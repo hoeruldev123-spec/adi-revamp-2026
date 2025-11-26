@@ -1,0 +1,350 @@
+body {
+  font-family: "Outfit", sans-serif !important;
+  font-weight: 400;
+  color: #333;
+}
+
+.nav-link.active {
+  color: #008bf9 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #008bf9;
+}
+
+/* Headings using Plus Jakarta Sans */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6,
+.fw-bold,
+.section-title {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 700;
+}
+
+/* ==== Hover Animation Effects ==== */
+
+/* Tombol dengan efek skala halus */
+.btn-hover-grow {
+  transition: all 0.3s ease-in-out;
+}
+.btn-hover-grow:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Gambar dengan efek zoom dan shadow */
+.img-hover-zoom {
+  transition: transform 0.4s ease;
+}
+.img-hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Logo client grayscale → full color */
+.logo-hover-color {
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+  opacity: 0.8;
+}
+.logo-hover-color:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+/* Efek underline smooth di teks link */
+.link-hover-underline {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+.link-hover-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.link-hover-underline:hover::after {
+  width: 100%;
+}
+/* Hero */
+
+.hero-home {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.hero-home .badge {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.hero-home img {
+  animation: floatCloud 6s ease-in-out infinite;
+}
+
+@keyframes floatCloud {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ====== Solutions ===== */
+
+.solution-title small {
+  color: #008bf9;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.solution-title h2 {
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.solution-title p {
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.solution-menu {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #6c757d;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s;
+}
+
+.solution-menu.active {
+  color: #212529;
+  font-weight: 700;
+}
+
+.solution-left {
+  border-left: 4px solid #008bf9;
+  background: linear-gradient(90deg, #eaf5ff 0%, #f9fbfd 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 4px 15px rgb(0 0 0 / 0.1);
+}
+
+.icon-wrapper {
+  width: 38px;
+  height: 38px;
+  background-color: #d9eaff;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.image-frame {
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #008bf9 0%, #b8dcff 100%);
+  padding: 20px;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 4px 8px 24px rgb(0 154 255 / 0.4);
+}
+
+.image-frame img {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+.image-badge {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 0 8px rgb(0 0 0 / 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.image-badge.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.image-badge.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Footer */
+
+footer {
+  font-size: 0.95rem;
+}
+
+footer .footer-link {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .footer-link:hover {
+  color: #008bf9;
+}
+
+footer .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #dce3eb;
+  border-radius: 8px;
+  color: #008bf9;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+footer .social-icon:hover {
+  background-color: #008bf9;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+footer hr {
+  border-top: 1px solid #e5e9ef;
+}
+
+/* === Services Section Custom === */
+#services-section {
+  background-color: #008bf9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* background pattern overlay */
+#services-section .pattern-bg {
+  background-image: url("../images/Patern.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.08;
+  z-index: -1;
+}
+
+/* service cards */
+#services-section .service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+
+#services-section .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Container utama untuk layer gambar */
+.service-card-image {
+  position: relative;
+  height: 240px;
+}
+
+/* Layer bawah: pattern */
+.service-card-image .bg-pattern {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  z-index: 1;
+  padding: 20px;
+}
+
+/* Layer atas: gambar utama */
+.service-card-image .main-image {
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: transform 0.4s ease;
+  padding: 20px;
+}
+
+/* Efek hover opsional */
+.service-card-image:hover .main-image {
+  transform: scale(1.05);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .service-card-image {
+    height: 200px;
+  }
+}
+
+/* card text */
+#services-section .card-body {
+  text-align: left;
+}
+
+#services-section .card-body h5 {
+  font-weight: 600;
+  color: #212529;
+}
+
+#services-section .card-body p {
+  color: #6c757d;
+}
+
+/* icon */
+#services-section .card-body i {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #008bf9;
+  margin-bottom: 6px;
+}
+
+/* WHY CHOOSE US */
+.why-choose-us .wcu-card {
+  background: #ffffff;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.why-choose-us .wcu-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.why-choose-us .floating-badges .badge {
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+/* Optional: Soft gradient background like the design */
+.why-choose-us {
+  background: linear-gradient(180deg, #f9fbff 0%, #ffffff 100%);
+}
