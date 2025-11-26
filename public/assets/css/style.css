@@ -1,3 +1,54 @@
+/* Fonts */
+:root {
+  --default-font: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --heading-font: "Plus Jakarta Sans", "Inter", sans-serif;
+  --nav-font: "Plus Jakarta Sans", "Inter", sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #2d465e; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #008bf9; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #212529; /* The default color of the main navmenu links */
+  --nav-hover-color: #008bf9; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #008bf9; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f3f9ff;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #008bf9;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #409dfd;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+
 body {
   font-family: "Outfit", sans-serif !important;
   font-weight: 400;
@@ -33,11 +84,11 @@ h6,
 
 /* Tombol dengan efek skala halus */
 .btn-hover-grow {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
 }
 .btn-hover-grow:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  transform: scale(1.08) !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Gambar dengan efek zoom dan shadow */
@@ -60,7 +111,25 @@ h6,
   transform: translateY(-4px);
 }
 
-/* Efek underline smooth di teks link */
+/* ====== Client ===== */
+.client-appear {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== Efek underline smooth di teks link ===== */
 .link-hover-underline {
   position: relative;
   color: inherit;
@@ -79,10 +148,14 @@ h6,
 .link-hover-underline:hover::after {
   width: 100%;
 }
-/* Hero */
+/* ======== Hero ======== */
 
 .hero-home {
   background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  background-image: url("/assets/images/patren-hero.svg");
+  background-size: contain;
+  background-position: left bottom;
+  background-repeat: no-repeat;
 }
 
 .hero-home .badge {
@@ -92,6 +165,23 @@ h6,
 
 .hero-home img {
   animation: floatCloud 6s ease-in-out infinite;
+}
+
+.hero-home-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+}
+
+.hero-home .container,
+.hero-home .row {
+  position: relative;
+  z-index: 2; /* memastikan konten tampil di atas overlay */
 }
 
 @keyframes floatCloud {
@@ -238,71 +328,59 @@ footer hr {
 /* === Services Section Custom === */
 #services-section {
   background-color: #008bf9;
-  position: relative;
+  position: relative; /* supaya anak absolute bisa berada di dalam */
   overflow: hidden;
 }
 
 /* background pattern overlay */
-#services-section .pattern-bg {
-  background-image: url("../images/Patern.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.08;
-  z-index: -1;
-}
-
-/* service cards */
-#services-section .service-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 20px;
-}
-
-#services-section .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* Container utama untuk layer gambar */
-.service-card-image {
-  position: relative;
-  height: 240px;
-}
-
-/* Layer bawah: pattern */
-.service-card-image .bg-pattern {
+/* #services-section .pattern-bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 
-  z-index: 1;
-  padding: 20px;
+  background-image: url("/assets/images/services-background.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+} */
+
+/* Wrapper Service Card */
+.service-card {
+  border-radius: 16px;
+  overflow: hidden; /* penting supaya radius gambar mengikuti card */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Layer atas: gambar utama */
-.service-card-image .main-image {
-  position: relative;
-  z-index: 2;
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
-  border-radius: inherit;
+/* Hover effect */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Wrapper (agar tidak merusak radius) */
+.service-card .card-img-top {
+  overflow: hidden; /* wajib supaya gambar ikut radius */
+  padding: 20px;
+  size: cover;
+}
+
+/* Image style */
+.service-image {
+  width: 100%;
+  height: 100%; /* boleh disesuaikan */
+  object-fit: cover; /* biar gambar rapi */
   transition: transform 0.4s ease;
-  padding: 20px;
 }
 
-/* Efek hover opsional */
-.service-card-image:hover .main-image {
+/* Hover zoom image */
+.service-card:hover .service-image {
   transform: scale(1.05);
 }
 
-/* Responsif */
-@media (max-width: 768px) {
-  .service-card-image {
-    height: 200px;
-  }
+/* Body text agar makin rapi */
+.service-card .card-body {
+  padding: 20px 22px;
 }
 
 /* card text */
@@ -332,6 +410,7 @@ footer hr {
   background: #ffffff;
   border-radius: 20px;
   transition: 0.3s ease;
+  padding-bottom: 0;
 }
 
 .why-choose-us .wcu-card:hover {
@@ -347,4 +426,92 @@ footer hr {
 /* Optional: Soft gradient background like the design */
 .why-choose-us {
   background: linear-gradient(180deg, #f9fbff 0%, #ffffff 100%);
+}
+
+/* ===== Vision Mission Switcher ===== */
+
+.vm-switcher {
+  position: relative;
+  display: flex;
+  width: 320px;
+  padding: 6px;
+  background: #f6f8fa;
+  border-radius: 40px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  gap: 4px;
+}
+
+.vm-btn {
+  flex: 1;
+  z-index: 2;
+  padding: 12px 0;
+  background: transparent;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #363a40;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.vm-btn.active {
+  color: #111;
+}
+
+.vm-slider {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: calc(50% - 4px);
+  height: calc(100% - 12px);
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease;
+}
+
+/* --- VM Content Animation --- */
+.vm-box {
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.45s ease, opacity 0.45s ease;
+}
+
+/* Saat konten disembunyikan ke kiri */
+.vm-box.hide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  pointer-events: none;
+}
+
+/* Saat konten disembunyikan ke kanan */
+.vm-box.hide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  pointer-events: none;
+}
+
+/* Wrapper agar posisi absolut bekerja */
+#vm-content {
+  position: relative;
+  min-height: 120px; /* menjaga tinggi supaya tidak lompat */
+}
+
+/* Konten aktif (vision) tampil normal */
+.vm-box.active {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+  pointer-events: auto;
+}
+
+/* Konten lain tersembunyi default */
+.vm-box:not(.active) {
+  opacity: 0;
+  transform: translateX(40px);
+  position: absolute;
+  pointer-events: none;
 }

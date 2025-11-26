@@ -15,7 +15,7 @@
         <div class="row g-4">
 
             <!-- Years of Experience -->
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="wcu-card p-4 h-100 shadow-sm bg-white rounded-4">
                     <div class="fs-1 fw-bold text-primary mb-2">11+</div>
                     <h5 class="fw-bold">Years of Experience</h5>
@@ -24,43 +24,36 @@
             </div>
 
             <!-- Portfolio of Use Cases -->
-            <div class="col-lg-8">
-                <div class="wcu-card p-4 h-100 shadow-sm bg-white rounded-4">
+            <div class="col-lg-9">
+                <div class="wcu-card p-4 pb-0 h-100 shadow-sm bg-white rounded-4">
                     <h5 class="fw-bold">Wide Portfolio of Use Cases</h5>
                     <p class="text-muted small mb-4">
                         We deliver innovative data and AI solutions that create real business impact across diverse industries.
                     </p>
-
-                    <img src="/assets/images/Wide-Portfolio-of-Use-Cases.png" class="img-fluid" alt="Use Case Illustration">
+                    <img src="/assets/images/Global-Leader-Partners.png" class="img-fluid" alt="Use Case Illustration">
                 </div>
             </div>
 
             <!-- Certified Team -->
             <div class="col-lg-6">
-                <div class="wcu-card p-4 h-100 shadow-sm bg-white rounded-4 position-relative">
+                <div class="wcu-card p-4 pb-0 h-100 shadow-sm bg-white rounded-4 position-relative">
                     <h5 class="fw-bold">Experienced & Certified Team</h5>
                     <p class="text-muted small mb-4">
                         Our certified experts in data, AI, and analytics deliver impactful solutions
                         that drive measurable business value.
                     </p>
-
-                    <div class="floating-badges">
-                        <span class="badge bg-light border text-dark me-2">IT Expert</span>
-                        <span class="badge bg-light border text-dark me-2">AI Specialist</span>
-                        <span class="badge bg-light border text-dark">Creative Product</span>
-                    </div>
+                    <img src="/assets/images/Experienced-Certified-Team.webp" class="img-fluid" alt="Experienced & Certified Team">
                 </div>
             </div>
 
             <!-- Global Partner -->
             <div class="col-lg-6">
-                <div class="wcu-card p-4 h-100 shadow-sm bg-white rounded-4 position-relative">
+                <div class="wcu-card p-4 pb-0 h-100 shadow-sm bg-white rounded-4 position-relative">
                     <h5 class="fw-bold">Global Leader Partners</h5>
                     <p class="text-muted small mb-4">
                         Partnering with global leaders in AI and data analytics to deliver trusted, high-impact solutions.
                     </p>
-
-                    <img src="/assets/images/Global-Leader-Partners.png" class="img-fluid" alt="Partner Illustration">
+                    <img src="/assets/images/Wide-Portfolio-of-Use-Cases.png" class="img-fluid img-bottom" alt="Partner Illustration">
                 </div>
             </div>
 
