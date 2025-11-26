@@ -333,17 +333,17 @@ footer hr {
 }
 
 /* background pattern overlay */
-/* #services-section .pattern-bg {
+#services-section .pattern-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 
-  background-image: url("/assets/images/services-background.png");
+  background-image: url("/assets/images/services-background.png"), url("/assets/images/services-background.png");
   background-repeat: no-repeat;
-  background-position: top left;
-} */
+  background-position: top left, bottom right;
+}
 
 /* Wrapper Service Card */
 .service-card {
