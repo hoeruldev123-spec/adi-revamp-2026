@@ -1,12 +1,11 @@
 <section id="services-section" class="py-5 position-relative">
   <div class="pattern-bg"></div>
-  <div class="pattern-bg2"></div>
+
   <div class="container text-center text-white">
     <h6 class="text-uppercase mb-2">Services</h6>
     <h2 class="fw-bold mb-3">Intelligent Services for Modern Businesses.</h2>
     <p class="mb-5">
-      Unlock the true potential of your data assets, gain a competitive edge, and drive innovation across your organization.
-    </p>
+      Unlock the true potential of your data assets, gain a competitive edge, and drive innovation across your organization.</p>
 
     <div class="row g-4 justify-content-center">
       <!-- Card 1 -->

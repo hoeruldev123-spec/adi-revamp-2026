@@ -82,7 +82,7 @@
   });
 
   // optional: small safety check untuk memastikan dropdown dapat dipakai
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function() {
     // pastikan tidak ada JS error di console
     if (typeof bootstrap === 'undefined') {
       console.error('Bootstrap JS tidak terdeteksi. Pastikan bootstrap.bundle.min.js dimuat.');
@@ -91,5 +91,3 @@
 </script>
 <script src="<?= base_url('assets/js/script.js') ?>"></script>
 <script src="<?= base_url('assets/js/main.js'); ?>"></script>
-<script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
-<script src="<?= base_url('assets/js/aos.js') ?>"></script>

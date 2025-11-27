@@ -1,16 +1,5 @@
 <?= $this->extend('layouts/main') ?>
 
-<!-- perlu di review -->
-<?= $this->section('hero') ?>
-<?= view('partials/hero/hero_large', [
-  'title' => 'Empowering Smarter Business Through Data & AI Integration',
-  'subtitle' => 'We deliver integrated solutions that transform complex data into clear insights and smarter business outcomes.',
-  'buttonText' => 'Learn More',
-  'buttonLink' => '/solutions'
-]) ?>
-<?= $this->endSection() ?>
-<!-- /perlu direview -->
-
 <?= $this->section('content') ?>
 
 <section class="hero-home hero-home-bg py-5 position-relative overflow-hidden">
@@ -46,10 +35,12 @@
 </section>
 
 
-<?= $this->include('partials/cards/client.php') ?>
-<?= $this->include('partials/cards/about_vision_mission.php') ?>
-<?= $this->include('partials/cards/services') ?>
-<?= $this->include('partials/sections/why_choose_us') ?>
+<?= $this->include('components/cards/client_card.php') ?>
+<?= $this->include('components/cards/about_vision_mission.php') ?>
+<?= $this->include('components/cards/service_card') ?>
+<?= $this->include('components/sections/why_choose_us') ?>
+<?= $this->include('components/cards/solution_card') ?>
+<?= $this->include('components/cards/principal_card') ?>
 
 
 <?= $this->endSection() ?>
