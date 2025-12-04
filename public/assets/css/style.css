@@ -733,13 +733,6 @@ footer hr {
   }
 }
 
-/* File: principal.css */
-#principal-section {
-  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
-  position: relative;
-  overflow: hidden;
-}
-
 /* Logo Carousel Styling - FIXED */
 .logo-carousel-container {
   overflow: hidden;
@@ -814,10 +807,68 @@ footer hr {
 }
 
 /* Principal Cards Styling */
+
+#principal-section {
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ganti CSS animasi yang lama dengan ini */
+.principal-page {
+  display: none;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.principal-page.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Optional: Animasi untuk card saat muncul */
+.principal-page.active .principal-card {
+  animation: cardSlideIn 0.6s ease forwards;
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.principal-page.active .principal-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.principal-page.active .principal-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.principal-page.active .principal-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.principal-page.active .principal-card:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.principal-page.active .principal-card:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.principal-page.active .principal-card:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .principal-card {
   background: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 8px;
   padding: 30px 25px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -862,8 +913,8 @@ footer hr {
 }
 
 .principal-logo img {
-  max-height: 50px;
-  max-width: 120px;
+  max-height: 80%;
+  max-width: 80%;
   object-fit: contain;
   transition: all 0.3s ease;
 }
@@ -885,6 +936,38 @@ footer hr {
   line-height: 1.6;
   font-size: 0.95rem;
   text-align: center;
+}
+
+.pagination {
+  margin-bottom: 0;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.page-link {
+  color: #007bff;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.75rem;
+  margin: 0 2px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.page-link:hover {
+  color: #0056b3;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #dee2e6;
 }
 
 /* Responsive Design */
@@ -922,4 +1005,176 @@ footer hr {
       transform: translateX(calc(-50%));
     }
   }
+}
+
+/* ISO Card Styles */
+
+.iso-card-inner {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ISO Image Container */
+.iso-img-container {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.iso-img-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.iso-img-container img {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: grayscale(20%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .iso-card-inner {
+    padding: 1.5rem;
+  }
+
+  .iso-img-container {
+    height: 100px;
+    margin-bottom: 1.25rem;
+  }
+
+  .iso-img-container img {
+    max-height: 70px;
+  }
+}
+
+/* Animation for card entrance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA Section Styles */
+.cta-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
+  box-shadow: 0 20px 60px rgba(30, 144, 255, 0.3);
+  border: none;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button Hover Effects */
+.btn-hover {
+  transition: all 0.3s ease;
+  background: white;
+  color: #1e90ff;
+  border: none;
+}
+
+.btn-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: #f8f9fa;
+  color: #0066cc;
+}
+
+.btn-hover svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-hover:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.btn-hover-outline {
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  background: transparent;
+}
+
+.btn-hover-outline:hover {
+  transform: translateY(-3px);
+  background: white;
+  color: #1e90ff;
+  border-color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-fade-in-delay {
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-card {
+    padding: 3rem 2rem !important;
+    min-height: 350px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .cta-section .lead {
+    font-size: 1rem !important;
+  }
+
+  .btn-lg {
+    padding: 0.75rem 2rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* Z-index fix */
+.z-1 {
+  z-index: 1;
 }

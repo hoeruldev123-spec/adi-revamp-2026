@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center mb-5">
-                <h6 class="text-uppercase mb-2">Solutions</h6>
+                <h6 class="text-uppercase text-primary mb-2">Solutions</h6>
                 <h2 class="fw-bold mb-3">
                     Discover smart solutions designed to help many industries grow and innovate.
                 </h2>

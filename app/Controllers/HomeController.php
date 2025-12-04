@@ -6,19 +6,37 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        return view('pages/home', [
-            'title' => 'Home - All Data International',
-            'active' => 'home'
-        ]);
-    }
+        // Load model data jika ada
+        // $serviceModel = new ServiceModel();
+        // $services = $serviceModel->getFeaturedServices();
 
-    public function solutions()
-    {
         $data = [
-            'title' => 'Solutions - SOUTTON',
-            'activePage' => 'solutions'
+            'title' => 'Home - All Data international',
+            'hero' => $this->getHeroData(),
+            // 'services' => $this->getServicesData(),
+            // 'solutions' => $this->getSolutionsData(),
+            // 'testimonials' => $this->getTestimonialsData()
         ];
 
-        return view('solutions', $data);
+        return view('pages/home', $data);
+    }
+
+    private function getHeroData()
+    {
+        return [
+            'badge' => 'Elevate Your Business with AI',
+            'title' => 'Empowering Smarter<br>Business Through Data<br>& AI Integration',
+            'description' => 'We deliver integrated solutions that transform complex data into clear insights and smarter business outcomes.',
+            'image' => 'cloud-hero.png',
+            'cta_text' => 'Learn More',
+            'cta_link' => '/solutions'
+        ];
+    }
+
+    private function getServicesData()
+    {
+        return [
+            // ... service data
+        ];
     }
 }

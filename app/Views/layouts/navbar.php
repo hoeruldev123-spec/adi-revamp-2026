@@ -5,7 +5,7 @@
 
     <!-- Logo -->
     <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="<?= base_url() ?>">
-      <img src="<?= base_url('assets/images/alldata_logo.png'); ?>" alt="All Data" height="40" class="me-2">
+      <img src="<?= base_url('assets/images/logo_coloured.png'); ?>" alt="All Data" height="40" class="me-2">
     </a>
 
     <!-- Toggle Button (Mobile) -->
@@ -24,7 +24,9 @@
           <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
             <li><a class="dropdown-item" href="<?= base_url('solutions/ai'); ?>">AI Solutions</a></li>
             <li><a class="dropdown-item" href="<?= base_url('solutions/data'); ?>">Data Integration</a></li>
-            <li><hr class="dropdown-divider"></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
             <li><a class="dropdown-item" href="<?= base_url('solutions'); ?>">All Solutions</a></li>
           </ul>
         </li>

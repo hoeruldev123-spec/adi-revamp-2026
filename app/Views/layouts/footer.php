@@ -67,8 +67,25 @@
   </div>
 
   <!-- Bottom Dark Section -->
-  <div class="bg-dark text-white text-center py-3 mt-4">
-    <small>Copyright © <?= date('Y'); ?>, All Data International | All Rights Reserved.</small>
+  <div class="bg-dark py-3 mt-4 border-top border-secondary">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Badge di Kiri -->
+        <div class="col-md-6 mb-2 mb-md-0">
+          <div class="badge border border-white text-white border px-3 py-2 shadow-sm d-inline-flex align-items-center">
+            <i class="bi bi-stars me-2"></i>
+            <?= $hero['badge'] ?? 'Elevate Your Business with AI' ?>
+          </div>
+        </div>
+
+        <!-- Copyright di Kanan -->
+        <div class="col-md-6 text-md-end">
+          <small class="text-white">
+            Copyright © <?= date('Y'); ?>, All Data International | All Rights Reserved.
+          </small>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <!-- ===== FOOTER END ===== -->
