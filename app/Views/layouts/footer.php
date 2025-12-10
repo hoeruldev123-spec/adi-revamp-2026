@@ -106,5 +106,4 @@
     }
   });
 </script>
-<script src="<?= base_url('assets/js/script.js') ?>"></script>
-<script src="<?= base_url('assets/js/main.js'); ?>"></script>
+<script src="<?= base_url('js/script.js') ?>"></script>

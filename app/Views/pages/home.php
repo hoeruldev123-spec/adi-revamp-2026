@@ -48,6 +48,8 @@
 <?= $this->include('components/cards/solution_card') ?>
 <?= $this->include('components/cards/principal_card') ?>
 <?= $this->include('components/sections/our_commitments') ?>
+<?= $this->include('components/sections/testimonials') ?>
+<?= $this->include('components/sections/resource') ?>
 <?= $this->include('components/sections/cta_section') ?>
 
 <?= $this->endSection() ?>

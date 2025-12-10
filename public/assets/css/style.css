@@ -1007,14 +1007,7 @@ footer hr {
   }
 }
 
-/* ISO Card Styles */
-
-.iso-card-inner {
-  padding: 2rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+/* ISO Styles */
 
 /* ISO Image Container */
 .iso-img-container {
@@ -1024,8 +1017,8 @@ footer hr {
   justify-content: center;
   margin-bottom: 1.5rem;
   padding: 1rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 12px;
+  /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px; */
   position: relative;
   overflow: hidden;
 }
@@ -1052,10 +1045,6 @@ footer hr {
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
-  .iso-card-inner {
-    padding: 1.5rem;
-  }
-
   .iso-img-container {
     height: 100px;
     margin-bottom: 1.25rem;

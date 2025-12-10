@@ -13,34 +13,22 @@
         <div id="isocard">
             <div class="row g-4 justify-content-center">
                 <!-- ISO Card 1 -->
-                <div class="col-lg-4 col-md-6">
-
-                    <div class="iso-card-inner">
-                        <div class="iso-img-container">
-                            <img src="<?= base_url('assets/images/iso/certified-iso1.png') ?>" alt="ISO 9001 Certification" class="img-fluid">
-                        </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="iso-img-container">
+                        <img src="<?= base_url('assets/images/iso/certified-iso1.png') ?>" alt="ISO 9001 Certification" class="img-fluid">
                     </div>
-
                 </div>
 
-                <div class="col-lg-4 col-md-6">
-
-                    <div class="iso-card-inner">
-                        <div class="iso-img-container">
-                            <img src="<?= base_url('assets/images/iso/certified-iso1.png') ?>" alt="ISO 9001 Certification" class="img-fluid">
-                        </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="iso-img-container">
+                        <img src="<?= base_url('assets/images/iso/certified-iso2.png') ?>" alt="ISO 9001 Certification" class="img-fluid">
                     </div>
-
                 </div>
 
-                <div class="col-lg-4 col-md-6">
-
-                    <div class="iso-card-inner">
-                        <div class="iso-img-container">
-                            <img src="<?= base_url('assets/images/iso/certified-iso1.png') ?>" alt="ISO 9001 Certification" class="img-fluid">
-                        </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="iso-img-container">
+                        <img src="<?= base_url('assets/images/iso/certified-iso3.png') ?>" alt="ISO 9001 Certification" class="img-fluid">
                     </div>
-
                 </div>
 
             </div>

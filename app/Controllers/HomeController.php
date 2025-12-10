@@ -12,7 +12,7 @@ class HomeController extends BaseController
 
         $data = [
             'title' => 'Home - All Data international',
-            'hero' => $this->getHeroData(),
+            // 'hero' => $this->getHeroData(),
             // 'services' => $this->getServicesData(),
             // 'solutions' => $this->getSolutionsData(),
             // 'testimonials' => $this->getTestimonialsData()

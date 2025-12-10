@@ -1,6 +1,7 @@
 <!-- File: solutions.php -->
 <section id="solutions-section" class="py-5">
     <div class="container">
+        <!-- Header -->
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center mb-5">
                 <h6 class="text-uppercase text-primary mb-2">Solutions</h6>
@@ -12,6 +13,7 @@
                 </p>
             </div>
         </div>
+        <!-- end header -->
 
         <div class="row">
             <!-- Navigation Tabs Vertikal di Kiri -->

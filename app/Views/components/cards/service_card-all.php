@@ -2,22 +2,11 @@
   <div class="pattern-bg"></div>
 
   <div class="container text-center text-white">
-
     <h6 class="text-uppercase mb-2">Services</h6>
     <h2 class="fw-bold mb-3">Intelligent Services for Modern Businesses.</h2>
     <p class="mb-5">
       Unlock the true potential of your data assets, gain a competitive edge, and drive innovation across your organization.</p>
 
-    <!-- 
-    <div class="row justify-content-center text-white">
-      <div class="col-lg-8 col-xl-6 mb-5">
-        <h6 class="text-uppercase mb-2">Services</h6>
-        <h2 class="fw-bold mb-3">Intelligent Services for Modern Businesses.</h2>
-        <p class="mb-5">
-          Unlock the true potential of your data assets, gain a competitive edge, and drive innovation across your organization.
-        </p>
-      </div>
-    </div> -->
 
     <div class="row g-4 justify-content-center">
       <!-- Card 1 -->
@@ -27,7 +16,7 @@
             <img src="<?= base_url('assets/images/services-card1.webp') ?>" alt="Use Case Development" class="w-100 service-image">
           </div>
           <div class="card-body text-dark text-start">
-            <div class="mb-2 text-primary fs-5"><i class="bi bi-briefcase"></i></div>
+            <div class="mb-2 text-primary fs-5"><img src="<?= base_url('assets/images/icon/icon-service-consulting.svg') ?>"></div>
             <h5 class="fw-semibold">Consulting</h5>
             <p class="text-muted small mb-0">
               Expert guidance to design data and AI strategies that maximize business value.
@@ -43,7 +32,7 @@
             <img src="<?= base_url('assets/images/services-card2.webp') ?>" alt="Use Case Development" class="w-100 service-image">
           </div>
           <div class="card-body text-dark text-start">
-            <div class="mb-2 text-primary fs-5"><i class="bi bi-diagram-3"></i></div>
+            <div class="mb-2 text-primary fs-5"><img src="<?= base_url('assets/images/icon/icon-service-usecase-development.svg') ?>"></div>
             <h5 class="fw-semibold">Use Case Development</h5>
             <p class="text-muted small mb-0">
               Build tailored AI and analytics solutions that address real business challenges.
@@ -59,7 +48,7 @@
             <img src="<?= base_url('assets/images/services-card3.webp') ?>" alt="Maintenance Support" class="w-100 service-image">
           </div>
           <div class="card-body text-dark text-start">
-            <div class="mb-2 text-primary fs-5"><i class="bi bi-tools"></i></div>
+            <div class="mb-2 text-primary fs-5"><img src="<?= base_url('assets/images/icon/icon-service-maintenance-support.svg') ?>"></div>
             <h5 class="fw-semibold">Maintenance Support</h5>
             <p class="text-muted small mb-0">
               Ensure system reliability with regular updates, monitoring, and performance optimization.
@@ -67,11 +56,44 @@
           </div>
         </div>
       </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6">
+        <div class="service-card card border-0 shadow-sm rounded-4 h-100">
+          <div class="card-img-top position-relative overflow-hidden rounded-top-4">
+            <img src="<?= base_url('assets/images/services-card4.webp') ?>" alt="Maintenance Support" class="w-100 service-image">
+          </div>
+          <div class="card-body text-dark text-start">
+            <div class="mb-2 text-primary fs-5"><img src="<?= base_url('assets/images/icon/icon-service-manage-service.svg') ?>"></div>
+            <h5 class="fw-semibold">Manage Services</h5>
+            <p class="text-muted small mb-0">
+              End-to-end management for secure, efficient, and scalable data infrastructure. 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-6">
+        <div class="service-card card border-0 shadow-sm rounded-4 h-100">
+          <div class="card-img-top position-relative overflow-hidden rounded-top-4">
+            <img src="<?= base_url('assets/images/services-card5.webp') ?>" alt="Maintenance Support" class="w-100 service-image">
+          </div>
+          <div class="card-body text-dark text-start">
+            <div class="mb-2 text-primary fs-5"><img src="<?= base_url('assets/images/icon/icon-service-training.svg') ?>"></div>
+            <h5 class="fw-semibold">Training</h5>
+            <p class="text-muted small mb-0">
+              Lorem ipsum dolor sit amet consectetur. Laoreet pharetra ornare mi porttitor.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="mt-5">
       <a href="/solutions" class="btn btn-hover-grow btn-light btn-lg rounded-pill px-4 py-2 shadow-sm">
-        See All Services <i class="bi bi-arrow-up-right ms-2"></i>
+        Talk with us <i class="bi bi-arrow-up-right ms-2"></i>
       </a>
     </div>
 
