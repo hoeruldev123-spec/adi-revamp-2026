@@ -82,4 +82,24 @@ class ServicesController extends BaseController
 
         return view('pages/services', $data);
     }
+
+    // ServicesController.php
+    public function consulting()
+    {
+        $data = [
+            'title' => 'Consulting',
+            'description' => 'Expert guidance to design data and AI strategies that maximize business value.',
+            'image' => 'services-card1.webp',
+
+            'cta_text' => 'Request this Service',
+            'cta_link' => '/contact?service=consulting',
+            'bg_class' => 'bg-white',
+            'pattern' => true, // AKTIFKAN PATTERN
+            'pattern_opacity' => 100,
+
+            // Content lainnya...
+        ];
+
+        return view('pages/services/consulting', $data);
+    }
 }

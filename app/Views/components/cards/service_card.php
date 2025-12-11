@@ -27,7 +27,7 @@
             <img src="<?= base_url('assets/images/services-card1.webp') ?>" alt="Use Case Development" class="w-100 service-image">
           </div>
           <div class="card-body text-dark text-start">
-            <div class="mb-2 text-primary fs-5"><i class="bi bi-briefcase"></i></div>
+            <div class="mb-2 text-primary fs-5"><img src="<?= base_url('assets/images/icon/icon-service-consulting.svg') ?>"></i></div>
             <h5 class="fw-semibold">Consulting</h5>
             <p class="text-muted small mb-0">
               Expert guidance to design data and AI strategies that maximize business value.
@@ -43,7 +43,7 @@
             <img src="<?= base_url('assets/images/services-card2.webp') ?>" alt="Use Case Development" class="w-100 service-image">
           </div>
           <div class="card-body text-dark text-start">
-            <div class="mb-2 text-primary fs-5"><i class="bi bi-diagram-3"></i></div>
+            <div class="mb-2 text-primary fs-5"><img src="<?= base_url('assets/images/icon/icon-service-usecase-development.svg') ?>"></div>
             <h5 class="fw-semibold">Use Case Development</h5>
             <p class="text-muted small mb-0">
               Build tailored AI and analytics solutions that address real business challenges.
@@ -59,7 +59,7 @@
             <img src="<?= base_url('assets/images/services-card3.webp') ?>" alt="Maintenance Support" class="w-100 service-image">
           </div>
           <div class="card-body text-dark text-start">
-            <div class="mb-2 text-primary fs-5"><i class="bi bi-tools"></i></div>
+            <div class="mb-2 text-primary fs-5"><img src="<?= base_url('assets/images/icon/icon-service-maintenance-support.svg') ?>"></div>
             <h5 class="fw-semibold">Maintenance Support</h5>
             <p class="text-muted small mb-0">
               Ensure system reliability with regular updates, monitoring, and performance optimization.

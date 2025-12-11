@@ -411,6 +411,96 @@ footer hr {
   margin-bottom: 6px;
 }
 
+/* Background Pattern untuk Small Hero */
+/* PATTERN OVERLAY STYLES */
+.small-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pattern Overlay Element */
+.pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/services-background.png"), url("../images/services-background.png");
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-size: 300px auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Pastikan konten di atas pattern */
+.small-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Pattern variations */
+.pattern-bg.pattern-dots .pattern-overlay {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.1 !important;
+  color: #0d6efd; /* Warna dots */
+}
+
+.pattern-bg.pattern-lines .pattern-overlay {
+  background-image: linear-gradient(90deg, currentColor 1px, transparent 1px), linear-gradient(currentColor 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.1 !important;
+  color: #0d6efd;
+}
+
+.pattern-bg.pattern-grid .pattern-overlay {
+  background-image: linear-gradient(90deg, currentColor 1px, transparent 1px), linear-gradient(currentColor 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.05 !important;
+  color: #0d6efd;
+}
+
+/* Floating animation */
+.pattern-floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+/* Untuk background terang */
+.bg-white .pattern-overlay,
+.bg-light .pattern-overlay {
+  opacity: 0.1;
+}
+
+/* Untuk background gelap */
+.bg-dark .pattern-overlay,
+.bg-primary .pattern-overlay {
+  opacity: 0.05;
+  filter: invert(1) brightness(1.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pattern-overlay {
+    background-size: 200px auto;
+    opacity: 0.08 !important;
+  }
+
+  .pattern-floating {
+    display: none;
+  }
+}
+
 /* WHY CHOOSE US */
 .why-choose-us .wcu-card {
   background: #ffffff;
