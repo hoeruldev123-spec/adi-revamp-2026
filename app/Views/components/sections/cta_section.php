@@ -27,24 +27,24 @@
 
                     <!-- Content -->
                     <div class="position-relative z-1">
-                        <h2 class="display-5 fw-bold mb-3 animate-fade-in">
+                        <h2 class="mb-3 animate-fade-in">
                             Ready to Harness the Power of<br>
                             Data Analytics for Your Business
                         </h2>
-                        <p class="lead mb-4 animate-fade-in-delay">
+                        <p class="mb-4 animate-fade-in-delay">
                             Turn your data into meaningful actions that help your business grow smarter and faster.<br>
                             Together, let's move forward toward real data driven success
                         </p>
 
                         <div class="d-flex gap-3 justify-content-center flex-wrap animate-fade-in-delay-2">
-                            <a href="<?= base_url('contact') ?>" class="btn btn-light btn-lg px-4 py-3 rounded-pill d-inline-flex align-items-center gap-2 shadow-lg btn-hover">
+                            <a href="<?= base_url('contact') ?>" class="btn btn-light btn-lg rounded-pill d-inline-flex align-items-center gap-2 shadow-lg btn-hover">
                                 <span>Contact Us</span>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <line x1="7" y1="17" x2="17" y2="7"></line>
                                     <polyline points="7 7 17 7 17 17"></polyline>
                                 </svg>
                             </a>
-                            <a href="<?= base_url('about') ?>" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill shadow-lg btn-hover-outline">
+                            <a href="<?= base_url('about') ?>" class="btn btn-outline-light btn-lg rounded-pill shadow-lg btn-hover-outline">
                                 Get to know us!
                             </a>
                         </div>

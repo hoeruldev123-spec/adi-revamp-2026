@@ -1,8 +1,8 @@
 /* Fonts */
 :root {
-  --default-font: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
-  --heading-font: "Plus Jakarta Sans", "Inter", sans-serif;
-  --nav-font: "Plus Jakarta Sans", "Inter", sans-serif;
+  --default-font: "Plus Jakarta Sans", system-ui, sans-serif;
+  --heading-font: "Outfit", system-ui, sans-serif;
+  --nav-font: "Plus Jakarta Sans", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -50,18 +50,12 @@
 --------------------------------------------------------------*/
 
 body {
-  font-family: "Outfit", sans-serif !important;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
   font-weight: 400;
   color: #333;
 }
 
-.nav-link.active {
-  color: #008bf9 !important;
-  font-weight: 600;
-  border-bottom: 2px solid #008bf9;
-}
-
-/* Headings using Plus Jakarta Sans */
+/* Heading font */
 h1,
 h2,
 h3,
@@ -74,10 +68,48 @@ h6,
 .display-4,
 .display-5,
 .display-6,
-.fw-bold,
 .section-title {
-  font-family: "Plus Jakarta Sans", sans-serif !important;
-  font-weight: 700;
+  font-family: "Outfit", system-ui, sans-serif;
+}
+
+/* Heading weights */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+/* Display / Hero */
+.display-1,
+.display-2 {
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: #008bf9 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #008bf9;
+}
+
+.dropdown-menu {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.4s ease;
+  z-index: 1050;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* ==== Hover Animation Effects ==== */
@@ -111,6 +143,28 @@ h6,
   transform: translateY(-4px);
 }
 
+/* ======== 404 ======== */
+.error-code {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #3b82f6; /* biru mirip gambar */
+}
+
+.error-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.error-desc {
+  color: #6c757d;
+  max-width: 420px;
+}
+
+.btn-rounded {
+  padding: 12px 28px;
+  border-radius: 50px;
+}
+
 /* ====== Client ===== */
 .client-appear {
   opacity: 0;
@@ -127,6 +181,38 @@ h6,
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* CLINET CARD STSTIS */
+.client-card-statis {
+  height: 120px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.client-card-statis img {
+  max-height: 50px;
+  max-width: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.client-card-statis:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
+
+  border-color: var(--bs-primary);
+}
+
+.client-card-statis:hover img {
+  transform: scale(1.05);
 }
 
 /* ==== Efek underline smooth di teks link ===== */
@@ -206,19 +292,16 @@ h6,
 }
 
 .solution-title h2 {
-  font-weight: 700;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
 .solution-title p {
   color: #6c757d;
-  max-width: 600px;
   margin: 0 auto;
 }
 
 .solution-menu {
-  font-weight: 600;
   font-size: 1.1rem;
   color: #6c757d;
   cursor: pointer;
@@ -228,7 +311,6 @@ h6,
 
 .solution-menu.active {
   color: #212529;
-  font-weight: 700;
 }
 
 .solution-left {
@@ -284,6 +366,60 @@ h6,
 .image-badge.bottom-right {
   bottom: 20px;
   right: 20px;
+}
+
+/* DETAIL SOLUTIONS */
+/* Image wrapper */
+.solution-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 28px;
+  background: #fff;
+  padding: 10px;
+}
+
+/* Gradient block */
+.solution-bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+}
+
+/* Gradient variations */
+.gradient-1 {
+  background: linear-gradient(135deg, #3aa6ff, #d6efff);
+}
+
+.gradient-2 {
+  background: linear-gradient(135deg, #9fd6ff, #3aa6ff);
+}
+
+.gradient-3 {
+  background: linear-gradient(135deg, #4bb1ff, #cfeaff);
+}
+
+/* Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  #detail-solutions {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 /* Footer */
@@ -416,6 +552,16 @@ footer hr {
 .small-hero {
   position: relative;
   overflow: hidden;
+}
+
+/* Rasio 624x486 */
+.ratio-box {
+  aspect-ratio: 624 / 486;
+}
+
+/* Pastikan gambar full & crop rapi */
+.object-fit-cover {
+  object-fit: cover;
 }
 
 /* Pattern Overlay Element */
@@ -744,7 +890,7 @@ footer hr {
 
 .solution-content .btn {
   border-radius: 50px;
-  font-weight: 600;
+  font-weight: 400;
   transition: all 0.3s ease;
 }
 
@@ -1097,6 +1243,61 @@ footer hr {
   }
 }
 
+/* ========================= */
+/* PRINCIPAL STATIS */
+/* ========================= */
+
+.principal-statis-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  /* abu-abu soft */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.principal-statis-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--bs-primary);
+}
+
+/* Logo */
+.principal-statis-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* LOGO RATA KIRI */
+}
+
+.principal-statis-logo {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* rata kiri */
+}
+
+/* Gambar logo */
+.principal-statis-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Deskripsi */
+.principal-statis-description {
+  margin-top: 8px;
+  text-align: left;
+}
+
+/* Jika jumlah card ganjil, card terakhir otomatis center */
+.principal-statis-item:last-child:nth-child(odd) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ISO Styles */
 
 /* ISO Image Container */
@@ -1208,6 +1409,36 @@ footer hr {
   border-color: white;
 }
 
+/* ===== Reusable Outline Pill Button light ===== */
+.btn-outline-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 4px 28px;
+  border-radius: 999px;
+  border: 2px solid #e2e2e2;
+  background: transparent;
+  color: #132f63;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-pill .btn-icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.btn-outline-pill:hover {
+  border-color: #1e90ff;
+  background: rgba(19, 47, 99, 0.04);
+}
+
+.btn-outline-pill:hover .btn-icon {
+  transform: translate(4px, -4px);
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -1256,4 +1487,135 @@ footer hr {
 /* Z-index fix */
 .z-1 {
   z-index: 1;
+}
+
+/* CONTACT PAGE STYLES */
+#contact-hero {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Form Styles */
+.form-floating .form-control {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+}
+
+.form-floating .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+
+  .card-body.p-4 {
+    padding: 1.5rem !important;
+  }
+}
+
+/* JOURNEY  */
+/* Timeline wrapper */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #dbeafe;
+  transform: translateX(-50%);
+}
+
+/* Item */
+.timeline-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+/* Left & Right alignment */
+.timeline-item.left {
+  justify-content: flex-start;
+}
+
+.timeline-item.right {
+  justify-content: flex-end;
+}
+
+/* Card */
+.timeline-card {
+  background: linear-gradient(180deg, #f0f9ff, #ffffff);
+  border-radius: 20px;
+  padding: 24px;
+  width: 380px;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); */
+}
+
+/* Icon */
+.timeline-icon {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  background: #eff6ff;
+  border: 2px solid #bfdbfe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  z-index: 2;
+}
+
+.timeline-icon img,
+.timeline-icon-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-item {
+    justify-content: flex-start !important;
+    padding-left: 40px;
+  }
+
+  .timeline-icon {
+    left: 8px;
+    transform: none;
+  }
+
+  .timeline-card {
+    width: 100%;
+  }
 }

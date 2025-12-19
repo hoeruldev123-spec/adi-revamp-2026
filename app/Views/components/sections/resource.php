@@ -4,7 +4,7 @@
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">
                 <h6 class="text-uppercase text-primary mb-2">RESOURCES</h6>
-                <h2 class="fw-bold mb-3">Stay Informed with Our Latest Updates</h2>
+                <h2 class="mb-3">Stay Informed with Our Latest Updates</h2>
 
             </div>
         </div>

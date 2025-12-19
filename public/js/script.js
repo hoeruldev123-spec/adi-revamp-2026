@@ -97,3 +97,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
   startJsAnimation();
 });
+
+// CONTACT US
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Simple validation
+      const firstName = document.getElementById("firstName").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const subject = document.getElementById("subject").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!firstName || !email || !subject || !message) {
+        alert("Please fill in all required fields.");
+        return;
+      }
+
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      // If validation passes, submit the form
+      this.submit();
+    });
+  }
+});

@@ -5,7 +5,7 @@
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">
                 <h6 class="text-uppercase text-primary mb-2">Principal</h6>
-                <h2 class="fw-bold mb-3">Driven by Strong Partnerships</h2>
+                <h2 class="mb-3">Driven by Strong Partnerships</h2>
                 <p class="mb-5">
                     Our collaboration with top principals drives innovation and growth, empowering businesses to move forward with confidence.
                 </p>

@@ -7,9 +7,9 @@
         </p>
 
         <!-- Title -->
-        <h2 class="fw-bold display-6 mb-5 text-dark">
+        <h2 class="mb-5 text-dark">
             Trusted by Leading Enterprises to Deliver <br>
-            Impactful Data- and AI-Driven Solutions
+            Impactful Data and AI Driven Solutions
         </h2>
 
         <div class="row g-4">
@@ -18,7 +18,7 @@
             <div class="col-lg-3">
                 <div class="wcu-card p-4 h-100 shadow-sm bg-white rounded-4">
                     <div class="fs-1 fw-bold text-primary mb-2">11+</div>
-                    <h5 class="fw-bold">Years of Experience</h5>
+                    <h5>Years of Experience</h5>
                     <p class="text-muted small mb-0">Grow and develop through solid experience</p>
                 </div>
             </div>
@@ -26,7 +26,7 @@
             <!-- Portfolio of Use Cases -->
             <div class="col-lg-9">
                 <div class="wcu-card p-4 pb-0 h-100 shadow-sm bg-white rounded-4">
-                    <h5 class="fw-bold">Wide Portfolio of Use Cases</h5>
+                    <h5>Wide Portfolio of Use Cases</h5>
                     <p class="text-muted small mb-4">
                         We deliver innovative data and AI solutions that create real business impact across diverse industries.
                     </p>
@@ -37,7 +37,7 @@
             <!-- Certified Team -->
             <div class="col-lg-6">
                 <div class="wcu-card p-4 pb-0 h-100 shadow-sm bg-white rounded-4 position-relative">
-                    <h5 class="fw-bold">Experienced & Certified Team</h5>
+                    <h5>Experienced & Certified Team</h5>
                     <p class="text-muted small mb-4">
                         Our certified experts in data, AI, and analytics deliver impactful solutions
                         that drive measurable business value.
@@ -49,7 +49,7 @@
             <!-- Global Partner -->
             <div class="col-lg-6">
                 <div class="wcu-card p-4 pb-0 h-100 shadow-sm bg-white rounded-4 position-relative">
-                    <h5 class="fw-bold">Global Leader Partners</h5>
+                    <h5>Global Leader Partners</h5>
                     <p class="text-muted small mb-4">
                         Partnering with global leaders in AI and data analytics to deliver trusted, high-impact solutions.
                     </p>

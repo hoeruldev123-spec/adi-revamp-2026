@@ -19,7 +19,7 @@
           <?= $hero['badge'] ?? 'Elevate Your Business with AI' ?>
         </div>
 
-        <h1 class="display-5 fw-bold text-dark mb-4">
+        <h1 class="text-dark mb-4">
           <?= $hero['title'] ?? 'Empowering Smarter Business Through Data & AI Integration' ?>
         </h1>
 

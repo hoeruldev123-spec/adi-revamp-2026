@@ -26,7 +26,7 @@
     <!-- Middle Section -->
     <div class="row mt-4">
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Solutions</h6>
+        <h6 class="mb-3">Solutions</h6>
         <ul class="list-unstyled text-muted">
           <li><a href="#" class="footer-link">FMCG</a></li>
           <li><a href="#" class="footer-link">Telecom</a></li>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Services</h6>
+        <h6 class="mb-3">Services</h6>
         <ul class="list-unstyled text-muted">
           <li><a href="#" class="footer-link">Consultation</a></li>
           <li><a href="#" class="footer-link">Use Case Development</a></li>
@@ -47,7 +47,7 @@
       </div>
 
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Resources</h6>
+        <h6 class="mb-3">Resources</h6>
         <ul class="list-unstyled text-muted">
           <li><a href="#" class="footer-link">Article</a></li>
           <li><a href="#" class="footer-link">Career</a></li>
@@ -56,7 +56,7 @@
       </div>
 
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold mb-3">Contact</h6>
+        <h6 class="mb-3">Contact</h6>
         <ul class="list-unstyled text-muted">
           <li class="mb-2"><i class="bi bi-telephone me-2 text-primary"></i> +6221-29319396</li>
           <li class="mb-2"><i class="bi bi-envelope me-2 text-primary"></i> info@alldataint.com</li>
@@ -91,6 +91,7 @@
 <!-- ===== FOOTER END ===== -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({

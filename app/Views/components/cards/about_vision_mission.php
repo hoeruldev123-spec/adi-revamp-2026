@@ -9,7 +9,7 @@
     </div>
 
     <!-- Heading -->
-    <h2 class="fw-bold display-5 mb-3">
+    <h2 class="mb-3">
       <span class="text-primary">Empowering</span>
       <span class="text-secondary">Intelligent Enterprises Through <br> Data and AI</span>
     </h2>
@@ -19,7 +19,7 @@
 
       <!-- Vision -->
       <div id="content-vision" class="vm-box active" class="vm-box">
-        <p class="lead text-muted">
+        <p class=" text-muted">
           To be the trusted partner empowering organizations to transform with integrated data,
           advanced analytics, and AI-driven innovation.
         </p>
@@ -28,7 +28,7 @@
       <!-- Mission -->
       <div id="content-mission" class="vm-box active" class="vm-box hide">
 
-        <p class="lead text-muted">
+        <p class=" text-muted">
           Deliver innovative end-to-end data solutions</br>
           Help organizations accelerate digital transformation</br>
           Enable smarter decisions with AI & analytics</br>
@@ -40,7 +40,7 @@
 
     <!-- CTA Button -->
     <div class="mt-4">
-      <a href="<?= base_url('company'); ?>" class="btn btn-primary btn-lg rounded-pill px-5">
+      <a href="<?= base_url('about'); ?>" class="btn btn-primary btn-lg rounded-pill px-5">
         About Us <i class="bi bi-arrow-up-right ms-2"></i>
       </a>
     </div>
