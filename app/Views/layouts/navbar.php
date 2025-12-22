@@ -143,9 +143,9 @@ $segment2 = getSafeSegment(2);
             <i class="bi bi-chevron-down ms-1 <?= ($segment1 == 'resources') ? 'text-primary' : '' ?>"></i>
           </a>
           <ul class="dropdown-menu border-0 shadow-lg rounded-3 py-2 mt-1 mt-lg-2" aria-labelledby="resourcesDropdown">
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'blog') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('resources/blog'); ?>">
-                <i class="bi bi-newspaper me-2 <?= ($segment2 == 'blog') ? 'text-white' : 'text-muted' ?>"></i>Blog
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'articles') ? 'active bg-primary text-white' : '' ?>"
+                href="<?= base_url('resources/articles'); ?>">
+                <i class="bi bi-newspaper me-2 <?= ($segment2 == 'articles') ? 'text-white' : 'text-muted' ?>"></i>Articles
               </a></li>
             <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'careers') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('company/careers'); ?>">

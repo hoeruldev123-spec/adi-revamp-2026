@@ -4,26 +4,32 @@
 
 <?= $this->section('content') ?>
 
-<section>
+<section class="d-flex align-items-center">
+    <div class="container my-5 py-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 text-center">
+                <div class="error-code mb-3">
+                    <h1 class="display-1 fw-bold text-primary">404</h1>
+                </div>
 
-    <div class="container d-flex align-items-center justify-content-center text-center">
-        <div>
-            <div class="error-code">
-                <h1 class="display-1 fw-bold">404</h1>
+                <div class="error-text h2 mb-3 text-secondary">
+                    Oops! Page Not Found
+                </div>
+
+                <p class="error-desc lead text-muted mb-4 mx-auto" style="max-width: 600px;">
+                    The page you're looking for might have been moved, deleted,
+                    or never existed. Let's get you back on track.
+                </p>
+
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="/" class="btn btn-primary btn-lg rounded-pill">
+                        Back to Home
+                    </a>
+
+                </div>
+
+
             </div>
-
-            <div class="error-text mb-2">
-                Oops! Page Not Found
-            </div>
-
-            <p class="error-desc mx-auto mb-4">
-                The page you’re looking for might have been moved, deleted,
-                or never existed. Let’s get you back on track.
-            </p>
-
-            <a href="/" class="btn btn-primary btn-rounded">
-                Back to Home
-            </a>
         </div>
     </div>
 </section>

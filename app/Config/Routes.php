@@ -32,7 +32,6 @@ $routes->group('services', function ($routes) {
     $routes->get('training', 'ServicesController::training');
 });
 
-
 // Company dengan submenu sesuai dropdown
 $routes->group('company', function ($routes) {
     $routes->get('about', 'CompanyController::about');
@@ -43,13 +42,10 @@ $routes->group('company', function ($routes) {
 });
 $routes->get('/company/contact', 'ContactController::index');
 
-// Resources dengan submenu sesuai dropdown
-$routes->get('/resources', 'ResourcesController::index');
-$routes->get('/resources/blog', 'ResourcesController::blog');
-$routes->get('/resources/case-studies', 'ResourcesController::caseStudies');
-$routes->get('/resources/whitepapers', 'ResourcesController::whitepapers');
-$routes->get('/resources/webinars', 'ResourcesController::webinars');
-$routes->get('/resources/documentation', 'ResourcesController::documentation');
+// Resources Routes
+$routes->get('resources', 'ResourcesController::index');
+$routes->get('resources/articles', 'ResourcesController::articles');
+$routes->get('resources/events', 'ResourcesController::events');
 
 // Contact
 $routes->get('/contact', 'ContactController::index');
@@ -59,12 +55,6 @@ $routes->post('/contact/submit', 'ContactController::submit');
 // Search
 $routes->get('/search', 'SearchController::index');
 $routes->get('/search/(:any)', 'SearchController::results/$1');
-
-// Untuk route yang belum ada controller-nya, gunakan placeholder
-$routes->get('/about', 'CompanyController::about'); // Redirect ke company/about
-$routes->get('/team', 'CompanyController::team');   // Redirect ke company/team
-$routes->get('/careers', 'CompanyController::careers'); // Redirect ke company/careers
-$routes->get('/blog', 'ResourcesController::blog'); // Redirect ke resources/blog
 
 // API Routes (jika diperlukan)
 $routes->group('api', ['namespace' => 'App\Controllers\Api'], function ($routes) {

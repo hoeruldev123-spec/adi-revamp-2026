@@ -1,9 +1,9 @@
 <!-- ===== FOOTER START ===== -->
-<footer class="pt-5 mt-5 border-top">
+<footer class="pt-5 mt-5">
   <div class="container">
 
     <!-- Top Section -->
-    <div class="row align-items-start mb-5">
+    <div class="row align-items-start mb-3">
       <div class="col-md-6 col-lg-5 mb-4">
         <a href="<?= base_url(); ?>" class="d-inline-flex align-items-center mb-3">
           <img src="<?= base_url('assets/images/alldata_logo.png'); ?>" alt="All Data International" height="45">
@@ -21,7 +21,11 @@
       </div>
     </div>
 
+    <div class="border-top"></div>
+
     <hr>
+
+
 
     <!-- Middle Section -->
     <div class="row mt-4">

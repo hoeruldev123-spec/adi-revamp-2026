@@ -162,7 +162,7 @@ h6 {
   }
 }
 
-/* CLINET CARD STSTIS */
+/* CLIENT CARD STSTIS */
 .client-card-statis {
   height: 120px;
   border-radius: 16px;
@@ -1597,4 +1597,148 @@ footer hr {
   .timeline-card {
     width: 100%;
   }
+}
+
+/* ARTICLES */
+#articles-section {
+  background: linear-gradient(180deg, #008bf9 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.pattern-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0d6efd 0%, #198754 100%);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+/* Untuk desktop, putih lebih dominan */
+@media (min-width: 768px) {
+  #articles-section {
+    background: linear-gradient(180deg, #008bf9 0%, #2d9cff 15%, /* Biru cepat berubah */ #89beff 35%, /* Biru muda lebih cepat */ #cce5ff 60%, /* Biru sangat muda di tengah */ #e6f2ff 80%, /* Hampir putih */ #ffffff 100% /* Full putih */);
+  }
+}
+
+#articles-section .container {
+  position: relative;
+  z-index: 2; /* Konten di depan */
+}
+
+.thumbnail-container {
+  height: 160px;
+  overflow: hidden;
+}
+
+.thumbnail-image {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .thumbnail-image {
+  transform: scale(1.05);
+}
+
+.card {
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.card:hover .card-title a {
+  color: #0d6efd !important;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Line clamp for text */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .col-lg-8 .card > div:first-child {
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-lg-8 .card > div:first-child {
+    height: 200px !important;
+  }
+
+  .col-lg-4 .card .col-5 {
+    width: 40% !important;
+  }
+
+  .col-lg-4 .card .col-7 {
+    width: 60% !important;
+  }
+}
+
+.pattern-articles.min-height-section {
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .pattern-articles.min-height-section {
+    min-height: 30vh;
+    padding: 6rem 0;
+  }
+}
+
+/* all-articles */
+#all-articles-section {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  #all-articles-section {
+    background: #ffffff;
+  }
+}
+
+#all-articles-section .container {
+  position: relative;
+  z-index: 2; /* Konten di depan */
+}
+
+.blog-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.blog-thumbnail {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-thumbnail {
+  transform: scale(1.05);
 }
