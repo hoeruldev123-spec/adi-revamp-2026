@@ -29,7 +29,7 @@
 
                 <!-- Card -->
                 <div class="testimonial-card">
-                    <img src="<?= base_url('assets/images/client/Logo-BPJS.png') ?>" class="testimonial-logo" alt="">
+                    <img src="<?= base_url('assets/images/client/Logo-01.png') ?>" class="testimonial-logo" alt="">
                     <p class="testimonial-text">
                         “Lorem ipsum dolor sit amet consectetur. Lobortis hendrerit aliquam et congue urna in.
                         Lectus dolor elit egestas tincidunt amet risus.”
@@ -49,7 +49,7 @@
 
                 <!-- Duplikat card -->
                 <div class="testimonial-card">
-                    <img src="<?= base_url('assets/images/client/Logo-BRI.png') ?>" class="testimonial-logo" alt="">
+                    <img src="<?= base_url('assets/images/client/Logo-02.png') ?>" class="testimonial-logo" alt="">
                     <p class="testimonial-text">
                         “Mauris aenean ac augue amet. feugiat eget tellus tristique nullam accumsan blandit.”
                     </p>
@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <img src="<?= base_url('assets/images/client/Logo-PLN.png') ?>" class="testimonial-logo" alt="">
+                    <img src="<?= base_url('assets/images/client/Logo-03.png') ?>" class="testimonial-logo" alt="">
                     <p class="testimonial-text">
                         “Sed ut donec quis netus. Mauris aenean ac augue amet.”
                     </p>
