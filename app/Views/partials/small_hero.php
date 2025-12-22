@@ -40,7 +40,7 @@ $bg_class         = $bg_class         ?? 'bg-white';
 
         <div class="row align-items-center g-5">
             <!-- Content -->
-            <div class="<?= $image ? 'col-lg-6' : 'col-8' ?>">
+            <div class="<?= $image ? 'col-lg-6 col-12' : 'col-lg-8 col-12' ?>">
                 <div class="pe-lg-4">
 
                     <?php if ($subtitle): ?>

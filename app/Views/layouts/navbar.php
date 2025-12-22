@@ -1,5 +1,22 @@
 <!-- ===== NAVBAR START ===== -->
-<?php $uri = service('uri'); ?>
+<?php
+$uri = service('uri');
+
+// Helper function untuk mendapatkan segment dengan aman
+function getSafeSegment($index)
+{
+  try {
+    $uri = service('uri');
+    return $uri->getSegment($index);
+  } catch (\CodeIgniter\HTTP\Exceptions\HTTPException $e) {
+    return null;
+  }
+}
+
+$segment1 = getSafeSegment(1);
+$segment2 = getSafeSegment(2);
+?>
+
 <nav class="navbar navbar-expand-lg navbar-white bg-white py-2 py-lg-3 sticky-top border-bottom shadow-sm" data-aos="fade-down">
   <div class="container">
 
@@ -34,35 +51,34 @@
     <div class="collapse navbar-collapse mt-3 mt-lg-0" id="mainNavbar">
       <ul class="navbar-nav me-auto align-items-lg-center">
 
-        <!-- Solutions dengan dropdown - CHEVRON SELALU ADA -->
+        <!-- Solutions dengan dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-between 
-            <?= ($uri->getSegment(1) == 'solutions') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
+            <?= ($segment1 == 'solutions') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
             href="<?= base_url('solutions') ?>"
             id="solutionsDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false">
             <span>Solutions</span>
-            <!-- CHEVRON SELALU ADA, bedakan warna saat active -->
-            <i class="bi bi-chevron-down ms-1 <?= ($uri->getSegment(1) == 'solutions') ? 'text-primary' : '' ?>"></i>
+            <i class="bi bi-chevron-down ms-1 <?= ($segment1 == 'solutions') ? 'text-primary' : '' ?>"></i>
           </a>
           <ul class="dropdown-menu border-0 shadow-lg rounded-3 py-2 mt-1 mt-lg-2" aria-labelledby="solutionsDropdown">
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($uri->getSegment(2) == 'fmcg') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'fmcg') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('solutions/fmcg'); ?>">
-                <i class="bi bi-cart3 me-2 <?= ($uri->getSegment(2) == 'fmcg') ? 'text-white' : 'text-muted' ?>"></i>FMCG
+                <i class="bi bi-cart3 me-2 <?= ($segment2 == 'fmcg') ? 'text-white' : 'text-muted' ?>"></i>FMCG
               </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($uri->getSegment(2) == 'telecom') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'telecom') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('solutions/telecom'); ?>">
-                <i class="bi bi-phone me-2 <?= ($uri->getSegment(2) == 'telecom') ? 'text-white' : 'text-muted' ?>"></i>Telecom
+                <i class="bi bi-phone me-2 <?= ($segment2 == 'telecom') ? 'text-white' : 'text-muted' ?>"></i>Telecom
               </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($uri->getSegment(2) == 'government') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'government') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('solutions/government'); ?>">
-                <i class="bi bi-building me-2 <?= ($uri->getSegment(2) == 'government') ? 'text-white' : 'text-muted' ?>"></i>Government
+                <i class="bi bi-building me-2 <?= ($segment2 == 'government') ? 'text-white' : 'text-muted' ?>"></i>Government
               </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($uri->getSegment(2) == 'financial') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'financial') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('solutions/financial'); ?>">
-                <i class="bi bi-bank me-2 <?= ($uri->getSegment(2) == 'financial') ? 'text-white' : 'text-muted' ?>"></i>Financial
+                <i class="bi bi-bank me-2 <?= ($segment2 == 'financial') ? 'text-white' : 'text-muted' ?>"></i>Financial
               </a></li>
             <li>
               <hr class="dropdown-divider mx-3 mx-lg-4 my-2">
@@ -76,70 +92,68 @@
 
         <!-- Services -->
         <li class="nav-item">
-          <a class="nav-link <?= ($uri->getSegment(1) == 'services') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
+          <a class="nav-link <?= ($segment1 == 'services') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
             href="<?= base_url('services'); ?>">
             Services
           </a>
         </li>
 
-        <!-- Company dengan dropdown - CHEVRON SELALU ADA -->
+        <!-- Company dengan dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-between
-            <?= ($uri->getSegment(1) == 'company' || $uri->getSegment(1) == 'about') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
+            <?= ($segment1 == 'company' || $segment1 == 'about') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
             href="<?= base_url('company') ?>"
             id="companyDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false">
             <span>Company</span>
-            <!-- CHEVRON SELALU ADA -->
-            <i class="bi bi-chevron-down ms-1 <?= ($uri->getSegment(1) == 'company' || $uri->getSegment(1) == 'about') ? 'text-primary' : '' ?>"></i>
+            <i class="bi bi-chevron-down ms-1 <?= ($segment1 == 'company' || $segment1 == 'about') ? 'text-primary' : '' ?>"></i>
           </a>
           <ul class="dropdown-menu border-0 shadow-lg rounded-3 py-2 mt-1 mt-lg-2" aria-labelledby="companyDropdown">
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($uri->getSegment(2) == 'our_partners') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our_partners') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('company/our_partners'); ?>">
-                <i class="bi bi-link-45deg me-2 <?= ($uri->getSegment(2) == 'our_partners') ? 'text-white' : 'text-muted' ?>"></i>Our Partners
+                <i class="bi bi-link-45deg me-2 <?= ($segment2 == 'our_partners') ? 'text-white' : 'text-muted' ?>"></i>Our Partners
               </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($uri->getSegment(2) == 'our_clients') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our_clients') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('company/our_clients'); ?>">
-                <i class="bi bi-people me-2 <?= ($uri->getSegment(2) == 'our_clients') ? 'text-white' : 'text-muted' ?>"></i>Our Clients
+                <i class="bi bi-people me-2 <?= ($segment2 == 'our_clients') ? 'text-white' : 'text-muted' ?>"></i>Our Clients
               </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($uri->getSegment(2) == 'our_competencies') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our_competencies') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('company/our_competencies'); ?>">
-                <i class="bi bi-gear me-2 <?= ($uri->getSegment(2) == 'our_competencies') ? 'text-white' : 'text-muted' ?>"></i>Our Competencies
+                <i class="bi bi-gear me-2 <?= ($segment2 == 'our_competencies') ? 'text-white' : 'text-muted' ?>"></i>Our Competencies
               </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($uri->getSegment(2) == 'about') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'about') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('company/about'); ?>">
-                <i class="bi bi-info-circle me-2 <?= ($uri->getSegment(2) == 'about') ? 'text-white' : 'text-muted' ?>"></i>About Us
+                <i class="bi bi-info-circle me-2 <?= ($segment2 == 'about') ? 'text-white' : 'text-muted' ?>"></i>About Us
               </a></li>
           </ul>
         </li>
 
-        <!-- Resources dengan dropdown - CHEVRON SELALU ADA -->
+        <!-- Resources dengan dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-between
-            <?= ($uri->getSegment(1) == 'resources') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
+            <?= ($segment1 == 'resources') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
             href="<?= base_url('resources') ?>"
             id="resourcesDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false">
             <span>Resources</span>
-            <!-- CHEVRON SELALU ADA -->
-            <i class="bi bi-chevron-down ms-1 <?= ($uri->getSegment(1) == 'resources') ? 'text-primary' : '' ?>"></i>
+            <i class="bi bi-chevron-down ms-1 <?= ($segment1 == 'resources') ? 'text-primary' : '' ?>"></i>
           </a>
           <ul class="dropdown-menu border-0 shadow-lg rounded-3 py-2 mt-1 mt-lg-2" aria-labelledby="resourcesDropdown">
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($uri->getSegment(2) == 'blog') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'blog') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('resources/blog'); ?>">
-                <i class="bi bi-newspaper me-2 <?= ($uri->getSegment(2) == 'blog') ? 'text-white' : 'text-muted' ?>"></i>Blog
+                <i class="bi bi-newspaper me-2 <?= ($segment2 == 'blog') ? 'text-white' : 'text-muted' ?>"></i>Blog
               </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($uri->getSegment(2) == 'careers') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'careers') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('company/careers'); ?>">
-                <i class="bi bi-briefcase me-2 <?= ($uri->getSegment(2) == 'careers') ? 'text-white' : 'text-muted' ?>"></i>Careers
+                <i class="bi bi-briefcase me-2 <?= ($segment2 == 'careers') ? 'text-white' : 'text-muted' ?>"></i>Careers
               </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($uri->getSegment(2) == 'events') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'events') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('resources/events'); ?>">
-                <i class="bi bi-calendar-event me-2 <?= ($uri->getSegment(2) == 'events') ? 'text-white' : 'text-muted' ?>"></i>Events
+                <i class="bi bi-calendar-event me-2 <?= ($segment2 == 'events') ? 'text-white' : 'text-muted' ?>"></i>Events
               </a></li>
           </ul>
         </li>
