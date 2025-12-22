@@ -9,6 +9,12 @@
   <meta property="og:url" content="<?= current_url() ?>">
   <meta property="og:image" content="<?= esc($og_image ?? base_url('assets/images/og-default.png')) ?>">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="<?= base_url('assets/images/all-data-international-logo-site.png') ?>">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('assets/images/all-data-international-logo-site.png') ?>">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/images/all-data-international-logo-site.png') ?>">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/images/all-data-international-logo-site.png') ?>">
+  <link rel="manifest" href="<?= base_url('assets/site.webmanifest') ?>">
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
