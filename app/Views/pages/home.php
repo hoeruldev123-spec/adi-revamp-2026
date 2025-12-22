@@ -27,7 +27,7 @@
           <?= $hero['description'] ?? 'We deliver integrated solutions that transform complex data into clear insights and smarter business outcomes.' ?>
         </p>
 
-        <a href="/solutions" class="btn btn-primary btn-lg rounded-pill px-4 py-2 shadow-sm">
+        <a href="/services" class="btn btn-primary btn-lg rounded-pill shadow-sm">
           Learn More <i class="bi bi-arrow-up-right ms-2"></i>
         </a>
       </div>

@@ -67,10 +67,29 @@ class CompanyController extends BaseController
 
     public function ourCompetencies()
     {
-        return view('pages/company/our_competencies', [
-            'title'       => 'Our Competencies',
-            'description' => 'Our core capabilities and technical expertise.',
-        ]);
+
+        $data = [
+
+            // Meta tags
+            'meta_title' => 'Our Competencies | Data & AI Solutions Expertise',
+            'meta_description' => 'Explore our comprehensive competencies in enterprise architecture, data engineering, AI/ML, and digital transformation.',
+            'meta_keywords' => 'data competencies, AI expertise, enterprise architecture, data engineering, digital transformation',
+
+            'subtitle' => 'Competencies',
+            'title' => 'Key Features For your Data Analytics',
+            'description' => 'All Data International believes that data drives innovation and helps businesses become more efficient and successful. With our AI expertise, we provide data solutions that help our customers achieve their goals effectively.',
+            'image' => false,
+
+            'cta_text' => false,
+            'cta_link' => false,
+            'bg_class' => 'bg-white',
+            'pattern' => true,
+            'pattern_opacity' => 100,
+
+            // Content lainnya...
+        ];
+
+        return view('pages/company/our_competencies', $data);
     }
 
     public function team()
