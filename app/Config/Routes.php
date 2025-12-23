@@ -45,7 +45,7 @@ $routes->get('/company/contact', 'ContactController::index');
 // Resources Routes
 $routes->get('resources', 'ResourcesController::index');
 $routes->get('resources/articles', 'ResourcesController::articles');
-$routes->get('resources/events', 'ResourcesController::events');
+// $routes->get('resources/events', 'ResourcesController::events');
 
 // Contact
 $routes->get('/contact', 'ContactController::index');

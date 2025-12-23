@@ -8,17 +8,25 @@
       <span class="vm-slider"></span>
     </div>
 
-    <!-- Heading -->
-    <h2 class="mb-3">
-      <span class="text-primary">Empowering</span>
-      <span class="text-secondary">Intelligent Enterprises Through <br> Data and AI</span>
-    </h2>
 
     <!-- Content -->
     <div id="vm-content" class="mx-auto" style="max-width: 700px;">
 
       <!-- Vision -->
       <div id="content-vision" class="vm-box active" class="vm-box">
+        <!-- Heading -->
+        <h2 class="mb-3">
+          <span class="animate-fade-blue" style="--delay: 0.5s">Empowering</span>
+          <span class="word-fade" style="--delay: 0.8s">Intelligent</span>
+          <span class="word-fade" style="--delay: 1.1s">Enterprises</span>
+          <span class="word-fade" style="--delay: 1.4s">Through</span>
+          <br>
+          <span class="word-fade" style="--delay: 1.7s">Data</span>
+          <span class="word-fade" style="--delay: 2.0s">and</span>
+          <span class="word-fade" style="--delay: 2.3s">AI</span>
+
+        </h2>
+
         <p class=" text-muted">
           To be the trusted partner empowering organizations to transform with integrated data,
           advanced analytics, and AI-driven innovation.
@@ -27,6 +35,18 @@
 
       <!-- Mission -->
       <div id="content-mission" class="vm-box active" class="vm-box hide">
+        <!-- Heading -->
+        <h2 class="mb-3">
+          <span class="animate-fade-blue" style="--delay: 0.5s">Transforming</span>
+          <span class="word-fade" style="--delay: 0.8s">Technology</span>
+          <span class="word-fade" style="--delay: 1.1s">into</span>
+          <span class="word-fade" style="--delay: 1.4s">Business</span>
+          <span class="word-fade" style="--delay: 1.7s">Value</span>
+
+
+        </h2>
+
+
 
         <p class=" text-muted">
           Deliver innovative end-to-end data solutions</br>
@@ -53,6 +73,7 @@
 
   </div>
 </section>
+
 
 <script>
   const btns = document.querySelectorAll(".vm-btn");
@@ -91,6 +112,37 @@
         missionBox.classList.add("active");
         missionBox.classList.remove("hide-right");
       }
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const vmButtons = document.querySelectorAll('.vm-btn');
+    const animatedWords = document.querySelectorAll('.animate-fade-blue, .word-fade');
+
+    vmButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const vmSwitcher = this.closest('.vm-switcher');
+
+        // Reset warna ke abu-abu
+        animatedWords.forEach(word => {
+          word.style.animation = 'none';
+          word.style.color = '#c6c6c6';
+          word.classList.remove('animate-again');
+
+          // Force reflow untuk restart animasi
+          void word.offsetWidth;
+
+          // Tambah class untuk trigger animasi ulang
+          setTimeout(() => {
+            word.classList.add('animate-again');
+            word.style.animation = '';
+          }, 50);
+        });
+
+        // Add clicked class untuk CSS
+        vmSwitcher.classList.add('clicked');
+        setTimeout(() => vmSwitcher.classList.remove('clicked'), 1000);
+      });
     });
   });
 </script>

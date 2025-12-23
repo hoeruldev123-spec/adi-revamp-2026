@@ -32,6 +32,6 @@ class ResourcesController extends BaseController
             'active_subpage' => 'events'
         ];
 
-        return view('resources/events', $data);
+        return view('pages/resources/events', $data);
     }
 }

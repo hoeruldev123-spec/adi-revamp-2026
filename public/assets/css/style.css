@@ -649,23 +649,51 @@ footer hr {
   background: linear-gradient(180deg, #f9fbff 0%, #ffffff 100%);
 }
 
-/* ===== Vision Mission Switcher ===== */
+/* ===== Vision Mission ===== */
+/* Animasi Hero blue */
+.animate-fade-blue,
+.word-fade {
+  color: #c6c6c6;
+  animation: wordToBlue 0.8s ease forwards;
+  animation-delay: var(--delay);
+}
 
+@keyframes wordToBlue {
+  0% {
+    color: #c6c6c6;
+  }
+
+  100% {
+    color: #0d6efd;
+  }
+}
+
+/* Reset animasi saat switcher diklik */
+.vm-switcher.clicked ~ h2 .animate-fade-blue,
+.vm-switcher.clicked ~ h2 .word-fade {
+  animation: none;
+  color: #c6c6c6;
+}
+
+.vm-switcher.clicked ~ h2 .animate-fade-blue.animate-again,
+.vm-switcher.clicked ~ h2 .word-fade.animate-again {
+  animation: wordToBlue 0.8s ease forwards;
+}
 .vm-switcher {
   position: relative;
-  display: flex;
-  width: 320px;
+  display: inline-flex;
   padding: 6px;
   background: #f6f8fa;
   border-radius: 40px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-  gap: 4px;
 }
 
+/* Switcher */
+
 .vm-btn {
-  flex: 1;
+  position: relative;
   z-index: 2;
-  padding: 12px 0;
+  padding: 12px 40px; /* Equal padding untuk kedua tombol */
   background: transparent;
   border: none;
   border-radius: 40px;
@@ -673,23 +701,30 @@ footer hr {
   font-weight: 500;
   color: #363a40;
   cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.vm-btn.active {
-  color: #111;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
 }
 
 .vm-slider {
   position: absolute;
   top: 6px;
   left: 6px;
-  width: calc(50% - 4px);
   height: calc(100% - 12px);
   background: #fff;
   border-radius: 40px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.35s ease;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  width: calc(50% - 6px);
+}
+
+/* Presisi berdasarkan button yang aktif */
+.vm-btn.active ~ .vm-slider {
+  transform: translateX(0);
+}
+
+.vm-btn[data-target="mission"].active ~ .vm-slider {
+  transform: translateX(100%);
 }
 
 /* --- VM Content Animation --- */
