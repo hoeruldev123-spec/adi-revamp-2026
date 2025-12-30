@@ -2,7 +2,7 @@
 <div class="container-fluid my-5 text-center client-appear">
   <p class="text-muted mb-6">
     Trusted by 1000+ Clients as a partner in technology
-    <a href="#" class="text-primary text-decoration-none">
+    <a href="company/our_clients" class="text-primary text-decoration-none">
       More Clients <i class="bi bi-arrow-right"></i>
     </a>
   </p>
