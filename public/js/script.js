@@ -28,6 +28,68 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// SOLUTION SECTION HOME
+document.addEventListener("DOMContentLoaded", function () {
+  const solutionItems = document.querySelectorAll(".solution-item");
+  const mainImage = document.getElementById("solution-main-image");
+
+  function activateSolution(item) {
+    // Remove active class from all items
+    solutionItems.forEach((el) => {
+      el.classList.remove("active");
+      el.querySelector(".solution-full").classList.remove("show");
+      el.querySelector(".solution-collapsed").classList.add("show");
+    });
+
+    // Add active class to clicked item
+    item.classList.add("active");
+    item.querySelector(".solution-full").classList.add("show");
+    item.querySelector(".solution-collapsed").classList.remove("show");
+
+    // Update image with fade effect
+    const newImage = item.getAttribute("data-image");
+    const newAlt = item.querySelector("h5").textContent + " Solution";
+
+    if (mainImage.src !== newImage) {
+      // Fade out current image
+      mainImage.classList.add("fade-out");
+
+      setTimeout(() => {
+        // Change image source
+        mainImage.src = newImage;
+        mainImage.alt = newAlt;
+
+        // Fade in new image
+        mainImage.classList.remove("fade-out");
+        mainImage.classList.add("fade-in");
+
+        // Remove fade-in class after animation
+        setTimeout(() => {
+          mainImage.classList.remove("fade-in");
+        }, 500);
+      }, 300);
+    }
+  }
+
+  // Add click event listeners
+  solutionItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      activateSolution(this);
+    });
+  });
+
+  // Optional: Auto-activate on hover (uncomment if needed)
+  /*
+        solutionItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                if (!this.classList.contains('active')) {
+                    activateSolution(this);
+                }
+            });
+        });
+        */
+});
+
 // File: principal.js
 document.addEventListener("DOMContentLoaded", function () {
   // Data principals
