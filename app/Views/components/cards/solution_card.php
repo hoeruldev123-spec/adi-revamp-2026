@@ -1,7 +1,6 @@
-<!-- File: solutions.php -->
 <section id="solutions-section" class="py-5">
     <div class="container">
-        <!-- Header -->
+
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center mb-5">
                 <h6 class="text-uppercase text-primary mb-2">Solutions</h6>
@@ -13,14 +12,13 @@
                 </p>
             </div>
         </div>
-        <!-- end header -->
 
         <div class="row align-items-center">
-            <!-- LEFT : Solutions List -->
-            <div class="col-lg-5 mb-4 mb-lg-0">
+
+            <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="solution-list">
                     <?php
-                    // Data solutions
+
                     $solutions = [
                         [
                             'id' => 'fmcg',
@@ -51,7 +49,7 @@
                             'title' => 'Financial',
                             'icon' => 'bi-bank',
                             'description' => 'Mitigate risks and detect fraud with advanced analytics and AI-powered security solutions.',
-                            'image' => base_url('assets/images/solutions-financial.webp'), // Ganti dengan gambar yang sesuai
+                            'image' => base_url('assets/images/solutions-financial.webp'),
                             'active' => false
                         ]
                     ];
@@ -62,7 +60,7 @@
                             data-target="<?= $solution['id'] ?>"
                             data-image="<?= $solution['image'] ?>">
 
-                            <!-- Bagian atas: header dengan icon dan title -->
+
                             <div class="solution-header d-flex align-items-center gap-3">
                                 <div class="icon-box">
                                     <i class="bi <?= $solution['icon'] ?>"></i>
@@ -70,9 +68,9 @@
                                 <h5 class="mb-0"><?= $solution['title'] ?></h5>
                             </div>
 
-                            <!-- Bagian bawah: konten deskripsi dan tombol -->
+
                             <div class="solution-content pt-2">
-                                <!-- Full content (visible when active) -->
+
                                 <div class="solution-full <?= $solution['active'] ? 'show' : '' ?>">
                                     <p class="mb-3 text-muted">
                                         <?= $solution['description'] ?>
@@ -82,7 +80,7 @@
                                     </a>
                                 </div>
 
-                                <!-- Collapsed content (visible when inactive) -->
+
                                 <div class="solution-collapsed">
 
                                 </div>
@@ -92,8 +90,8 @@
                 </div>
             </div>
 
-            <!-- RIGHT : Image Card -->
-            <div class="col-lg-7">
+
+            <div class="col-lg-6">
                 <div class="solution-image-wrapper">
                     <img src="<?= $solutions[0]['image'] ?>"
                         alt="<?= $solutions[0]['title'] ?> Solution"

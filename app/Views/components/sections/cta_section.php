@@ -4,17 +4,6 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="cta-card position-relative rounded-4 p-5 text-center text-white overflow-hidden">
-                    <!-- Background Decoration -->
-                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10">
-                        <svg class="w-100 h-100" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="80" fill="currentColor" opacity="0.3" />
-                            <circle cx="1100" cy="80" r="60" fill="currentColor" opacity="0.2" />
-                            <circle cx="200" cy="350" r="50" fill="currentColor" opacity="0.25" />
-                            <circle cx="1000" cy="320" r="70" fill="currentColor" opacity="0.2" />
-                            <circle cx="600" cy="50" r="40" fill="currentColor" opacity="0.3" />
-                            <circle cx="800" cy="380" r="45" fill="currentColor" opacity="0.25" />
-                        </svg>
-                    </div>
 
                     <!-- Cloud Decoration at Bottom -->
                     <div class="position-absolute bottom-0 start-0 w-100" style="height: 120px; margin-bottom: -2px;">
@@ -26,25 +15,22 @@
                     </div>
 
                     <!-- Content -->
-                    <div class="position-relative z-1">
-                        <h2 class="mb-3 animate-fade-in">
+                    <div class="position-relative z-1 bg-white bg-opacity-75 rounded-4 p-4 p-md-5 shadow-lg">
+                        <h2 class="mb-3 animate-fade-in text-dark">
                             Ready to Harness the Power of<br>
                             Data Analytics for Your Business
                         </h2>
-                        <p class="mb-4 animate-fade-in-delay">
+                        <p class="mb-4 animate-fade-in-delay text-dark">
                             Turn your data into meaningful actions that help your business grow smarter and faster.<br>
                             Together, let's move forward toward real data driven success
                         </p>
 
                         <div class="d-flex gap-3 justify-content-center flex-wrap animate-fade-in-delay-2">
-                            <a href="<?= base_url('contact') ?>" class="btn btn-light btn-lg rounded-pill d-inline-flex align-items-center gap-2 shadow-lg btn-hover">
+                            <a href="<?= base_url('contact') ?>" class="btn btn-primary rounded-pill btn-hover-up">
                                 <span>Contact Us</span>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                                    <polyline points="7 7 17 7 17 17"></polyline>
-                                </svg>
+                                <i class="bi bi-arrow-up-right btn-icon"></i>
                             </a>
-                            <a href="<?= base_url('about') ?>" class="btn btn-outline-light btn-lg rounded-pill shadow-lg btn-hover-outline">
+                            <a href="<?= base_url('about') ?>" class="btn border-primary rounded-pill bg-white text-primary btn-hover-up">
                                 Get to know us!
                             </a>
                         </div>
