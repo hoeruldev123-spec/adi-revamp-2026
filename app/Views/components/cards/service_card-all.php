@@ -1,7 +1,7 @@
 <section id="services-section" class="py-5 position-relative">
   <div class="pattern-bg"></div>
 
-  <div class="container text-center text-white">
+  <div class="container text-center text-white" data-aos="fade-up">
     <h6 class="text-uppercase mb-2">Services</h6>
     <h2 class="mb-3">Intelligent Services for Modern Businesses.</h2>
     <p class="mb-5">

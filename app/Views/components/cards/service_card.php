@@ -1,7 +1,7 @@
 <section id="services-section" class="py-5 position-relative">
   <div class="pattern-bg"></div>
 
-  <div class="container text-center text-white">
+  <div class="container text-center text-white" data-aos="fade-up">
 
     <h6 class="text-uppercase mb-2">Services</h6>
     <h2 class="mb-3">Intelligent Services for Modern Businesses.</h2>
@@ -36,7 +36,6 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
       <div class="col-md-4">
         <div class="service-card card border-0 shadow-sm rounded-4 h-100">
           <div class="card-img-top position-relative overflow-hidden rounded-top-4">
@@ -52,7 +51,6 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
       <div class="col-md-4">
         <div class="service-card card border-0 shadow-sm rounded-4 h-100">
           <div class="card-img-top position-relative overflow-hidden rounded-top-4">

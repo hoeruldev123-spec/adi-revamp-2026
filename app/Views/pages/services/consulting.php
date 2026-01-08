@@ -4,11 +4,9 @@
 
 <?= $this->section('content') ?>
 
-<!-- Panggil Small Hero -->
 <?= $this->include('partials/small_hero', []) ?>
 
-<!-- Konten detail service di bawah hero -->
-<section class="py-5">
+<section class="py-5" data-aos="fade-up">
     <div class="container">
         <h5>What to Expect</h5>
         <p>Every great transformation starts with the right strategy. Our consultants dive deep into your business goals to design a clear, data-driven roadmap for AI adoption and integration. We help you uncover opportunities, minimize risks, and make confident technology decisions.
@@ -21,7 +19,7 @@
         <h5>Who It's For</h5>
         <p>Organizations ready to embrace data and AI but seeking clarity, direction, and expert partnership to move forward.
         </p>
-        <!-- Konten detail di sini -->
+
     </div>
 </section>
 

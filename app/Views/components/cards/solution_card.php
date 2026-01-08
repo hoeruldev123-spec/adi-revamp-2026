@@ -1,5 +1,5 @@
 <section id="solutions-section" class="py-5">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
 
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center mb-5">

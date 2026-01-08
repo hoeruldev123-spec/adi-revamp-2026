@@ -1,11 +1,10 @@
-<!-- app/Views/pages/resources/articles.php -->
 <?= $this->extend('layouts/main') ?>
 
 <?= $this->section('title') ?>Articles | All Data International<?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
 
-<section id="articles-section" class="py-5 position-relative">
+<section id="articles-section" class="py-5 position-relative" data-aos="fade-up">
     <div class="container text-center text-white">
         <div class="pattern-articles min-height-section">
             <div class="container">
@@ -73,7 +72,6 @@
                 $default_large = "https://placehold.co/800x400/0d6efd/ffffff?text=Featured+Article";
                 $default_small = "https://placehold.co/400x200/6c757d/ffffff?text=Article";
 
-                // Cek jika ada embedded media
                 if (!isset($article['_embedded']['wp:featuredmedia'][0])) {
                     return $size === 'large' ? $default_large : $default_small;
                 }
@@ -109,7 +107,6 @@
                 return $size === 'large' ? $default_large : $default_small;
             }
 
-            // Fetch articles
             $articles = fetchArticlesWithRetry();
 
             // Fallback demo data
@@ -155,7 +152,6 @@
                 $main_article = $articles[0];
             ?>
 
-                <!-- KOLOM KIRI: Artikel Utama -->
                 <div class="col-lg-8 mb-4 mb-lg-0">
                     <div class="card border-0 shadow-sm h-100 overflow-hidden">
                         <!-- Thumbnail Besar dengan Fallback -->

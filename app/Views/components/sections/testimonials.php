@@ -1,7 +1,6 @@
 <section id="testimonials" class="py-5 bg-white">
     <div class="container">
 
-        <!-- Header -->
         <div class="d-flex justify-content-between align-items-start mb-4 flex-wrap gap-3">
             <div>
                 <h6 class="text-uppercase text-primary fw-semibold mb-2">Testimonials</h6>
@@ -12,7 +11,6 @@
                 </p>
             </div>
 
-            <!-- Navigation -->
             <div class="d-flex gap-2">
                 <button class="testimonial-nav prev">
                     <i class="bi bi-arrow-left"></i>
@@ -23,11 +21,9 @@
             </div>
         </div>
 
-        <!-- Slider -->
         <div class="testimonial-slider-wrapper">
             <div class="testimonial-slider">
 
-                <!-- Card -->
                 <div class="testimonial-card">
                     <img src="<?= base_url('assets/images/client/Logo-01.png') ?>" class="testimonial-logo" alt="">
                     <p class="testimonial-text">
@@ -47,7 +43,6 @@
                     </div>
                 </div>
 
-                <!-- Duplikat card -->
                 <div class="testimonial-card">
                     <img src="<?= base_url('assets/images/client/Logo-02.png') ?>" class="testimonial-logo" alt="">
                     <p class="testimonial-text">

@@ -2,7 +2,7 @@
     <div class="container">
 
         <!-- Item Enterprise Architecture & Technology Modernization -->
-        <div class="row align-items-center gy-4 mb-5">
+        <div class="row align-items-center gy-4 mb-5" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
                     <img src="<?= base_url('assets/images/conpetencies/competencies-Enterprise-Architecture.png') ?>" alt="" class="img-fluid">
@@ -38,7 +38,7 @@
 
         <!-- Modern Data Storage for AI-Driven Enterprise -->
         <!-- Item 02 (zig-zag) -->
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
+        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
                     <img src="<?= base_url('assets/images/conpetencies/competencies-modern-data-storage-ai-driven-enterprise.png') ?>" alt="" class="img-fluid">
@@ -65,7 +65,7 @@
 
         <!-- Data Engineering & Integration -->
         <!-- Item 03 -->
-        <div class="row align-items-center gy-4">
+        <div class="row align-items-center gy-4" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
                     <img src="<?= base_url('assets/images/conpetencies/competencies-data-engineering-integration-solutions.png') ?>" alt="" class="img-fluid">
@@ -100,7 +100,7 @@
 
         <!-- Data Virtualization -->
         <!-- Item 02 (zig-zag) -->
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
+        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
                     <img src="<?= base_url('assets/images/conpetencies/competencies-data-virtualization-solutions.png') ?>" alt="" class="img-fluid">
@@ -134,7 +134,7 @@
         </div>
 
         <!-- Item Data Warehousing & Business Intelligence -->
-        <div class="row align-items-center gy-4">
+        <div class="row align-items-center gy-4" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
                     <img src="<?= base_url('assets/images/conpetencies/competencies-data-warehousing-business-intelligence.png') ?>" alt="" class="img-fluid">
@@ -165,7 +165,7 @@
 
         <!-- Item Data Strategy & Governance -->
         <!-- (zig-zag) -->
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
+        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
                     <img src="<?= base_url('assets/images/conpetencies/competencies-data-strategy-governance.png') ?>" alt="" class="img-fluid">
@@ -195,7 +195,7 @@
         </div>
 
         <!-- Item Advanced Analytics & Machine Learning -->
-        <div class="row align-items-center gy-4">
+        <div class="row align-items-center gy-4" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
                     <img src="<?= base_url('assets/images/conpetencies/competencies-advanced-analytics-machine-learning.png') ?>" alt="" class="img-fluid">
@@ -226,7 +226,7 @@
 
         <!-- Item Data Quality & Management -->
         <!-- (zig-zag) -->
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
+        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
                     <img src="<?= base_url('assets/images/conpetencies/competencies-data-quality-management-solutions.png') ?>" alt="" class="img-fluid">
@@ -252,7 +252,7 @@
         </div>
 
         <!-- Item Infrastructure & Security Solutions -->
-        <div class="row align-items-center gy-4">
+        <div class="row align-items-center gy-4" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
                     <img src="<?= base_url('assets/images/conpetencies/competencies-data-infrastructure-security-solutions.png') ?>" alt="" class="img-fluid">

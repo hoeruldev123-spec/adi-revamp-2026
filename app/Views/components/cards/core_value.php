@@ -1,4 +1,4 @@
-<section id="services-section" class="py-5 position-relative">
+<section id="services-section" class="py-5 position-relative" data-aos="fade-up">
   <div class="pattern-bg"></div>
 
   <div class="container text-center text-white">
@@ -7,7 +7,6 @@
     <p class="mb-5">
       Our team empowers enterprises to analyze real-time data, uncover predictive insights, and turn challenges into opportunities. We value creativity, continuous learning, and innovation delivering the best solutions and services for our customers</p>
 
-    <!-- CARD CONTEN -->
     <div class="row g-4 justify-content-center">
       <!-- Card 1 -->
       <div class="col-md-6">

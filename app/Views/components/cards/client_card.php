@@ -1,5 +1,4 @@
-<!-- Client Logos -->
-<div class="container-fluid my-5 text-center client-appear">
+<div class="container-fluid my-5 text-center client-appear" data-aos="fade-up">
   <p class="text-muted mb-6">
     Trusted by 1000+ Clients as a partner in technology
     <a href="company/our_clients" class="text-primary text-decoration-none">

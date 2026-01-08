@@ -1,7 +1,6 @@
 <div class="container py-5">
-  <div class="row g-4 justify-content-center">
+  <div class="row g-4 justify-content-center" data-aos="fade-up">
 
-    <!-- Card -->
     <div class="col-6 col-md-4 col-lg-3">
       <div class="client-card-statis">
         <img src="<?= base_url('assets/images/client/Logo-01.png'); ?>" alt="Allianz">

@@ -1,23 +1,18 @@
-<section id="principal-section" class="py-5 bg-light">
+<section id="principal-section" class="py-5 bg-light" data-aos="fade-up">
     <div class="container">
         <div class="row align-items-center g-5">
-            <!-- Content -->
             <div class="col-lg-6">
                 <div class="pe-lg-4 position-relative">
-                    <!-- Subtitle -->
                     <div class="hero-subtitle text-uppercase text-primary fw-semibold">
                         MORE PARTNERS
                     </div>
 
-                    <!-- Title -->
                     <h1 class="display-5 fw-bold mb-4">Driven by Strong Partnerships</h1>
 
-                    <!-- Description -->
                     <p class="lead text-muted mb-4">
                         Our collaboration with top principals drives innovation and growth, empowering businesses to move forward with confidence.
                     </p>
 
-                    <!-- CTA Buttons -->
                     <div class="d-flex flex-wrap gap-3 align-items-center">
                         <a href="/kontak" class="btn btn-primary btn-lg rounded-pill px-4 py-2 shadow-sm">
                             Explore Partners <i class="bi bi-arrow-right ms-2"></i>
@@ -26,7 +21,6 @@
                 </div>
             </div>
 
-            <!-- Logo -->
             <div class="col-lg-6">
                 <div id="principalCards">
                     <!-- Page 1 (First 6 cards) -->

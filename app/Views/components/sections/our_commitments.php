@@ -1,6 +1,5 @@
-<section id="principal-section" class="py-5 bg-light">
+<section id="principal-section" class="py-5 bg-light" data-aos="fade-up">
     <div class="container">
-        <!-- Header Section -->
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">
                 <h6 class="text-uppercase text-primary mb-2">OUR COMMITMENT</h6>
@@ -9,10 +8,8 @@
             </div>
         </div>
 
-        <!-- ISO Cards -->
         <div id="isocard">
             <div class="row g-4 justify-content-center">
-                <!-- ISO Card 1 -->
                 <div class="col-lg-3 col-md-6">
                     <div class="iso-img-container">
                         <img src="<?= base_url('assets/images/iso/certified-iso1.png') ?>" alt="ISO 9001 Certification" class="img-fluid">

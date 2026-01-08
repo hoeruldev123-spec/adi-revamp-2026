@@ -9,33 +9,20 @@
 
 <?= $this->section('content') ?>
 
-
-<!-- ===== CONTACT FORM SECTION ===== -->
 <section id="contact-form-section" class="py-5">
-
     <div class="container">
         <div class="row gx-5 gy-3" data-aos="fade-up">
-
-
-            <!-- Contact Information -->
             <div class="col-lg-6">
-
                 <div class="pe-lg-4 position-relative mb-4">
-                    <!-- Subtitle -->
                     <div class="hero-subtitle text-uppercase text-primary fw-semibold">
                         CONTACT US
                     </div>
-
-                    <!-- Title -->
                     <h1 class="mb-4">How Can We Assist You<br>Today?</h1>
-
-                    <!-- Description -->
                     <p class="lead text-muted mb-4">
                         Need some assistance? Feel free to send us a message using this form, and we'll respond promptly!
                     </p>
                 </div>
 
-                <!-- Head Office -->
                 <div class="col-lg-12">
                     <div class="card border-1 rounded-4 mb-4">
                         <div class="card-body p-4 d-flex align-items-start gap-3">
@@ -46,8 +33,6 @@
                                         <i class="bi bi-building text-primary fs-4"></i>
                                     </div>
                                 </div>
-
-
                                 <div>
                                     <h5 class="mb-1">Head Office</h5>
                                     <p class="text-muted mb-0">
@@ -60,11 +45,7 @@
                 </div>
 
 
-
-
-
                 <div class="row gx-4 gy-4 mb-4">
-                    <!-- Email -->
                     <div class="col-lg-6">
                         <div class="card border-1 rounded-4 h-100">
                             <div class="card-body p-4 d-flex align-items-start gap-3">
@@ -86,8 +67,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Call Us -->
                     <div class="col-lg-6">
                         <div class="card border-1 rounded-4 h-100">
                             <div class="card-body p-4 d-flex align-items-start gap-3">
@@ -113,7 +92,6 @@
                     </div>
                 </div>
 
-                <!-- WhatsApp -->
                 <div class="col-lg-12">
                     <div class="card border-1 rounded-4">
                         <div class="card-body p-4 d-flex align-items-center gap-3">
@@ -141,17 +119,13 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <!-- Contact Form -->
             <div class="col-lg-6">
                 <div class="card border-0  rounded-4 p-4 p-lg-5">
-
-
                     <form id="contactForm" action="<?= base_url('contact/submit') ?>" method="POST">
                         <div class="row g-4">
-                            <!-- First Name -->
+
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text"
@@ -163,8 +137,7 @@
                                     <label for="firstName">First Name</label>
                                 </div>
                             </div>
-
-                            <!-- Last Name -->
+                            >
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text"
@@ -177,7 +150,6 @@
                                 </div>
                             </div>
 
-                            <!-- Email -->
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="email"
@@ -190,7 +162,6 @@
                                 </div>
                             </div>
 
-                            <!-- Phone -->
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="tel"
@@ -202,7 +173,6 @@
                                 </div>
                             </div>
 
-                            <!-- Company -->
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text"
@@ -214,7 +184,6 @@
                                 </div>
                             </div>
 
-                            <!-- Subject -->
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="text"
@@ -227,7 +196,6 @@
                                 </div>
                             </div>
 
-                            <!-- Message -->
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control"
@@ -240,7 +208,6 @@
                                 </div>
                             </div>
 
-                            <!-- Privacy Policy -->
                             <div class="col-12">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="privacyPolicy" required>
@@ -251,7 +218,6 @@
                                 </div>
                             </div>
 
-                            <!-- Submit Button -->
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary rounded-pill">
                                     Send Message <i class="bi bi-arrow-up-right ms-2"></i>
@@ -262,15 +228,12 @@
                 </div>
             </div>
 
-
         </div>
     </div>
 </section>
 
-<!-- ===== OUR LOCATIONS SECTION ===== -->
-<section id="our-locations" class="py-5 bg-light">
+<section id="our-locations" class="py-5 bg-light" data-aos="fade-up">
     <!-- <div class="container py-5" data-aos="fade-up"> -->
-
     <div class="row justify-content-center mb-5">
         <div class="col-lg-12 text-center">
             <h6 class="text-uppercase text-primary mb-2">OUR LOCATIONS</h6>
@@ -290,18 +253,13 @@
             </div>
         </div>
     </div>
-
-    </div>
-
+    <!-- </div> -->
 </section>
 
-<!-- ===== SOCIAL CONNECT SECTION ===== -->
 <section id="social-connect" class="py-5" data-aos="fade-up">
     <div class="container py-5">
-
-
         <div class="row g-4 justify-content-center">
-            <!-- LinkedIn -->
+
             <div class="col-lg-4 col-md-6">
                 <div class="card border-1 rounded-4 h-100 p-4">
                     <div class="bg-linkedin bg-opacity-10 rounded-3 d-inline-block mb-2">
@@ -321,7 +279,6 @@
                 </div>
             </div>
 
-            <!-- Instagram -->
             <div class="col-lg-4 col-md-6">
                 <div class="card border-1 rounded-4 h-100 p-4">
                     <div class="bg-instagram bg-opacity-10 rounded-3 d-inline-block mb-2">
@@ -341,7 +298,6 @@
                 </div>
             </div>
 
-            <!-- Facebook -->
             <div class="col-lg-4 col-md-6">
                 <div class="card border-1 rounded-4 h-100 p-4">
                     <div class="bg-facebook bg-opacity-10 rounded-3 d-inline-block mb-2">
@@ -360,7 +316,6 @@
                     </div>
                 </div>
             </div>
-
 
         </div>
     </div>

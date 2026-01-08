@@ -9,8 +9,7 @@
 
 <?= $this->section('content') ?>
 
-<!-- Hero Section -->
-<section class="hero-home hero-home-bg py-5 position-relative overflow-hidden">
+<section class="hero-home hero-home-bg py-5 position-relative overflow-hidden" data-aos="fade-up">
   <div class="container py-5">
     <div class="row align-items-center">
       <div class="col-lg-6">
@@ -40,7 +39,6 @@
   </div>
 </section>
 
-<!-- Components dengan Data Passing -->
 <?= $this->include('components/cards/client_card') ?>
 <?= $this->include('components/cards/about_vision_mission') ?>
 <?= $this->include('components/cards/service_card') ?>

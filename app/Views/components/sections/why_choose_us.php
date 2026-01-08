@@ -1,7 +1,6 @@
-<section class="why-choose-us py-5">
+<section class="why-choose-us py-5" data-aos="fade-up">
     <div class="container">
 
-        <!-- Section Label -->
         <p class="text-primary fw-semibold small mb-2">
             WHY CHOOSE ALL DATA INTERNATIONAL
         </p>

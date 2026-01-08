@@ -16,7 +16,7 @@
 ]) ?>
 
 <section class="py-5">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <h5>What to Expect</h5>
         <p>
             From vision to value — we turn your business challenges into real, working AI solutions. Together, we build use cases powered by machine learning, predictive analytics, and automation that directly address your most critical needs.

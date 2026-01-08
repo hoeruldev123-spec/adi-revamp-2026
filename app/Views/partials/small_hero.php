@@ -14,7 +14,7 @@ $pattern_opacity  = $pattern_opacity  ?? 1; // pakai 0–1 biar konsisten CSS
 $bg_class         = $bg_class         ?? 'bg-white';
 ?>
 
-<section class="small-hero py-5 <?= esc($bg_class) ?> position-relative overflow-hidden">
+<section class="small-hero py-5 <?= esc($bg_class) ?> position-relative overflow-hidden" data-aos="fade-up">
 
     <?php if ($pattern): ?>
         <style>

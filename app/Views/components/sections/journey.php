@@ -1,8 +1,6 @@
-<!-- File: principal.php -->
 <section id="journey-section" class="py-5 bg-white">
     <div class="container">
-        <!-- Header Section -->
-        <div class="row justify-content-center mb-5">
+        <div class="row justify-content-center mb-5" data-aos="fade-up">
             <div class="col-lg-8 text-center">
                 <h6 class="text-uppercase text-primary mb-2">JOURNEY</h6>
                 <h2 class="fw-bold mb-3">Here’s a Look at Our Journey and How We’ve Grown Together</h2>
@@ -12,8 +10,7 @@
             </div>
         </div>
 
-        <!-- Timeline -->
-        <div class="timeline">
+        <div class="timeline" data-aos="fade-up">
 
             <!-- Item 1 (Right) -->
             <div class="timeline-item right">

@@ -1,6 +1,5 @@
-<!-- File: principal-statis.php -->
 <section id="principal-statis-section" class="py-5" style="background-color:#F8F9FA;">
-    <div class="container col-lg-8">
+    <div class="container col-lg-8" data-aos="fade-up">
         <div class="principal-statis-container">
             <div id="principal-statisCards ">
 

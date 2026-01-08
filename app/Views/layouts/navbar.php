@@ -1,4 +1,3 @@
-<!-- ===== NAVBAR START ===== -->
 <?php
 $uri = service('uri');
 
@@ -19,22 +18,16 @@ $segment2 = getSafeSegment(2);
 
 <nav class="navbar navbar-expand-lg navbar-white bg-white py-2 py-lg-3 sticky-top border-bottom shadow-sm" data-aos="fade-down">
   <div class="container">
-
-    <!-- Logo & Toggle Wrapper (Mobile) -->
     <div class="d-flex justify-content-between align-items-center w-100 d-lg-none">
-      <!-- Logo Mobile -->
       <a class="navbar-brand" href="<?= base_url() ?>">
         <img src="<?= base_url('assets/images/logo_coloured.png'); ?>" alt="All Data" height="32">
       </a>
 
-      <!-- Toggle Button & Contact (Mobile) -->
       <div class="d-flex align-items-center gap-3">
-        <!-- Search Icon Mobile -->
         <a href="<?= base_url('search'); ?>" class="nav-link text-dark p-1">
           <i class="bi bi-search fs-5"></i>
         </a>
 
-        <!-- Toggle Button Mobile -->
         <button class="navbar-toggler border-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
           aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -42,16 +35,12 @@ $segment2 = getSafeSegment(2);
       </div>
     </div>
 
-    <!-- Logo Desktop -->
     <a class="navbar-brand me-5 d-none d-lg-block" href="<?= base_url() ?>">
       <img src="<?= base_url('assets/images/logo_coloured.png'); ?>" alt="All Data" height="35">
     </a>
 
-    <!-- Navbar content -->
     <div class="collapse navbar-collapse mt-3 mt-lg-0" id="mainNavbar">
       <ul class="navbar-nav me-auto align-items-lg-center">
-
-        <!-- Solutions dengan dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-between 
             <?= ($segment1 == 'solutions') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
@@ -90,7 +79,6 @@ $segment2 = getSafeSegment(2);
           </ul>
         </li>
 
-        <!-- Services -->
         <li class="nav-item">
           <a class="nav-link <?= ($segment1 == 'services') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
             href="<?= base_url('services'); ?>">
@@ -98,7 +86,6 @@ $segment2 = getSafeSegment(2);
           </a>
         </li>
 
-        <!-- Company dengan dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-between
             <?= ($segment1 == 'company' || $segment1 == 'about') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
@@ -130,7 +117,6 @@ $segment2 = getSafeSegment(2);
           </ul>
         </li>
 
-        <!-- Resources dengan dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-between
             <?= ($segment1 == 'resources') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
@@ -160,22 +146,17 @@ $segment2 = getSafeSegment(2);
 
       </ul>
 
-      <!-- Desktop Right Section -->
       <div class="d-none d-lg-flex align-items-center gap-4 ms-auto">
-        <!-- Search Icon Desktop -->
         <a href="<?= base_url('search'); ?>" class="nav-link text-dark position-relative">
           <i class="bi bi-search fs-5"></i>
         </a>
 
-        <!-- Contact Button Desktop -->
         <a href="<?= base_url('contact'); ?>" class="btn btn-primary rounded-pill px-4">
           Contact <i class="bi bi-chevron-right"></i>
         </a>
       </div>
 
-      <!-- Mobile Bottom Actions -->
       <div class="d-lg-none mt-4 pt-3 border-top">
-        <!-- Close Button for Mobile Menu -->
         <button type="button" class="btn btn-outline-secondary w-100 mb-3 d-flex align-items-center justify-content-center"
           onclick="closeMobileMenu()">
           <i class="bi bi-x-lg me-2"></i> Close Menu
@@ -185,7 +166,6 @@ $segment2 = getSafeSegment(2);
           <i class="bi bi-telephone me-2"></i>Contact Us
         </a>
 
-        <!-- Optional: Quick Contact Info -->
         <div class="text-center">
           <small class="text-muted">Or call us directly:</small>
           <div class="mt-1">
@@ -198,15 +178,12 @@ $segment2 = getSafeSegment(2);
     </div>
   </div>
 </nav>
-<!-- ===== NAVBAR END ===== -->
 
-<!-- Custom CSS untuk Responsive -->
 <style>
   .nav-link.dropdown-toggle::after {
     display: none !important;
   }
 
-  /* Mobile Optimizations */
   @media (max-width: 991.98px) {
     .navbar {
       padding-top: 0.5rem;
@@ -241,13 +218,11 @@ $segment2 = getSafeSegment(2);
       display: none !important;
     }
 
-    /* CHEVRON styling di mobile */
     .nav-link.dropdown-toggle .bi-chevron-down {
       font-size: 1rem;
       transition: transform 0.3s ease;
     }
 
-    /* Rotate chevron saat dropdown terbuka di mobile */
     .nav-link.dropdown-toggle.show .bi-chevron-down {
       transform: rotate(180deg);
     }
@@ -287,7 +262,6 @@ $segment2 = getSafeSegment(2);
     }
   }
 
-  /* Desktop Optimizations */
   @media (min-width: 992px) {
     .navbar {
       padding-top: 0.75rem;
@@ -304,14 +278,12 @@ $segment2 = getSafeSegment(2);
       color: var(--bs-primary) !important;
     }
 
-    /* CHEVRON styling di desktop */
     .nav-link.dropdown-toggle .bi-chevron-down {
       font-size: 0.75rem;
       margin-left: 0.25rem;
       transition: transform 0.3s ease;
     }
 
-    /* Rotate chevron saat dropdown terbuka di desktop */
     .nav-link.dropdown-toggle[aria-expanded="true"] .bi-chevron-down,
     .nav-link.dropdown-toggle.show .bi-chevron-down {
       transform: rotate(180deg);
@@ -332,12 +304,10 @@ $segment2 = getSafeSegment(2);
     }
   }
 
-  /* Active State untuk CHEVRON */
   .nav-link.active .bi-chevron-down {
     color: var(--bs-primary) !important;
   }
 
-  /* Active state untuk dropdown items */
   .dropdown-item.active {
     position: relative;
     /* padding-left: 2.5rem !important; */
@@ -355,7 +325,6 @@ $segment2 = getSafeSegment(2);
     border-radius: 50%;
   } */
 
-  /* Active State Enhancement */
   .nav-link.active {
     position: relative;
     border-bottom: 2px solid var(--bs-primary);
@@ -370,7 +339,6 @@ $segment2 = getSafeSegment(2);
     }
   }
 
-  /* Better Toggle Button */
   .navbar-toggler {
     width: 40px;
     height: 40px;
@@ -408,7 +376,6 @@ $segment2 = getSafeSegment(2);
     box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.1);
   }
 
-  /* Smooth navbar collapse animation */
   @media (max-width: 991.98px) {
     .navbar-collapse {
       transition: max-height 0.35s ease, opacity 0.25s ease;
@@ -434,10 +401,9 @@ $segment2 = getSafeSegment(2);
   }
 </style>
 
-<!-- JavaScript untuk Enhanced Functionality -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Function untuk close mobile menu
+
     window.closeMobileMenu = function() {
       const navbarCollapse = document.getElementById('mainNavbar');
       const navbarToggler = document.querySelector('.navbar-toggler');
@@ -448,20 +414,16 @@ $segment2 = getSafeSegment(2);
       }
     };
 
-
-
-    // Biarkan Bootstrap menangani - cukup gunakan ini untuk close ketika klik link
     document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item').forEach(link => {
       link.addEventListener('click', function() {
         if (window.innerWidth < 992) {
-          // Collapse navbar di mobile
+
           const navbarCollapse = document.getElementById('mainNavbar');
           const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
           if (bsCollapse) {
             bsCollapse.hide();
           }
 
-          // Juga close semua dropdown
           document.querySelectorAll('.dropdown-menu').forEach(menu => {
             menu.classList.remove('show');
           });
@@ -476,7 +438,7 @@ $segment2 = getSafeSegment(2);
     // Handle window resize
     window.addEventListener('resize', function() {
       if (window.innerWidth >= 992) {
-        // Di desktop, reset semua state mobile
+
         const navbarCollapse = document.getElementById('mainNavbar');
         if (navbarCollapse.classList.contains('show')) {
           const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
@@ -485,7 +447,6 @@ $segment2 = getSafeSegment(2);
           }
         }
 
-        // Close semua dropdown di desktop saat resize (optional)
         document.querySelectorAll('.dropdown-menu').forEach(menu => {
           menu.classList.remove('show');
         });

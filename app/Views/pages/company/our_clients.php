@@ -4,7 +4,6 @@
 
 <?= $this->section('content') ?>
 
-<!-- Panggil Small Hero -->
 <?= $this->include('partials/small_hero', []) ?>
 
 <?= $this->include('components/cards/client_card_statis') ?>

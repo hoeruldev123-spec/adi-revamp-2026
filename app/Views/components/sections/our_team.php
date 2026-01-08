@@ -1,7 +1,6 @@
 <section id="principal-section" class="py-5 bg-light">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
 
-        <!-- Header Section -->
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">
                 <h6 class="text-uppercase text-primary mb-2">OUR TEAM</h6>
@@ -12,7 +11,6 @@
             </div>
         </div>
 
-        <!-- Team Image -->
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
                 <img

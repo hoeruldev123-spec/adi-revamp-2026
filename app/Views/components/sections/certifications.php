@@ -1,5 +1,4 @@
-<!-- File: principal.php -->
-<section id="certifications-section" class="py-5 bg-white">
+<section id="certifications-section" class="py-5 bg-white" data-aos="fade-up">
     <div class="container">
         <!-- Header Section -->
         <div class="row justify-content-center mb-5">

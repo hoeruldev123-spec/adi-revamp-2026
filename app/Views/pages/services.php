@@ -9,7 +9,6 @@
 
 <?= $this->section('content') ?>
 
-<!-- Components dengan Data Passing -->
 <?= $this->include('components/cards/service_card-all') ?>
 <?= $this->include('components/cards/principal_card') ?>
 <?= $this->include('components/sections/cta_section') ?>

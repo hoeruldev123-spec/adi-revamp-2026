@@ -1,6 +1,6 @@
 <!-- CTA Section -->
 <section class="cta-section position-relative overflow-hidden py-5">
-    <div class="container py-5">
+    <div class="container py-5" data-aos="fade-up">
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="cta-card position-relative rounded-4 p-5 text-center text-white overflow-hidden">

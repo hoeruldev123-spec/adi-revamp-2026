@@ -1,7 +1,5 @@
-<!-- File: principal.php -->
 <section id="principal-section" class="py-5 bg-light">
-    <div class="container">
-        <!-- Header Section -->
+    <div class="container" data-aos="fade-up">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">
                 <h6 class="text-uppercase text-primary mb-2">Principal</h6>
@@ -12,11 +10,8 @@
             </div>
         </div>
 
-        <!-- Principal Cards Container with Pagination -->
         <div class="principal-container">
-            <!-- Cards Wrapper for Pagination -->
             <div id="principalCards">
-                <!-- Page 1 (First 6 cards) -->
                 <div class="principal-page active">
                     <div class="row g-4">
                         <!-- Qlik Card -->
@@ -117,7 +112,6 @@
                     </div>
                 </div>
 
-                <!-- Page 2 (Next 6 cards) -->
                 <div class="principal-page">
                     <div class="row g-4">
                         <!-- New Card 1 -->

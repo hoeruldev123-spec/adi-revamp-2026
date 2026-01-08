@@ -4,10 +4,8 @@
 
 <?= $this->section('content') ?>
 
-<!-- Panggil Small Hero -->
 <?= $this->include('partials/small_hero', []) ?>
 
-<!-- Konten detail service di bawah hero -->
 <section class="py-5">
 
 </section>
