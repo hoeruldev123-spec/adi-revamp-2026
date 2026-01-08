@@ -6,7 +6,8 @@
 
 <?= $this->include('partials/small_hero', []) ?>
 
-<?= $this->include('components/cards/client_card_statis') ?>
+<?= $this->include('components/cards/client_card_statis', ['clients' => $clients]) ?>
+
 <?= $this->include('components/sections/cta_section') ?>
 
 <?= $this->endSection() ?>

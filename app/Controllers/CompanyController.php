@@ -59,7 +59,47 @@ class CompanyController extends BaseController
             'pattern' => true, // AKTIFKAN PATTERN
             'pattern_opacity' => 100,
 
-            // Content lainnya...
+
+        ];
+
+        $clients = [
+            ['logo' => 'adira-finance.png', 'alt' => 'Adira Finance', 'name' => 'Adira Finance'],
+            ['logo' => 'allianz.png', 'alt' => 'Allianz', 'name' => 'Allianz Indonesia'],
+            ['logo' => 'asdp.webp', 'alt' => 'asdp', 'name' => 'ASDP Indonesia Ferry'],
+            ['logo' => 'bank-bjb.webp', 'alt' => 'bank bjb', 'name' => 'Bank BJB'],
+            ['logo' => 'bank-dki.webp', 'alt' => 'bank dki', 'name' => 'Bank DKI'],
+            ['logo' => 'bca-digital.png', 'alt' => 'BCA Digital', 'name' => 'BCA Digital'],
+            ['logo' => 'bca-syariah.webp', 'alt' => 'bca syariah', 'name' => 'BCA Syariah'],
+            ['logo' => 'bca.webp', 'alt' => 'bca', 'name' => 'Bank BCA'],
+            ['logo' => 'bki.webp', 'alt' => 'bki', 'name' => 'BKI (Biro Klasifikasi Indonesia)'],
+            ['logo' => 'bpjs-kesehatan.webp', 'alt' => 'bpjs kesehatan', 'name' => 'BPJS Kesehatan'],
+            ['logo' => 'bpjs-ketenagakerjaan.png', 'alt' => 'BPJS Ketenagakerjaan', 'name' => 'BPJS Ketenagakerjaan'],
+            ['logo' => 'bri.webp', 'alt' => 'bri', 'name' => 'Bank BRI'],
+            ['logo' => 'bsi.webp', 'alt' => 'bsi', 'name' => 'Bank Syariah Indonesia (BSI)'],
+            ['logo' => 'dbs.webp', 'alt' => 'dbs', 'name' => 'DBS Bank'],
+            ['logo' => 'fif-group.png', 'alt' => 'FIF Group', 'name' => 'FIF Group'],
+            ['logo' => 'gtech-digital-asia.webp', 'alt' => 'gtech digital asia', 'name' => 'GTech Digital Asia'],
+            ['logo' => 'ifg.webp', 'alt' => 'ifg', 'name' => 'IFG (Indonesia Financial Group)'],
+            ['logo' => 'kai.webp', 'alt' => 'kai', 'name' => 'KAI (Kereta Api Indonesia)'],
+            ['logo' => 'kalbe.webp', 'alt' => 'Kalbe', 'name' => 'Kalbe Farma'],
+            ['logo' => 'kino.webp', 'alt' => 'kino', 'name' => 'Kino Indonesia'],
+            ['logo' => 'otsuka.webp', 'alt' => 'otsuka', 'name' => 'Otsuka Indonesia'],
+            ['logo' => 'pama.webp', 'alt' => 'pama', 'name' => 'PAMA (Persada Amanah Makmur Abadi)'],
+            ['logo' => 'pln-epi.webp', 'alt' => 'pln epi', 'name' => 'PLN EPI (Energi Prima Indonesia)'],
+            ['logo' => 'pln-ip.webp', 'alt' => 'pln ip', 'name' => 'Indonesia Power'],
+            ['logo' => 'pln-npc.webp', 'alt' => 'pln npc', 'name' => 'PLN NPC (Nusantara Power Company)'],
+            ['logo' => 'pln.webp', 'alt' => 'pln', 'name' => 'PLN (Perusahaan Listrik Negara)'],
+            ['logo' => 'ppa.webp', 'alt' => 'ppa', 'name' => 'PPA'],
+            ['logo' => 'prodia.webp', 'alt' => 'prodia', 'name' => 'Prodia Laboratories'],
+            ['logo' => 'pupuk-indonesia.webp', 'alt' => 'pupuk indonesia', 'name' => 'Pupuk Indonesia'],
+            // ['logo' => 'icon-plus.png', 'alt' => 'More Clients', 'name' => 'View More Clients'], // Optional
+
+            // Tambahkan client lainnya di sini
+        ];
+
+        $data = [
+            // 'hero' => $heroData,
+            'clients' => $clients,
         ];
 
         return view('pages/company/our_clients', $data);

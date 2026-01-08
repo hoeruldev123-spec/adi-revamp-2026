@@ -12,22 +12,66 @@
         <div class="client-slider-container">
           <div class="slider">
             <div class="logos">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-01.png'); ?>" height="45" alt="Allianz">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-02.png'); ?>" height="45" alt="BCA Digital">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-03.png'); ?>" height="45" alt="BPJS">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-04.png'); ?>" height="45" alt="Kalbe">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-05.png'); ?>" height="45" alt="FIF">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-06.png'); ?>" height="45" alt="PLN">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-07.png'); ?>" height="45" alt="Adira">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/adira-finance.png'); ?>" height="30" alt="Adira Finance">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/allianz.png'); ?>" height="30" alt="Allianz">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/asdp.webp'); ?>" height="30" alt="asdp">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bank-bjb.webp'); ?>" height="30" alt="bank bjb">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bank-dki.webp'); ?>" height="30" alt="bank dki">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bca-digital.png'); ?>" height="30" alt="BCA Digital">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bca-syariah.webp'); ?>" height="30" alt="bca syariah">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bca.webp'); ?>" height="30" alt="bca">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bki.webp'); ?>" height="30" alt="bki">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bpjs-kesehatan.webp'); ?>" height="30" alt="bpjs kesehatan">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bpjs-ketenagakerjaan.png'); ?>" height="30" alt="BPJS Ketenagakerjaan">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bri.webp'); ?>" height="30" alt="bri">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bsi.webp'); ?>" height="30" alt="bsi">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/dbs.webp'); ?>" height="30" alt="dbs">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/fif-group.png'); ?>" height="30" alt="FIF Group">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/gtech-digital-asia.webp'); ?>" height="30" alt="gtech digital asia">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/ifg.webp'); ?>" height="30" alt="ifg">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kai.webp'); ?>" height="30" alt="kai">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kalbe.webp'); ?>" height="30" alt="Kalbe">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kino.webp'); ?>" height="30" alt="kino">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/otsuka.webp'); ?>" height="30" alt="otsuka">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pama.webp'); ?>" height="30" alt="pama">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pln-epi.webp'); ?>" height="30" alt="pln epi">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pln-ip.webp'); ?>" height="30" alt="pln ip">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pln-npc.webp'); ?>" height="30" alt="pln npc">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pln.webp'); ?>" height="30" alt="pln">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/ppa.webp'); ?>" height="30" alt="ppa">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/prodia.webp'); ?>" height="30" alt="prodia">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pupuk-indonesia.webp'); ?>" height="30" alt="pupuk indonesia">
             </div>
             <div class="logos">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-01.png'); ?>" height="45" alt="Allianz">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-02.png'); ?>" height="45" alt="BCA Digital">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-03.png'); ?>" height="45" alt="BPJS">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-04.png'); ?>" height="45" alt="Kalbe">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-05.png'); ?>" height="45" alt="FIF">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-06.png'); ?>" height="45" alt="PLN">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/Logo-07.png'); ?>" height="45" alt="Adira">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/adira-finance.png'); ?>" height="30" alt="Adira Finance">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/allianz.png'); ?>" height="30" alt="Allianz">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/asdp.webp'); ?>" height="30" alt="asdp">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bank-bjb.webp'); ?>" height="30" alt="bank bjb">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bank-dki.webp'); ?>" height="30" alt="bank dki">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bca-digital.png'); ?>" height="30" alt="BCA Digital">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bca-syariah.webp'); ?>" height="30" alt="bca syariah">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bca.webp'); ?>" height="30" alt="bca">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bki.webp'); ?>" height="30" alt="bki">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bpjs-kesehatan.webp'); ?>" height="30" alt="bpjs kesehatan">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bpjs-ketenagakerjaan.png'); ?>" height="30" alt="BPJS Ketenagakerjaan">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bri.webp'); ?>" height="30" alt="bri">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bsi.webp'); ?>" height="30" alt="bsi">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/dbs.webp'); ?>" height="30" alt="dbs">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/fif-group.png'); ?>" height="30" alt="FIF Group">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/gtech-digital-asia.webp'); ?>" height="30" alt="gtech digital asia">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/ifg.webp'); ?>" height="30" alt="ifg">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kai.webp'); ?>" height="30" alt="kai">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kalbe.webp'); ?>" height="30" alt="Kalbe">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kino.webp'); ?>" height="30" alt="kino">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/otsuka.webp'); ?>" height="30" alt="otsuka">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pama.webp'); ?>" height="30" alt="pama">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pln-epi.webp'); ?>" height="30" alt="pln epi">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pln-ip.webp'); ?>" height="30" alt="pln ip">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pln-npc.webp'); ?>" height="30" alt="pln npc">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pln.webp'); ?>" height="30" alt="pln">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/ppa.webp'); ?>" height="30" alt="ppa">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/prodia.webp'); ?>" height="30" alt="prodia">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pupuk-indonesia.webp'); ?>" height="30" alt="pupuk indonesia">
             </div>
           </div>
         </div>
@@ -54,7 +98,7 @@
 
   .slider {
     display: flex;
-    animation: slidein 40s linear infinite;
+    animation: slidein 60s linear infinite;
     width: max-content;
   }
 
@@ -67,7 +111,6 @@
 
   .img-hover-zoom {
     /* filter: grayscale(100%); */
-
     transition: all 0.3s ease;
     object-fit: contain;
   }
