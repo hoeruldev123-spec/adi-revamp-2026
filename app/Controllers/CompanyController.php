@@ -46,22 +46,6 @@ class CompanyController extends BaseController
 
     public function ourClients()
     {
-
-        $data = [
-            'subtitle' => 'Our Client',
-            'title' => 'Trusted by Leading Businesses Across Industries',
-            'description' => 'Our clients are at the heart of everything we do. From enterprises to industry leaders, they trust us to deliver data driven solutions.',
-            'image' => false,
-
-            'cta_text' => false,
-            'cta_link' => false,
-            'bg_class' => 'bg-white',
-            'pattern' => true, // AKTIFKAN PATTERN
-            'pattern_opacity' => 100,
-
-
-        ];
-
         $clients = [
             ['logo' => 'adira-finance.png', 'alt' => 'Adira Finance', 'name' => 'Adira Finance'],
             ['logo' => 'allianz.png', 'alt' => 'Allianz', 'name' => 'Allianz Indonesia'],
@@ -98,7 +82,19 @@ class CompanyController extends BaseController
         ];
 
         $data = [
-            // 'hero' => $heroData,
+            // HERO
+            'subtitle' => 'Our Client',
+            'title' => 'Trusted by Leading Businesses Across Industries',
+            'description' => 'Our clients are at the heart of everything we do. From enterprises to industry leaders, they trust us to deliver data driven solutions.',
+            'image' => false,
+
+            'cta_text' => false,
+            'cta_link' => false,
+            'bg_class' => 'bg-white',
+            'pattern' => true, // AKTIFKAN PATTERN
+            'pattern_opacity' => 100,
+
+            // DATA CLIENT
             'clients' => $clients,
         ];
 
