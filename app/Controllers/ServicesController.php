@@ -7,25 +7,25 @@ class ServicesController extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Our Services | Your Company Name',
+            'title' => 'Our Services | All Data International',
             'meta' => [
-                'keywords' => 'IT services, digital transformation, cloud solutions, AI integration, business consulting',
-                'description' => 'Discover our comprehensive range of professional services designed to drive your business growth through technology and innovation.'
+                'keywords' => 'IT services, digital transformation, cloud solutions, AI integration',
+                'description' => 'Discover our comprehensive range of professional services.'
             ],
-
-            // Hero Section Data
             'hero' => [
                 'badge' => 'Our Expertise',
                 'title' => 'Comprehensive Services for Digital Transformation',
-                'description' => 'We provide end-to-end solutions that help businesses leverage technology to achieve operational excellence and competitive advantage.',
+                'description' => 'We provide end-to-end solutions.',
                 'image' => 'services-hero.png'
             ],
-
-
         ];
 
-        return view('pages/services', $data);
+        return view(
+            'pages/services',
+            $this->withPrincipalSlides($data)
+        );
     }
+
 
     public function consulting()
     {
