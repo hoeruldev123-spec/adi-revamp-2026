@@ -9,6 +9,7 @@ use CodeIgniter\Router\RouteCollection;
 // Home & Main Pages
 $routes->get('/', 'HomeController::index');
 $routes->get('/home', 'HomeController::index');
+$routes->get('/principal', 'HomeController::principal_card'); // halaman khusus principal
 
 // Solutions dengan submenu sesuai dropdown
 $routes->group('solutions', function ($routes) {

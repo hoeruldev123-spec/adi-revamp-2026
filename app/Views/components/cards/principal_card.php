@@ -1,295 +1,67 @@
-<section class="partnership-section">
-    <div class="container" data-aos="fade-up">
-        <!-- Header -->
-        <div class="text-center">
-            <div class="section-label">PRINCIPAL</div>
-            <h2 class="section-title">Driven by Strong Partnerships</h2>
-            <p class="section-description">
-                Our collaboration with top principals drives innovation and growth, empowering businesses to move forward with confidence.
-            </p>
-        </div>
+<?php if (!empty($principal_slides) && is_array($principal_slides)): ?>
 
-        <!-- Carousel -->
-        <div id="partnershipCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-            <div class="carousel-inner">
-                <!-- Slide 1 (Card 1-6) -->
-                <div class="carousel-item active">
-                    <div class="row g-4">
-                        <!-- Qlik Card -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Qlik.png') ?>" alt="Qlik" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Empowering data-driven insights through advanced analytics and intuitive visualization.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+    <section class="partnership-section">
+        <div class="container" data-aos="fade-up">
 
-                        <!-- Confluent Card -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Confluent.png') ?>" alt="Confluent" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Real-time data streaming powered by Apache Kafka for smarter business operations.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Denodo Card -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Denodo.png') ?>" alt="Denodo" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Seamless data virtualization enabling unified access across multiple systems and sources.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Snowflake Card -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Snowflake.png') ?>" alt="Snowflake" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Scalable cloud data platform for high-performance analytics and AI innovation.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Dataiku Card -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Dataiku.png') ?>" alt="Dataiku" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Collaborative AI platform to build, deploy, and manage enterprise machine learning.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Cloudera Card -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Cloudera.png') ?>" alt="Cloudera" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Hybrid data platform integrating analytics, AI, and data management at scale.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Slide 2 (Card 7-12) -->
-                <div class="carousel-item">
-                    <div class="row g-4">
-                        <!-- New Card 1 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Tableau.png') ?>" alt="New Principal 1" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Transform raw data into actionable insights with intuitive visual analytics and interactive dashboards.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- New Card 2 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-YugabyteDB.png') ?>" alt="New Principal 2" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Distributed SQL database for cloud-native applications, delivering scalability, resilience, and PostgreSQL compatibility.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tambahkan 4 card baru lainnya di sini -->
-                        <!-- New Card 3 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Hasura.png') ?>" alt="New Principal 3" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Instant GraphQL APIs that accelerate development by connecting directly to your databases and services.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- New Card 4 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-ClickHouse.png') ?>" alt="New Principal 4" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Real-time analytics database that delivers lightning-fast queries on massive volumes of structured data.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- New Card 5 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Alibaba-Cloud.png') ?>" alt="New Principal 5" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Comprehensive cloud computing services driving digital transformation across Asia and global markets.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- New Card 6 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-redis.png') ?>" alt="New Principal 6" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        In-memory data structure store enabling high-performance caching, messaging, and real-time applications.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="row g-4">
-                        <!-- New Card 7 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Dell.png') ?>" alt="New Principal 7" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        End-to-end IT infrastructure solutions that power modern enterprises with reliable hardware and software.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- New Card 8 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-AWS.png') ?>" alt="New Principal 8" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        World's most comprehensive and broadly adopted cloud platform for scalable computing, storage, and AI services.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- New Card 9 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="principal-card h-100">
-                                <div class="card-header mb-3">
-                                    <div class="principal-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Helett Packard.png') ?>" alt="New Principal 10" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="principal-description text-muted">
-                                        Hybrid cloud solutions and intelligent edge technologies that accelerate data-first modernization.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+            <div class="text-center">
+                <div class="section-label">PRINCIPAL</div>
+                <h2 class="section-title">Driven by Strong Partnerships</h2>
+                <p class="section-description">
+                    Our collaboration with top principals drives innovation and growth, empowering businesses to move forward with confidence.
+                </p>
             </div>
 
-            <!-- Custom Dot Pagination -->
-            <div class="carousel-dots">
-                <button type="button" class="carousel-dot active" data-bs-target="#partnershipCarousel" data-bs-slide-to="0"></button>
-                <button type="button" class="carousel-dot" data-bs-target="#partnershipCarousel" data-bs-slide-to="1"></button>
-                <button type="button" class="carousel-dot" data-bs-target="#partnershipCarousel" data-bs-slide-to="2"></button>
+            <div id="partnershipCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+
+                    <?php foreach ($principal_slides as $slideIndex => $slide): ?>
+                        <div class="carousel-item <?= $slideIndex === 0 ? 'active' : '' ?>">
+                            <div class="row g-4">
+                                <?php foreach ($slide as $principal): ?>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="principal-card h-100">
+                                            <div class="card-header mb-3">
+                                                <div class="principal-logo">
+                                                    <img src="<?= base_url('assets/images/principals/' . $principal['logo']) ?>"
+                                                        alt="<?= esc($principal['alt']) ?>"
+                                                        class="img-fluid">
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="principal-description text-muted">
+                                                    <?= esc($principal['description']) ?>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+
+                </div>
+
+                <div class="carousel-dots">
+                    <?php foreach ($principal_slides as $index => $_): ?>
+                        <button type="button"
+                            class="carousel-dot <?= $index === 0 ? 'active' : '' ?>"
+                            data-bs-target="#partnershipCarousel"
+                            data-bs-slide-to="<?= $index ?>"
+                            aria-label="Slide <?= $index + 1 ?>">
+                        </button>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<script>
-    // Update active dot on slide change
-    document.getElementById('partnershipCarousel').addEventListener('slide.bs.carousel', function(e) {
-        const dots = document.querySelectorAll('.carousel-dot');
-        dots.forEach((dot, index) => {
-            if (index === e.to) {
-                dot.classList.add('active');
-            } else {
-                dot.classList.remove('active');
-            }
-        });
-    });
-</script>
+    <script>
+        document.getElementById('partnershipCarousel')
+            ?.addEventListener('slide.bs.carousel', function(e) {
+                document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === e.to);
+                });
+            });
+    </script>
+
+<?php endif; ?>
