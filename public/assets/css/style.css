@@ -377,7 +377,9 @@ h6 {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
 }
 
 .solution-image.fade-out {
@@ -586,7 +588,9 @@ footer hr {
 
   background-image: url("/assets/images/services-background.png"), url("/assets/images/services-background.png");
   background-repeat: no-repeat;
-  background-position: top left, bottom right;
+  background-position:
+    top left,
+    bottom right;
   z-index: 1; /* Background di belakang */
 }
 
@@ -599,7 +603,9 @@ footer hr {
 .service-card {
   border-radius: 16px;
   overflow: hidden; /* penting supaya radius gambar mengikuti card */
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 /* Hover effect */
@@ -681,7 +687,9 @@ footer hr {
   height: 100%;
   background-image: url("../images/services-background.png"), url("../images/services-background.png");
   background-repeat: no-repeat;
-  background-position: top left, bottom right;
+  background-position:
+    top left,
+    bottom right;
   background-size: 300px auto;
   z-index: 0;
   pointer-events: none;
@@ -862,7 +870,9 @@ footer hr {
   width: 100%;
   opacity: 1;
   transform: translateX(0);
-  transition: transform 0.45s ease, opacity 0.45s ease;
+  transition:
+    transform 0.45s ease,
+    opacity 0.45s ease;
 }
 
 /* Saat konten disembunyikan ke kiri */
@@ -973,205 +983,123 @@ footer hr {
     transform: translateX(calc(-50%));
   }
 }
+/* ============== */
+/* PRINCIPAL */
+/* ============== */
 
-/* Principal Cards Styling */
-
-#principal-section {
-  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Ganti CSS animasi yang lama dengan ini */
-.principal-page {
-  display: none;
-  opacity: 0;
-  transform: translateX(30px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+.partnership-section {
+  padding: 80px 0;
+  background-color: #f9fafb;
 }
 
-.principal-page.active {
-  display: block;
-  opacity: 1;
-  transform: translateX(0);
+#partnershipCarousel .row {
+  padding: 10px; /* Beri ruang di atas row */
 }
 
-/* Optional: Animasi untuk card saat muncul */
-.principal-page.active .principal-card {
-  animation: cardSlideIn 0.6s ease forwards;
-  opacity: 0;
-  transform: translateX(20px);
+.section-label {
+  color: var(--bs-primary);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
-.principal-page.active .principal-card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.principal-page.active .principal-card:nth-child(2) {
-  animation-delay: 0.15s;
-}
-.principal-page.active .principal-card:nth-child(3) {
-  animation-delay: 0.2s;
-}
-.principal-page.active .principal-card:nth-child(4) {
-  animation-delay: 0.25s;
-}
-.principal-page.active .principal-card:nth-child(5) {
-  animation-delay: 0.3s;
-}
-.principal-page.active .principal-card:nth-child(6) {
-  animation-delay: 0.35s;
+.section-title {
+  color: #1f2937;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
-@keyframes cardSlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.section-description {
+  color: #6b7280;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 60px;
 }
 
 .principal-card {
   background: white;
-  border: none;
-  border-radius: 8px;
-  padding: 30px 25px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #bababa; /* Tambahkan width dan style */
+  border-radius: 16px;
+  padding: 40px 32px;
+  height: 100%;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.principal-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(135deg, #0d6efd, #6610f2);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  margin-bottom: 24px;
 }
 
 .principal-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(13, 110, 253, 0.15);
-}
-
-.principal-card:hover::before {
-  transform: scaleX(1);
-}
-
-.card-header {
-  text-align: center;
-  border: none;
-  background: transparent;
-  padding: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
 }
 
 .principal-logo {
-  height: 60px;
+  height: 50px;
+  margin-bottom: 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
 }
 
 .principal-logo img {
-  max-height: 80%;
-  max-width: 80%;
+  max-height: 50px;
+  max-width: 180px;
   object-fit: contain;
+}
+
+.card-description {
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Carousel Controls */
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.principal-card:hover .principal-logo img {
-  transform: scale(1.1);
+.carousel-dot.active {
+  width: 32px;
+  border-radius: 4px;
+  background-color: var(--bs-primary);
 }
 
-.principal-name {
-  color: #212529;
-  font-size: 1.3rem;
-  background: linear-gradient(135deg, #0d6efd, #6610f2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.carousel-inner {
+  overflow: hidden;
 }
 
-.principal-description {
-  line-height: 1.6;
-  font-size: 0.95rem;
-  text-align: center;
-}
-
-.pagination {
-  margin-bottom: 0;
-}
-
-.page-item.active .page-link {
-  background-color: #007bff;
-  border-color: #007bff;
-  color: white;
-}
-
-.page-link {
-  color: #007bff;
-  border: 1px solid #dee2e6;
-  padding: 0.5rem 0.75rem;
-  margin: 0 2px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-
-.page-link:hover {
-  color: #0056b3;
-  background-color: #e9ecef;
-  border-color: #dee2e6;
-}
-
-.page-item.disabled .page-link {
-  color: #6c757d;
-  pointer-events: none;
-  background-color: #fff;
-  border-color: #dee2e6;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .logo-carousel-item img {
-    max-height: 50px;
-    max-width: 120px;
-  }
-
-  .carousel-gradient {
-    width: 50px;
-  }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-  .logo-carousel-track {
-    gap: 40px;
-    animation-duration: 30s;
+  .section-title {
+    font-size: 32px;
   }
 
-  .logo-carousel-item img {
-    max-height: 40px;
-    max-width: 100px;
+  .section-description {
+    font-size: 16px;
   }
 
-  .carousel-gradient {
-    width: 30px;
-  }
-
-  @keyframes scrollLogos {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-50%));
-    }
+  .partnership-section {
+    padding: 50px 0;
   }
 }
 
@@ -1185,7 +1113,9 @@ footer hr {
   padding: 24px;
   border: 1px solid #e5e7eb;
   /* abu-abu soft */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   text-align: left;
 }
 
@@ -1296,8 +1226,8 @@ footer hr {
 }
 
 .cta-card {
-  background: radial-gradient(circle at 20% 30%, #6ec1ff 0%, transparent 45%), radial-gradient(circle at 50% 50%, #9fd6ff 0%, transparent 50%), radial-gradient(circle at 80% 40%, #4aa8ff 0%, transparent 45%),
-    linear-gradient(135deg, #0d8df2, #1fa2ff);
+  background:
+    radial-gradient(circle at 20% 30%, #6ec1ff 0%, transparent 45%), radial-gradient(circle at 50% 50%, #9fd6ff 0%, transparent 50%), radial-gradient(circle at 80% 40%, #4aa8ff 0%, transparent 45%), linear-gradient(135deg, #0d8df2, #1fa2ff);
   box-shadow: 0 20px 60px rgba(30, 144, 255, 0.3);
   border: none;
   min-height: 400px;
@@ -1437,7 +1367,9 @@ footer hr {
 }
 
 .hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
@@ -1687,7 +1619,9 @@ footer hr {
 }
 
 .blog-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   overflow: hidden;
 }
 

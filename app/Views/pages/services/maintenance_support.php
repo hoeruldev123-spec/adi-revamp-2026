@@ -19,7 +19,7 @@
         <h5>Who It's For</h5>
         <p>Organizations ready to embrace data and AI but seeking clarity, direction, and expert partnership to move forward.
         </p>
-        <!-- Konten detail di sini -->
+
     </div>
 </section>
 
