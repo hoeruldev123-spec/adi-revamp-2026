@@ -19,12 +19,11 @@
                 </div>
                 <div class="timeline-card">
                     <div class="d-flex justify-content-between mb-2">
-                        <h5 class="fw-semibold">Title</h5>
+                        <h5 class="fw-semibold">The Foundation</h5>
                         <span class="text-muted">2015</span>
                     </div>
                     <p class="bg-white p-20 p-2 rounded-2 ">
-                        Lorem ipsum dolor sit amet consectetur. Elit sed rutrum et neque
-                        et scelerisque sagittis lacus ornare.
+                        All Data International was founded with a vision to maximize the value of data. The journey began with a team of 10 people in Mampang, focusing on data exploration and utilization.
                     </p>
                 </div>
             </div>
@@ -36,12 +35,11 @@
                 </div>
                 <div class="timeline-card">
                     <div class="d-flex justify-content-between mb-2">
-                        <h5 class="fw-semibold">Title</h5>
-                        <span class="text-muted">2020</span>
+                        <h5 class="fw-semibold">First Global Partnership</h5>
+                        <span class="text-muted">2015</span>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Elit sed rutrum et neque
-                        et scelerisque sagittis lacus ornare.
+                    <p class="bg-white p-20 p-2 rounded-2 ">
+                        ADI established its first global partnership with Tableau, marking the initial step as a data-driven system integrator.
                     </p>
                 </div>
             </div>
@@ -53,12 +51,11 @@
                 </div>
                 <div class="timeline-card">
                     <div class="d-flex justify-content-between mb-2">
-                        <h5 class="fw-semibold">Title</h5>
-                        <span class="text-muted">2022</span>
+                        <h5 class="fw-semibold">First Enterprise Project</h5>
+                        <span class="text-muted">2015</span>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Elit sed rutrum et neque
-                        et scelerisque sagittis lacus ornare.
+                    <p class="bg-white p-20 p-2 rounded-2 ">
+                        ADI was trusted to deliver its first enterprise project through a Tableau implementation at PLN, laying the foundation of trust with both clients and principals
                     </p>
                 </div>
             </div>
@@ -70,12 +67,27 @@
                 </div>
                 <div class="timeline-card">
                     <div class="d-flex justify-content-between mb-2">
-                        <h5 class="fw-semibold">Title</h5>
+                        <h5 class="fw-semibold">Accelerated Growth</h5>
+                        <span class="text-muted">2016-2024</span>
+                    </div>
+                    <p class="bg-white p-20 p-2 rounded-2 ">
+                        ADI experienced rapid growth as a data-focused system integrator, delivering projects across multiple industries and expanding partnerships with global principals such as Talend, Dataiku, and Denodo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="timeline-item right">
+                <div class="timeline-icon">
+                    <img src="<?= base_url('assets/images/icon/icon-calendar.png') ?>" alt="Timeline" class="timeline-icon-img">
+                </div>
+                <div class="timeline-card">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h5 class="fw-semibold">AI Data Analytics Focus</h5>
                         <span class="text-muted">2025</span>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Elit sed rutrum et neque
-                        et scelerisque sagittis lacus ornare.
+                    <p class="bg-white p-20 p-2 rounded-2 ">
+                        Entering a new phase, ADI transformed into an AI Data Analytics Company, delivering solutions that integrate data, analytics, and artificial intelligence.
                     </p>
                 </div>
             </div>

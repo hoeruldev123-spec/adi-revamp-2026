@@ -15,7 +15,7 @@
         // Card 1–3
         $isTopThree = $index < 3;
 
-        // Grid logic (tetap seperti punyamu)
+        // Grid logic
         $colClass = $isTopThree ? 'col-md-4' : 'col-md-6';
         ?>
 
