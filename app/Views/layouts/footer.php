@@ -12,9 +12,12 @@
       <div class="col-md-6 col-lg-4 mb-4 text-md-end">
         <p class="mb-2 fw-semibold">Let's connect on Social Media</p>
         <div class="d-flex justify-content-md-end gap-3">
-          <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="https://id.linkedin.com/company/all-data-international" target="_blank" rel="noopener"
+            class="social-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com/alldataint" target="_blank" rel="noopener"
+            class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="https://facebook.com/alldataint" target="_blank" rel="noopener"
+            class="social-icon"><i class="bi bi-facebook"></i></a>
         </div>
       </div>
     </div>
@@ -26,41 +29,65 @@
       <div class="col-md-3 mb-4">
         <h6 class="mb-3">Solutions</h6>
         <ul class="list-unstyled text-muted">
-          <li><a href="#" class="footer-link">FMCG</a></li>
-          <li><a href="#" class="footer-link">Telecom</a></li>
-          <li><a href="#" class="footer-link">Government</a></li>
-          <li><a href="#" class="footer-link">Financial</a></li>
+          <li><a href="<?= base_url('solutions/fmcg') ?>" class="footer-link">FMCG</a></li>
+          <li><a href="<?= base_url('solutions/telecom') ?>" class="footer-link">Telecom</a></li>
+          <li><a href="<?= base_url('solutions/government') ?>" class="footer-link">Government</a></li>
+          <li><a href="<?= base_url('solutions/financial') ?>" class="footer-link">Financial</a></li>
         </ul>
+
       </div>
 
       <div class="col-md-3 mb-4">
         <h6 class="mb-3">Services</h6>
         <ul class="list-unstyled text-muted">
-          <li><a href="#" class="footer-link">Consultation</a></li>
-          <li><a href="#" class="footer-link">Use Case Development</a></li>
-          <li><a href="#" class="footer-link">Manage Services</a></li>
-          <li><a href="#" class="footer-link">Maintenance Support</a></li>
-          <li><a href="#" class="footer-link">Training</a></li>
+          <li><a href="<?= base_url('services/consulting') ?>" class="footer-link">Consulting</a></li>
+          <li><a href="<?= base_url('services/use-case-development') ?>" class="footer-link">Use Case Development</a></li>
+          <li><a href="<?= base_url('services/managed-services') ?>" class="footer-link">Managed Services</a></li>
+          <li><a href="<?= base_url('services/maintenance-support') ?>" class="footer-link">Maintenance Support</a></li>
+          <li><a href="<?= base_url('services/training') ?>" class="footer-link">Training</a></li>
         </ul>
+
       </div>
 
       <div class="col-md-3 mb-4">
         <h6 class="mb-3">Resources</h6>
         <ul class="list-unstyled text-muted">
-          <li><a href="#" class="footer-link">Article</a></li>
-          <li><a href="#" class="footer-link">Career</a></li>
-          <li><a href="#" class="footer-link">Event</a></li>
+          <li><a href="<?= base_url('resources/articles') ?>" class="footer-link">Article</a></li>
+          <li><a href="<?= base_url('company/team') ?>" class="footer-link">Career</a></li>
+          <li><a href="<?= base_url('resources') ?>" class="footer-link">Event</a></li>
         </ul>
+
       </div>
 
       <div class="col-md-3 mb-4">
         <h6 class="mb-3">Contact</h6>
-        <ul class="list-unstyled text-muted">
-          <li class="mb-2"><i class="bi bi-telephone me-2 text-primary"></i> +6221-29319396</li>
-          <li class="mb-2"><i class="bi bi-envelope me-2 text-primary"></i> info@alldataint.com</li>
-          <li><i class="bi bi-geo-alt me-2 text-primary"></i> Grand Aries Niaga, Blok G1–2T, Jakarta 11620 Indonesia</li>
+
+        <ul class="list-unstyled text-muted contact-list">
+          <li class="d-flex align-items-start">
+            <span class="icon">
+              <i class="bi bi-telephone text-primary"></i>
+            </span>
+            <span class="text">+6221-29319396</span>
+          </li>
+
+          <li class="d-flex align-items-start">
+            <span class="icon">
+              <i class="bi bi-envelope text-primary"></i>
+            </span>
+            <span class="text">info@alldataint.com</span>
+          </li>
+
+          <li class="d-flex align-items-start">
+            <span class="icon">
+              <i class="bi bi-geo-alt text-primary"></i>
+            </span>
+            <span class="text">
+              Grand Aries Niaga, Blok G1–2T, Jakarta 11620 Indonesia
+            </span>
+          </li>
         </ul>
       </div>
+
     </div>
   </div>
 

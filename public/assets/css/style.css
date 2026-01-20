@@ -571,6 +571,18 @@ footer hr {
   border-top: 1px solid #e5e9ef;
 }
 
+.contact-list .icon {
+  width: 24px; /* area ikon fix */
+  flex-shrink: 0;
+  margin-right: 8px;
+  line-height: 1.4;
+}
+
+.contact-list .text {
+  display: block;
+  line-height: 1.6;
+}
+
 /* === Services Section Custom === */
 #services-section {
   background-color: #008bf9;

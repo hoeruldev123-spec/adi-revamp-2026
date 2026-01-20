@@ -26,352 +26,214 @@
                     <!-- Page 1 (First 6 cards) -->
                     <div class="principal-page active">
                         <div class="row g-4">
-                            <!-- Qlik Card -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Qlik.png') ?>" alt="Qlik" class="img-fluid">
+                            <div class="container">
+                                <div class="row justify-content-center certifications-grid">
+
+                                    <!-- Column 1 (down) -->
+                                    <div class="col certification-col down">
+                                        <div class="cert-track">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Alibaba-Cloud.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-AWS.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-ClickHouse.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Cloudera.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Confluent.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Creatio.png'); ?>">
+
+                                            <!-- CLONE -->
+                                            <img src="<?= base_url('assets/images/principals/Logo-Alibaba-Cloud.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-AWS.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-ClickHouse.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Cloudera.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Confluent.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Creatio.png'); ?>">
                                         </div>
                                     </div>
 
-                                </div>
-                            </div>
 
-                            <!-- Confluent Card -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Confluent.png') ?>" alt="Confluent" class="img-fluid">
+
+                                    <!-- Column 2 (up) -->
+                                    <div class="col certification-col up">
+
+                                        <div class="cert-track">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Dataiku.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Dell.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Denodo.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Hasura.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Helett Packard.png'); ?>">
+
+                                            <img src="<?= base_url('assets/images/principals/Logo-Dataiku.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Dell.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Denodo.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Hasura.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Helett Packard.png'); ?>">
                                         </div>
+
+
                                     </div>
 
-                                </div>
-                            </div>
+                                    <!-- Column 3 -->
+                                    <div class="col certification-col down">
 
-                            <!-- Denodo Card -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Denodo.png') ?>" alt="Denodo" class="img-fluid">
+                                        <div class="cert-track">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Qlik.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-redis.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Snowflake.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Tableau.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-YugabyteDB.png'); ?>">
+
+                                            <img src="<?= base_url('assets/images/principals/Logo-Qlik.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-redis.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Snowflake.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-Tableau.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/Logo-YugabyteDB.png'); ?>">
                                         </div>
-                                    </div>
 
+
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- Snowflake Card -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Snowflake.png') ?>" alt="Snowflake" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- Dataiku Card -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Dataiku.png') ?>" alt="Dataiku" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- Cloudera Card -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Cloudera.png') ?>" alt="Cloudera" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Page 2 (Next 6 cards) -->
-                    <div class="principal-page">
-                        <div class="row g-4">
-                            <!-- New Card 1 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Tableau.png') ?>" alt="New Principal 1" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- New Card 2 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-YugabyteDB.png') ?>" alt="New Principal 2" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- Tambahkan 4 card baru lainnya di sini -->
-                            <!-- New Card 3 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Hasura.png') ?>" alt="New Principal 3" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- New Card 4 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-ClickHouse.png') ?>" alt="New Principal 4" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- New Card 5 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Alibaba-Cloud.png') ?>" alt="New Principal 5" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- New Card 6 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-redis.png') ?>" alt="New Principal 6" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Page 3 (Last 6 cards) -->
-                    <div class="principal-page">
-                        <div class="row g-4">
-                            <!-- New Card 7 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Dell.png') ?>" alt="New Principal 7" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- New Card 8 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-AWS.png') ?>" alt="New Principal 8" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- New Card 9 -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="principal-card h-100">
-                                    <div class="card-header mb-3">
-                                        <div class="principal-logo">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Helett Packard.png') ?>" alt="New Principal 10" class="img-fluid">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
                 </div>
-                <!-- Pagination Controls -->
-                <div class="row mt-5">
-                    <div class="col-12">
-                        <nav aria-label="Principal pagination">
-                            <ul class="pagination justify-content-center" id="principalPagination">
-                                <!-- Pagination buttons will be generated dynamically -->
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+
 
             </div>
         </div>
     </div>
+
+
+    <style>
+        .certifications-grid {
+            gap: 10px;
+        }
+
+        /* Kolom */
+        .certification-col {
+            height: 380px;
+            overflow: hidden;
+        }
+
+
+        /* Track icon */
+        .cert-track {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 0;
+        }
+
+        /* Animation */
+        .certification-col.down .cert-track {
+            animation: scrollDown 12s linear infinite;
+        }
+
+        .certification-col.up .cert-track {
+            animation: scrollUp 12s linear infinite;
+        }
+
+        /* Icon */
+        .cert-track img {
+            max-height: 60px;
+            width: auto;
+            max-width: 60%;
+            object-fit: contain;
+            transition: transform .3s ease;
+        }
+
+
+
+        .certification-col::before,
+        .certification-col::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Fade atas */
+        .certification-col::before {
+            top: 0;
+            background: linear-gradient(to bottom,
+                    #ffffff 0%,
+                    rgba(255, 255, 255, 0) 100%);
+        }
+
+        /* Fade bawah */
+        .certification-col::after {
+            bottom: 0;
+            background: linear-gradient(to top,
+                    #ffffff 0%,
+                    rgba(255, 255, 255, 0) 100%);
+        }
+
+
+        /* Keyframes */
+        @keyframes scrollDown {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-50%);
+            }
+        }
+
+        @keyframes scrollUp {
+            from {
+                transform: translateY(-50%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+
+        /* Pause on hover */
+        .certification-col:hover .cert-track {
+            animation-play-state: paused;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .certification-col {
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .certifications-grid {
+                gap: 15px;
+            }
+
+            .cert-track img {
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .certification-col {
+                height: 260px;
+            }
+
+            .cert-track {
+                padding: 25px 0;
+                gap: 18px;
+            }
+
+            .cert-track img {
+                max-height: 42px;
+            }
+
+            .certification-col::before,
+            .certification-col::after {
+                height: 45px;
+            }
+        }
+    </style>
+
 </section>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const principalPages = document.querySelectorAll('.principal-page');
-        const paginationContainer = document.getElementById('principalPagination');
-        const totalPages = principalPages.length;
-
-        // Generate pagination buttons
-        function generatePagination() {
-            paginationContainer.innerHTML = '';
-
-            // Previous button
-            const prevLi = document.createElement('li');
-            prevLi.className = 'page-item';
-            prevLi.innerHTML = '<a class="page-link" href="#" aria-label="Previous" data-page="prev"><span aria-hidden="true">&laquo;</span></a>';
-            paginationContainer.appendChild(prevLi);
-
-            // Page number buttons
-            for (let i = 0; i < totalPages; i++) {
-                const li = document.createElement('li');
-                li.className = `page-item ${i === 0 ? 'active' : ''}`;
-                li.innerHTML = `<a class="page-link" href="#" data-page="${i}">${i + 1}</a>`;
-                paginationContainer.appendChild(li);
-            }
-
-            // Next button
-            const nextLi = document.createElement('li');
-            nextLi.className = 'page-item';
-            nextLi.innerHTML = '<a class="page-link" href="#" aria-label="Next" data-page="next"><span aria-hidden="true">&raquo;</span></a>';
-            paginationContainer.appendChild(nextLi);
-
-            // Add event listeners
-            document.querySelectorAll('.page-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const page = this.getAttribute('data-page');
-                    changePage(page);
-                });
-            });
-        }
-
-        // Change page function
-        // Ganti hanya bagian animasi dalam fungsi changePage():
-        function changePage(page) {
-            const currentActive = document.querySelector('.principal-page.active');
-            const currentPageIndex = Array.from(principalPages).indexOf(currentActive);
-            let newPageIndex;
-
-            if (page === 'prev') {
-                newPageIndex = Math.max(0, currentPageIndex - 1);
-            } else if (page === 'next') {
-                newPageIndex = Math.min(totalPages - 1, currentPageIndex + 1);
-            } else {
-                newPageIndex = parseInt(page);
-            }
-
-            // Jika sudah di halaman yang sama, tidak perlu lakukan apa-apa
-            if (newPageIndex === currentPageIndex) return;
-
-            // Tentukan arah animasi (untuk efek slide horizontal)
-            const isGoingForward = newPageIndex > currentPageIndex;
-
-            // Matikan event listener sementara selama transisi
-            document.querySelectorAll('.page-link').forEach(link => {
-                link.style.pointerEvents = 'none';
-            });
-
-            // 1. Fade out halaman aktif saat ini dengan slide horizontal
-            currentActive.style.opacity = '0';
-            currentActive.style.transform = isGoingForward ? 'translateX(-30px)' : 'translateX(30px)';
-
-            setTimeout(() => {
-                // 2. Sembunyikan halaman lama
-                currentActive.classList.remove('active');
-                currentActive.style.opacity = '';
-                currentActive.style.transform = '';
-
-                // 3. Tampilkan halaman baru dengan posisi awal
-                const newPage = principalPages[newPageIndex];
-                newPage.classList.add('active');
-                newPage.style.opacity = '0';
-                newPage.style.transform = isGoingForward ? 'translateX(30px)' : 'translateX(-30px)';
-
-                // Force reflow untuk memastikan transisi berjalan
-                newPage.offsetHeight;
-
-                // 4. Animasikan halaman baru masuk
-                setTimeout(() => {
-                    newPage.style.opacity = '1';
-                    newPage.style.transform = 'translateX(0)';
-
-                    // Aktifkan kembali event listener setelah transisi selesai
-                    setTimeout(() => {
-                        document.querySelectorAll('.page-link').forEach(link => {
-                            link.style.pointerEvents = '';
-                        });
-                    }, 300);
-
-                }, 50);
-
-                // Update pagination buttons
-                document.querySelectorAll('#principalPagination .page-item').forEach((item, index) => {
-                    if (index === 0) return; // Skip prev button
-
-                    if (index === newPageIndex + 1) { // +1 for prev button
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
-
-                // Update prev/next button states
-                const prevBtn = paginationContainer.querySelector('.page-item:first-child .page-link');
-                const nextBtn = paginationContainer.querySelector('.page-item:last-child .page-link');
-
-                if (newPageIndex === 0) {
-                    prevBtn.parentElement.classList.add('disabled');
-                } else {
-                    prevBtn.parentElement.classList.remove('disabled');
-                }
-
-                if (newPageIndex === totalPages - 1) {
-                    nextBtn.parentElement.classList.add('disabled');
-                } else {
-                    nextBtn.parentElement.classList.remove('disabled');
-                }
-
-            }, 300); // Tunggu hingga slide out selesai
-        }
-
-        // Initialize pagination
-        generatePagination();
-
-        // Show first page by default
-        if (principalPages.length > 0) {
-            principalPages[0].classList.add('active');
-        }
-    });
-</script>

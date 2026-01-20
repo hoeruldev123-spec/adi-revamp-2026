@@ -36,9 +36,9 @@
                     <img src="<?= base_url('assets/images/certifications/certifications-4.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-7.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-8.png'); ?>">
-                    <img src="<?= base_url('assets/images/certifications/certifications-9.png'); ?>">
-                    <img src="<?= base_url('assets/images/certifications/certifications-10.png'); ?>">
-                    <img src="<?= base_url('assets/images/certifications/certifications-11.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-2.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-3.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-12.png'); ?>">
                 </div>
             </div>
@@ -60,9 +60,9 @@
                 <div class="cert-track">
                     <img src="<?= base_url('assets/images/certifications/certifications-7.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-8.png'); ?>">
-                    <img src="<?= base_url('assets/images/certifications/certifications-9.png'); ?>">
-                    <img src="<?= base_url('assets/images/certifications/certifications-10.png'); ?>">
-                    <img src="<?= base_url('assets/images/certifications/certifications-11.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-2.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-3.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-12.png'); ?>">
                 </div>
             </div>
@@ -84,9 +84,9 @@
                 <div class="cert-track">
                     <img src="<?= base_url('assets/images/certifications/certifications-7.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-8.png'); ?>">
-                    <img src="<?= base_url('assets/images/certifications/certifications-9.png'); ?>">
-                    <img src="<?= base_url('assets/images/certifications/certifications-10.png'); ?>">
-                    <img src="<?= base_url('assets/images/certifications/certifications-11.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-2.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-3.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-12.png'); ?>">
                 </div>
             </div>
