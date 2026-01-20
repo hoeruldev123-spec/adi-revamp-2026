@@ -23,7 +23,6 @@
     </div>
 
     <div class="border-top"></div>
-    <hr>
 
     <div class="row mt-4">
       <div class="col-md-3 mb-4">
@@ -111,19 +110,17 @@
   </div>
 </footer>
 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
     duration: 1000,
     once: true
   });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof bootstrap === 'undefined') {
-      console.error('Bootstrap JS tidak terdeteksi. Pastikan bootstrap.bundle.min.js dimuat.');
-    }
-  });
 </script>
-<script src="<?= base_url('js/script.js') ?>"></script>
+
+<script src="<?= base_url('js/script.js?v=' . filemtime(FCPATH . 'js/script.js')) ?>"></script>

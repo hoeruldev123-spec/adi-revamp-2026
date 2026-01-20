@@ -6,6 +6,7 @@ class HomeController extends BaseController
 {
     public function index()
     {
+        // PRINCIPALS SECTION
         $principals = [
             ['logo' => 'Logo-Qlik.png', 'alt' => 'Qlik', 'description' => 'Empowering data-driven insights through advanced analytics and intuitive visualization.'],
             ['logo' => 'Logo-Confluent.png', 'alt' => 'Confluent', 'description' => 'Real-time data streaming powered by Apache Kafka for smarter business operations.'],
@@ -27,8 +28,7 @@ class HomeController extends BaseController
 
         ];
 
-
-
+        //TITLE & META DATA
         $data = [
             'title' => 'Home - All Data International',
 
@@ -37,6 +37,7 @@ class HomeController extends BaseController
                 'description' => 'Transform your business with AI and data integration solutions'
             ],
 
+            //SERVICES SECTION
             'services' => array_slice(
                 array_values($this->getServices()),
                 0,
@@ -45,8 +46,10 @@ class HomeController extends BaseController
 
             'hero' => $this->getHeroData(),
 
+            //FILTER MENAMPILAKN 6 CARD PRINCIPAL
             'principal_slides' => array_chunk($principals, 6) ?? [],
 
+            // ALL TESTIMONIAL
             'testimonials' => [
                 [
                     'logo' => 'bpjs-ketenagakerjaan.png',
@@ -106,11 +109,10 @@ class HomeController extends BaseController
 
         ];
 
-
-
         return view('pages/home', $data);
     }
 
+    //HERO
     private function getHeroData()
     {
         return [
