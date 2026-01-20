@@ -9,7 +9,7 @@
 
 <?= $this->section('content') ?>
 
-<?= $this->include('components/cards/service_card-all') ?>
+<?= $this->include('components/cards/service_card') ?>
 
 <?= $this->include('components/cards/principal_card') ?>
 

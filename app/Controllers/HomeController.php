@@ -27,6 +27,8 @@ class HomeController extends BaseController
 
         ];
 
+
+
         $data = [
             'title' => 'Home - All Data International',
 
@@ -34,6 +36,12 @@ class HomeController extends BaseController
                 'keywords' => 'AI, Data Integration, Business Solutions',
                 'description' => 'Transform your business with AI and data integration solutions'
             ],
+
+            'services' => array_slice(
+                array_values($this->getServices()),
+                0,
+                3
+            ),
 
             'hero' => $this->getHeroData(),
 

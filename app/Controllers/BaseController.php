@@ -83,4 +83,51 @@ abstract class BaseController extends Controller
 
         return $data;
     }
+
+    // SERVICES
+    protected function getServices(): array
+    {
+        return [
+            'consulting' => [
+                'key' => 'consulting',
+                'title' => 'Consulting',
+                'description' => 'Expert guidance to design data and AI strategies.',
+                'image' => 'services-card1.webp',
+                'icon' => 'icon-service-consulting.svg',
+                'url' => 'services/consulting',
+            ],
+            'use-case-development' => [
+                'key' => 'use-case-development',
+                'title' => 'Use Case Development',
+                'description' => 'Build tailored AI and analytics solutions.',
+                'image' => 'services-card2.webp',
+                'icon' => 'icon-service-usecase-development.svg',
+                'url' => 'services/use-case-development',
+            ],
+            'maintenance-support' => [
+                'key' => 'maintenance-support',
+                'title' => 'Maintenance Support',
+                'description' => 'Ensure system reliability and optimization.',
+                'image' => 'services-card3.webp',
+                'icon' => 'icon-service-maintenance-support.svg',
+                'url' => 'services/maintenance-support',
+            ],
+            'managed-services' => [
+                'key' => 'managed-services',
+                'title' => 'Managed Services',
+                'description' => 'End-to-end infrastructure management.',
+                'image' => 'services-card4.webp',
+                'icon' => 'icon-service-manage-service.svg',
+                'url' => 'services/managed-services',
+            ],
+            'training' => [
+                'key' => 'training',
+                'title' => 'Training',
+                'description' => 'Professional data & AI training programs.',
+                'image' => 'services-card5.webp',
+                'icon' => 'icon-service-training.svg',
+                'url' => 'services/training',
+            ],
+        ];
+    }
 }
