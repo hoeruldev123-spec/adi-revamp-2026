@@ -35,10 +35,10 @@ $routes->group('services', function ($routes) {
 
 // Company dengan submenu sesuai dropdown
 $routes->group('company', function ($routes) {
-    $routes->get('about', 'CompanyController::about');
-    $routes->get('our_partners', 'CompanyController::ourPartners');
-    $routes->get('our_clients', 'CompanyController::ourClients');
-    $routes->get('our_competencies', 'CompanyController::ourCompetencies');
+    $routes->get('about-us', 'CompanyController::about');
+    $routes->get('our-partners', 'CompanyController::ourPartners');
+    $routes->get('our-clients', 'CompanyController::ourClients');
+    $routes->get('our-competencies', 'CompanyController::ourCompetencies');
     $routes->get('team', 'CompanyController::team');
 });
 $routes->get('/company/contact', 'ContactController::index');

@@ -49,9 +49,9 @@
 
     </div>
 
-    <?php if (uri_string() !== 'company/about'): ?>
+    <?php if (uri_string() !== 'company/about-us'): ?>
       <div class="mt-4">
-        <a href="<?= base_url('company/about'); ?>" class="btn btn-primary btn-lg rounded-pill px-5">
+        <a href="<?= base_url('company/about-us'); ?>" class="btn btn-primary btn-lg rounded-pill px-5">
           About Us <i class="bi bi-arrow-up-right ms-2"></i>
         </a>
       </div>

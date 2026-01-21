@@ -27,7 +27,7 @@ class SolutionsController extends BaseController
             // ===== PAGE CONTENT =====
             'subtitle'   => 'DETAIL SOLUTIONS',
             'description' => 'Optimize demand forecasting and supply chain with AI-powered analytics for smarter market decisions.',
-            'image'      => 'solutions-fmcg.webp',
+            'image'      => 'solutions/solutions-fmcg.webp',
 
             // ===== CTA =====
             'cta_text'   => 'Explore Now',
@@ -50,7 +50,7 @@ class SolutionsController extends BaseController
             // ===== PAGE CONTENT =====
             'subtitle'    => 'DETAIL SOLUTIONS',
             'description' => 'Leverage AI-driven insights to enhance network reliability and customer experience.',
-            'image'       => 'solutions-telecom.webp',
+            'image'       => 'solutions/solutions-telecom.webp',
 
             // ===== CTA =====
             'cta_text'    => 'Explore Now',
@@ -73,7 +73,7 @@ class SolutionsController extends BaseController
             // ===== PAGE CONTENT =====
             'subtitle'    => 'DETAIL SOLUTIONS',
             'description' => 'Empowering government institutions with secure, data-driven, and intelligent solutions.',
-            'image'       => 'solutions-government.webp',
+            'image'       => 'solutions/solutions-government.webp',
 
             // ===== CTA =====
             'cta_text'    => 'Explore Now',
@@ -94,7 +94,7 @@ class SolutionsController extends BaseController
 
             'subtitle'    => 'DETAIL SOLUTIONS',
             'description' => 'Enhance financial decisions with intelligent analytics and automation.',
-            'image'       => 'solutions-finance.webp',
+            'image'       => 'solutions/solutions-financial.webp',
 
             'cta_text'    => 'Explore Now',
             'cta_link'    => '#detail-solutions',

@@ -25,7 +25,7 @@
                             'title' => 'FMCG',
                             'icon' => 'bi-basket',
                             'description' => 'Optimize demand forecasting and supply chain with AI-powered analytics for smarter market decisions.',
-                            'image' => base_url('assets/images/solutions-fmcg.webp'),
+                            'image' => base_url('assets/images/solutions/solutions-fmcg.webp'),
                             'active' => true
                         ],
                         [
@@ -33,7 +33,7 @@
                             'title' => 'Telecom',
                             'icon' => 'bi-phone',
                             'description' => 'Enhance network performance and customer experience with real-time data analytics and predictive maintenance.',
-                            'image' => base_url('assets/images/solutions-telecom.webp'),
+                            'image' => base_url('assets/images/solutions/solutions-telecom.webp'),
                             'active' => false
                         ],
                         [
@@ -41,7 +41,7 @@
                             'title' => 'Government',
                             'icon' => 'bi-building',
                             'description' => 'Transform public services with data-driven decision making and efficient resource allocation.',
-                            'image' => base_url('assets/images/solutions-government.webp'),
+                            'image' => base_url('assets/images/solutions/solutions-government.webp'),
                             'active' => false
                         ],
                         [
@@ -49,7 +49,7 @@
                             'title' => 'Financial',
                             'icon' => 'bi-bank',
                             'description' => 'Mitigate risks and detect fraud with advanced analytics and AI-powered security solutions.',
-                            'image' => base_url('assets/images/solutions-financial.webp'),
+                            'image' => base_url('assets/images/solutions/solutions-financial.webp'),
                             'active' => false
                         ]
                     ];

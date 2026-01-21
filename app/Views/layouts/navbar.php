@@ -97,21 +97,21 @@ $segment2 = getSafeSegment(2);
             <i class="bi bi-chevron-down ms-1 <?= ($segment1 == 'company' || $segment1 == 'about') ? 'text-primary' : '' ?>"></i>
           </a>
           <ul class="dropdown-menu border-0 shadow-lg rounded-3 py-2 mt-1 mt-lg-2" aria-labelledby="companyDropdown">
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our_partners') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('company/our_partners'); ?>">
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our-partners') ? 'active bg-primary text-white' : '' ?>"
+                href="<?= base_url('company/our-partners'); ?>">
                 <i class="bi bi-link-45deg me-2 <?= ($segment2 == 'our_partners') ? 'text-white' : 'text-muted' ?>"></i>Our Partners
               </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our_clients') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('company/our_clients'); ?>">
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our-clients') ? 'active bg-primary text-white' : '' ?>"
+                href="<?= base_url('company/our-clients'); ?>">
                 <i class="bi bi-people me-2 <?= ($segment2 == 'our_clients') ? 'text-white' : 'text-muted' ?>"></i>Our Clients
               </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our_competencies') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('company/our_competencies'); ?>">
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our-competencies') ? 'active bg-primary text-white' : '' ?>"
+                href="<?= base_url('company/our-competencies'); ?>">
                 <i class="bi bi-gear me-2 <?= ($segment2 == 'our_competencies') ? 'text-white' : 'text-muted' ?>"></i>Our Competencies
               </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'about') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('company/about'); ?>">
-                <i class="bi bi-info-circle me-2 <?= ($segment2 == 'about') ? 'text-white' : 'text-muted' ?>"></i>About Us
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'about-us') ? 'active bg-primary text-white' : '' ?>"
+                href="<?= base_url('company/about-us'); ?>">
+                <i class="bi bi-info-circle me-2 <?= ($segment2 == 'about-us') ? 'text-white' : 'text-muted' ?>"></i>About Us
               </a></li>
           </ul>
         </li>
