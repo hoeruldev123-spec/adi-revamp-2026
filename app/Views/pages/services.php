@@ -1,6 +1,6 @@
 <?= $this->extend('layouts/main') ?>
 
-<?= $this->section('title') ?><?= $title ?? 'Services' ?><?= $this->endSection() ?>
+<?= $this->section('title') ?><?= $title ?? 'Services | All Data International' ?><?= $this->endSection() ?>
 
 <?= $this->section('meta') ?>
 <meta name="keywords" content="<?= $meta['keywords'] ?? '' ?>">

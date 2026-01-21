@@ -7,7 +7,7 @@ class ContactController extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Contact Us - All Data International',
+            'title' => 'Contact Us | All Data International',
             'page' => 'contact',
             'meta_description' => 'Get in touch with All Data International. Contact us for inquiries, support, or partnership opportunities.',
             'meta_keywords' => 'contact, support, inquiry, partnership, Jakarta office, WhatsApp, email'

@@ -144,6 +144,205 @@ h6 {
   border-radius: 50px;
 }
 
+/* ===== NAVBAR ===== */
+.nav-link.dropdown-toggle::after {
+    display: none !important;
+  }
+
+  @media (max-width: 991.98px) {
+    .navbar {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .navbar-collapse {
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      margin-top: 0.5rem;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+
+    .nav-item {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 0.5rem 0;
+    }
+
+    .nav-item:last-child {
+      border-bottom: none;
+    }
+
+    .nav-link {
+      padding: 0.75rem 0.5rem !important;
+      font-size: 1.1rem;
+    }
+
+    .nav-link.dropdown-toggle::after {
+      display: none !important;
+    }
+
+    .nav-link.dropdown-toggle .bi-chevron-down {
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link.dropdown-toggle.show .bi-chevron-down {
+      transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+      border: none !important;
+      box-shadow: none !important;
+      background: rgba(0, 0, 0, 0.02);
+      margin-left: 1rem;
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      max-height: 0;
+
+
+
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      display: block !important;
+      /* Important untuk custom toggle */
+    }
+
+    .dropdown-menu.show {
+      max-height: 500px;
+      transition: max-height 0.4s ease-in;
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 0.75rem !important;
+      font-size: 1rem;
+      border-radius: 0.375rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .dropdown-item:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .navbar {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .nav-link {
+      padding: 0.5rem 1rem !important;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--bs-primary) !important;
+    }
+
+    .nav-link.dropdown-toggle .bi-chevron-down {
+      font-size: 0.75rem;
+      margin-left: 0.25rem;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link.dropdown-toggle[aria-expanded="true"] .bi-chevron-down,
+    .nav-link.dropdown-toggle.show .bi-chevron-down {
+      transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+      min-width: 220px;
+      animation: fadeIn 0.2s ease;
+    }
+
+    .dropdown-item {
+      transition: all 0.2s ease;
+    }
+
+    .dropdown-item:hover {
+      background-color: rgba(var(--bs-primary-rgb), 0.1);
+      padding-left: 1.5rem !important;
+    }
+  }
+
+  .nav-link.active .bi-chevron-down {
+    color: var(--bs-primary) !important;
+  }
+
+  .dropdown-item.active {
+    position: relative;
+  }
+  
+  .nav-link.active {
+    position: relative;
+    border-bottom: 2px solid var(--bs-primary);
+  }
+
+  @media (max-width: 991.98px) {
+    .nav-link.active {
+      border-bottom: none;
+      background: rgba(var(--bs-primary-rgb), 0.1);
+      border-radius: 0.375rem;
+      padding-left: 1rem !important;
+    }
+  }
+
+  .navbar-toggler {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+  }
+
+  /* State awal - selalu reset */
+  .navbar-toggler .navbar-toggler-icon {
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform: rotate(0deg);
+  }
+
+  /* Ketika menu terbuka (aria-expanded="true") */
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(90deg);
+  }
+
+  .navbar-toggler:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.1);
+  }
+
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      transition: max-height 0.35s ease, opacity 0.25s ease;
+      overflow: hidden;
+    }
+
+    .navbar-collapse:not(.show) {
+      max-height: 0;
+      opacity: 0;
+      padding: 0 1rem;
+    }
+
+    .navbar-collapse.show {
+      max-height: 1000px;
+      opacity: 1;
+      padding: 1rem;
+    }
+  }
+
+  /* Close button styling */
+  .btn-outline-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
 /* ====== Client ===== */
 .client-appear {
   opacity: 0;
@@ -818,16 +1017,17 @@ footer hr {
 }
 
 /* Reset animasi saat switcher diklik */
-.vm-switcher.clicked ~ h2 .animate-fade-blue,
-.vm-switcher.clicked ~ h2 .word-fade {
-  animation: none;
+.word-fade,
+.animate-fade-blue {
+  display: inline-block; 
   color: #c6c6c6;
 }
 
-.vm-switcher.clicked ~ h2 .animate-fade-blue.animate-again,
-.vm-switcher.clicked ~ h2 .word-fade.animate-again {
+.vm-box.active .word-fade.animate,
+.vm-box.active .animate-fade-blue.animate {
   animation: wordToBlue 0.8s ease forwards;
 }
+
 .vm-switcher {
   position: relative;
   display: inline-flex;
@@ -838,7 +1038,6 @@ footer hr {
 }
 
 /* Switcher */
-
 .vm-btn {
   position: relative;
   z-index: 2;
@@ -879,48 +1078,35 @@ footer hr {
 /* --- VM Content Animation --- */
 .vm-box {
   position: absolute;
-  width: 100%;
-  opacity: 1;
-  transform: translateX(0);
-  transition:
-    transform 0.45s ease,
-    opacity 0.45s ease;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity .45s ease, transform .45s ease;
+  pointer-events: none;
+  /* width: 100%; */
 }
 
-/* Saat konten disembunyikan ke kiri */
+.vm-box.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
+}
+
 .vm-box.hide-left {
   opacity: 0;
   transform: translateX(-40px);
-  pointer-events: none;
 }
 
-/* Saat konten disembunyikan ke kanan */
 .vm-box.hide-right {
   opacity: 0;
   transform: translateX(40px);
-  pointer-events: none;
 }
 
 /* Wrapper agar posisi absolut bekerja */
 #vm-content {
   position: relative;
-  min-height: 120px; /* menjaga tinggi supaya tidak lompat */
-}
-
-/* Konten aktif (vision) tampil normal */
-.vm-box.active {
-  opacity: 1;
-  transform: translateX(0);
-  position: relative;
-  pointer-events: auto;
-}
-
-/* Konten lain tersembunyi default */
-.vm-box:not(.active) {
-  opacity: 0;
-  transform: translateX(40px);
-  position: absolute;
-  pointer-events: none;
+  min-height: 160px; 
 }
 
 /* Logo Carousel Styling - FIXED */
@@ -1494,10 +1680,9 @@ footer hr {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
+/* Hover Effect */
 .hover-lift {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
@@ -1509,6 +1694,7 @@ footer hr {
 .form-floating .form-control {
   border: 1px solid #dee2e6;
   border-radius: 10px;
+  font-size: 0.95rem;
 }
 
 .form-floating .form-control:focus {
@@ -1516,20 +1702,80 @@ footer hr {
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ============================= */
+/* TABLET (≤ 992px) */
+/* ============================= */
+@media (max-width: 992px) {
   .display-4 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 
   .display-5 {
-    font-size: 2rem;
+    font-size: 2.25rem;
+  }
+
+  #contact-hero {
+    text-align: center;
+  }
+
+  .hover-lift:hover {
+    transform: none; /* disable lift on touch */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+  }
+}
+
+/* ============================= */
+/* MOBILE (≤ 768px) */
+/* ============================= */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.25rem;
+  }
+
+  .display-5 {
+    font-size: 1.9rem;
   }
 
   .card-body.p-4 {
     padding: 1.5rem !important;
   }
+
+  .form-floating label {
+    font-size: 0.85rem;
+  }
+
+  .form-floating .form-control {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .hover-lift {
+    transition: none; /* better UX on mobile */
+  }
 }
+
+/* ============================= */
+/* SMALL MOBILE (≤ 576px) */
+/* ============================= */
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .display-5 {
+    font-size: 1.6rem;
+  }
+
+  .card-body {
+    padding: 1.25rem !important;
+  }
+
+  button,
+  .btn {
+    width: 100%;
+  }
+}
+
 
 /* JOURNEY  */
 /* Timeline wrapper */

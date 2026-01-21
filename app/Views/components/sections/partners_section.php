@@ -14,7 +14,7 @@
                     </p>
 
                     <div class="d-flex flex-wrap gap-3 align-items-center">
-                        <a href="/kontak" class="btn btn-primary btn-lg rounded-pill px-4 py-2 shadow-sm">
+                        <a href="<?= base_url('company/our_partners'); ?>" class="btn btn-primary btn-lg rounded-pill px-4 py-2 shadow-sm">
                             Explore Partners <i class="bi bi-arrow-right ms-2"></i>
                         </a>
                     </div>
@@ -49,11 +49,8 @@
                                         </div>
                                     </div>
 
-
-
                                     <!-- Column 2 (up) -->
                                     <div class="col certification-col up">
-
                                         <div class="cert-track">
                                             <img src="<?= base_url('assets/images/principals/Logo-Dataiku.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Dell.png'); ?>">
@@ -67,13 +64,11 @@
                                             <img src="<?= base_url('assets/images/principals/Logo-Hasura.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Helett Packard.png'); ?>">
                                         </div>
-
 
                                     </div>
 
                                     <!-- Column 3 -->
                                     <div class="col certification-col down">
-
                                         <div class="cert-track">
                                             <img src="<?= base_url('assets/images/principals/Logo-Qlik.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-redis.png'); ?>">
@@ -87,7 +82,6 @@
                                             <img src="<?= base_url('assets/images/principals/Logo-Tableau.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-YugabyteDB.png'); ?>">
                                         </div>
-
 
                                     </div>
                                 </div>

@@ -11,7 +11,7 @@
 
 <section id="contact-form-section" class="py-5">
     <div class="container">
-        <div class="row gx-5 gy-3" data-aos="fade-up">
+        <div class="row gx-4 gy-3" data-aos="fade-up">
             <div class="col-lg-6">
                 <div class="pe-lg-4 position-relative mb-4">
                     <div class="hero-subtitle text-uppercase text-primary fw-semibold">
@@ -25,8 +25,8 @@
 
                 <div class="col-lg-12">
                     <div class="card border-1 rounded-4 mb-4">
-                        <div class="card-body p-4 d-flex align-items-start gap-3">
-                            <div class="row gx-4 gy-4">
+                        <div class="card-body p-4 d-flex gap-3">
+                            <div class="flex-shrink-0">
                                 <div class="flex-grow-1">
                                     <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                                         style="width:48px;height:48px;">
@@ -48,8 +48,8 @@
                 <div class="row gx-4 gy-4 mb-4">
                     <div class="col-lg-6">
                         <div class="card border-1 rounded-4 h-100">
-                            <div class="card-body p-4 d-flex align-items-start gap-3">
-                                <div class="row gx-4 gy-4">
+                            <div class="card-body p-4 d-flex gap-3">
+                                <div class="flex-shrink-0">
                                     <div class="flex-grow-1">
                                         <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                                             style="width:48px;height:48px;">
@@ -69,8 +69,8 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="card border-1 rounded-4 h-100">
-                            <div class="card-body p-4 d-flex align-items-start gap-3">
-                                <div class="row gx-4 gy-4">
+                            <div class="card-body p-4 d-flex gap-3">
+                                <div class="flex-shrink-0">
                                     <div class="flex-grow-1">
                                         <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                                             style="width:48px;height:48px;">
@@ -95,7 +95,7 @@
                 <div class="col-lg-12">
                     <div class="card border-1 rounded-4">
                         <div class="card-body p-4 d-flex align-items-center gap-3">
-                            <div class="row gx-4 gy-4">
+                            <div class="flex-shrink-0">
                                 <div class="flex-grow-1">
                                     <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                                         style="width:48px;height:48px;">
@@ -137,7 +137,7 @@
                                     <label for="firstName">First Name</label>
                                 </div>
                             </div>
-                            >
+
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text"
@@ -233,27 +233,29 @@
 </section>
 
 <section id="our-locations" class="py-5 bg-light" data-aos="fade-up">
-    <!-- <div class="container py-5" data-aos="fade-up"> -->
-    <div class="row justify-content-center mb-5">
-        <div class="col-lg-12 text-center">
-            <h6 class="text-uppercase text-primary mb-2">OUR LOCATIONS</h6>
-            <h2 class="mb-5">Discover Our Offices</h2>
-            <div class="position-relative overflow-hidden shadow-sm" style="height: 400px; background-color: #0dcaf0;">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.544637975645!2d106.7513134!3d-6.1916294999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7e1905d9f27%3A0xad148812b785f3ee!2sPT.%20All%20Data%20International!5e0!3m2!1sen!2sid!4v1767847866575!5m2!1sen!2sid"
-                    width="100%"
-                    height="100%"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    class="h-100 w-100"
-                    style="filter: invert(95%) hue-rotate(180deg) saturate(150%) brightness(115%) contrast(90%) sepia(15%);">
-                </iframe>
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-12 text-center">
+
+                <h6 class="text-uppercase text-primary mb-2">OUR LOCATIONS</h6>
+                <h2 class="mb-5">Discover Our Offices</h2>
+                <div class="position-relative overflow-hidden shadow-sm" style="height: 400px; background-color: #0dcaf0;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.544637975645!2d106.7513134!3d-6.1916294999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7e1905d9f27%3A0xad148812b785f3ee!2sPT.%20All%20Data%20International!5e0!3m2!1sen!2sid!4v1767847866575!5m2!1sen!2sid"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="h-100 w-100"
+                        style="border:0; filter: invert(95%) hue-rotate(180deg) saturate(150%) brightness(115%) contrast(90%) sepia(15%);">
+                    </iframe>
+                </div>
+
             </div>
         </div>
     </div>
-    <!-- </div> -->
 </section>
 
 <section id="social-connect" class="py-5" data-aos="fade-up">

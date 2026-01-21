@@ -1,4 +1,4 @@
-// File: solutions.js
+// SOLUTION PAGE
 document.addEventListener("DOMContentLoaded", function () {
   const solutionTabs = document.querySelectorAll("#solutionsTab .nav-link");
 
@@ -191,3 +191,61 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// NAVBAR //
+document.addEventListener('DOMContentLoaded', function() {
+
+    window.closeMobileMenu = function() {
+      const navbarCollapse = document.getElementById('mainNavbar');
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
+    };
+
+    document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item').forEach(link => {
+      link.addEventListener('click', function() {
+        if (window.innerWidth < 992) {
+
+          const navbarCollapse = document.getElementById('mainNavbar');
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (bsCollapse) {
+            bsCollapse.hide();
+          }
+
+          document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            menu.classList.remove('show');
+          });
+          document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.classList.remove('show');
+          });
+        }
+      });
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 992) {
+
+        const navbarCollapse = document.getElementById('mainNavbar');
+        if (navbarCollapse.classList.contains('show')) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (bsCollapse) {
+            bsCollapse.hide();
+          }
+        }
+
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+          menu.classList.remove('show');
+        });
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.classList.remove('show');
+        });
+      }
+    });
+  });
+  // END NAVBAR

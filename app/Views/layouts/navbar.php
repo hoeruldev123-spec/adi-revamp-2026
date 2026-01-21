@@ -1,7 +1,6 @@
 <?php
 $uri = service('uri');
 
-// Helper function untuk mendapatkan segment dengan aman
 function getSafeSegment($index)
 {
   try {
@@ -129,18 +128,21 @@ $segment2 = getSafeSegment(2);
             <i class="bi bi-chevron-down ms-1 <?= ($segment1 == 'resources') ? 'text-primary' : '' ?>"></i>
           </a>
           <ul class="dropdown-menu border-0 shadow-lg rounded-3 py-2 mt-1 mt-lg-2" aria-labelledby="resourcesDropdown">
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'articles') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('resources/articles'); ?>">
-                <i class="bi bi-newspaper me-2 <?= ($segment2 == 'articles') ? 'text-white' : 'text-muted' ?>"></i>Articles
-              </a></li>
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'careers') ? 'active bg-primary text-white' : '' ?>"
+            <li>
+              <a class="dropdown-item py-2 px-3 px-lg-4 <?= (uri_string() === 'articles') ? 'active bg-primary text-white' : '' ?>"
+                href="<?= base_url('articles'); ?>">
+                <i class="bi bi-newspaper me-2 <?= (uri_string() === 'articles') ? 'text-white' : 'text-muted' ?>"></i>
+                Articles
+              </a>
+            </li>
+            <!-- <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'careers') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('company/careers'); ?>">
                 <i class="bi bi-briefcase me-2 <?= ($segment2 == 'careers') ? 'text-white' : 'text-muted' ?>"></i>Careers
               </a></li>
             <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'events') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('resources/events'); ?>">
                 <i class="bi bi-calendar-event me-2 <?= ($segment2 == 'events') ? 'text-white' : 'text-muted' ?>"></i>Events
-              </a></li>
+              </a></li> -->
           </ul>
         </li>
 
@@ -178,283 +180,3 @@ $segment2 = getSafeSegment(2);
     </div>
   </div>
 </nav>
-
-<style>
-  .nav-link.dropdown-toggle::after {
-    display: none !important;
-  }
-
-  @media (max-width: 991.98px) {
-    .navbar {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-    }
-
-    .navbar-collapse {
-      background: white;
-      border-radius: 0.5rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      margin-top: 0.5rem;
-      max-height: 85vh;
-      overflow-y: auto;
-    }
-
-    .nav-item {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      padding: 0.5rem 0;
-    }
-
-    .nav-item:last-child {
-      border-bottom: none;
-    }
-
-    .nav-link {
-      padding: 0.75rem 0.5rem !important;
-      font-size: 1.1rem;
-    }
-
-    .nav-link.dropdown-toggle::after {
-      display: none !important;
-    }
-
-    .nav-link.dropdown-toggle .bi-chevron-down {
-      font-size: 1rem;
-      transition: transform 0.3s ease;
-    }
-
-    .nav-link.dropdown-toggle.show .bi-chevron-down {
-      transform: rotate(180deg);
-    }
-
-    .dropdown-menu {
-      border: none !important;
-      box-shadow: none !important;
-      background: rgba(0, 0, 0, 0.02);
-      margin-left: 1rem;
-      margin-top: 0.5rem;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      max-height: 0;
-
-
-
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-      display: block !important;
-      /* Important untuk custom toggle */
-    }
-
-    .dropdown-menu.show {
-      max-height: 500px;
-      transition: max-height 0.4s ease-in;
-    }
-
-    .dropdown-item {
-      padding: 0.5rem 0.75rem !important;
-      font-size: 1rem;
-      border-radius: 0.375rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .dropdown-item:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .navbar {
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
-    }
-
-    .nav-link {
-      padding: 0.5rem 1rem !important;
-      font-weight: 500;
-      transition: all 0.2s ease;
-    }
-
-    .nav-link:hover {
-      color: var(--bs-primary) !important;
-    }
-
-    .nav-link.dropdown-toggle .bi-chevron-down {
-      font-size: 0.75rem;
-      margin-left: 0.25rem;
-      transition: transform 0.3s ease;
-    }
-
-    .nav-link.dropdown-toggle[aria-expanded="true"] .bi-chevron-down,
-    .nav-link.dropdown-toggle.show .bi-chevron-down {
-      transform: rotate(180deg);
-    }
-
-    .dropdown-menu {
-      min-width: 220px;
-      animation: fadeIn 0.2s ease;
-    }
-
-    .dropdown-item {
-      transition: all 0.2s ease;
-    }
-
-    .dropdown-item:hover {
-      background-color: rgba(var(--bs-primary-rgb), 0.1);
-      padding-left: 1.5rem !important;
-    }
-  }
-
-  .nav-link.active .bi-chevron-down {
-    color: var(--bs-primary) !important;
-  }
-
-  .dropdown-item.active {
-    position: relative;
-    /* padding-left: 2.5rem !important; */
-  }
-
-  /* .dropdown-item.active::before {
-    content: '';
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 4px;
-    height: 4px;
-    background: currentColor;
-    border-radius: 50%;
-  } */
-
-  .nav-link.active {
-    position: relative;
-    border-bottom: 2px solid var(--bs-primary);
-  }
-
-  @media (max-width: 991.98px) {
-    .nav-link.active {
-      border-bottom: none;
-      background: rgba(var(--bs-primary-rgb), 0.1);
-      border-radius: 0.375rem;
-      padding-left: 1rem !important;
-    }
-  }
-
-  .navbar-toggler {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-    border-radius: 0.375rem;
-    transition: all 0.2s ease;
-  }
-
-  /* State awal - selalu reset */
-  .navbar-toggler .navbar-toggler-icon {
-    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    transform: rotate(0deg);
-  }
-
-  /* Ketika menu terbuka (aria-expanded="true") */
-  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    transform: rotate(90deg);
-  }
-
-  /* Rotate toggle icon saat menu terbuka
-  .navbar-toggler.collapsed .navbar-toggler-icon {
-    transition: transform 0.3s ease;
-  }
-
-  .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
-    transform: rotate(90deg);
-  } */
-
-  .navbar-toggler:hover {
-    background: rgba(0, 0, 0, 0.02);
-  }
-
-  .navbar-toggler:focus {
-    box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.1);
-  }
-
-  @media (max-width: 991.98px) {
-    .navbar-collapse {
-      transition: max-height 0.35s ease, opacity 0.25s ease;
-      overflow: hidden;
-    }
-
-    .navbar-collapse:not(.show) {
-      max-height: 0;
-      opacity: 0;
-      padding: 0 1rem;
-    }
-
-    .navbar-collapse.show {
-      max-height: 1000px;
-      opacity: 1;
-      padding: 1rem;
-    }
-  }
-
-  /* Close button styling */
-  .btn-outline-secondary:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-
-    window.closeMobileMenu = function() {
-      const navbarCollapse = document.getElementById('mainNavbar');
-      const navbarToggler = document.querySelector('.navbar-toggler');
-      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-
-      if (bsCollapse) {
-        bsCollapse.hide();
-      }
-    };
-
-    document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item').forEach(link => {
-      link.addEventListener('click', function() {
-        if (window.innerWidth < 992) {
-
-          const navbarCollapse = document.getElementById('mainNavbar');
-          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-          if (bsCollapse) {
-            bsCollapse.hide();
-          }
-
-          document.querySelectorAll('.dropdown-menu').forEach(menu => {
-            menu.classList.remove('show');
-          });
-          document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.classList.remove('show');
-          });
-        }
-      });
-    });
-
-    // Handle window resize
-    window.addEventListener('resize', function() {
-      if (window.innerWidth >= 992) {
-
-        const navbarCollapse = document.getElementById('mainNavbar');
-        if (navbarCollapse.classList.contains('show')) {
-          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-          if (bsCollapse) {
-            bsCollapse.hide();
-          }
-        }
-
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-          menu.classList.remove('show');
-        });
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-          toggle.setAttribute('aria-expanded', 'false');
-          toggle.classList.remove('show');
-        });
-      }
-    });
-  });
-</script>

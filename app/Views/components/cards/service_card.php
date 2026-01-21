@@ -59,14 +59,14 @@
       <?php endforeach; ?>
     </div>
 
+    <?php if (uri_string() !== 'services'): ?>
+      <div class="mt-5">
+        <a href="/services" class="btn btn-hover-grow btn-light btn-lg rounded-pill shadow-sm">
+          See All Services <i class="bi bi-arrow-up-right ms-2"></i>
+        </a>
+      </div>
+    <?php endif; ?>
 
-
-
-    <div class="mt-5">
-      <a href="/services" class="btn btn-hover-grow btn-light btn-lg rounded-pill shadow-sm">
-        See All Services <i class="bi bi-arrow-up-right ms-2"></i>
-      </a>
-    </div>
 
   </div>
 

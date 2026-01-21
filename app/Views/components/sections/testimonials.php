@@ -74,122 +74,58 @@
 
 
 <script>
+    // TESTIMONIAL
     document.addEventListener('DOMContentLoaded', () => {
         const slider = document.querySelector('.testimonial-slider');
-        const cards = document.querySelectorAll('.testimonial-card');
-        const nextBtn = document.querySelector('.testimonial-nav.next');
-        const prevBtn = document.querySelector('.testimonial-nav.prev');
-
-        let index = 0;
-
-        function visibleCount() {
-            if (window.innerWidth < 576) return 1;
-            if (window.innerWidth < 992) return 2;
-            return 3;
-        }
-
-        function cardFullWidth() {
-            const card = cards[0];
-            const style = window.getComputedStyle(slider);
-            const gap = parseInt(style.columnGap || style.gap || 0);
-            return card.offsetWidth + gap;
-        }
-
-        function maxIndex() {
-            return Math.max(0, cards.length - visibleCount());
-        }
-
-        function updateButtons() {
-            prevBtn.classList.toggle('disabled', index === 0);
-            nextBtn.classList.toggle('disabled', index >= maxIndex());
-        }
-
-        function updateSlider() {
-            index = Math.min(index, maxIndex());
-            slider.style.transform = `translateX(-${index * cardFullWidth()}px)`;
-            updateButtons();
-        }
-
-        nextBtn.addEventListener('click', () => {
-            if (index < maxIndex()) {
-                index++;
-                updateSlider();
-            }
-        });
-
-        prevBtn.addEventListener('click', () => {
-            if (index > 0) {
-                index--;
-                updateSlider();
-            }
-        });
-
-        window.addEventListener('resize', updateSlider);
-
-        updateSlider(); // init
-    });
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const slider = document.querySelector('.testimonial-slider');
-        const cards = document.querySelectorAll('.testimonial-card');
+        const cards = [...document.querySelectorAll('.testimonial-card')];
         const nextBtn = document.querySelector('.testimonial-nav.next');
         const prevBtn = document.querySelector('.testimonial-nav.prev');
         const progressBar = document.querySelector('.testimonial-progress-bar');
 
         let index = 0;
 
-        function visibleCount() {
+        const visibleCount = () => {
             if (window.innerWidth < 576) return 1;
             if (window.innerWidth < 992) return 2;
             return 3;
-        }
+        };
 
-        function cardFullWidth() {
-            const card = cards[0];
-            const style = window.getComputedStyle(slider);
-            const gap = parseInt(style.columnGap || style.gap || 0);
-            return card.offsetWidth + gap;
-        }
+        const cardFullWidth = () => {
+            const style = getComputedStyle(slider);
+            const gap = parseInt(style.gap || style.columnGap || 0);
+            return cards[0].offsetWidth + gap;
+        };
 
-        function maxIndex() {
-            return Math.max(0, cards.length - visibleCount());
-        }
+        const update = () => {
+            const visible = visibleCount();
+            const maxIndex = Math.max(0, cards.length - visible);
 
-        function updateProgress() {
-            const max = maxIndex();
-            const percent = max === 0 ? 100 : (index / max) * 100;
-            progressBar.style.width = `${percent}%`;
-        }
+            index = Math.min(index, maxIndex);
 
-        function updateButtons() {
-            prevBtn.classList.toggle('disabled', index === 0);
-            nextBtn.classList.toggle('disabled', index >= maxIndex());
-        }
-
-        function updateSlider() {
-            index = Math.min(index, maxIndex());
+            // slide
             slider.style.transform = `translateX(-${index * cardFullWidth()}px)`;
-            updateButtons();
-            updateProgress();
-        }
+
+            // buttons
+            prevBtn.classList.toggle('disabled', index === 0);
+            nextBtn.classList.toggle('disabled', index >= maxIndex);
+
+            // progress
+            const shown = Math.min(index + visible, cards.length);
+            progressBar.style.width = `${(shown / cards.length) * 100}%`;
+        };
 
         nextBtn.addEventListener('click', () => {
-            if (index < maxIndex()) {
-                index++;
-                updateSlider();
-            }
+            index++;
+            update();
         });
 
         prevBtn.addEventListener('click', () => {
-            if (index > 0) {
-                index--;
-                updateSlider();
-            }
+            index--;
+            update();
         });
 
-        window.addEventListener('resize', updateSlider);
+        window.addEventListener('resize', update);
 
-        updateSlider(); // init
+        update(); // init
     });
 </script>

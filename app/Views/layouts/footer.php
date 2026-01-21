@@ -1,7 +1,7 @@
 <footer class="pt-5 mt-5" data-aos="fade-up">
   <div class="container">
 
-    <div class="row align-items-start mb-3">
+    <div class="row justify-content-between align-items-start  mb-3">
       <div class="col-md-6 col-lg-5 mb-4">
         <a href="<?= base_url(); ?>" class="d-inline-flex align-items-center mb-3">
           <img src="<?= base_url('assets/images/alldata_logo.png'); ?>" alt="All Data International" height="45">
@@ -60,29 +60,47 @@
 
       <div class="col-md-3 mb-4">
         <h6 class="mb-3">Contact</h6>
-
         <ul class="list-unstyled text-muted contact-list">
-          <li class="d-flex align-items-start">
-            <span class="icon">
-              <i class="bi bi-telephone text-primary"></i>
-            </span>
-            <span class="text">+6221-29319396</span>
+          <li>
+            <a href="tel:+622129319396"
+              class="d-flex align-items-start text-decoration-none text-muted">
+              <span class="icon">
+                <i class="bi bi-telephone text-primary"></i>
+              </span>
+              <span class="text footer-link">+62 21 2931 9396</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="tel:+622129319397"
+              class="d-flex align-items-start text-decoration-none text-muted">
+              <span class="icon">
+                <i class="bi bi-telephone text-primary"></i>
+              </span>
+              <span class="text footer-link">+62 21 2931 9397</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:info@alldataint.com"
+              class="d-flex align-items-start text-decoration-none text-muted">
+              <span class="icon">
+                <i class="bi bi-envelope text-primary"></i>
+              </span>
+              <span class="text footer-link">info@alldataint.com</span>
+            </a>
           </li>
 
           <li class="d-flex align-items-start">
-            <span class="icon">
-              <i class="bi bi-envelope text-primary"></i>
-            </span>
-            <span class="text">info@alldataint.com</span>
-          </li>
-
-          <li class="d-flex align-items-start">
-            <span class="icon">
-              <i class="bi bi-geo-alt text-primary"></i>
-            </span>
-            <span class="text">
-              Grand Aries Niaga, Blok G1–2T, Jakarta 11620 Indonesia
-            </span>
+            <a href="https://maps.app.goo.gl/f9Z8MYaZtK1wNsm9A" target="_blank" rel="noopener"
+              class="d-flex align-items-start text-decoration-none text-muted">
+              <span class="icon">
+                <i class="bi bi-geo-alt text-primary"></i>
+              </span>
+              <span class="text footer-link">
+                Grand Aries Niaga, Blok G1–2T & 2S, Jakarta 11620 Indonesia
+              </span>
+            </a>
           </li>
         </ul>
       </div>
