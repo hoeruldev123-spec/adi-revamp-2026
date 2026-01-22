@@ -26,12 +26,26 @@
                     <img src="<?= base_url('assets/images/certifications/certifications-4.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-5.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-6.png'); ?>">
+
+                    <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-2.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-3.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-4.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-5.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-6.png'); ?>">
                 </div>
             </div>
 
             <!-- Column 2 (up) -->
             <div class="col certification-col up">
                 <div class="cert-track">
+                    <img src="<?= base_url('assets/images/certifications/certifications-4.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-7.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-8.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-2.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-3.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-12.png'); ?>">
 
                     <img src="<?= base_url('assets/images/certifications/certifications-4.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-7.png'); ?>">
@@ -52,12 +66,26 @@
                     <img src="<?= base_url('assets/images/certifications/certifications-4.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-5.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-6.png'); ?>">
+
+                    <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-2.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-3.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-4.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-5.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-6.png'); ?>">
                 </div>
             </div>
 
             <!-- Column 4 -->
             <div class="col certification-col up">
                 <div class="cert-track">
+                    <img src="<?= base_url('assets/images/certifications/certifications-7.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-8.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-2.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-3.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-12.png'); ?>">
+
                     <img src="<?= base_url('assets/images/certifications/certifications-7.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-8.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
@@ -76,12 +104,26 @@
                     <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-2.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-3.png'); ?>">
+
+                    <img src="<?= base_url('assets/images/certifications/certifications-4.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-5.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-6.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-2.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-3.png'); ?>">
                 </div>
             </div>
 
             <!-- Column 6 -->
             <div class="col certification-col up">
                 <div class="cert-track">
+                    <img src="<?= base_url('assets/images/certifications/certifications-7.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-8.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-2.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-3.png'); ?>">
+                    <img src="<?= base_url('assets/images/certifications/certifications-12.png'); ?>">
+
                     <img src="<?= base_url('assets/images/certifications/certifications-7.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-8.png'); ?>">
                     <img src="<?= base_url('assets/images/certifications/certifications-1.png'); ?>">
@@ -113,27 +155,26 @@
             flex-direction: column;
             align-items: center;
             gap: 30px;
-            padding: 80px 0;
+            padding: 40px 0;
         }
 
         /* Icon */
         .cert-track img {
-            height: 100px;
-            object-fit: contain;
-            transition: transform .3s ease;
+            transition: transform .25s ease, filter .25s ease;
         }
 
         .cert-track img:hover {
             transform: scale(1.15);
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, .15));
         }
 
         /* Animation */
         .certification-col.down .cert-track {
-            animation: moveDown 10s linear infinite;
+            animation: scrollDown 18s linear infinite;
         }
 
         .certification-col.up .cert-track {
-            animation: moveUp 10s linear infinite;
+            animation: scrollUp 18s linear infinite;
         }
 
         .certification-col::before,
@@ -163,25 +204,24 @@
                     rgba(255, 255, 255, 0) 100%);
         }
 
-
         /* Keyframes */
-        @keyframes moveDown {
-            0% {
-                transform: translateY(-50%);
+        @keyframes scrollDown {
+            from {
+                transform: translateY(0);
             }
 
-            100% {
-                transform: translateY(0);
+            to {
+                transform: translateY(-50%);
             }
         }
 
-        @keyframes moveUp {
-            0% {
-                transform: translateY(0);
+        @keyframes scrollUp {
+            from {
+                transform: translateY(-50%);
             }
 
-            100% {
-                transform: translateY(-50%);
+            to {
+                transform: translateY(0);
             }
         }
 
@@ -189,6 +229,7 @@
         .certification-col:hover .cert-track {
             animation-play-state: paused;
         }
+
 
         /* Responsive */
         @media (max-width: 992px) {

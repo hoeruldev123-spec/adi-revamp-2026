@@ -14,7 +14,7 @@
             <?php
             function fetchWordPressPosts()
             {
-                $api_url = 'https://alldataint.com/wp-json/wp/v2/posts';
+                $api_url = 'https://staging-adi2026.alldataint.com/articles/wp-json/wp/v2/posts';
                 $api_params = array(
                     'per_page' => 3,
                     '_embed' => 'wp:featuredmedia,wp:term',
