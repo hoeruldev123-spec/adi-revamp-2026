@@ -151,7 +151,7 @@
         </div>
 
         <div class="justify-content-center text-center">
-            <a href="<?= base_url('resources/articles') ?>" class="btn btn-primary rounded-pill px-4 btn-hover-up">
+            <a href="<?= base_url('articles/') ?>" class="btn btn-primary rounded-pill px-4 btn-hover-up">
                 All Post
             </a>
         </div>
