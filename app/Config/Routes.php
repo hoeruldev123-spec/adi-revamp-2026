@@ -49,7 +49,7 @@ $routes->get('resources/articles', 'ResourcesController::articles');
 // $routes->get('resources/events', 'ResourcesController::events');
 
 // Contact
-$routes->get('/contact', 'Contact::index');
+$routes->get('/contact', 'Contact::index', ['as' => 'contact']);
 $routes->get('/contact-us', 'Contact::index'); // Alternatif
 $routes->post('/contact/submit', 'Contact::submit');
 

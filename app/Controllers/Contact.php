@@ -41,12 +41,15 @@ class Contact extends Controller
             'message'    => $this->request->getPost('message')
         ];
 
-        // Kirim email
+        // Send email
         if ($this->sendEmail($data)) {
-            return redirect()->back()->with('success', 'Your message has been successfully submitted. Our team will contact you shortly.');
-        } else {
-            return redirect()->back()->withInput()->with('error', 'Sorry, there was an error sending your message. Please try again later.');
+            return redirect()->route('contact')
+                ->with('success', 'Your message has been successfully submitted. Our team will contact you shortly.');
         }
+
+        return redirect()->back()
+            ->withInput()
+            ->with('error', 'Sorry, there was an error sending your message. Please try again later.');
     }
 
     private function sendEmail($data)
