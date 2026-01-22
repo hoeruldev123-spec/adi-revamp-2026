@@ -49,9 +49,9 @@ $routes->get('resources/articles', 'ResourcesController::articles');
 // $routes->get('resources/events', 'ResourcesController::events');
 
 // Contact
-$routes->get('/contact', 'ContactController::index');
-$routes->get('/contact-us', 'ContactController::index'); // Alternatif
-$routes->post('/contact/submit', 'ContactController::submit');
+$routes->get('/contact', 'Contact::index');
+$routes->get('/contact-us', 'Contact::index'); // Alternatif
+$routes->post('/contact/submit', 'Contact::submit');
 
 // Search
 $routes->get('/search', 'SearchController::index');

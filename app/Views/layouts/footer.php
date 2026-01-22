@@ -65,7 +65,7 @@
             <a href="tel:+622129319396"
               class="d-flex align-items-start text-decoration-none text-muted">
               <span class="icon">
-                <i class="bi bi-telephone text-primary"></i>
+                <i class="bi bi-telephone"></i>
               </span>
               <span class="text footer-link">+62 21 2931 9396</span>
             </a>
@@ -75,7 +75,7 @@
             <a href="tel:+622129319397"
               class="d-flex align-items-start text-decoration-none text-muted">
               <span class="icon">
-                <i class="bi bi-telephone text-primary"></i>
+                <i class="bi bi-telephone"></i>
               </span>
               <span class="text footer-link">+62 21 2931 9397</span>
             </a>
@@ -85,7 +85,7 @@
             <a href="mailto:info@alldataint.com"
               class="d-flex align-items-start text-decoration-none text-muted">
               <span class="icon">
-                <i class="bi bi-envelope text-primary"></i>
+                <i class="bi bi-envelope"></i>
               </span>
               <span class="text footer-link">info@alldataint.com</span>
             </a>
@@ -95,7 +95,7 @@
             <a href="https://maps.app.goo.gl/f9Z8MYaZtK1wNsm9A" target="_blank" rel="noopener"
               class="d-flex align-items-start text-decoration-none text-muted">
               <span class="icon">
-                <i class="bi bi-geo-alt text-primary"></i>
+                <i class="bi bi-geo-alt"></i>
               </span>
               <span class="text footer-link">
                 Grand Aries Niaga, Blok G1–2T & 2S, Jakarta 11620 Indonesia

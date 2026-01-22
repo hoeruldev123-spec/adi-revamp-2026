@@ -103,12 +103,12 @@
                                     </div>
                                 </div>
 
-                                <div class="flex-grow-1 mb-3">
+                                <div class="flex-grow-1">
                                     <h5 class="mb-1">WhatsApp</h5>
                                     <p class="text-muted mb-0 small">We're ready to assist and happy to connect!</p>
                                 </div>
 
-                                <div class="flex-shrink-0">
+                                <div class="flex-shrink-0 mt-3">
                                     <a href="https://wa.me/6281233300382"
                                         target="_blank"
                                         class="btn btn-primary rounded-pill">
@@ -122,17 +122,55 @@
             </div>
 
             <div class="col-lg-6">
-                <div class="card border-0  rounded-4 p-4 p-lg-5">
+                <div class="card border-0 rounded-4 p-4 p-lg-5">
+
+                    <!-- Success Message -->
+                    <?php if (session()->getFlashdata('success')): ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <i class="bi bi-check-circle me-2"></i>
+                            <?= session()->getFlashdata('success') ?>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php endif; ?>
+
+                    <!-- Error Message -->
+                    <?php if (session()->getFlashdata('error')): ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            <?= session()->getFlashdata('error') ?>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php endif; ?>
+
+                    <!-- Validation Errors -->
+                    <?php if (session()->getFlashdata('errors')): ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            <strong>Please fix the following errors:</strong>
+                            <ul class="mb-0 mt-2">
+                                <?php foreach (session()->getFlashdata('errors') as $error): ?>
+                                    <li><?= esc($error) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php endif; ?>
+
+                    <h3 class="mb-4">Send us a message</h3>
+
                     <form id="contactForm" action="<?= base_url('contact/submit') ?>" method="POST">
+                        <?= csrf_field() ?>
+
                         <div class="row g-4">
 
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text"
-                                        class="form-control"
+                                        class="form-control <?= session('errors.first_name') ? 'is-invalid' : '' ?>"
                                         id="firstName"
                                         name="first_name"
                                         placeholder="Enter first name"
+                                        value="<?= old('first_name') ?>"
                                         required>
                                     <label for="firstName">First Name</label>
                                 </div>
@@ -141,10 +179,11 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text"
-                                        class="form-control"
+                                        class="form-control <?= session('errors.last_name') ? 'is-invalid' : '' ?>"
                                         id="lastName"
                                         name="last_name"
                                         placeholder="Enter last name"
+                                        value="<?= old('last_name') ?>"
                                         required>
                                     <label for="lastName">Last Name</label>
                                 </div>
@@ -153,10 +192,11 @@
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="email"
-                                        class="form-control"
+                                        class="form-control <?= session('errors.email') ? 'is-invalid' : '' ?>"
                                         id="email"
                                         name="email"
                                         placeholder="Enter your email"
+                                        value="<?= old('email') ?>"
                                         required>
                                     <label for="email">Email Address</label>
                                 </div>
@@ -165,10 +205,11 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="tel"
-                                        class="form-control"
+                                        class="form-control <?= session('errors.phone') ? 'is-invalid' : '' ?>"
                                         id="phone"
                                         name="phone"
-                                        placeholder="Enter phone number">
+                                        placeholder="Enter phone number"
+                                        value="<?= old('phone') ?>">
                                     <label for="phone">Phone Number</label>
                                 </div>
                             </div>
@@ -176,10 +217,11 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text"
-                                        class="form-control"
+                                        class="form-control <?= session('errors.company') ? 'is-invalid' : '' ?>"
                                         id="company"
                                         name="company"
-                                        placeholder="Enter company name">
+                                        placeholder="Enter company name"
+                                        value="<?= old('company') ?>">
                                     <label for="company">Company</label>
                                 </div>
                             </div>
@@ -187,10 +229,11 @@
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="text"
-                                        class="form-control"
+                                        class="form-control <?= session('errors.subject') ? 'is-invalid' : '' ?>"
                                         id="subject"
                                         name="subject"
                                         placeholder="Enter subject"
+                                        value="<?= old('subject') ?>"
                                         required>
                                     <label for="subject">Subject</label>
                                 </div>
@@ -198,12 +241,12 @@
 
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control"
+                                    <textarea class="form-control <?= session('errors.message') ? 'is-invalid' : '' ?>"
                                         id="message"
                                         name="message"
                                         placeholder="Type your message here..."
                                         style="height: 150px"
-                                        required></textarea>
+                                        required><?= old('message') ?></textarea>
                                     <label for="message">Your Message</label>
                                 </div>
                             </div>
@@ -219,14 +262,40 @@
                             </div>
 
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary rounded-pill">
-                                    Send Message <i class="bi bi-arrow-up-right ms-2"></i>
+                                <button type="submit" class="btn btn-primary rounded-pill" id="submitBtn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="spinner-border spinner-border-sm d-none ms-2" role="status" aria-hidden="true"></span>
+                                    <i class="bi bi-arrow-up-right ms-2 arrow-icon"></i>
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+
+            <!-- JavaScript untuk handling form submit -->
+            <script>
+                document.getElementById('contactForm').addEventListener('submit', function() {
+                    const btn = document.getElementById('submitBtn');
+                    const btnText = btn.querySelector('.btn-text');
+                    const spinner = btn.querySelector('.spinner-border');
+                    const arrow = btn.querySelector('.arrow-icon');
+
+                    btn.disabled = true;
+                    btnText.textContent = 'Sending...';
+                    spinner.classList.remove('d-none');
+                    if (arrow) arrow.classList.add('d-none');
+                });
+
+                // Auto dismiss alerts after 5 seconds
+                setTimeout(function() {
+                    const alerts = document.querySelectorAll('.alert');
+                    alerts.forEach(function(alert) {
+                        const bsAlert = new bootstrap.Alert(alert);
+                        bsAlert.close();
+                    });
+                }, 5000);
+            </script>
 
         </div>
     </div>
