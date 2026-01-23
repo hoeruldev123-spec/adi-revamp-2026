@@ -56,6 +56,7 @@ $routes->post('/contact/submit', 'Contact::submit');
 // Search
 $routes->get('/search', 'SearchController::index');
 $routes->get('/search/(:any)', 'SearchController::results/$1');
+$routes->get('/search/results', 'SearchController::results');
 
 // API Routes (jika diperlukan)
 $routes->group('api', ['namespace' => 'App\Controllers\Api'], function ($routes) {

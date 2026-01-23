@@ -51,9 +51,9 @@
       <div class="col-md-3 mb-4">
         <h6 class="mb-3">Resources</h6>
         <ul class="list-unstyled text-muted">
-          <li><a href="<?= base_url('resources/articles') ?>" class="footer-link">Article</a></li>
-          <li><a href="<?= base_url('company/team') ?>" class="footer-link">Career</a></li>
-          <li><a href="<?= base_url('resources') ?>" class="footer-link">Event</a></li>
+          <li><a href="<?= base_url('articles') ?>" class="footer-link">Article</a></li>
+          <!-- <li><a href="<?= base_url('company/team') ?>" class="footer-link">Career</a></li>
+          <li><a href="<?= base_url('resources') ?>" class="footer-link">Event</a></li> -->
         </ul>
 
       </div>
