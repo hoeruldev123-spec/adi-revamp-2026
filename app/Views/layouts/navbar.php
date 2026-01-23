@@ -52,7 +52,7 @@ $segment2 = getSafeSegment(2);
             <i class="bi bi-chevron-down ms-1 <?= ($segment1 == 'solutions') ? 'text-primary' : '' ?>"></i>
           </a>
           <ul class="dropdown-menu border-0 shadow-lg rounded-3 py-2 mt-1 mt-lg-2" aria-labelledby="solutionsDropdown">
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'fmcg') ? 'active bg-primary text-white' : '' ?>"
+            <!-- <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'fmcg') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('solutions/fmcg'); ?>">
                 <i class="bi bi-cart3 me-2 <?= ($segment2 == 'fmcg') ? 'text-white' : 'text-muted' ?>"></i>FMCG
               </a></li>
@@ -67,7 +67,7 @@ $segment2 = getSafeSegment(2);
             <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'financial') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('solutions/financial'); ?>">
                 <i class="bi bi-bank me-2 <?= ($segment2 == 'financial') ? 'text-white' : 'text-muted' ?>"></i>Financial
-              </a></li>
+              </a></li> -->
             <li>
               <hr class="dropdown-divider mx-3 mx-lg-4 my-2">
             </li>
