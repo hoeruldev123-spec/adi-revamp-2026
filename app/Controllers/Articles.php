@@ -14,6 +14,7 @@ class Articles extends BaseController
 
     public function index($page = 1)
     {
+        helper('pagination');
         $page = max(1, (int) $page);
 
         $search   = $this->request->getGet('search') ?? '';

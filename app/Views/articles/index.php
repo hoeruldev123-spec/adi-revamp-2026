@@ -124,7 +124,6 @@
                 <!-- Articles List (10 items) -->
                 <?php if (!empty($articles)): ?>
                     <div class="row g-3">
-                        <h2 class="h3 fw-bold mb-3" data-aos="fade-up">All Articles</h2>
                         <?php foreach ($articles as $article): ?>
                             <div class="col-12" data-aos="fade-up">
                                 <article class="card border-0 shadow-sm hover-card">
@@ -203,61 +202,17 @@
                     </div>
 
                     <!-- Pagination -->
-                    <?php if ($totalPages > 1): ?>
-                        <nav aria-label="Articles pagination" class="mt-4">
-                            <ul class="pagination justify-content-center">
-                                <!-- Previous -->
-                                <li class="page-item <?= $currentPage <= 1 ? 'disabled' : '' ?>">
-                                    <a class="page-link"
-                                        href="<?= base_url('resources/articles/page/' . ($currentPage - 1) . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>"
-                                        <?= $currentPage <= 1 ? 'tabindex="-1"' : '' ?>>
-                                        <i class="bi bi-chevron-left"></i>
-                                    </a>
-                                </li>
+                    <?= build_pagination_links([
+                        'basePath'    => 'resources/articles/page',
+                        'currentPage' => $currentPage,
+                        'totalPages'  => $totalPages,
+                        'queryParams' => [
+                            'search'   => $search,
+                            'category' => $selectedCategory,
+                            'tag'      => $selectedTag,
+                        ],
+                    ]) ?>
 
-                                <!-- Page Numbers -->
-                                <?php
-                                $startPage = max(1, $currentPage - 2);
-                                $endPage = min($totalPages, $currentPage + 2);
-
-                                if ($startPage > 1): ?>
-                                    <li class="page-item">
-                                        <a class="page-link" href="<?= base_url('resources/articles/page/1' . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>">1</a>
-                                    </li>
-                                    <?php if ($startPage > 2): ?>
-                                        <li class="page-item disabled"><span class="page-link">...</span></li>
-                                    <?php endif; ?>
-                                <?php endif; ?>
-
-                                <?php for ($i = $startPage; $i <= $endPage; $i++): ?>
-                                    <li class="page-item <?= $i == $currentPage ? 'active' : '' ?>">
-                                        <a class="page-link"
-                                            href="<?= base_url('resources/articles/page/' . $i . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>">
-                                            <?= $i ?>
-                                        </a>
-                                    </li>
-                                <?php endfor; ?>
-
-                                <?php if ($endPage < $totalPages): ?>
-                                    <?php if ($endPage < $totalPages - 1): ?>
-                                        <li class="page-item disabled"><span class="page-link">...</span></li>
-                                    <?php endif; ?>
-                                    <li class="page-item">
-                                        <a class="page-link" href="<?= base_url('resources/articles/page/' . $totalPages . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>"><?= $totalPages ?></a>
-                                    </li>
-                                <?php endif; ?>
-
-                                <!-- Next -->
-                                <li class="page-item <?= $currentPage >= $totalPages ? 'disabled' : '' ?>">
-                                    <a class="page-link"
-                                        href="<?= base_url('resources/articles/page/' . ($currentPage + 1) . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>"
-                                        <?= $currentPage >= $totalPages ? 'tabindex="-1"' : '' ?>>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    <?php endif; ?>
 
                 <?php else: ?>
                     <!-- No Articles -->
