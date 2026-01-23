@@ -114,7 +114,7 @@
                                     <span class="badge bg-secondary ms-2"><?= esc($tagName) ?></span>
                                 <?php endif; ?>
                             </div>
-                            <a href="<?= base_url('articles') ?>" class="btn btn-sm btn-outline-secondary">
+                            <a href="<?= base_url('resources/articles') ?>" class="btn btn-sm btn-outline-secondary">
                                 <i class="bi bi-x-circle me-1"></i>Clear Filters
                             </a>
                         </div>
@@ -202,17 +202,13 @@
                     </div>
 
                     <!-- Pagination -->
-                    <?= build_pagination_links([
-                        'basePath'    => 'resources/articles/page',
-                        'currentPage' => $currentPage,
-                        'totalPages'  => $totalPages,
-                        'queryParams' => [
-                            'search'   => $search,
-                            'category' => $selectedCategory,
-                            'tag'      => $selectedTag,
-                        ],
-                    ]) ?>
-
+                    <?php if ($totalPages > 1): ?>
+                        <nav aria-label="Articles pagination" class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                <?= $pagination ?>
+                            </ul>
+                        </nav>
+                    <?php endif; ?>
 
                 <?php else: ?>
                     <!-- No Articles -->
@@ -237,7 +233,7 @@
                             <h5 class="card-title mb-3">
                                 <i class="bi bi-search me-2 text-primary"></i>Search Articles
                             </h5>
-                            <form action="<?= base_url('articles') ?>" method="get">
+                            <form action="<?= base_url('resources/articles') ?>" method="get">
                                 <div class="input-group">
                                     <input
                                         type="text"
@@ -262,7 +258,7 @@
                                 </h5>
                                 <div class="list-group list-group-flush">
                                     <?php foreach (array_slice($categories, 0, 10) as $category): ?>
-                                        <a href="<?= base_url('articles?category=' . $category['id']) ?>"
+                                        <a href="<?= base_url('resources/articles?category=' . $category['id']) ?>"
                                             class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center px-0 <?= $selectedCategory == $category['id'] ? 'active' : '' ?>">
                                             <span><?= esc($category['name']) ?></span>
                                             <span class="badge bg-primary-subtle text-primary rounded-pill">
@@ -284,7 +280,7 @@
                                 </h5>
                                 <div class="d-flex flex-wrap gap-2">
                                     <?php foreach (array_slice($tags, 0, 15) as $tag): ?>
-                                        <a href="<?= base_url('articles?tag=' . $tag['id']) ?>"
+                                        <a href="<?= base_url('resources/articles?tag=' . $tag['id']) ?>"
                                             class="badge bg-secondary-subtle text-secondary text-decoration-none py-2 px-3 <?= $selectedTag == $tag['id'] ? 'bg-secondary text-white' : '' ?>">
                                             #<?= esc($tag['name']) ?>
                                         </a>

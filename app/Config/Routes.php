@@ -51,6 +51,11 @@ $routes->get('resources', 'ResourcesController::index');
 // Articles Routes
 $routes->get('resources/articles', 'Articles::index');
 $routes->get('resources/articles/page/(:num)', 'Articles::index/$1');
+
+$routes->get('resources/articles/search', 'Articles::search');
+$routes->get('resources/articles/category/(:segment)', 'Articles::category/$1');
+$routes->get('resources/articles/tag/(:segment)', 'Articles::tag/$1');
+
 $routes->get('resources/articles/page/1', function () {
     return redirect()->to('resources/articles', 301);
 });

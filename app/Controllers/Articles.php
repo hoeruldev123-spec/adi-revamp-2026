@@ -59,6 +59,19 @@ class Articles extends BaseController
             'selectedTag' => $tag
         ];
 
+        $pagination = build_pagination_links([
+            'basePath'    => 'resources/articles/page',
+            'currentPage' => $page,
+            'totalPages'  => $totalPages,
+            'queryParams' => [
+                'search'   => $search,
+                'category' => $category,
+                'tag'      => $tag,
+            ]
+        ]);
+
+        $data['pagination'] = $pagination;
+
         return view('articles/index', $data);
     }
 
