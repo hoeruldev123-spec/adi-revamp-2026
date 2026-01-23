@@ -259,11 +259,17 @@
                                 <div class="list-group list-group-flush">
                                     <?php foreach (array_slice($categories, 0, 10) as $category): ?>
                                         <a href="<?= base_url('resources/articles?category=' . $category['id']) ?>"
-                                            class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center px-0 <?= $selectedCategory == $category['id'] ? 'active' : '' ?>">
+                                            class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center
+                                            px-3 py-2 rounded-3
+                                            <?= $selectedCategory == $category['id'] ? 'bg-primary text-white fw-semibold' : '' ?>">
                                             <span><?= esc($category['name']) ?></span>
-                                            <span class="badge bg-primary-subtle text-primary rounded-pill">
+                                            <span class="badge <?= $selectedCategory == $category['id']
+                                                                    ? 'bg-white text-primary'
+                                                                    : 'bg-primary-subtle text-primary'
+                                                                ?>">
                                                 <?= $category['count'] ?>
                                             </span>
+
                                         </a>
                                     <?php endforeach; ?>
                                 </div>
@@ -281,9 +287,13 @@
                                 <div class="d-flex flex-wrap gap-2">
                                     <?php foreach (array_slice($tags, 0, 15) as $tag): ?>
                                         <a href="<?= base_url('resources/articles?tag=' . $tag['id']) ?>"
-                                            class="badge bg-secondary-subtle text-secondary text-decoration-none py-2 px-3 <?= $selectedTag == $tag['id'] ? 'bg-secondary text-white' : '' ?>">
+                                            class="badge text-decoration-none py-2 px-3 rounded-3 tag-item
+                                            <?= $selectedTag == $tag['id']
+                                                ? 'bg-primary text-white'
+                                                : 'bg-secondary-subtle text-secondary' ?>">
                                             #<?= esc($tag['name']) ?>
                                         </a>
+
                                     <?php endforeach; ?>
                                 </div>
                             </div>
@@ -352,6 +362,14 @@
     .pagination .page-item.active .page-link {
         background-color: var(--bs-primary);
         border-color: var(--bs-primary);
+    }
+
+    .tag-item {
+        transition: background-color .2s ease, color .2s ease;
+    }
+
+    .tag-item:hover:not(.bg-primary) {
+        transform: translateY(-1px);
     }
 
     @media (max-width: 991px) {
