@@ -2,14 +2,14 @@
 
 <?= $this->section('content') ?>
 
-<section class="search-hero bg-gradient py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+<section class="search-hero bg-light py-5">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center" data-aos="fade-up">
                 <div class="mb-4">
-                    <i class="bi bi-search display-3 text-white mb-3 d-block"></i>
-                    <h1 class="display-4 fw-bold text-white mb-3">Search</h1>
-                    <p class="lead text-white-50 mb-4">Find solutions, services, and resources</p>
+                    <i class="bi bi-search display-3 text-dark mb-3 d-block"></i>
+                    <h1 class="display-4 fw-bold text-primary mb-3">Search</h1>
+                    <p class="lead text-primary-50 mb-4">Find solutions, services, and resources</p>
                 </div>
 
                 <form action="<?= base_url('search/results') ?>" method="get" class="search-form">
@@ -119,7 +119,7 @@
             <div class="col-md-6">
                 <div class="card border-0 shadow-sm h-100 hover-scale">
                     <div class="card-body p-4">
-                        <a href="<?= base_url('solutions') ?>" class="text-decoration-none">
+                        <a href="<?= base_url('solutions/fmcg') ?>" class="text-decoration-none">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="icon-box bg-primary text-white rounded-3 p-3 me-3">
@@ -161,7 +161,7 @@
             <div class="col-md-6">
                 <div class="card border-0 shadow-sm h-100 hover-scale">
                     <div class="card-body p-4">
-                        <a href="<?= base_url('articles') ?>" class="text-decoration-none">
+                        <a href="<?= base_url('resources/articles') ?>" class="text-decoration-none">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="icon-box bg-info text-white rounded-3 p-3 me-3">
@@ -182,7 +182,7 @@
             <div class="col-md-6">
                 <div class="card border-0 shadow-sm h-100 hover-scale">
                     <div class="card-body p-4">
-                        <a href="<?= base_url('company') ?>" class="text-decoration-none">
+                        <a href="<?= base_url('company/about-us') ?>" class="text-decoration-none">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="icon-box bg-secondary text-white rounded-3 p-3 me-3">
