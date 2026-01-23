@@ -9,7 +9,7 @@ class WordPress extends BaseConfig
     /**
      * WordPress API Base URL
      */
-    public string $apiBaseUrl = 'https://staging-adi2026.alldataint.com/articles/wp-json/wp/v2/posts';
+    public string $apiBaseUrl = 'https://staging-adi2026.alldataint.com/articles/wp-json/wp/v2/';
 
     /**
      * WordPress Posts Endpoint

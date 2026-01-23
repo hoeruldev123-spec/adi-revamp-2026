@@ -9,7 +9,7 @@ class SearchController extends BaseController
     public function __construct()
     {
         $this->db = \Config\Database::connect();
-        helper('wordpress');
+        // Helper loading is optional now
     }
 
     public function index()
@@ -128,14 +128,74 @@ class SearchController extends BaseController
 
     private function searchArticles($query)
     {
+        $articles = [];
+
         try {
-            // Use WordPress helper
-            $articles = wp_search_posts($query, 20);
-            return $articles;
+            // Direct WordPress API call
+            $apiUrl = 'https://staging-adi2026.alldataint.com/articles/wp-json/wp/v2/posts';
+
+            $params = http_build_query([
+                'search' => $query,
+                'per_page' => 20,
+                '_embed' => true
+            ]);
+
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $apiUrl . '?' . $params);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+            $response = curl_exec($ch);
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            curl_close($ch);
+
+            if ($httpCode == 200 && $response !== false) {
+                $wpPosts = json_decode($response, true);
+
+                if (is_array($wpPosts)) {
+                    foreach ($wpPosts as $post) {
+                        // Extract excerpt
+                        $excerpt = strip_tags($post['excerpt']['rendered'] ?? '');
+                        $excerpt = trim($excerpt);
+                        $excerpt = mb_substr($excerpt, 0, 200) . '...';
+
+                        // Get featured image
+                        $thumbnail = '';
+                        if (isset($post['_embedded']['wp:featuredmedia'][0]['source_url'])) {
+                            $thumbnail = $post['_embedded']['wp:featuredmedia'][0]['source_url'];
+                        }
+
+                        // Get categories
+                        $categories = [];
+                        if (isset($post['_embedded']['wp:term'][0])) {
+                            foreach ($post['_embedded']['wp:term'][0] as $term) {
+                                $categories[] = $term['name'];
+                            }
+                        }
+
+                        $articles[] = [
+                            'id' => $post['id'],
+                            'title' => html_entity_decode($post['title']['rendered'], ENT_QUOTES),
+                            'description' => $excerpt,
+                            'url' => $post['link'],
+                            'category' => 'Articles',
+                            'date' => date('d M Y', strtotime($post['date'])),
+                            'author' => $post['_embedded']['author'][0]['name'] ?? 'Admin',
+                            'thumbnail' => $thumbnail,
+                            'categories' => $categories
+                        ];
+                    }
+                }
+            } else {
+                log_message('error', "WordPress API returned HTTP $httpCode");
+            }
         } catch (\Exception $e) {
             log_message('error', 'WordPress Search Error: ' . $e->getMessage());
-            return [];
         }
+
+        return $articles;
     }
 
     private function searchStaticPages($query)

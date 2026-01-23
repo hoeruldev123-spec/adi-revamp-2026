@@ -24,7 +24,8 @@ if (!function_exists('wp_get_posts')) {
         }
 
         // Build URL
-        $url = base_url($config->apiBaseUrl . $config->postsEndpoint);
+        $config = config('WordPress');
+        $url = $config->apiBaseUrl . $config->postsEndpoint;
 
         // Default parameters
         $defaultParams = [
