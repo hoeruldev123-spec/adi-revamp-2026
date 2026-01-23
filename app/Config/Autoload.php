@@ -88,5 +88,5 @@ class Autoload extends AutoloadConfig
      *
      * @var list<string>
      */
-    public $helpers = ['wordpress']; // atau ['wordpress', 'form', 'url'] jika sudah ada yang lain
+    public $helpers = ['wordpress', 'articles']; // atau ['wordpress', 'form', 'url'] jika sudah ada yang lain
 }

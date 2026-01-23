@@ -2,7 +2,6 @@
 
 <?= $this->section('content') ?>
 
-<!-- Hero Section -->
 <section class="search-hero bg-gradient py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
     <div class="container">
         <div class="row justify-content-center">
