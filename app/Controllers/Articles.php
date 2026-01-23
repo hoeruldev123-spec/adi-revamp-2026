@@ -12,18 +12,29 @@ class Articles extends BaseController
         $this->wpApiUrl = 'https://staging-adi2026.alldataint.com/articles/wp-json/wp/v2/';
     }
 
-    public function index()
+    public function index($page = 1)
     {
-        $page = $this->request->getGet('page') ?? 1;
-        $search = $this->request->getGet('search') ?? '';
+        $page = max(1, (int) $page);
+
+        $search   = $this->request->getGet('search') ?? '';
         $category = $this->request->getGet('category') ?? '';
-        $tag = $this->request->getGet('tag') ?? '';
+        $tag      = $this->request->getGet('tag') ?? '';
+
 
         // Get latest 3 articles for featured section
         $latestArticles = $this->getLatestArticles(3);
+        $featuredIds = array_column($latestArticles, 'id');
+
 
         // Get articles for listing (offset by 3 to skip featured articles)
-        $articles = $this->getArticles($page, $search, $category, $tag);
+        $articles = $this->getArticles(
+            $page,
+            $search,
+            $category,
+            $tag,
+            $featuredIds
+        );
+
 
         // Get categories and tags for sidebar
         $categories = $this->getCategories();
@@ -76,68 +87,47 @@ class Articles extends BaseController
         return [];
     }
 
-    private function getArticles($page = 1, $search = '', $category = '', $tag = '')
+    private function getArticles($page, $search, $category, $tag, $excludeIds = [])
     {
-        try {
-            // Start from offset 3 to skip featured articles
-            $offset = ($page == 1) ? 3 : (($page - 1) * $this->perPage) + 3;
+        $params = [
+            'per_page' => $this->perPage,
+            'page'     => max(1, (int)$page),
+            '_embed'   => true,
+        ];
 
-            $params = [
-                'per_page' => $this->perPage,
-                'offset' => $offset,
-                '_embed' => true
-            ];
-
-            if (!empty($search)) {
-                $params['search'] = $search;
-                $offset = ($page - 1) * $this->perPage; // Reset offset for search
-                unset($params['offset']);
-                $params['offset'] = $offset;
-            }
-
-            if (!empty($category)) {
-                $params['categories'] = $category;
-            }
-
-            if (!empty($tag)) {
-                $params['tags'] = $tag;
-            }
-
-            $url = $this->wpApiUrl . 'posts?' . http_build_query($params);
-
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            curl_setopt($ch, CURLOPT_HEADER, true);
-
-            $response = curl_exec($ch);
-            $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            curl_close($ch);
-
-            if ($httpCode == 200 && $response) {
-                $header = substr($response, 0, $headerSize);
-                $body = substr($response, $headerSize);
-
-                // Get total pages from header
-                preg_match('/X-WP-TotalPages: (\d+)/', $header, $matches);
-                $totalPages = isset($matches[1]) ? (int)$matches[1] : 1;
-
-                $posts = json_decode($body, true);
-
-                return [
-                    'posts' => $this->formatPosts($posts),
-                    'total_pages' => $totalPages
-                ];
-            }
-        } catch (\Exception $e) {
-            log_message('error', 'WordPress Articles Error: ' . $e->getMessage());
+        if ($excludeIds) {
+            $params['exclude'] = implode(',', $excludeIds);
         }
 
-        return ['posts' => [], 'total_pages' => 1];
+        if ($search)   $params['search'] = $search;
+        if ($category) $params['categories'] = $category;
+        if ($tag)      $params['tags'] = $tag;
+
+        $url = $this->wpApiUrl . 'posts?' . http_build_query($params);
+
+        $ch = curl_init();
+        curl_setopt_array($ch, [
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HEADER => true,
+            CURLOPT_SSL_VERIFYPEER => false,
+        ]);
+
+        $response = curl_exec($ch);
+        $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+        curl_close($ch);
+
+        $header = substr($response, 0, $headerSize);
+        $body   = substr($response, $headerSize);
+
+        preg_match('/X-WP-TotalPages:\s*(\d+)/i', $header, $matches);
+
+        return [
+            'posts' => $this->formatPosts(json_decode($body, true)),
+            'total_pages' => (int)($matches[1] ?? 1)
+        ];
     }
+
 
     private function getCategories()
     {

@@ -51,6 +51,10 @@ $routes->get('resources', 'ResourcesController::index');
 // Articles Routes
 $routes->get('resources/articles', 'Articles::index');
 $routes->get('resources/articles/page/(:num)', 'Articles::index/$1');
+$routes->get('resources/articles/page/1', function () {
+    return redirect()->to('resources/articles', 301);
+});
+
 
 // Contact
 $routes->get('/contact', 'Contact::index', ['as' => 'contact']);

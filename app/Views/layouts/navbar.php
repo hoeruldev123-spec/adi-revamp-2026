@@ -129,9 +129,9 @@ $segment2 = getSafeSegment(2);
           </a>
           <ul class="dropdown-menu border-0 shadow-lg rounded-3 py-2 mt-1 mt-lg-2" aria-labelledby="resourcesDropdown">
             <li>
-              <a class="dropdown-item py-2 px-3 px-lg-4 <?= (uri_string() === 'articles') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('articles'); ?>">
-                <i class="bi bi-newspaper me-2 <?= (uri_string() === 'articles') ? 'text-white' : 'text-muted' ?>"></i>
+              <a class="dropdown-item py-2 px-3 px-lg-4 <?= (uri_string() === 'resources/articles') ? 'active bg-primary text-white' : '' ?>"
+                href="<?= base_url('resources/articles'); ?>">
+                <i class="bi bi-newspaper me-2 <?= (uri_string() === 'resources/articles') ? 'text-white' : 'text-muted' ?>"></i>
                 Articles
               </a>
             </li>

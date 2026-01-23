@@ -2,8 +2,7 @@
 
 <?= $this->section('content') ?>
 
-<!-- Hero Section -->
-<section class="articles-hero bg-gradient py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+<section class="articles-hero bg-primary py-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center text-white" data-aos="fade-up">
@@ -14,7 +13,6 @@
     </div>
 </section>
 
-<!-- Latest Articles - Featured Cards (3 Cards) -->
 <?php if (!empty($latestArticles) && empty($search) && empty($selectedCategory) && empty($selectedTag) && $currentPage == 1): ?>
     <section class="py-5 bg-light">
         <div class="container">
@@ -126,6 +124,7 @@
                 <!-- Articles List (10 items) -->
                 <?php if (!empty($articles)): ?>
                     <div class="row g-3">
+                        <h2 class="h3 fw-bold mb-3" data-aos="fade-up">All Articles</h2>
                         <?php foreach ($articles as $article): ?>
                             <div class="col-12" data-aos="fade-up">
                                 <article class="card border-0 shadow-sm hover-card">
@@ -210,7 +209,7 @@
                                 <!-- Previous -->
                                 <li class="page-item <?= $currentPage <= 1 ? 'disabled' : '' ?>">
                                     <a class="page-link"
-                                        href="<?= base_url('articles?page=' . ($currentPage - 1) . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>"
+                                        href="<?= base_url('resources/articles/page/' . ($currentPage - 1) . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>"
                                         <?= $currentPage <= 1 ? 'tabindex="-1"' : '' ?>>
                                         <i class="bi bi-chevron-left"></i>
                                     </a>
@@ -223,7 +222,7 @@
 
                                 if ($startPage > 1): ?>
                                     <li class="page-item">
-                                        <a class="page-link" href="<?= base_url('articles?page=1' . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>">1</a>
+                                        <a class="page-link" href="<?= base_url('resources/articles/page/1' . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>">1</a>
                                     </li>
                                     <?php if ($startPage > 2): ?>
                                         <li class="page-item disabled"><span class="page-link">...</span></li>
@@ -233,7 +232,7 @@
                                 <?php for ($i = $startPage; $i <= $endPage; $i++): ?>
                                     <li class="page-item <?= $i == $currentPage ? 'active' : '' ?>">
                                         <a class="page-link"
-                                            href="<?= base_url('articles?page=' . $i . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>">
+                                            href="<?= base_url('resources/articles/page/' . $i . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>">
                                             <?= $i ?>
                                         </a>
                                     </li>
@@ -244,14 +243,14 @@
                                         <li class="page-item disabled"><span class="page-link">...</span></li>
                                     <?php endif; ?>
                                     <li class="page-item">
-                                        <a class="page-link" href="<?= base_url('articles?page=' . $totalPages . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>"><?= $totalPages ?></a>
+                                        <a class="page-link" href="<?= base_url('resources/articles/page/' . $totalPages . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>"><?= $totalPages ?></a>
                                     </li>
                                 <?php endif; ?>
 
                                 <!-- Next -->
                                 <li class="page-item <?= $currentPage >= $totalPages ? 'disabled' : '' ?>">
                                     <a class="page-link"
-                                        href="<?= base_url('articles?page=' . ($currentPage + 1) . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>"
+                                        href="<?= base_url('resources/articles/page/' . ($currentPage + 1) . ($search ? '&search=' . urlencode($search) : '') . ($selectedCategory ? '&category=' . $selectedCategory : '') . ($selectedTag ? '&tag=' . $selectedTag : '')) ?>"
                                         <?= $currentPage >= $totalPages ? 'tabindex="-1"' : '' ?>>
                                         <i class="bi bi-chevron-right"></i>
                                     </a>
