@@ -17,43 +17,6 @@
 
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="solution-list">
-                    <?php
-
-                    $solutions = [
-                        [
-                            'id' => 'fmcg',
-                            'title' => 'FMCG',
-                            'icon' => 'bi-basket',
-                            'description' => 'Optimize demand forecasting and supply chain with AI-powered analytics for smarter market decisions.',
-                            'image' => base_url('assets/images/solutions/solutions-fmcg.webp'),
-                            'active' => true
-                        ],
-                        [
-                            'id' => 'telecom',
-                            'title' => 'Telecom',
-                            'icon' => 'bi-phone',
-                            'description' => 'Enhance network performance and customer experience with real-time data analytics and predictive maintenance.',
-                            'image' => base_url('assets/images/solutions/solutions-telecom.webp'),
-                            'active' => false
-                        ],
-                        [
-                            'id' => 'government',
-                            'title' => 'Government',
-                            'icon' => 'bi-building',
-                            'description' => 'Transform public services with data-driven decision making and efficient resource allocation.',
-                            'image' => base_url('assets/images/solutions/solutions-government.webp'),
-                            'active' => false
-                        ],
-                        [
-                            'id' => 'financial',
-                            'title' => 'Financial',
-                            'icon' => 'bi-bank',
-                            'description' => 'Mitigate risks and detect fraud with advanced analytics and AI-powered security solutions.',
-                            'image' => base_url('assets/images/solutions/solutions-financial.webp'),
-                            'active' => false
-                        ]
-                    ];
-                    ?>
 
                     <?php foreach ($solutions as $index => $solution): ?>
                         <div class="solution-item <?= $solution['active'] ? 'active' : '' ?>"

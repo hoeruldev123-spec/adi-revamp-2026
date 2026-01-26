@@ -55,13 +55,4 @@
         </div>
     </section>
 
-    <script>
-        document.getElementById('partnershipCarousel')
-            ?.addEventListener('slide.bs.carousel', function(e) {
-                document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
-                    dot.classList.toggle('active', index === e.to);
-                });
-            });
-    </script>
-
 <?php endif; ?>

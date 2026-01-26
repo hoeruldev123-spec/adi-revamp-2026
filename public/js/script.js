@@ -249,3 +249,133 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   // END NAVBAR
+
+  // SEARCH PAGE //
+// Auto Focus Script
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput && window.innerWidth > 768) {
+            setTimeout(() => searchInput.focus(), 300);
+        }
+    });
+// ====END===
+
+// about_vision_mission
+const btns = document.querySelectorAll(".vm-btn");
+  const slider = document.querySelector(".vm-slider");
+
+  const visionBox = document.getElementById("content-vision");
+  const missionBox = document.getElementById("content-mission");
+
+  btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+
+      document.querySelector(".vm-btn.active").classList.remove("active");
+      btn.classList.add("active");
+
+      slider.style.transform = `translateX(${i * 100}%)`;
+
+      const show = i === 0 ? visionBox : missionBox;
+      const hide = i === 0 ? missionBox : visionBox;
+
+      hide.classList.remove("active");
+      hide.classList.add(i === 0 ? "hide-right" : "hide-left");
+
+      show.classList.add("active");
+      show.classList.remove("hide-left", "hide-right");
+
+      // retrigger word animation
+      show.querySelectorAll(".word-fade, .animate-fade-blue").forEach(el => {
+        el.classList.remove("animate");
+        void el.offsetWidth;
+        el.classList.add("animate");
+      });
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const vmButtons = document.querySelectorAll('.vm-btn');
+
+    vmButtons.forEach(button => {
+      button.addEventListener('click', function() {
+
+        const target = this.dataset.target;
+        const activeBox = document.getElementById(`content-${target}`);
+        const animatedWords = activeBox.querySelectorAll('.animate-fade-blue, .word-fade');
+
+        animatedWords.forEach(word => {
+          word.style.animation = 'none';
+          word.classList.remove('animate-again');
+          void word.offsetWidth;
+          word.classList.add('animate-again');
+          word.style.animation = '';
+        });
+
+      });
+    });
+  });
+
+  // =======end========
+
+  // PRINCIPAL CARD
+   document.getElementById('partnershipCarousel')
+            ?.addEventListener('slide.bs.carousel', function(e) {
+                document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === e.to);
+                });
+            });
+
+ // TESTIMONIAL
+    document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.querySelector('.testimonial-slider');
+        const cards = [...document.querySelectorAll('.testimonial-card')];
+        const nextBtn = document.querySelector('.testimonial-nav.next');
+        const prevBtn = document.querySelector('.testimonial-nav.prev');
+        const progressBar = document.querySelector('.testimonial-progress-bar');
+
+        let index = 0;
+
+        const visibleCount = () => {
+            if (window.innerWidth < 576) return 1;
+            if (window.innerWidth < 992) return 2;
+            return 3;
+        };
+
+        const cardFullWidth = () => {
+            const style = getComputedStyle(slider);
+            const gap = parseInt(style.gap || style.columnGap || 0);
+            return cards[0].offsetWidth + gap;
+        };
+
+        const update = () => {
+            const visible = visibleCount();
+            const maxIndex = Math.max(0, cards.length - visible);
+
+            index = Math.min(index, maxIndex);
+
+            // slide
+            slider.style.transform = `translateX(-${index * cardFullWidth()}px)`;
+
+            // buttons
+            prevBtn.classList.toggle('disabled', index === 0);
+            nextBtn.classList.toggle('disabled', index >= maxIndex);
+
+            // progress
+            const shown = Math.min(index + visible, cards.length);
+            progressBar.style.width = `${(shown / cards.length) * 100}%`;
+        };
+
+        nextBtn.addEventListener('click', () => {
+            index++;
+            update();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            index--;
+            update();
+        });
+
+        window.addEventListener('resize', update);
+
+        update(); // init
+    });

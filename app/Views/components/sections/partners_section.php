@@ -27,11 +27,11 @@
                     <div class="principal-page active">
                         <div class="row g-4">
                             <div class="container">
-                                <div class="row justify-content-center certifications-grid">
+                                <div class="row justify-content-center partners-loops-grid">
 
                                     <!-- Column 1 (down) -->
-                                    <div class="col certification-col down">
-                                        <div class="cert-track">
+                                    <div class="col partners-loops-col down">
+                                        <div class="cert-track-partners">
                                             <img src="<?= base_url('assets/images/principals/Logo-Alibaba-Cloud.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-AWS.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-ClickHouse.png'); ?>">
@@ -50,8 +50,8 @@
                                     </div>
 
                                     <!-- Column 2 (up) -->
-                                    <div class="col certification-col up">
-                                        <div class="cert-track">
+                                    <div class="col partners-loops-col up">
+                                        <div class="cert-track-partners">
                                             <img src="<?= base_url('assets/images/principals/Logo-Dataiku.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Dell.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Denodo.png'); ?>">
@@ -68,8 +68,8 @@
                                     </div>
 
                                     <!-- Column 3 -->
-                                    <div class="col certification-col down">
-                                        <div class="cert-track">
+                                    <div class="col partners-loops-col down">
+                                        <div class="cert-track-partners">
                                             <img src="<?= base_url('assets/images/principals/Logo-Qlik.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-redis.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Snowflake.png'); ?>">
@@ -94,140 +94,5 @@
             </div>
         </div>
     </div>
-
-
-    <style>
-        .certifications-grid {
-            gap: 10px;
-        }
-
-        /* Kolom */
-        .certification-col {
-            height: 380px;
-            overflow: hidden;
-        }
-
-
-        /* Track icon */
-        .cert-track {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-            padding: 0;
-        }
-
-        /* Animation */
-        .certification-col.down .cert-track {
-            animation: scrollDown 12s linear infinite;
-        }
-
-        .certification-col.up .cert-track {
-            animation: scrollUp 12s linear infinite;
-        }
-
-        /* Icon */
-        .cert-track img {
-            max-height: 60px;
-            width: auto;
-            max-width: 60%;
-            object-fit: contain;
-            transition: transform .3s ease;
-        }
-
-
-
-        .certification-col::before,
-        .certification-col::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 70px;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        /* Fade atas */
-        .certification-col::before {
-            top: 0;
-            background: linear-gradient(to bottom,
-                    #ffffff 0%,
-                    rgba(255, 255, 255, 0) 100%);
-        }
-
-        /* Fade bawah */
-        .certification-col::after {
-            bottom: 0;
-            background: linear-gradient(to top,
-                    #ffffff 0%,
-                    rgba(255, 255, 255, 0) 100%);
-        }
-
-
-        /* Keyframes */
-        @keyframes scrollDown {
-            from {
-                transform: translateY(0);
-            }
-
-            to {
-                transform: translateY(-50%);
-            }
-        }
-
-        @keyframes scrollUp {
-            from {
-                transform: translateY(-50%);
-            }
-
-            to {
-                transform: translateY(0);
-            }
-        }
-
-
-        /* Pause on hover */
-        .certification-col:hover .cert-track {
-            animation-play-state: paused;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .certification-col {
-                height: 220px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .certifications-grid {
-                gap: 15px;
-            }
-
-            .cert-track img {
-                height: 35px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .certification-col {
-                height: 260px;
-            }
-
-            .cert-track {
-                padding: 25px 0;
-                gap: 18px;
-            }
-
-            .cert-track img {
-                max-height: 42px;
-            }
-
-            .certification-col::before,
-            .certification-col::after {
-                height: 45px;
-            }
-        }
-    </style>
 
 </section>

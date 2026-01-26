@@ -225,7 +225,7 @@
 
             <!-- Sidebar -->
             <div class="col-lg-4">
-                <div class="sticky-top" style="top: 100px;">
+                <div class="article-sidebar">
 
                     <!-- Search Widget -->
                     <div class="card border-0 shadow-sm mb-4" data-aos="fade-up">
@@ -305,84 +305,5 @@
         </div>
     </div>
 </section>
-
-<!-- Custom Styles -->
-<style>
-    .hover-lift,
-    .hover-card {
-        transition: all 0.3s ease;
-    }
-
-    .hover-lift:hover,
-    .hover-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
-    }
-
-    .stretched-link::after {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-        content: "";
-    }
-
-    .card-body {
-        position: relative;
-    }
-
-    .object-fit-cover {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-
-    .bg-primary-subtle {
-        background-color: rgba(13, 110, 253, 0.1) !important;
-    }
-
-    .bg-secondary-subtle {
-        background-color: rgba(108, 117, 125, 0.1) !important;
-    }
-
-    .list-group-item.active {
-        background-color: var(--bs-primary);
-        border-color: var(--bs-primary);
-        color: white;
-    }
-
-    .pagination .page-link {
-        border-radius: 0.375rem;
-        margin: 0 0.25rem;
-        border: 1px solid #dee2e6;
-    }
-
-    .pagination .page-item.active .page-link {
-        background-color: var(--bs-primary);
-        border-color: var(--bs-primary);
-    }
-
-    .tag-item {
-        transition: background-color .2s ease, color .2s ease;
-    }
-
-    .tag-item:hover:not(.bg-primary) {
-        transform: translateY(-1px);
-    }
-
-    @media (max-width: 991px) {
-        .sticky-top {
-            position: relative !important;
-            top: 0 !important;
-        }
-
-        .hover-lift:hover,
-        .hover-card:hover {
-            transform: translateY(-3px);
-        }
-    }
-</style>
 
 <?= $this->endSection() ?>
