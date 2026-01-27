@@ -1,5 +1,7 @@
 <?= $this->extend('layouts/main') ?>
 
+<?= $this->section('title') ?><?= $title ?? 'Articles | All Data International' ?><?= $this->endSection() ?>
+
 <?= $this->section('content') ?>
 
 <section class="articles-hero bg-primary py-5">

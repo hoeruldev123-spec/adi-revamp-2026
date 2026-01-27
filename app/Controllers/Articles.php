@@ -45,7 +45,7 @@ class Articles extends BaseController
         $totalPages = $articles['total_pages'] ?? 1;
 
         $data = [
-            'title' => 'Articles - All Data International',
+            'title' => 'Articles | All Data International',
             'meta_description' => 'Read the latest articles, insights, and news from All Data International',
             'meta_keywords' => 'articles, blog, insights, news, data solutions',
             'latestArticles' => $latestArticles,

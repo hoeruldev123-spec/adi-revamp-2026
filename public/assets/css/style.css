@@ -126,7 +126,7 @@ h6 {
 .error-code {
   font-size: 8rem;
   font-weight: 700;
-  color: #3b82f6; /* biru mirip gambar */
+  color: #3b82f6; 
 }
 
 .error-text {
@@ -412,8 +412,29 @@ h6 {
 .link-hover-underline:hover::after {
   width: 100%;
 }
-/* ======== Hero ======== */
 
+/* WRAPPER ICON */
+.badge-icon {
+  width: 22px;
+  height: 22px;
+  background: rgba(13, 110, 253, 0.08);
+  border: 1px solid rgba(100, 161, 253, 0.3);
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-icon,
+.badge-icon img,
+.badge-icon svg {
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+/* ========end wrapper========== */
+
+/* ======== Hero ======== */
 .hero-home {
   background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
   background-image: url("/assets/images/patren-hero.svg");
@@ -431,6 +452,24 @@ h6 {
   animation: floatCloud 6s ease-in-out infinite;
 }
 
+.hero-badge {
+  border: 1px solid rgba(13, 110, 253, 0.3);
+  border-radius: 10px;
+  padding: 6px 10px;
+  gap: 8px;
+}
+
+.hero-badge-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.hero-badge:hover {
+  background: rgba(13, 110, 253, 0.12);
+}
+
+
+
 .hero-home-bg::before {
   content: "";
   position: absolute;
@@ -445,7 +484,7 @@ h6 {
 .hero-home .container,
 .hero-home .row {
   position: relative;
-  z-index: 2; /* memastikan konten tampil di atas overlay */
+  z-index: 2;
 }
 
 @keyframes floatCloud {
@@ -508,20 +547,19 @@ h6 {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: #e6f2ff;
+  border: 1px solid rgba(13, 110, 253, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2f80ed;
   font-size: 1.25rem;
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
 .solution-item.active .icon-box {
-  background: #4da3ff;
-  color: white;
+  background: white;
   transform: scale(1.1);
+  border: none;
 }
 
 .solution-content {
@@ -1135,6 +1173,8 @@ footer hr {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .logo-carousel-item img {
@@ -1463,10 +1503,6 @@ footer hr {
   gap: 12px;
 }
 
-.testimonial-nav.disabled {
-  opacity: 0.4;
-  pointer-events: none;
-}
 .avatar {
   width: 44px;
   height: 44px;
@@ -1519,6 +1555,11 @@ footer hr {
 .testimonial-nav.active {
   background: #0d6efd;
   color: #fff;
+}
+
+.testimonial-nav.disabled {
+  background: #d0d0d0;
+  pointer-events: none;
 }
 
 /* Responsive */
@@ -2628,8 +2669,8 @@ footer hr {
 
     .article-sidebar {
     position: sticky;
-    top: 100px; /* tinggi navbar */
-    z-index: 10; /* LEBIH RENDAH dari navbar */
+    top: 100px; 
+    z-index: 10;
 }
     @media (max-width: 991px) {
     .article-sidebar {

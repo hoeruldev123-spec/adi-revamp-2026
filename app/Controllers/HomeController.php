@@ -24,13 +24,11 @@ class HomeController extends BaseController
             ['logo' => 'Logo-AWS.png', 'alt' => 'AWS', 'description' => 'Cloud computing and AI services.'],
             ['logo' => 'Logo-Helett Packard.png', 'alt' => 'Hewlett Packard', 'description' => 'Hybrid cloud solutions.'],
             ['logo' => 'Logo-Creatio.png', 'alt' => 'Creatio', 'description' => 'Empowering decisions by transforming raw data into actionable insights through interactive visual analytics.'],
-
-
         ];
 
         //TITLE & META DATA
         $data = [
-            'title' => 'Home - All Data International',
+            'title' => 'All Data International | AI, Data Integration, Business Solutions',
 
             'meta' => [
                 'keywords' => 'AI, Data Integration, Business Solutions',
@@ -67,7 +65,7 @@ class HomeController extends BaseController
             [
                 'id' => 'fmcg',
                 'title' => 'FMCG',
-                'icon' => 'bi-basket',
+                'icon' => base_url('assets/icon-color/cart-due-color.svg'),
                 'description' => 'Optimize demand forecasting and supply chain with AI-powered analytics for smarter market decisions.',
                 'image' => base_url('assets/images/solutions/solutions-fmcg.webp'),
                 'active' => true
@@ -75,7 +73,7 @@ class HomeController extends BaseController
             [
                 'id' => 'telecom',
                 'title' => 'Telecom',
-                'icon' => 'bi-phone',
+                'icon' => base_url('assets/icon-color/telecom-due-color.svg'),
                 'description' => 'Enhance network performance and customer experience with real-time data analytics and predictive maintenance.',
                 'image' => base_url('assets/images/solutions/solutions-telecom.webp'),
                 'active' => false
@@ -83,7 +81,7 @@ class HomeController extends BaseController
             [
                 'id' => 'government',
                 'title' => 'Government',
-                'icon' => 'bi-building',
+                'icon' => base_url('assets/icon-color/government-due-color.svg'),
                 'description' => 'Transform public services with data-driven decision making and efficient resource allocation.',
                 'image' => base_url('assets/images/solutions/solutions-government.webp'),
                 'active' => false
@@ -91,7 +89,7 @@ class HomeController extends BaseController
             [
                 'id' => 'financial',
                 'title' => 'Financial',
-                'icon' => 'bi-bank',
+                'icon' => base_url('assets/icon-color/finance-due-color.svg'),
                 'description' => 'Mitigate risks and detect fraud with advanced analytics and AI-powered security solutions.',
                 'image' => base_url('assets/images/solutions/solutions-financial.webp'),
                 'active' => false
@@ -107,7 +105,12 @@ class HomeController extends BaseController
             'badge' => 'Elevate Your Business with AI',
             'title' => 'Empowering Smarter<br>Business Through Data<br>& AI Integration',
             'description' => 'We deliver integrated solutions that transform complex data into clear insights and smarter business outcomes.',
-            'image' => 'cloud-hero.png',
+            'image' => [
+                'mobile' => 'cloud-hero-400.webp',
+                'tablet' => 'cloud-hero-800.webp',
+                'desktop' => 'cloud-hero-1200.webp',
+            ],
+
         ];
     }
 

@@ -13,10 +13,23 @@
   <div class="container py-5">
     <div class="row align-items-center">
       <div class="col-lg-6">
-        <div class="badge bg-white text-primary border border-primary px-3 py-2 mb-3 d-inline-flex align-items-center">
-          <i class="bi bi-stars me-2"></i>
-          <?= $hero['badge'] ?? 'Elevate Your Business with AI' ?>
+
+        <div class="hero-badge d-inline-flex align-items-center mb-3">
+          <span class="badge-icon">
+            <img
+              src="<?= base_url('assets/icon-color/star-due-color.svg') ?>"
+              alt="Star icon"
+              width="16"
+              height="16"
+              loading="eager"
+              decoding="async">
+          </span>
+
+          <span class="hero-badge-text text-primary">
+            <?= $hero['badge'] ?? 'Elevate Your Business with AI' ?>
+          </span>
         </div>
+
 
         <h1 class="text-dark mb-4">
           <?= $hero['title'] ?? 'Empowering Smarter Business Through Data & AI Integration' ?>
@@ -29,12 +42,33 @@
         <a href="/services" class="btn btn-primary btn-lg rounded-pill shadow-sm">
           Learn More <i class="bi bi-arrow-up-right ms-2"></i>
         </a>
+
       </div>
 
       <div class="col-lg-6 text-center mt-5 mt-lg-0">
-        <img src="<?= base_url('assets/images/' . ($hero['image'] ?? 'cloud-hero.png')) ?>"
-          alt="Cloud Illustration" class="img-fluid" style="max-height: 350px;">
+        <picture>
+          <!-- Desktop -->
+          <source
+            media="(min-width: 992px)"
+            srcset="<?= base_url('assets/images/hero/' . $hero['image']['desktop']) ?>">
+
+          <!-- Tablet -->
+          <source
+            media="(min-width: 576px)"
+            srcset="<?= base_url('assets/images/hero/' . $hero['image']['tablet']) ?>">
+
+          <!-- Mobile / fallback -->
+          <img
+            src="<?= base_url('assets/images/hero/' . $hero['image']['mobile']) ?>"
+            alt="Cloud-based AI illustration"
+            width="400"
+            height="350"
+            loading="lazy"
+            decoding="async"
+            class="img-fluid">
+        </picture>
       </div>
+
     </div>
   </div>
 </section>

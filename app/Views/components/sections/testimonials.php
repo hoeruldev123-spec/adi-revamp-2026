@@ -14,10 +14,10 @@
 
             <div class="d-flex gap-2">
                 <button class="testimonial-nav prev active">
-                    <i class="bi bi-arrow-left"></i>
+                    <img src="<?= base_url('assets/icon-outline/arrow-left-outline.svg') ?>">
                 </button>
                 <button class="testimonial-nav next active">
-                    <i class="bi bi-arrow-right"></i>
+                    <img src="<?= base_url('assets/icon-outline/arrow-right-outline.svg') ?>">
                 </button>
             </div>
         </div>

@@ -26,7 +26,8 @@
 
                             <div class="solution-header d-flex align-items-center gap-3">
                                 <div class="icon-box">
-                                    <i class="bi <?= $solution['icon'] ?>"></i>
+                                    <img
+                                        src="<?= $solution['icon'] ?>">
                                 </div>
                                 <h5 class="mb-0"><?= $solution['title'] ?></h5>
                             </div>
@@ -38,9 +39,9 @@
                                     <p class="mb-3 text-muted">
                                         <?= $solution['description'] ?>
                                     </p>
-                                    <a href="<?= base_url('solutions/' . $solution['id']) ?>" class="btn btn-outline-primary btn-sm">
+                                    <!-- <a href="<?= base_url('solutions/' . $solution['id']) ?>" class="btn btn-outline-primary btn-sm">
                                         Learn More <i class="bi bi-arrow-right"></i>
-                                    </a>
+                                    </a> -->
                                 </div>
 
 

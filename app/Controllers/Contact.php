@@ -8,7 +8,7 @@ class Contact extends Controller
 {
     public function index()
     {
-        return view('pages/contact_us'); // View dengan form yang Anda miliki
+        return view('pages/contact_us');
     }
 
     public function submit()
