@@ -14,7 +14,7 @@
                     </p>
 
                     <div class="d-flex flex-wrap gap-3 align-items-center">
-                        <a href="<?= base_url('company/our_partners'); ?>" class="btn btn-primary btn-lg rounded-pill px-4 py-2 shadow-sm">
+                        <a href="<?= base_url('company/our-partners'); ?>" class="btn btn-primary btn-lg rounded-pill px-4 py-2 shadow-sm">
                             Explore Partners <i class="bi bi-arrow-right ms-2"></i>
                         </a>
                     </div>

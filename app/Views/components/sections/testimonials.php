@@ -13,11 +13,16 @@
             </div>
 
             <div class="d-flex gap-2">
-                <button class="testimonial-nav prev active">
-                    <img src="<?= base_url('assets/icon-outline/arrow-left-outline.svg') ?>">
+                <button class="testimonial-nav prev active" aria-label="Previous testimonial">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                    </svg>
                 </button>
-                <button class="testimonial-nav next active">
-                    <img src="<?= base_url('assets/icon-outline/arrow-right-outline.svg') ?>">
+
+                <button class="testimonial-nav next active" aria-label="Next testimonial">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg>
                 </button>
             </div>
         </div>

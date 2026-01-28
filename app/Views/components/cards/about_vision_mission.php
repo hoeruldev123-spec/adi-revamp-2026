@@ -57,9 +57,34 @@
       </div>
     <?php endif; ?>
 
-    <div class="position-absolute bottom-0 start-50 translate-middle-x w-100"
-      style="z-index:-1; background-image: url('<?= base_url('assets/images/Patern.png') ?>'); 
-      background-size: cover; background-position: center; height: 300px;">
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="z-index:-1;">
+      <div
+        class="w-100 h-100"
+        style="
+            background-image: url('<?= base_url('assets/images/Patern.png') ?>');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        ">
+        <!-- overlay gradient -->
+        <div
+          style="
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(
+                    to bottom,
+                    #ffffff 0%,
+                    rgba(255,255,255,0) 25%,
+                    rgba(255,255,255,0) 75%,
+                    #ffffff 100%
+                );
+                pointer-events: none;
+            ">
+        </div>
+      </div>
     </div>
+
+
   </div>
 </section>

@@ -29,9 +29,13 @@
                                 <span>Contact Us</span>
                                 <i class="bi bi-arrow-up-right btn-icon"></i>
                             </a>
-                            <a href="<?= base_url('company/about-us') ?>" class="btn border-primary rounded-pill bg-white text-primary btn-hover-up">
-                                Get to know us!
-                            </a>
+
+                            <?php if (uri_string() !== 'company/about-us'): ?>
+                                <a href="<?= base_url('company/about-us') ?>"
+                                    class="btn border-primary rounded-pill bg-white text-primary btn-hover-up">
+                                    Get to know us!
+                                </a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

@@ -28,9 +28,9 @@
                         <div class="card-body p-4 d-flex gap-3">
                             <div class="flex-shrink-0">
                                 <div class="flex-grow-1">
-                                    <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                    <div class="bg-primary bg-opacity-10 border border-primary border-opacity-25 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0 mb-2"
                                         style="width:48px;height:48px;">
-                                        <i class="bi bi-building text-primary fs-4"></i>
+                                        <img src="<?= base_url('assets/icon-color/about-due-color.svg') ?>" alt="">
                                     </div>
                                 </div>
                                 <div>
@@ -51,9 +51,9 @@
                             <div class="card-body p-4 d-flex gap-3">
                                 <div class="flex-shrink-0">
                                     <div class="flex-grow-1">
-                                        <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                        <div class="bg-primary bg-opacity-10 border border-primary border-opacity-25 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0 mb-2"
                                             style="width:48px;height:48px;">
-                                            <i class="bi bi-envelope text-primary fs-4"></i>
+                                            <img src="<?= base_url('assets/icon-color/email-outline.svg') ?>" alt="">
                                         </div>
                                     </div>
 
@@ -72,9 +72,9 @@
                             <div class="card-body p-4 d-flex gap-3">
                                 <div class="flex-shrink-0">
                                     <div class="flex-grow-1">
-                                        <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                        <div class="bg-primary bg-opacity-10 border border-primary border-opacity-25 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0 mb-2"
                                             style="width:48px;height:48px;">
-                                            <i class="bi bi-telephone text-primary fs-4"></i>
+                                            <img src="<?= base_url('assets/icon-color/phone-outline.svg') ?>" alt="">
                                         </div>
                                     </div>
                                     <div>
@@ -97,9 +97,9 @@
                         <div class="card-body p-4 d-flex align-items-center gap-3">
                             <div class="flex-shrink-0">
                                 <div class="flex-grow-1">
-                                    <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                    <div class="d-flex align-items-center justify-content-center flex-shrink-0 mb-2"
                                         style="width:48px;height:48px;">
-                                        <i class="bi bi-whatsapp text-primary fs-4"></i>
+                                        <img src="<?= base_url('assets/icon-color/info-whatsapp-filled.svg') ?>" alt="">
                                     </div>
                                 </div>
 
@@ -112,7 +112,11 @@
                                     <a href="https://wa.me/6281233300382"
                                         target="_blank"
                                         class="btn btn-primary rounded-pill">
-                                        Let's Chat on WhatsApp <i class="bi bi-arrow-up-right ms-2"></i>
+                                        Let's Chat on WhatsApp <svg class="ms-2" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                                            <path d="M14 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4.707L3.354 14.854a.5.5 0 1 1-.708-.708L12.793 4H6.5a.5.5 0 0 1 0-1z"
+                                                fill="currentColor" />
+                                        </svg>
+
                                     </a>
                                 </div>
                             </div>
@@ -262,7 +266,7 @@
                             </div>
 
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary rounded-pill" id="submitBtn">
+                                <button type="submit" class="btn btn-primary rounded-pill w-100" id="submitBtn">
                                     <span class="btn-text">Send Message</span>
                                     <span class="spinner-border spinner-border-sm d-none ms-2" role="status" aria-hidden="true"></span>
                                     <i class="bi bi-arrow-up-right ms-2 arrow-icon"></i>
@@ -301,25 +305,39 @@
     </div>
 </section>
 
-<section id="our-locations" class="py-5 bg-light" data-aos="fade-up">
-    <div class="container">
+<section id="our-locations" class="py-5 bg-white" data-aos="fade-up">
+    <div class="container-fluid px-0">
         <div class="row justify-content-center mb-5">
-            <div class="col-lg-12 text-center">
+            <div class="col-12 text-center">
 
                 <h6 class="text-uppercase text-primary mb-2">OUR LOCATIONS</h6>
                 <h2 class="mb-5">Discover Our Offices</h2>
-                <div class="position-relative overflow-hidden shadow-sm" style="height: 400px; background-color: #0dcaf0;">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.544637975645!2d106.7513134!3d-6.1916294999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7e1905d9f27%3A0xad148812b785f3ee!2sPT.%20All%20Data%20International!5e0!3m2!1sen!2sid!4v1767847866575!5m2!1sen!2sid"
-                        width="100%"
-                        height="100%"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="h-100 w-100"
-                        style="border:0; filter: invert(95%) hue-rotate(180deg) saturate(150%) brightness(115%) contrast(90%) sepia(15%);">
-                    </iframe>
+                <div class="map-wrapper position-relative overflow-hidden w-100">
+
+                    <img
+                        src="<?= base_url('assets/images/map-location.webp') ?>"
+                        alt="Map Location"
+                        class="map-bg w-100 d-block"
+                        loading="lazy">
+
+                    <div class="location-card position-absolute">
+                        <h6 class="fw-semibold mb-2">PT. All Data International</h6>
+
+                        <p class="text-muted small mb-3">
+                            Jakarta Grand Aries Niaga Blok G1–2T, Jl. Taman Aries No.1,
+                            RT.10/RW.3, Meruya Utara, Kec. Kembangan,
+                            Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11620
+                        </p>
+
+                        <a href="https://maps.app.goo.gl/aeqgeW9h6VWeU8Va6" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-outline-primary btn-sm rounded-pill d-inline-flex align-items-center gap-2">
+                            Show Detail Location
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="btn-icon">
+                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                            </svg>
+                        </a>
+                    </div>
+
                 </div>
 
             </div>
@@ -333,8 +351,9 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-1 rounded-4 h-100 p-4">
-                    <div class="bg-linkedin bg-opacity-10 rounded-3 d-inline-block mb-2">
-                        <i class="bi bi-linkedin text-linkedin text-primary fs-1"></i>
+                    <div class="d-inline-block mb-2">
+                        <img src="<?= base_url('assets/icon-filled/info-linkedin-filled.svg') ?>" alt="Linkedin"
+                            style="width: 40px; height: 40px;">
                     </div>
                     <h4 class=" mb-3">Connect on LinkedIn</h4>
                     <p class="text-muted mb-4">
@@ -352,8 +371,8 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-1 rounded-4 h-100 p-4">
-                    <div class="bg-instagram bg-opacity-10 rounded-3 d-inline-block mb-2">
-                        <i class="bi bi-instagram text-instagram text-primary fs-1"></i>
+                    <div class="d-inline-block mb-2">
+                        <img src="<?= base_url('assets/icon-filled/info-instagram-filled.svg') ?>" alt="Instagram" style="width: 40px; height: 40px;">
                     </div>
                     <h4 class=" mb-3">Follow on Instagram</h4>
                     <p class="text-muted mb-4">
@@ -371,8 +390,8 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="card border-1 rounded-4 h-100 p-4">
-                    <div class="bg-facebook bg-opacity-10 rounded-3 d-inline-block mb-2">
-                        <i class="bi bi-facebook text-facebook text-primary fs-1"></i>
+                    <div class="d-inline-block mb-2">
+                        <img src="<?= base_url('assets/icon-filled/info-facebook-filled.svg') ?>" alt="Facebook" style="width: 40px; height: 40px;">
                     </div>
                     <h4 class=" mb-3">Like on Facebook</h4>
                     <p class="text-muted mb-4">

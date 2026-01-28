@@ -12,10 +12,12 @@ class CompanyController extends BaseController
             'description' => 'A passionate team driving innovation and growth with clients and principals to create impactful industry results.',
             'image' => false,
 
-            'cta_text' => 'Request this Service',
+            'cta_text' => 'Get in Touch',
             'cta_link' => '/contact?service=consulting',
+            'cta_style' => 'primary',
+
             'bg_class' => 'bg-white',
-            'pattern' => true, // AKTIFKAN PATTERN
+            'pattern' => true,
             'pattern_opacity' => 100,
 
             // Content lainnya...

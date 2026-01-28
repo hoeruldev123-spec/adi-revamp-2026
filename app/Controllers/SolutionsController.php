@@ -33,7 +33,6 @@ class SolutionsController extends BaseController
             'cta_text'   => 'Explore Now',
             'cta_link'   => '#detail-solutions',
             'cta_action' => 'scroll',
-            'cta_icon'   => 'bi bi-arrow-down-right',
         ]);
     }
 
@@ -56,7 +55,6 @@ class SolutionsController extends BaseController
             'cta_text'    => 'Explore Now',
             'cta_link'    => '#detail-solutions',
             'cta_action'  => 'scroll',
-            'cta_icon'    => 'bi bi-arrow-down-right',
         ]);
     }
 
@@ -79,7 +77,6 @@ class SolutionsController extends BaseController
             'cta_text'    => 'Explore Now',
             'cta_link'    => '#detail-solutions',
             'cta_action'  => 'scroll',
-            'cta_icon'    => 'bi bi-arrow-down-right',
         ]);
     }
 
