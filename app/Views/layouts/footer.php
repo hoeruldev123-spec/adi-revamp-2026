@@ -28,10 +28,10 @@
       <div class="col-md-3 mb-4">
         <h6 class="mb-3">Solutions</h6>
         <ul class="list-unstyled text-muted">
-          <li><a href="<?= base_url('solutions/fmcg') ?>" class="footer-link">FMCG</a></li>
+          <!-- <li><a href="<?= base_url('solutions/fmcg') ?>" class="footer-link">FMCG</a></li>
           <li><a href="<?= base_url('solutions/telecom') ?>" class="footer-link">Telecom</a></li>
           <li><a href="<?= base_url('solutions/government') ?>" class="footer-link">Government</a></li>
-          <li><a href="<?= base_url('solutions/financial') ?>" class="footer-link">Financial</a></li>
+          <li><a href="<?= base_url('solutions/financial') ?>" class="footer-link">Financial</a></li> -->
         </ul>
 
       </div>
