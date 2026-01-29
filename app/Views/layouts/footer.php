@@ -33,7 +33,6 @@
           <li><a href="<?= base_url('solutions/government') ?>" class="footer-link">Government</a></li>
           <li><a href="<?= base_url('solutions/financial') ?>" class="footer-link">Financial</a></li> -->
         </ul>
-
       </div>
 
       <div class="col-md-3 mb-4">
@@ -147,11 +146,13 @@
 </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="<?= base_url('assets/vendor/swiper/swiper-bundle.min.js') ?>"></script>
+
+<script src="<?= base_url('assets/vendor/aos/aos.js') ?>"></script>
 <script>
   AOS.init({
     duration: 1000,

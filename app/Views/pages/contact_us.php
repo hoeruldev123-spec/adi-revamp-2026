@@ -33,6 +33,7 @@
                                         <img src="<?= base_url('assets/icon-color/about-due-color.svg') ?>" alt="">
                                     </div>
                                 </div>
+
                                 <div>
                                     <h5 class="mb-1">Head Office</h5>
                                     <p class="text-muted mb-0">
