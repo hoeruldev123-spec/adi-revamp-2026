@@ -55,13 +55,13 @@ $segment2 = getSafeSegment(2);
             </svg>
           </a>
           <ul class="dropdown-menu border-0 shadow-lg rounded-3 py-2 mt-1 mt-lg-2" aria-labelledby="solutionsDropdown">
-            <!-- <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'fmcg') ? 'active bg-primary text-white' : '' ?>"
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'fmcg') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('solutions/fmcg'); ?>">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
                   class="me-2 <?= ($segment2 == 'fmcg') ? 'text-white' : 'text-muted' ?>">
                   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
                 </svg>
-                FMCG
+                Retail & FMCG
               </a></li>
 
             <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'telecom') ? 'active bg-primary text-white' : '' ?>"
@@ -74,7 +74,7 @@ $segment2 = getSafeSegment(2);
                 Telecom
               </a></li>
 
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'government') ? 'active bg-primary text-white' : '' ?>"
+            <!-- <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'government') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('solutions/government'); ?>">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
                   class="me-2 <?= ($segment2 == 'government') ? 'text-white' : 'text-muted' ?>">
@@ -82,7 +82,7 @@ $segment2 = getSafeSegment(2);
                   <path d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z" />
                 </svg>
                 Government
-              </a></li>
+              </a></li> -->
 
             <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'financial') ? 'active bg-primary text-white' : '' ?>"
                 href="<?= base_url('solutions/financial'); ?>">
@@ -91,7 +91,7 @@ $segment2 = getSafeSegment(2);
                   <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
                 </svg>
                 Financial
-              </a></li> -->
+              </a></li>
             <li>
               <hr class="dropdown-divider mx-3 mx-lg-4 my-2">
             </li>

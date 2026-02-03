@@ -78,14 +78,14 @@ class HomeController extends BaseController
                 'image' => base_url('assets/images/solutions/solutions-telecom.webp'),
                 'active' => false
             ],
-            [
-                'id' => 'government',
-                'title' => 'Government',
-                'icon' => base_url('assets/icon-color/government-due-color.svg'),
-                'description' => 'Transform public services with data-driven decision making and efficient resource allocation.',
-                'image' => base_url('assets/images/solutions/solutions-government.webp'),
-                'active' => false
-            ],
+            // [
+            //     'id' => 'government',
+            //     'title' => 'Government',
+            //     'icon' => base_url('assets/icon-color/government-due-color.svg'),
+            //     'description' => 'Transform public services with data-driven decision making and efficient resource allocation.',
+            //     'image' => base_url('assets/images/solutions/solutions-government.webp'),
+            //     'active' => false
+            // ],
             [
                 'id' => 'financial',
                 'title' => 'Financial',

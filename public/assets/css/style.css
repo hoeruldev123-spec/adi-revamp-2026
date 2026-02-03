@@ -725,25 +725,6 @@ h6 {
   margin: 0;
 }
 
-/* RIGHT IMAGE */
-.solution-image-wrapper {
-  transition: all 0.5s ease;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.solution-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
-}
-
 .solution-image.fade-out {
   opacity: 0;
   transform: scale(0.95);
@@ -841,22 +822,53 @@ h6 {
 }
 
 /* DETAIL SOLUTIONS */
-/* Image wrapper */
-.solution-image {
-  position: relative;
+.solution-image-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 28px;
-  background: #fff;
-  padding: 10px;
+  aspect-ratio: 4 / 3; /* 🔥 KUNCI KONSISTENSI */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+}
+
+/* IMAGE */
+.solution-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 WAJIB */
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+/* FALLBACK GRADIENT */
+.solution-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #3aa6ff, #d6efff);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* OPTIONAL HOVER EFFECT */
+.solution-image-wrapper:hover .solution-image {
+  transform: scale(1.05);
+  opacity: 0.95;
 }
 
 /* Gradient block */
 .solution-bg {
   width: 100%;
   height: 100%;
+  min-height: 280px;
   border-radius: 20px;
   background-size: 200% 200%;
+  background: linear-gradient(135deg, #3aa6ff, #d6efff);
   animation: gradientMove 8s ease infinite;
 }
 

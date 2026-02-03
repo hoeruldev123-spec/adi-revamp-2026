@@ -1,53 +1,36 @@
 <section id="detail-solutions" class="py-5 position-relative overflow-hidden bg-white">
     <div class="container">
 
-        <!-- Item 01 -->
-        <div class="row align-items-center gy-4 mb-5" data-aos="fade-up">
-            <div class="col-lg-5">
-                <div class="solution-image">
-                    <div class="solution-bg gradient-1"></div>
-                </div>
-            </div>
-            <div class="col-lg-6 offset-lg-1">
-                <h3 class="mb-3">Solution Explanation-01</h3>
-                <p class="text-muted">
-                    Lorem ipsum dolor sit amet consectetur. Scelerisque id ut vivamus gravida sapien.
-                    Sem lectus risus etiam augue pharetra quis integer.
-                </p>
-            </div>
-        </div>
+        <?php foreach ($solutions as $index => $item): ?>
+            <div class="row align-items-center mb-5 gy-4 " data-aos="fade-up">
 
-        <!-- Item 02 (zig-zag) -->
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse" data-aos="fade-up">
-            <div class="col-lg-5">
-                <div class="solution-image">
-                    <div class="solution-bg gradient-2"></div>
+                <!-- IMAGE / BG -->
+                <div class="col-md-6 <?= $index % 2 != 0 ? 'order-md-2' : '' ?>">
+                    <div class="solution-image-wrapper rounded-4 shadow-sm">
+                        <?php if (!empty($item['image'])): ?>
+                            <img
+                                src="<?= base_url('assets/images/' . $item['image']) ?>"
+                                class="solution-image"
+                                alt="<?= esc($item['title']) ?>"
+                                loading="lazy">
+                        <?php else: ?>
+                            <div class="solution-bg d-flex align-items-center justify-content-center">
+                                <h4 class="text-white fw-semibold opacity-75 text-center px-3">
+                                    <?= esc($item['title']) ?>
+                                </h4>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6 offset-lg-1">
-                <h3 class="mb-3">Solution Explanation-02</h3>
-                <p class="text-muted">
-                    Lorem ipsum dolor sit amet consectetur. Scelerisque id ut vivamus gravida sapien.
-                    Sem lectus risus etiam augue pharetra quis integer.
-                </p>
-            </div>
-        </div>
 
-        <!-- Item 03 -->
-        <div class="row align-items-center gy-4" data-aos="fade-up">
-            <div class="col-lg-5">
-                <div class="solution-image">
-                    <div class="solution-bg gradient-3"></div>
+                <!-- CONTENT -->
+                <div class="col-md-6 <?= $index % 2 != 0 ? 'order-md-1' : '' ?>">
+                    <h3 class="mb-3"><?= esc($item['title']) ?></h3>
+                    <p class="text-muted mb-0"><?= esc($item['description']) ?></p>
                 </div>
+
             </div>
-            <div class="col-lg-6 offset-lg-1">
-                <h3 class="mb-3">Solution Explanation-03</h3>
-                <p class="text-muted">
-                    Lorem ipsum dolor sit amet consectetur. Scelerisque id ut vivamus gravida sapien.
-                    Sem lectus risus etiam augue pharetra quis integer.
-                </p>
-            </div>
-        </div>
+        <?php endforeach; ?>
 
     </div>
 </section>

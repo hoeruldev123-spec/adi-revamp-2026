@@ -39,9 +39,9 @@
                                     <p class="mb-3 text-muted">
                                         <?= $solution['description'] ?>
                                     </p>
-                                    <!-- <a href="<?= base_url('solutions/' . $solution['id']) ?>" class="btn btn-outline-primary btn-sm">
+                                    <a href="<?= base_url('solutions/' . $solution['id']) ?>" class="btn btn-outline-primary btn-sm">
                                         Learn More <i class="bi bi-arrow-right"></i>
-                                    </a> -->
+                                    </a>
                                 </div>
 
 
@@ -56,7 +56,7 @@
 
 
             <div class="col-lg-6">
-                <div class="solution-image-wrapper">
+                <div class="solution-home-image-wrapper">
                     <img src="<?= $solutions[0]['image'] ?>"
                         alt="<?= $solutions[0]['title'] ?> Solution"
                         class="img-fluid solution-image"
