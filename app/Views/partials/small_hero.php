@@ -67,8 +67,7 @@ $bg_class         = $bg_class         ?? 'bg-white';
                                 <span class="btn-text"><?= esc($cta_text) ?></span>
                                 <?php if (($cta_icon ?? 'up-right') === 'down-right'): ?>
                                     <!-- Arrow Down Right -->
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                                         <path d="M7 7L17 17M17 17H8M17 17V8"
                                             stroke="currentColor"
                                             stroke-width="2"

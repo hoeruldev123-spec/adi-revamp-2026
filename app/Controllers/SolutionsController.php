@@ -44,23 +44,21 @@ class SolutionsController extends BaseController
                 [
                     'title'       => 'AI-Driven Demand Forecasting',
                     'description' => 'Leverage AI models to automatically capture complex seasonal and holiday demand patterns—such as Lebaran—across thousands of SKUs with higher accuracy than manual forecasting.',
-                    // 'image'       => 'solutions/fmcg-demand.webp',
+                    'image'       => 'solutions/fmcg-1.webp',
                 ],
                 [
                     'title'       => 'Inventory Optimization at Scale',
                     'description' => 'Optimize safety stock levels and replenishment decisions to reduce excess inventory while maintaining high product availability during peak demand periods.',
-                    // 'image'       => 'solutions/solutions-fmcg.webp',
+                    'image'       => 'solutions/fmcg-2.webp',
                 ],
                 [
                     'title'       => 'Human-in-the-Loop Planning',
                     'description' => 'Empower supply chain planners to focus on strategic adjustments while AI handles forecasting complexity—combining automation with human expertise for better outcomes.',
-                    'image'       => 'solutions/solutions-fmcg.webp',
+                    'image'       => 'solutions/fmcg-3.webp',
                 ],
             ],
         ]);
     }
-
-
 
     public function telecom()
     {
@@ -90,22 +88,21 @@ class SolutionsController extends BaseController
                 [
                     'title'       => 'Pre-Emptive Churn Detection',
                     'description' => 'Use AI models to identify early warning signals such as declining usage and engagement—detecting “silent churn” weeks before customers decide to leave.',
-                    // 'image'       => 'solutions/fmcg-demand.webp',
+                    'image'       => 'solutions/telecom-1.webp',
                 ],
                 [
                     'title'       => 'Intelligent Retention Actions',
                     'description' => 'Automatically trigger personalized retention offers and interventions while customers are still receptive—maximizing retention success and campaign efficiency.',
-                    // 'image'       => 'solutions/solutions-fmcg.webp',
+                    'image'       => 'solutions/telecom-2.webp',
                 ],
                 [
                     'title'       => 'Revenue Protection & Impact Measurement',
                     'description' => 'Measure the financial impact of churn prevention initiatives with clear visibility into retention success, revenue saved, and monthly ROI.',
-                    'image'       => 'solutions/solutions-fmcg.webp',
+                    'image'       => 'solutions/telecom-3.webp',
                 ],
             ],
         ]);
     }
-
 
     public function government()
     {
@@ -155,17 +152,17 @@ class SolutionsController extends BaseController
                 [
                     'title'       => 'Next Best Offer (AI Personalization)',
                     'description' => 'Leverage AI to identify customer life events and behavioural patterns from transaction data, enabling financial institutions to recommend the most relevant product or service at the right time.',
-                    // 'image'       => 'solutions/fmcg-demand.webp',
+                    'image'       => 'solutions/financial-industry-1.webp',
                 ],
                 [
                     'title'       => '360° Customer Intelligence',
                     'description' => 'Build a unified view of customer data across channels and transactions to understand intent, needs, and financial behaviour moving beyond traditional balance-based segmentation.',
-                    // 'image'       => 'solutions/solutions-fmcg.webp',
+                    'image'       => 'solutions/financial-industry-2.webp',
                 ],
                 [
                     'title'       => 'Campaign Performance Optimization',
                     'description' => 'Focus campaigns on the right customers with the right offers—improving conversion rates and campaign ROI.',
-                    'image'       => 'solutions/solutions-fmcg.webp',
+                    'image'       => 'solutions/financial-industry-3.webp',
                 ],
             ],
         ]);

@@ -823,13 +823,22 @@ h6 {
 
 /* DETAIL SOLUTIONS */
 .solution-image-wrapper {
-  width: 100%;
-  aspect-ratio: 4 / 3; /* 🔥 KUNCI KONSISTENSI */
+  width: 70%;
+  aspect-ratio: 4 / 3; /* konsisten */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border-radius: 20px;
+  transition: transform 0.5s ease;
+  margin-inline: auto; /* center horizontal */
+}
+
+/* gambar di dalam wrapper */
+.solution-image-wrapper img.solution-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* gambar selalu penuh & rapi */
   transition: transform 0.5s ease;
 }
 
@@ -837,7 +846,7 @@ h6 {
 .solution-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 🔥 WAJIB */
+  object-fit: cover;
   transition:
     transform 0.5s ease,
     opacity 0.5s ease;
@@ -895,6 +904,24 @@ h6 {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .solution-image-wrapper {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .solution-image-wrapper {
+    margin-left: 0;   /* kiri */
+    margin-right: auto;
+  }
+
+  .order-md-2 .solution-image-wrapper {
+    margin-left: auto;
+    margin-right: 0; /* kanan */
   }
 }
 
@@ -961,7 +988,7 @@ footer hr {
 /* === Services Section Custom === */
 #services-section {
   background-color: #008bf9;
-  position: relative; /* supaya anak absolute bisa berada di dalam */
+  position: relative; /* supaya child absolute bisa berada di dalam */
   overflow: hidden;
 }
 
@@ -989,7 +1016,7 @@ footer hr {
 /* Wrapper Service Card */
 .service-card {
   border-radius: 16px;
-  overflow: hidden; /* penting supaya radius gambar mengikuti card */
+  overflow: hidden; /* radius gambar mengikuti card */
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -1011,7 +1038,7 @@ footer hr {
 /* Image style */
 .service-image {
   width: 100%;
-  height: 100%; /* boleh disesuaikan */
+  height: 100%; 
   object-fit: cover; /* biar gambar rapi */
   transition: transform 0.4s ease;
 }
