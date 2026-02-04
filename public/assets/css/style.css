@@ -1251,6 +1251,37 @@ footer hr {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
+#vm-content,
+.vm-switcher,
+section.py-5 {
+  overflow-x: hidden;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+@media (max-width: 576px) {
+  /* .vm-switcher {
+    width: 100%;
+  } */
+
+  .vm-switcher {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+  .vm-btn {
+    min-width: unset;       
+    padding: 10px 16px;    
+    font-size: 14px;
+  }
+
+  .vm-slider {
+    width: calc(50% - 6px);
+  }
+}
+
+
 /* Switcher */
 .vm-btn {
   position: relative;
@@ -1263,8 +1294,8 @@ footer hr {
   font-weight: 500;
   color: #363a40;
   cursor: pointer;
-  flex: 1;
-  min-width: 200px;
+  /* flex: 1; */
+  /* min-width: 200px; */
   text-align: center;
 }
 
@@ -1294,7 +1325,7 @@ footer hr {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(0);
   transition: opacity .45s ease, transform .45s ease;
   pointer-events: none;
   /* width: 100%; */
@@ -1309,12 +1340,12 @@ footer hr {
 
 .vm-box.hide-left {
   opacity: 0;
-  transform: translateX(-40px);
+  transform: translateX(-20px);
 }
 
 .vm-box.hide-right {
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(20px);
 }
 
 /* Wrapper agar posisi absolut bekerja */
@@ -1322,6 +1353,15 @@ footer hr {
   position: relative;
   min-height: 160px; 
 }
+
+@media (max-width: 576px) {
+  .vm-box,
+  .vm-box.hide-right,
+  .vm-box.hide-left {
+    transform: translateX(0);
+  }
+}
+
 
 /* Logo Carousel Styling - FIXED */
 .logo-carousel-container {

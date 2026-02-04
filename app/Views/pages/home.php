@@ -47,27 +47,42 @@
 
       <div class="col-lg-6 text-center mt-5 mt-lg-0">
         <picture>
+
           <!-- Desktop -->
           <source
             media="(min-width: 992px)"
-            srcset="<?= base_url('assets/images/hero/' . $hero['image']['desktop']) ?>">
+            srcset="
+        <?= base_url('assets/images/hero/cloud-hero-800.webp') ?> 800w,
+        <?= base_url('assets/images/hero/cloud-hero-1200.webp') ?> 1200w
+      "
+            sizes="400px">
 
           <!-- Tablet -->
           <source
             media="(min-width: 576px)"
-            srcset="<?= base_url('assets/images/hero/' . $hero['image']['tablet']) ?>">
+            srcset="
+        <?= base_url('assets/images/hero/cloud-hero-400.webp') ?> 400w,
+        <?= base_url('assets/images/hero/cloud-hero-800.webp') ?> 800w
+      "
+            sizes="90vw">
 
-          <!-- Mobile / fallback -->
+          <!-- Mobile -->
           <img
-            src="<?= base_url('assets/images/hero/' . $hero['image']['mobile']) ?>"
-            alt="Cloud-based AI illustration"
+            src="<?= base_url('assets/images/hero/cloud-hero-400.webp') ?>"
+            srcset="
+        <?= base_url('assets/images/hero/cloud-hero-400.webp') ?> 400w,
+        <?= base_url('assets/images/hero/cloud-hero-800.webp') ?> 800w
+      "
+            sizes="90vw"
             width="400"
             height="350"
-            loading="lazy"
+            alt="Cloud-based AI illustration"
             decoding="async"
+            fetchpriority="high"
             class="img-fluid">
         </picture>
       </div>
+
 
     </div>
   </div>

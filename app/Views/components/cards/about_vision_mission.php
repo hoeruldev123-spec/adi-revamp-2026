@@ -16,7 +16,6 @@
           <span class="word-fade" style="--delay: 0.8s">Intelligent</span>
           <span class="word-fade" style="--delay: 1.1s">Enterprises</span>
           <span class="word-fade" style="--delay: 1.4s">Through</span>
-          <br>
           <span class="word-fade" style="--delay: 1.7s">Data</span>
           <span class="word-fade" style="--delay: 2.0s">and</span>
           <span class="word-fade" style="--delay: 2.3s">AI</span>

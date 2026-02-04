@@ -105,11 +105,11 @@ class HomeController extends BaseController
             'badge' => 'Elevate Your Business with AI',
             'title' => 'Empowering Smarter<br>Business Through Data<br>& AI Integration',
             'description' => 'We deliver integrated solutions that transform complex data into clear insights and smarter business outcomes.',
-            'image' => [
-                'mobile' => 'cloud-hero-400.webp',
-                'tablet' => 'cloud-hero-800.webp',
-                'desktop' => 'cloud-hero-1200.webp',
-            ],
+            // 'image' => [
+            //     'mobile' => 'cloud-hero-400.webp',
+            //     'tablet' => 'cloud-hero-800.webp',
+            //     'desktop' => 'cloud-hero-1200.webp',
+            // ],
 
         ];
     }

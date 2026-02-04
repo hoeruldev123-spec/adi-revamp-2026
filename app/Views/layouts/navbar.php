@@ -234,21 +234,6 @@ $segment2 = getSafeSegment(2);
       </div>
 
       <div class="d-lg-none mt-4 pt-3 border-top">
-        <!-- <button
-          type="button"
-          class="btn btn-outline-secondary w-100 mb-3 d-flex align-items-center justify-content-center gap-2"
-          onclick="closeMobileMenu()">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            style="display:block"
-            aria-hidden="true">
-            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-          </svg>
-          <span>Close Menu</span>
-        </button> -->
 
         <a href="<?= base_url('contact'); ?>" class="btn btn-primary rounded-pill w-100 mb-3 py-3 fw-semibold">
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-2">
