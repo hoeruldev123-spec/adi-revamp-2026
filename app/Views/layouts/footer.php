@@ -120,9 +120,9 @@
       <div class="row align-items-center">
         <div class="col-md-6 mb-2 mb-md-0">
           <div class="badge border border-white text-white border px-3 py-2 shadow-sm d-inline-flex align-items-center gap-2">
-            <span class="badge-icon">
+            <span class="badge-icon-footer">
               <img
-                src="<?= base_url('assets/icon-color/star-due-color.svg') ?>"
+                src="<?= base_url('assets/icon-color/star-due-color-white.svg') ?>"
                 alt="Star icon"
                 width="16"
                 height="16"

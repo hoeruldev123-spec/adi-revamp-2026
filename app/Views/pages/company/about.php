@@ -13,7 +13,7 @@
 <?= $this->include('components/cards/client_card') ?>
 <?= $this->include('components/cards/core_value') ?>
 <?= $this->include('components/cards/about_vision_mission') ?>
-<?= $this->include('components/sections/our_team') ?>
+<!-- disini section OUR TEAM -->
 <?= $this->include('components/sections/journey') ?>
 <?= $this->include('components/cards/principal_card') ?>
 <?= $this->include('components/sections/certifications') ?>
