@@ -6,9 +6,14 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center" data-aos="fade-up">
-                <div class="mb-4">
-                    <i class="bi bi-search display-3 text-dark mb-3 d-block"></i>
-                    <h1 class="display-4 fw-bold text-primary mb-3">Search</h1>
+                <div class="mb-4 d-flex flex-column align-items-center">
+                    <svg class="icon icon-search display-3 text-primary mb-3 d-block"
+                        viewBox="0 0 16 16"
+                        aria-hidden="true">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l.098.115 3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+
+                    <!-- <h1 class="display-4 fw-bold text-primary mb-3">Search</h1> -->
                     <p class="lead text-primary-50 mb-4">Find solutions, services, and resources</p>
                 </div>
 

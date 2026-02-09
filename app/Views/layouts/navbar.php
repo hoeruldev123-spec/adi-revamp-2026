@@ -19,12 +19,11 @@ $segment2 = getSafeSegment(2);
   <div class="container">
     <div class="d-flex justify-content-between align-items-center w-100 d-lg-none">
       <a class="navbar-brand" href="<?= base_url() ?>">
-        <img src="<?= base_url('assets/images/logo_coloured.png'); ?>" alt="All Data" height="32">
+        <img src="<?= base_url('assets/images/logo_coloured.png'); ?>" alt="All Data" height="38">
       </a>
 
       <div class="d-flex align-items-center gap-3">
-        <a href="<?= base_url('search'); ?>" class="nav-link text-dark p-1">
-          <i class="bi bi-search fs-5"></i>
+        <a href="<?= base_url('search'); ?>" class="nav-link text-dark p-1 icon-search">
         </a>
 
         <button class="navbar-toggler border-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
@@ -35,7 +34,7 @@ $segment2 = getSafeSegment(2);
     </div>
 
     <a class="navbar-brand me-5 d-none d-lg-block" href="<?= base_url() ?>">
-      <img src="<?= base_url('assets/images/logo_coloured.png'); ?>" alt="All Data" height="35">
+      <img src="<?= base_url('assets/images/logo_coloured.png'); ?>" alt="All Data" height="48">
     </a>
 
     <div class="collapse navbar-collapse mt-3 mt-lg-0" id="mainNavbar">
@@ -221,8 +220,8 @@ $segment2 = getSafeSegment(2);
       </ul>
 
       <div class="d-none d-lg-flex align-items-center gap-4 ms-auto">
-        <a href="<?= base_url('search'); ?>" class="nav-link text-dark position-relative">
-          <i class="bi bi-search fs-5"></i>
+        <a href="<?= base_url('search'); ?>" class="nav-link text-dark position-relative icon-search">
+
         </a>
 
         <a href="<?= base_url('contact'); ?>" class="btn btn-primary rounded-pill px-4">
