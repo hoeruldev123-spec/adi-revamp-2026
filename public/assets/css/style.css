@@ -2210,89 +2210,113 @@ section.py-5 {
   }
 }
 
-/* ARTICLES */
+/* ===========================
+   ARTICLES SECTION
+   =========================== */
+
 #articles-section {
-  background: linear-gradient(180deg, #008bf9 0%, #ffffff 100%);
   position: relative;
   overflow: hidden;
-}
-
-.pattern-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.9;
-  z-index: -1;
-}
-
-/* Untuk desktop, putih lebih dominan */
-@media (min-width: 768px) {
-  #articles-section {
-    background: linear-gradient(180deg, #008bf9 0%, #2d9cff 15%, /* Biru cepat berubah */ #89beff 35%, /* Biru muda lebih cepat */ #cce5ff 60%, /* Biru sangat muda di tengah */ #e6f2ff 80%, /* Hampir putih */ #ffffff 100% /* Full putih */);
-  }
+  background: linear-gradient(180deg, #008bf9 0%, #ffffff 100%);
 }
 
 #articles-section .container {
   position: relative;
-  z-index: 2; /* Konten di depan */
+  z-index: 2; /* konten selalu di atas */
 }
 
+/* background pattern */
+.pattern-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  z-index: 0; /* jangan negatif, biar aman */
+  pointer-events: none;
+}
+
+/* Desktop: putih lebih dominan */
+@media (min-width: 768px) {
+  #articles-section {
+    background: linear-gradient(
+      180deg,
+      #008bf9 0%,
+      #2d9cff 15%,
+      #89beff 35%,
+      #cce5ff 60%,
+      #e6f2ff 80%,
+      #ffffff 100%
+    );
+  }
+}
+
+/* thumbnail */
 .thumbnail-container {
   height: 160px;
   overflow: hidden;
 }
 
 .thumbnail-image {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.card:hover .thumbnail-image {
-  transform: scale(1.05);
-}
-
-.card {
-  transition: all 0.3s ease;
+/* card hover (dibatasi agar tidak ganggu semua card di web)
+   kalau kamu memang mau berlaku global, hapus prefix #articles-section */
+#articles-section .card {
   height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+#articles-section .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
 }
 
-.card:hover .card-title a {
+#articles-section .card:hover .thumbnail-image {
+  transform: scale(1.05);
+}
+
+#articles-section .card:hover .card-title a {
   color: #0d6efd !important;
 }
 
+/* utility */
 .object-fit-cover {
   object-fit: cover;
 }
 
-/* Line clamp for text */
+/* Line clamp */
 .line-clamp-2 {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Responsive */
+/* ===========================
+   RESPONSIVE TWEAKS
+   (mengganti selector rawan: .col-lg-8 .card > div:first-child)
+   =========================== */
+
+/* Jika yang kamu maksud adalah area thumbnail pertama pada card,
+   lebih aman target .thumbnail-container */
 @media (max-width: 992px) {
-  .col-lg-8 .card > div:first-child {
-    height: 250px !important;
+  .thumbnail-container {
+    height: 250px;
   }
 }
 
 @media (max-width: 768px) {
-  .col-lg-8 .card > div:first-child {
-    height: 200px !important;
+  .thumbnail-container {
+    height: 200px;
   }
 
+  /* aturan ini tetap seperti punyamu, tapi lebih aman kalau elemen memang ada */
   .col-lg-4 .card .col-5 {
     width: 40% !important;
   }
@@ -2302,6 +2326,7 @@ section.py-5 {
   }
 }
 
+/* hero/pattern section height */
 .pattern-articles.min-height-section {
   min-height: 30vh;
   display: flex;
@@ -2316,28 +2341,25 @@ section.py-5 {
   }
 }
 
-/* all-articles */
+/* ===========================
+   ALL ARTICLES SECTION
+   =========================== */
+
 #all-articles-section {
-  background: #ffffff;
   position: relative;
   overflow: hidden;
-}
-@media (min-width: 768px) {
-  #all-articles-section {
-    background: #ffffff;
-  }
+  background: #ffffff;
 }
 
 #all-articles-section .container {
   position: relative;
-  z-index: 2; /* Konten di depan */
+  z-index: 2;
 }
 
+/* blog card */
 .blog-card {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
@@ -2345,7 +2367,9 @@ section.py-5 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
+/* blog thumbnail */
 .blog-thumbnail {
+  width: 100%;
   height: 200px;
   object-fit: cover;
   transition: transform 0.5s ease;
@@ -2354,6 +2378,7 @@ section.py-5 {
 .blog-card:hover .blog-thumbnail {
   transform: scale(1.05);
 }
+
 
 /* Custom blur classes */
 .backdrop-blur {
