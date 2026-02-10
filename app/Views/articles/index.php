@@ -93,7 +93,7 @@
 
                 <!-- Active Filters -->
                 <?php if (!empty($search) || !empty($selectedCategory) || !empty($selectedTag)): ?>
-                    <div class="mb-4 p-3 bg-white border rounded shadow-sm">
+                    <div class="mb-4 p-3 bg-white border rounded shadow-sm" data-aos="fade-up">
                         <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
                             <div class="d-flex flex-wrap gap-2 align-items-center">
                                 <span class="small fw-bold text-muted text-uppercase">Filters:</span>
