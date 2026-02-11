@@ -260,8 +260,7 @@
     setTimeout(checkAnimationSupport, 100);
   };
 
-  // ==================== CONTACT FORM ====================
-document.addEventListener('DOMContentLoaded', () => {
+  const initContactForm = () => {
   const contactForm = document.getElementById('contactForm');
   if (!contactForm) return;
 
@@ -297,42 +296,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const validate = () => {
     let ok = true;
 
-    // required fields
     Object.values(els).forEach((el) => {
       if (!el) return;
-
-      const empty = el.type === 'checkbox'
-        ? !el.checked
-        : el.value.trim() === '';
-
-      if (empty) {
-        ok = false;
-        markInvalid(el);
-      } else {
-        clearInvalid(el);
-      }
+      const empty = el.type === 'checkbox' ? !el.checked : el.value.trim() === '';
+      if (empty) { ok = false; markInvalid(el); } else { clearInvalid(el); }
     });
 
-    // email format
     const emailVal = els.email?.value.trim() || '';
-    if (emailVal && !emailRegex.test(emailVal)) {
-      ok = false;
-      markInvalid(els.email);
-    }
+    if (emailVal && !emailRegex.test(emailVal)) { ok = false; markInvalid(els.email); }
 
     return ok;
   };
 
-  // realtime remove invalid
   Object.values(els).forEach((el) => {
     if (!el) return;
     const evt = el.type === 'checkbox' ? 'change' : 'input';
     el.addEventListener(evt, () => {
-      const empty = el.type === 'checkbox'
-        ? !el.checked
-        : el.value.trim() === '';
-      if (empty) markInvalid(el);
-      else clearInvalid(el);
+      const empty = el.type === 'checkbox' ? !el.checked : el.value.trim() === '';
+      if (empty) markInvalid(el); else clearInvalid(el);
 
       if (el === els.email) {
         const v = el.value.trim();
@@ -342,31 +323,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   contactForm.addEventListener('submit', (e) => {
-    // kalau invalid, STOP submit
-    if (!validate()) {
-      e.preventDefault();
-      return;
-    }
-
-    // valid => biarkan submit real ke server
+    if (!validate()) { e.preventDefault(); return; }
     setLoading(true);
   });
 
-  // auto close alerts (kalau ada)
   setTimeout(() => {
     document.querySelectorAll('.alert').forEach((alert) => {
       try {
-        if (window.bootstrap?.Alert) {
-          new bootstrap.Alert(alert).close();
-        } else {
-          alert.remove();
-        }
-      } catch {
-        alert.remove();
-      }
+        if (window.bootstrap?.Alert) new bootstrap.Alert(alert).close();
+        else alert.remove();
+      } catch { alert.remove(); }
     });
   }, 5000);
-});
+};
 
   // ==================== NAVBAR ====================
   const initNavbar = () => {
@@ -593,12 +562,14 @@ document.addEventListener('DOMContentLoaded', () => {
       initSolutionSection,
       initPrincipalCarousel,
       initContactForm,
+      initWhatsAppFloating,
       initNavbar,
       initSearch,
       initVisionMission,
       initPrincipalCardCarousel,
       initTestimonialCarousel
     ];
+
 
     // Jalankan semua init functions
     initFunctions.forEach(fn => {
@@ -633,4 +604,72 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 })();
+
+// whatsapp floating
+const initWhatsAppFloating = () => {
+  const WA_NUMBER = '6281233300382';
+
+  const widget = document.getElementById('waWidget');
+  const box = document.getElementById('waBox');
+  const fab = document.getElementById('waFab');
+  const closeBtn = document.getElementById('waClose');
+  const sendBtn = document.getElementById('waSend');
+  if (!widget || !box || !fab || !sendBtn) return;
+
+  const path = (window.location.pathname || '/').replace(/\/+$/, '') || '/';
+  const isHome = path === '/' || path === '/home';
+  const isContact = path === '/contact' || path === '/contact-us' || path === '/company/contact';
+  if (isHome || isContact) return;
+
+  let selectedMsg = 'Hi! I’d like to know more about your services.';
+
+  const openWa = (message) => {
+    const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank', 'noopener');
+  };
+
+  const openBox = () => box.classList.add('is-open');
+  const closeBox = () => box.classList.remove('is-open');
+  const toggleBox = () => box.classList.toggle('is-open');
+
+  setTimeout(() => {
+  widget.style.display = 'block';
+
+  requestAnimationFrame(() => {
+    widget.classList.add('is-ready');
+
+    // Mobile: hanya tampil tombol, jangan auto open card
+    const isMobile = window.matchMedia('(max-width: 767.98px)').matches;
+
+    if (!isMobile) {
+      // Desktop: auto open card setelah jeda kecil
+      setTimeout(openBox, 300);
+    }
+  });
+}, 3000);
+
+
+  fab.addEventListener('click', () => {
+  toggleBox();
+});
+
+  if (closeBtn) closeBtn.addEventListener('click', (e) => { e.stopPropagation(); closeBox(); });
+
+  widget.querySelectorAll('.wa-chip').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      selectedMsg = btn.getAttribute('data-wa-msg') || selectedMsg;
+      openWa(selectedMsg);
+    });
+  });
+
+  sendBtn.addEventListener('click', () => openWa(selectedMsg));
+
+  document.addEventListener('mousedown', (e) => {
+    if (!box.classList.contains('is-open')) return;
+    if (widget.contains(e.target)) return;
+    closeBox();
+  });
+
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBox(); });
+};
 

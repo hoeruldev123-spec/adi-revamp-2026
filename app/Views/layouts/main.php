@@ -18,6 +18,8 @@
 
   <?= $this->include('layouts/footer') ?>
 
+  <?= $this->include('whatsapp_floating') ?>
+
   <?= $this->renderSection('scripts') ?>
 </body>
 

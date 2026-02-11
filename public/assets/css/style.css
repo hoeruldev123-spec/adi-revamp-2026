@@ -3264,3 +3264,171 @@ section.py-5 {
   .card .card-body form .input-group > .form-control{ height: 46px; line-height: 46px; }
   .card .card-body form .input-group > .btn{ height: 46px; width: 50px; flex-basis: 50px; }
 }
+
+
+/* ===== WhatsApp Floating Widget ===== */
+.wa-widget{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1055;
+  display: none; /* akan di-show lewat JS */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.wa-fab{
+  width: 56px;
+  height: 56px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--bs-primary);
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
+  opacity: 0;
+  transform: translateY(10px) scale(.98);
+  transition: opacity .28s ease, transform .28s ease, box-shadow .15s ease;
+  will-change: transform, opacity;
+}
+
+.wa-widget.is-ready .wa-fab {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.wa-fab:hover{ transform: translateY(-1px); box-shadow: 0 14px 32px rgba(0,0,0,.22); }
+.wa-fab:active{ transform: translateY(0px); }
+
+.wa-box{
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+  width: 320px;
+  max-width: calc(100vw - 36px);
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.18);
+  overflow: hidden;
+  transform: translateY(10px) scale(.96);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .22s ease, transform .22s ease;
+  will-change: transform, opacity;
+}
+
+.wa-box.is-open{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+  .wa-fab, .wa-box {
+    transition: none !important;
+  }
+}
+
+.wa-box-header{
+  padding: 12px 14px;
+  background: #f7fafc;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.wa-brand{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.wa-badge{
+  width: 34px;
+  height: 34px;
+  
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+.wa-title{ font-weight: 700; font-size: 14px; line-height: 1.2; color: #111827; }
+.wa-subtitle{ font-size: 12px; color: #6b7280; margin-top: 2px; }
+
+.wa-close{
+  border: 0;
+  background: transparent;
+  color: #6b7280;
+  padding: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.wa-close:hover{ background: rgba(0,0,0,.05); color: #374151; }
+
+.wa-box-body{
+  padding: 12px 14px 10px;
+}
+
+.wa-bubble{
+  background: #f3f4f6;
+  color: #111827;
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.wa-quick{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wa-chip{
+  border: 1px solid rgba(0,0,0,.1);
+  background: #fff;
+  border-radius: 999px;
+  padding: 8px 10px;
+  font-size: 12.5px;
+  cursor: pointer;
+  color: #111827;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.wa-chip:hover{
+  background: #f9fafb;
+  border-color: rgba(0,0,0,.16);
+  transform: translateY(-1px);
+}
+
+.wa-box-footer{
+  padding: 10px 14px 14px;
+}
+
+.wa-send{
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  background: var(--bs-primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.wa-send:hover{ background: #0b1220; }
+
+@media (max-width: 575.98px){
+  .wa-widget{ right: 14px; bottom: 14px; }
+  .wa-fab{ width: 54px; height: 54px; }
+  .wa-box{ width: 310px; bottom: 68px; }
+}
+/* ===== /WhatsApp Floating Widget ===== */

@@ -100,7 +100,7 @@
                                 <div class="flex-grow-1">
                                     <div class="d-flex align-items-center justify-content-center flex-shrink-0 mb-2"
                                         style="width:48px;height:48px;">
-                                        <img src="<?= base_url('assets/icon-color/info-whatsapp-filled.svg') ?>" alt="">
+                                        <img src="<?= base_url('assets/icon-color/info-whatsapp-filled.svg') ?>" alt="whatsapp">
                                     </div>
                                 </div>
 
@@ -131,21 +131,42 @@
 
                     <!-- Success Message -->
                     <?php if (session()->getFlashdata('success')): ?>
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <i class="bi bi-check-circle me-2"></i>
-                            <?= session()->getFlashdata('success') ?>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <div class="alert alert-success alert-dismissible fade show d-flex align-items-start gap-2" role="alert">
+                            <span class="flex-shrink-0 mt-1" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0z" />
+                                    <path d="M12.03 5.97a.75.75 0 0 1 0 1.06L7.477 11.58a.75.75 0 0 1-1.06 0L3.97 9.133a.75.75 0 1 1 1.06-1.06l1.86 1.86 4.61-4.61a.75.75 0 0 1 1.06 0z" fill="#fff" />
+                                </svg>
+                            </span>
+
+                            <div>
+                                <?= session()->getFlashdata('success') ?>
+                            </div>
+
+                            <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     <?php endif; ?>
 
+
                     <!-- Error Message -->
                     <?php if (session()->getFlashdata('error')): ?>
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <i class="bi bi-exclamation-triangle me-2"></i>
-                            <?= session()->getFlashdata('error') ?>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <div class="alert alert-danger alert-dismissible fade show d-flex align-items-start gap-2" role="alert">
+                            <span class="flex-shrink-0 mt-1" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.938 2.016a.13.13 0 0 1 .125 0l6.857 11.667c.03.052.03.116 0 .168a.146.146 0 0 1-.125.074H1.205a.146.146 0 0 1-.125-.074.163.163 0 0 1 0-.168L7.938 2.016z" />
+                                    <path d="M7.002 5.5a1 1 0 0 1 2 0l-.35 4.5a.65.65 0 0 1-1.3 0l-.35-4.5z" fill="#fff" />
+                                    <path d="M8 12a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" fill="#fff" />
+                                </svg>
+                            </span>
+
+                            <div>
+                                <?= session()->getFlashdata('error') ?>
+                            </div>
+
+                            <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     <?php endif; ?>
+
 
                     <!-- Validation Errors -->
                     <?php if (session()->getFlashdata('errors')): ?>
@@ -209,13 +230,16 @@
 
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="tel"
-                                        class="form-control <?= session('errors.phone') ? 'is-invalid' : '' ?>"
+                                    <input
+                                        type="tel"
                                         id="phone"
                                         name="phone"
-                                        placeholder="Enter phone number"
-                                        value="<?= old('phone') ?>"
-                                        required>
+                                        class="form-control"
+                                        placeholder="e.g. 081234567890 atau +6281234567890"
+                                        inputmode="tel"
+                                        required
+                                        pattern="^\+?[0-9]{10,15}$"
+                                        title="Please enter a valid phone number using digits only (an optional + is allowed at the start). Length must be 10–15 digits. Examples: 081234567890 or +6281234567890">
                                     <label for="phone">Phone Number</label>
                                 </div>
                             </div>
