@@ -46,7 +46,7 @@
                             <div class="testimonial-footer">
                                 <div class="avatar">
                                     <?php if (!empty($item['avatar'])): ?>
-                                        <img src="<?= base_url('assets/images/avatar/' . $item['avatar']) ?>" alt="">
+                                        <img src="<?= base_url('assets/icon-outline/' . $item['avatar']) ?>" alt="">
                                     <?php endif; ?>
                                 </div>
 

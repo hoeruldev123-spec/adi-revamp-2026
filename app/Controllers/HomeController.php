@@ -51,6 +51,8 @@ class HomeController extends BaseController
 
             'testimonials' => $this->getTestimonials(),
 
+            'latestArticles' => $this->getLatestArticles(3),
+
         ];
 
         return view('pages/home', $data);
@@ -123,7 +125,7 @@ class HomeController extends BaseController
                 'text' => 'Tim All Data menunjukkan kemampuan yang sangat baik dalam penyelesaian masalah dengan komunikasi yang lancar. Tim PMO dan teknis bekerja profesional serta memiliki pemahaman produk yang mendalam sepanjang proyek.',
                 'name' => 'BPJSTK',
                 'position' => 'Ahli Utama Data Quality',
-                'avatar' => null,
+                'avatar' => 'icons8-male-user.svg',
                 'video' => null
             ],
             [
@@ -131,7 +133,7 @@ class HomeController extends BaseController
                 'text' => 'Tim All Data menunjukkan kinerja yang memuaskan dengan koordinasi proyek yang baik, komunikasi yang jelas, dan penguasaan platform yang solid. Kami puas dan merekomendasikan All Data untuk kerja sama selanjutnya.',
                 'name' => 'Bank BRI',
                 'position' => 'Senior Manager',
-                'avatar' => null,
+                'avatar' => 'icons8-male-user.svg',
                 'video' => null
             ],
             [
@@ -139,39 +141,128 @@ class HomeController extends BaseController
                 'text' => 'Tim All Data sangat kooperatif dan responsif dalam menangani kendala di lapangan. Proyek berjalan sesuai timeline dengan kualitas teknis dan komunikasi yang baik sepanjang proses implementasi.',
                 'name' => 'PLN',
                 'position' => 'PLN MT',
-                'avatar' => null,
+                'avatar' => 'icons8-male-user.svg',
                 'video' => null
             ],
             [
                 'logo' => 'otsuka.webp',
                 'text' => 'Kolaborasi dengan All Data berjalan sangat baik. Tim teknikal responsif dan kompeten, komunikasi jelas, serta eksekusi proyek efisien. Tim sales juga sangat membantu dari awal hingga akhir proyek.',
                 'name' => 'Otsuka',
-                'position' => 'Head of Data Management & Governance'
+                'position' => 'Head of Data Management & Governance',
+                'avatar' => 'icons8-male-user.svg'
             ],
             [
                 'logo' => 'bri.webp',
                 'text' => 'All Data memberikan dukungan yang konsisten dan responsif bagi Divisi Data Operational Platform BRI. Kolaborasi berjalan sangat baik dengan tim engineer dan manajemen yang sigap menghadapi berbagai tantangan.',
                 'name' => 'Bank BRI',
-                'position' => 'DPO IT Infrastructure & Operations Division'
+                'position' => 'DPO IT Infrastructure & Operations Division',
+                'avatar' => 'icons8-male-user.svg'
             ],
             [
                 'logo' => 'kai.webp',
                 'text' => 'Kerja sama dengan All Data International berjalan sangat baik. Tim profesional, responsif, dan fleksibel dalam implementasi Tableau Multi Node, dengan komunikasi efektif yang menjaga progres proyek tetap terkontrol.',
                 'name' => 'KAI',
-                'position' => 'Manager ERP Support & Operation'
+                'position' => 'Manager ERP Support & Operation',
+                'avatar' => 'icons8-male-user.svg'
             ],
             [
                 'logo' => 'pln-epi.webp',
                 'text' => 'Kerja sama dengan All Data International menunjukkan peningkatan signifikan. Tim responsif, komunikatif, dan berkomitmen tinggi dalam menyelesaikan setiap isu dengan kualitas dan ketepatan waktu yang baik.',
                 'name' => 'PLN EPI',
-                'position' => 'Data Manager dan Analytics'
+                'position' => 'Data Manager dan Analytics',
+                'avatar' => 'icons8-male-user.svg'
             ],
             [
                 'logo' => 'allianz.png',
                 'text' => 'Kerja sama Allianz Indonesia dengan All Data International berjalan sangat baik. Tim terbukti suportif, responsif, dan kompeten dalam menangani kendala teknis selama proyek berlangsung.',
                 'name' => 'Allianz',
-                'position' => 'Head of Data Architect and Solutions'
+                'position' => 'Head of Data Architect and Solutions',
+                'avatar' => 'icons8-male-user.svg'
             ],
         ];
+    }
+
+    // LATES ARTICLES
+    private function getLatestArticles($limit = 3)
+    {
+        try {
+            $wpApiUrl = 'https://staging-adi2026.alldataint.com/articles/wp-json/wp/v2/';
+            $url = $wpApiUrl . 'posts?per_page=' . $limit . '&_embed=true';
+
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+            $response = curl_exec($ch);
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            curl_close($ch);
+
+            if ($httpCode == 200 && $response) {
+                $posts = json_decode($response, true);
+                return $this->formatPosts($posts);
+            }
+        } catch (\Exception $e) {
+            log_message('error', 'WordPress Latest Articles Error (Home): ' . $e->getMessage());
+        }
+
+        return [];
+    }
+
+    private function formatPosts($posts)
+    {
+        if (!is_array($posts)) {
+            return [];
+        }
+
+        $formatted = [];
+
+        foreach ($posts as $post) {
+            $excerpt = strip_tags($post['excerpt']['rendered'] ?? '');
+            $excerpt = trim($excerpt);
+            $excerpt = mb_substr($excerpt, 0, 150) . '...';
+
+            $thumbnail = '';
+            if (isset($post['_embedded']['wp:featuredmedia'][0]['source_url'])) {
+                $thumbnail = $post['_embedded']['wp:featuredmedia'][0]['source_url'];
+            }
+
+            $categories = [];
+            if (isset($post['_embedded']['wp:term'][0])) {
+                foreach ($post['_embedded']['wp:term'][0] as $term) {
+                    $categories[] = [
+                        'id' => $term['id'],
+                        'name' => $term['name'],
+                        'slug' => $term['slug']
+                    ];
+                }
+            }
+
+            $tags = [];
+            if (isset($post['_embedded']['wp:term'][1])) {
+                foreach ($post['_embedded']['wp:term'][1] as $term) {
+                    $tags[] = [
+                        'id' => $term['id'],
+                        'name' => $term['name'],
+                        'slug' => $term['slug']
+                    ];
+                }
+            }
+
+            $formatted[] = [
+                'id' => $post['id'],
+                'title' => html_entity_decode($post['title']['rendered'], ENT_QUOTES),
+                'excerpt' => $excerpt,
+                'url' => $post['link'],
+                'date' => date('d M Y', strtotime($post['date'])),
+                'author' => $post['_embedded']['author'][0]['name'] ?? 'Admin',
+                'thumbnail' => $thumbnail,
+                'categories' => $categories,
+                'tags' => $tags
+            ];
+        }
+
+        return $formatted;
     }
 }

@@ -261,113 +261,112 @@
   };
 
   // ==================== CONTACT FORM ====================
-  const initContactForm = () => {
-    const contactForm = getElement('#contactForm', 'contactForm');
-    if (!contactForm) return;
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contactForm');
+  if (!contactForm) return;
 
-    // Cache form elements
-    const formElements = {
-      firstName: contactForm.querySelector('#firstName'),
-      email: contactForm.querySelector('#email'),
-      subject: contactForm.querySelector('#subject'),
-      message: contactForm.querySelector('#message'),
-    };
+  const els = {
+    firstName: contactForm.querySelector('#firstName'),
+    lastName: contactForm.querySelector('#lastName'),
+    email: contactForm.querySelector('#email'),
+    phone: contactForm.querySelector('#phone'),
+    company: contactForm.querySelector('#company'),
+    subject: contactForm.querySelector('#subject'),
+    message: contactForm.querySelector('#message'),
+    privacyPolicy: contactForm.querySelector('#privacyPolicy'),
+  };
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const submitBtn = document.getElementById('submitBtn');
+  const btnText = submitBtn?.querySelector('.btn-text');
+  const spinner = submitBtn?.querySelector('.spinner-border');
+  const arrow = submitBtn?.querySelector('.arrow-icon');
 
-    const validateForm = () => {
-      let isValid = true;
-      const errors = [];
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      // Check required fields
-      Object.entries(formElements).forEach(([key, element]) => {
-        if (element && element.value.trim() === '') {
-          isValid = false;
-          element.classList.add('is-invalid');
-          errors.push(`${key} is required`);
-        } else if (element) {
-          element.classList.remove('is-invalid');
-        }
-      });
+  const setLoading = (on) => {
+    if (!submitBtn) return;
+    submitBtn.disabled = on;
+    if (btnText) btnText.textContent = on ? 'Sending...' : 'Send Message';
+    if (spinner) spinner.classList.toggle('d-none', !on);
+    if (arrow) arrow.classList.toggle('d-none', on);
+  };
 
-      // Email validation
-      if (formElements.email && !emailRegex.test(formElements.email.value.trim())) {
-        isValid = false;
-        formElements.email.classList.add('is-invalid');
-        errors.push('Please enter a valid email address');
-      }
+  const markInvalid = (el) => el && el.classList.add('is-invalid');
+  const clearInvalid = (el) => el && el.classList.remove('is-invalid');
 
-      if (!isValid) {
-        // Tampilkan error secara lebih user-friendly
-        const errorMsg = errors.join('\n');
-        showFormMessage(errorMsg, 'error');
-      }
+  const validate = () => {
+    let ok = true;
 
-      return isValid;
-    };
+    // required fields
+    Object.values(els).forEach((el) => {
+      if (!el) return;
 
-    const showFormMessage = (message, type = 'success') => {
-      // Implement feedback UI yang lebih baik
-      const alertDiv = document.createElement('div');
-      alertDiv.className = `alert alert-${type === 'error' ? 'danger' : 'success'} mt-3`;
-      alertDiv.textContent = message;
-      alertDiv.setAttribute('role', 'alert');
-      
-      // Remove existing alerts
-      const existingAlert = contactForm.querySelector('.alert');
-      if (existingAlert) existingAlert.remove();
-      
-      contactForm.insertBefore(alertDiv, contactForm.firstChild);
-      
-      // Auto-hide setelah 5 detik
-      setTimeout(() => {
-        alertDiv.remove();
-      }, 5000);
-    };
+      const empty = el.type === 'checkbox'
+        ? !el.checked
+        : el.value.trim() === '';
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      
-      if (validateForm()) {
-        // Tampilkan loading state
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        
-        // Simulasi async submission
-        setTimeout(() => {
-          // Reset form
-          contactForm.reset();
-          Object.values(formElements).forEach(el => {
-            if (el) el.classList.remove('is-invalid');
-          });
-          
-          // Tampilkan success message
-          showFormMessage('Message sent successfully!');
-          
-          // Reset button
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-        }, 1500);
-      }
-    };
-
-    // Real-time validation
-    Object.values(formElements).forEach(element => {
-      if (element) {
-        element.addEventListener('blur', () => {
-          if (element.value.trim() === '') {
-            element.classList.add('is-invalid');
-          } else {
-            element.classList.remove('is-invalid');
-          }
-        });
+      if (empty) {
+        ok = false;
+        markInvalid(el);
+      } else {
+        clearInvalid(el);
       }
     });
 
-    contactForm.addEventListener('submit', handleSubmit);
+    // email format
+    const emailVal = els.email?.value.trim() || '';
+    if (emailVal && !emailRegex.test(emailVal)) {
+      ok = false;
+      markInvalid(els.email);
+    }
+
+    return ok;
   };
+
+  // realtime remove invalid
+  Object.values(els).forEach((el) => {
+    if (!el) return;
+    const evt = el.type === 'checkbox' ? 'change' : 'input';
+    el.addEventListener(evt, () => {
+      const empty = el.type === 'checkbox'
+        ? !el.checked
+        : el.value.trim() === '';
+      if (empty) markInvalid(el);
+      else clearInvalid(el);
+
+      if (el === els.email) {
+        const v = el.value.trim();
+        if (v && !emailRegex.test(v)) markInvalid(el);
+      }
+    });
+  });
+
+  contactForm.addEventListener('submit', (e) => {
+    // kalau invalid, STOP submit
+    if (!validate()) {
+      e.preventDefault();
+      return;
+    }
+
+    // valid => biarkan submit real ke server
+    setLoading(true);
+  });
+
+  // auto close alerts (kalau ada)
+  setTimeout(() => {
+    document.querySelectorAll('.alert').forEach((alert) => {
+      try {
+        if (window.bootstrap?.Alert) {
+          new bootstrap.Alert(alert).close();
+        } else {
+          alert.remove();
+        }
+      } catch {
+        alert.remove();
+      }
+    });
+  }, 5000);
+});
 
   // ==================== NAVBAR ====================
   const initNavbar = () => {

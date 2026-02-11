@@ -214,7 +214,8 @@
                                         id="phone"
                                         name="phone"
                                         placeholder="Enter phone number"
-                                        value="<?= old('phone') ?>">
+                                        value="<?= old('phone') ?>"
+                                        required>
                                     <label for="phone">Phone Number</label>
                                 </div>
                             </div>
@@ -226,7 +227,8 @@
                                         id="company"
                                         name="company"
                                         placeholder="Enter company name"
-                                        value="<?= old('company') ?>">
+                                        value="<?= old('company') ?>"
+                                        required>
                                     <label for="company">Company</label>
                                 </div>
                             </div>
@@ -277,30 +279,6 @@
                     </form>
                 </div>
             </div>
-
-            <!-- JavaScript untuk handling form submit -->
-            <script>
-                document.getElementById('contactForm').addEventListener('submit', function() {
-                    const btn = document.getElementById('submitBtn');
-                    const btnText = btn.querySelector('.btn-text');
-                    const spinner = btn.querySelector('.spinner-border');
-                    const arrow = btn.querySelector('.arrow-icon');
-
-                    btn.disabled = true;
-                    btnText.textContent = 'Sending...';
-                    spinner.classList.remove('d-none');
-                    if (arrow) arrow.classList.add('d-none');
-                });
-
-                // Auto dismiss alerts after 5 seconds
-                setTimeout(function() {
-                    const alerts = document.querySelectorAll('.alert');
-                    alerts.forEach(function(alert) {
-                        const bsAlert = new bootstrap.Alert(alert);
-                        bsAlert.close();
-                    });
-                }, 5000);
-            </script>
 
         </div>
     </div>
