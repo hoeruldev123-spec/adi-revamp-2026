@@ -20,6 +20,4 @@
 
 <link rel="stylesheet" href="<?= base_url('assets/vendor/aos/aos.css') ?>">
 
-<link rel="stylesheet" href="<?= base_url('assets/vendor/swiper/swiper-bundle.min.css') ?>">
-
 <link href="<?= base_url('assets/css/style.css?v=' . filemtime(FCPATH . 'assets/css/style.css')) ?>" rel="stylesheet">

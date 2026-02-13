@@ -147,8 +147,6 @@
 
 <script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
-<script src="<?= base_url('assets/vendor/swiper/swiper-bundle.min.js') ?>"></script>
-
 <script src="<?= base_url('assets/vendor/aos/aos.js') ?>"></script>
 <script>
   AOS.init({

@@ -1,4 +1,4 @@
-<section class="py-5 bg-light position-relative text-center" data-aos="fade-up">
+<section class="py-5 position-relative text-center" data-aos="fade-up">
   <div class="container py-5">
 
     <div class="vm-switcher mx-auto mb-4">
@@ -56,11 +56,11 @@
       </div>
     <?php endif; ?>
 
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="z-index:-1;">
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-light" style="z-index:-1;">
       <div
         class="w-100 h-100"
         style="
-            background-image: url('<?= base_url('assets/images/Patern.png') ?>');
+            background-image: url('<?= base_url('assets/images/Patern.webp') ?>');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
