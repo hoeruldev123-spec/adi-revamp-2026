@@ -7,73 +7,72 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 // Home & Main Pages
-$routes->get('/', 'HomeController::index');
-$routes->get('/home', 'HomeController::index');
-$routes->get('/principal', 'HomeController::principal_card'); // halaman khusus principal
+$routes->match(['get', 'head'], '/', 'HomeController::index');
+$routes->match(['get', 'head'], '/home', 'HomeController::index');
+$routes->match(['get', 'head'], '/principal', 'HomeController::principal_card'); // halaman khusus principal
 
 // Solutions dengan submenu sesuai dropdown
 $routes->group('solutions', function ($routes) {
-    $routes->get('/', 'SolutionsController::index');
+    $routes->match(['get', 'head'], '/', 'SolutionsController::index');
 
-    $routes->get('fmcg', 'SolutionsController::fmcg');
-    $routes->get('telecom', 'SolutionsController::telecom');
-    $routes->get('government', 'SolutionsController::government');
-    $routes->get('financial', 'SolutionsController::financial');
+    $routes->match(['get', 'head'], 'fmcg', 'SolutionsController::fmcg');
+    $routes->match(['get', 'head'], 'telecom', 'SolutionsController::telecom');
+    $routes->match(['get', 'head'], 'government', 'SolutionsController::government');
+    $routes->match(['get', 'head'], 'financial', 'SolutionsController::financial');
 });
 
 // Services - sesuai navbar (tanpa dropdown)
 $routes->group('services', function ($routes) {
-    $routes->get('/', 'ServicesController::index');
+    $routes->match(['get', 'head'], '/', 'ServicesController::index');
 
     // Sub halaman Services
-    $routes->get('consulting', 'ServicesController::consulting');
-    $routes->get('use-case-development', 'ServicesController::useCaseDevelopment');
-    $routes->get('maintenance-support', 'ServicesController::maintenanceSupport');
-    $routes->get('managed-services', 'ServicesController::managedServices');
-    $routes->get('training', 'ServicesController::training');
+    $routes->match(['get', 'head'], 'consulting', 'ServicesController::consulting');
+    $routes->match(['get', 'head'], 'use-case-development', 'ServicesController::useCaseDevelopment');
+    $routes->match(['get', 'head'], 'maintenance-support', 'ServicesController::maintenanceSupport');
+    $routes->match(['get', 'head'], 'managed-services', 'ServicesController::managedServices');
+    $routes->match(['get', 'head'], 'training', 'ServicesController::training');
 });
 
 // Company dengan submenu sesuai dropdown
 $routes->group('company', function ($routes) {
-    $routes->get('about-us', 'CompanyController::about');
-    $routes->get('our-partners', 'CompanyController::ourPartners');
-    $routes->get('our-clients', 'CompanyController::ourClients');
-    $routes->get('our-competencies', 'CompanyController::ourCompetencies');
-    $routes->get('team', 'CompanyController::team');
+    $routes->match(['get', 'head'], 'about-us', 'CompanyController::about');
+    $routes->match(['get', 'head'], 'our-partners', 'CompanyController::ourPartners');
+    $routes->match(['get', 'head'], 'our-clients', 'CompanyController::ourClients');
+    $routes->match(['get', 'head'], 'our-competencies', 'CompanyController::ourCompetencies');
+    $routes->match(['get', 'head'], 'team', 'CompanyController::team');
 });
-$routes->get('/company/contact', 'ContactController::index');
+$routes->match(['get', 'head'], '/company/contact', 'ContactController::index');
 
 // Resources Routes
-$routes->get('resources', 'ResourcesController::index');
-// $routes->get('resources/articles', 'ResourcesController::articles');
-// $routes->get('resources/events', 'ResourcesController::events');
+$routes->match(['get', 'head'], 'resources', 'ResourcesController::index');
+// $routes->match(['get','head'], 'resources/articles', 'ResourcesController::articles');
+// $routes->match(['get','head'], 'resources/events', 'ResourcesController::events');
 
 // Articles Routes
-$routes->get('resources/articles', 'Articles::index');
-$routes->get('resources/articles/page/(:num)', 'Articles::index/$1');
+$routes->match(['get', 'head'], 'resources/articles', 'Articles::index');
+$routes->match(['get', 'head'], 'resources/articles/page/(:num)', 'Articles::index/$1');
 
-$routes->get('resources/articles/search', 'Articles::search');
-$routes->get('resources/articles/category/(:segment)', 'Articles::category/$1');
-$routes->get('resources/articles/tag/(:segment)', 'Articles::tag/$1');
+$routes->match(['get', 'head'], 'resources/articles/search', 'Articles::search');
+$routes->match(['get', 'head'], 'resources/articles/category/(:segment)', 'Articles::category/$1');
+$routes->match(['get', 'head'], 'resources/articles/tag/(:segment)', 'Articles::tag/$1');
 
-$routes->get('resources/articles/page/1', function () {
+$routes->match(['get', 'head'], 'resources/articles/page/1', function () {
     return redirect()->to('resources/articles', 301);
 });
 
-
 // Contact
-$routes->get('/contact', 'Contact::index', ['as' => 'contact']);
-$routes->get('/contact-us', 'Contact::index'); // Alternatif
+$routes->match(['get', 'head'], '/contact', 'Contact::index', ['as' => 'contact']);
+$routes->match(['get', 'head'], '/contact-us', 'Contact::index'); // Alternatif
 $routes->post('/contact/submit', 'Contact::submit');
 
 // Search
-$routes->get('/search', 'SearchController::index');
-$routes->get('/search/(:any)', 'SearchController::results/$1');
-$routes->get('/search/results', 'SearchController::results');
+$routes->match(['get', 'head'], '/search', 'SearchController::index');
+$routes->match(['get', 'head'], '/search/(:any)', 'SearchController::results/$1');
+$routes->match(['get', 'head'], '/search/results', 'SearchController::results');
 
 // API Routes (jika diperlukan)
 $routes->group('api', ['namespace' => 'App\Controllers\Api'], function ($routes) {
-    $routes->get('search/suggest', 'SearchController::suggest');
+    $routes->match(['get', 'head'], 'search/suggest', 'SearchController::suggest');
     $routes->post('contact/form', 'ContactController::submitAjax');
 });
 
