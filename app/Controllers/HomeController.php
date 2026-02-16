@@ -186,7 +186,7 @@ class HomeController extends BaseController
     private function getLatestArticles($limit = 3)
     {
         try {
-            $wpApiUrl = 'https://staging-adi2026.alldataint.com/articles/wp-json/wp/v2/';
+            $wpApiUrl = 'https://alldataint.com/articles/wp-json/wp/v2/';
             $url = $wpApiUrl . 'posts?per_page=' . $limit . '&_embed=true';
 
             $ch = curl_init();

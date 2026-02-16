@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'https://staging-adi2026.alldataint.com/';
+    public string $baseURL = 'https://alldataint.com/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

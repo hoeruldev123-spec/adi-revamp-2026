@@ -132,7 +132,7 @@ class SearchController extends BaseController
 
         try {
             // Direct WordPress API call
-            $apiUrl = 'https://staging-adi2026.alldataint.com/articles/wp-json/wp/v2/posts';
+            $apiUrl = 'https://alldataint.com/articles/wp-json/wp/v2/posts';
 
             $params = http_build_query([
                 'search' => $query,

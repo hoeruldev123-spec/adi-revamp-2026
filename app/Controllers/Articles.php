@@ -9,7 +9,7 @@ class Articles extends BaseController
 
     public function __construct()
     {
-        $this->wpApiUrl = 'https://staging-adi2026.alldataint.com/articles/wp-json/wp/v2/';
+        $this->wpApiUrl = 'https://alldataint.com/articles/wp-json/wp/v2/';
     }
 
     public function index($page = 1)
