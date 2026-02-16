@@ -1,31 +1,11 @@
-# ----------------------------------------------------------------------
-# CodeIgniter 4 - Public .htaccess
-# ----------------------------------------------------------------------
-
-# Disable directory browsing
 Options -Indexes
 
 <IfModule mod_rewrite.c>
-  Options +FollowSymlinks
   RewriteEngine On
 
-  # If you installed CI4 in a subfolder, set RewriteBase accordingly.
-  # Karena ini ada di /public dan dipanggil via root rewrite, biarkan kosong.
-  # RewriteBase /
-
-  # Redirect Trailing Slashes...
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} (.+)/$
-  RewriteRule ^ %1 [L,R=301]
-
-  # Send all requests that are not existing files/directories to index.php
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.*)$ index.php/$1 [L,NC,QSA]
-
-  # Ensure Authorization header is passed along
-  RewriteCond %{HTTP:Authorization} .
-  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
 
 <IfModule !mod_rewrite.c>

@@ -1,51 +1,47 @@
 ############################################
 # ROOT .htaccess (public_html)
-# - CI4 berada di /public
-# - WordPress berada di /articles
+# CI4: /public
+# WP : /articles
 ############################################
-
 Options -Indexes
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  ############################################
-  # 1) Canonical (opsional tapi recommended)
-  ############################################
-
-  # www -> non-www
+  # -------------------------
+  # Canonical HTTPS + non-www
+  # -------------------------
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
-  # http -> https
   RewriteCond %{HTTPS} !=on
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-  ############################################
-  # 2) Jangan ganggu folder WordPress /articles
-  #    dan jangan ganggu file/folder yang benar-benar ada
-  ############################################
-
-  # Biarkan request ke /articles tetap ke WordPress
+  # -------------------------
+  # WordPress stays on /articles
+  # -------------------------
   RewriteRule ^articles(?:/|$) - [L]
 
-  # Biarkan file/folder asli di root (misal robots.txt, sitemap.xml, dll)
+  # -------------------------
+  # Static assets live in /public/*
+  # (biar /assets/... tetap jalan)
+  # -------------------------
+  RewriteRule ^(assets|css|js|images|uploads)(/.*)?$ public/$0 [L]
+
+  # -------------------------
+  # Existing file/dir in root: allow
+  # (robots.txt, sitemap.xml, dll)
+  # -------------------------
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  ############################################
-  # 3) SEO Redirect: slug lama di root -> /articles/<slug>
-  #    (WAJIB whitelist route CI4 supaya tidak ketangkep)
-  ############################################
-
+  # -------------------------
+  # SEO Redirect: old WP root slug -> /articles/<slug>
+  # whitelist route CI4 supaya gak ketangkep
+  # -------------------------
   RewriteRule ^(?!public(?:/|$))\
-(?!assets(?:/|$))\
-(?!css(?:/|$))\
-(?!js(?:/|$))\
-(?!images(?:/|$))\
-(?!uploads(?:/|$))\
 (?!solutions(?:/|$))\
 (?!services(?:/|$))\
 (?!company(?:/|$))\
@@ -55,47 +51,38 @@ Options -Indexes
 (?!search(?:/|$))\
 (?!home(?:/|$))(.+)$ articles/$1 [R=301,L]
 
-  ############################################
-  # 4) Forward semua request lainnya ke CI4 /public (internal rewrite)
-  ############################################
-
-  RewriteCond %{REQUEST_URI} !^/public/
-  RewriteRule ^(.*)$ public/$1 [L]
+  # -------------------------
+  # CI4 Front Controller (SAFE): always hit the file
+  # -------------------------
+  RewriteRule ^$ public/index.php [L]
+  RewriteRule ^(.*)$ public/index.php/$1 [L,NC,QSA]
 </IfModule>
 
 ############################################
-# ENABLE GZIP COMPRESSION (KEEP)
+# ENABLE GZIP COMPRESSION
 ############################################
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/plain
-  AddOutputFilterByType DEFLATE text/html
-  AddOutputFilterByType DEFLATE text/xml
-  AddOutputFilterByType DEFLATE text/css
-  AddOutputFilterByType DEFLATE application/javascript
-  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/json
   AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
 ############################################
-# BROWSER CACHING (KEEP)
+# BROWSER CACHING
 ############################################
 <IfModule mod_expires.c>
   ExpiresActive On
-
-  # Images
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
-
-  # CSS & JS
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
 
 ############################################
-# KEEP ALIVE (NOTE: server biasanya sudah handle ini)
+# KEEP ALIVE (optional)
 ############################################
 <IfModule mod_headers.c>
   Header set Connection keep-alive
