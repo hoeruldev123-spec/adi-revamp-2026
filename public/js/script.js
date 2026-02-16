@@ -616,10 +616,10 @@ const initWhatsAppFloating = () => {
   const sendBtn = document.getElementById('waSend');
   if (!widget || !box || !fab || !sendBtn) return;
 
-  const path = (window.location.pathname || '/').replace(/\/+$/, '') || '/';
-  const isHome = path === '/' || path === '/home';
-  const isContact = path === '/contact' || path === '/contact-us' || path === '/company/contact';
-  if (isHome || isContact) return;
+  //const path = (window.location.pathname || '/').replace(/\/+$/, '') || '/';
+  //const isHome = path === '/' || path === '/home';
+  //const isContact = path === '/contact' || path === '/contact-us' || path === '/company/contact';
+  //if (isHome || isContact) return;
 
   let selectedMsg = 'Hi! I’d like to know more about your services.';
 
@@ -643,7 +643,12 @@ const initWhatsAppFloating = () => {
 
     if (!isMobile) {
       // Desktop: auto open card setelah jeda kecil
-      setTimeout(openBox, 300);
+      if (!sessionStorage.getItem('wa_widget_opened')) {
+        setTimeout(() => {
+          openBox();
+          sessionStorage.setItem('wa_widget_opened', 'true');
+        }, 300);
+      }
     }
   });
 }, 3000);
@@ -672,4 +677,3 @@ const initWhatsAppFloating = () => {
 
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBox(); });
 };
-
