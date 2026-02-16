@@ -14,22 +14,30 @@ Options -Indexes
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
   # -------------------------
-  # Keep WordPress on /articles
+  # WordPress stays on /articles
   # -------------------------
   RewriteRule ^articles(?:/|$) - [L]
 
   # -------------------------
-  # Allow real files in root (robots, sitemap, dll)
+  # Static assets -> served from /public/...
+  # (sesuaikan kalau folder asset kamu beda)
+  # -------------------------
+  RewriteRule ^(assets|css|js|images|uploads)(/.*)?$ public/$0 [L]
+
+  # -------------------------
+  # Allow existing real files/dirs in root
   # -------------------------
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
   # -------------------------
-  # SEO Redirect: old WP root slug -> /articles/<slug>
-  # (Whitelist CI4 routes biar gak ikut ke WP)
+  # SEO Redirect: old WP root slugs -> /articles/<slug>
+  # whitelist CI4 routes biar gak ikut ke WP
+  # (HATI-HATI: ini harus di atas front controller CI4)
   # -------------------------
-  RewriteRule ^(?!solutions(?:/|$))\
+  RewriteRule ^(?!$)(?!public(?:/|$))\
+(?!solutions(?:/|$))\
 (?!services(?:/|$))\
 (?!company(?:/|$))\
 (?!resources(?:/|$))\
@@ -39,7 +47,8 @@ Options -Indexes
 (?!home(?:/|$))(.+)$ articles/$1 [R=301,L]
 
   # -------------------------
-  # CI4 front controller
+  # CI4 Front Controller (NO PATH_INFO)
+  # ini yang paling aman di LiteSpeed
   # -------------------------
-  RewriteRule ^(.*)$ public/index.php/$1 [L,NC,QSA]
+  RewriteRule ^ public/index.php [L,NC,QSA]
 </IfModule>
