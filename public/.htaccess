@@ -1,3 +1,7 @@
+# ----------------------------------------------------------------------
+# CodeIgniter 4 - Public .htaccess
+# ----------------------------------------------------------------------
+
 # Disable directory browsing
 Options -Indexes
 
@@ -5,66 +9,25 @@ Options -Indexes
   Options +FollowSymlinks
   RewriteEngine On
 
-  # -------------------------------------------------------
-  # Redirect Trailing Slashes (except real directories)
-  # -------------------------------------------------------
+  # If you installed CI4 in a subfolder, set RewriteBase accordingly.
+  # Karena ini ada di /public dan dipanggil via root rewrite, biarkan kosong.
+  # RewriteBase /
+
+  # Redirect Trailing Slashes...
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} (.+)/$
   RewriteRule ^ %1 [L,R=301]
 
-  # -------------------------------------------------------
-  # Canonical: force HTTPS + non-www
-  # (tetap pakai punyamu karena aman)
-  # -------------------------------------------------------
-
-  # www -> non-www
-  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
-
-  # http -> https
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
-  # -------------------------------------------------------
-  # SEO Redirect: old WP root URLs -> /articles/<path>
-  # IMPORTANT: place BEFORE CI4 front controller
-  # -------------------------------------------------------
-
-  # Jangan ganggu file/folder asli
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
-
-  # Redirect hanya jika URL BUKAN route CI4 & BUKAN /articles
-  # (gunakan negative lookahead agar tidak bergantung REQUEST_URI)
-  RewriteRule ^(?:index\.php/)?(?!articles(?:/|$))\
-(?!assets(?:/|$))\
-(?!css(?:/|$))\
-(?!js(?:/|$))\
-(?!images(?:/|$))\
-(?!uploads(?:/|$))\
-(?!solutions(?:/|$))\
-(?!services(?:/|$))\
-(?!company(?:/|$))\
-(?!resources(?:/|$))\
-(?!contact(?:/|$))\
-(?!contact-us(?:/|$))\
-(?!search(?:/|$))\
-(?!home(?:/|$))(.+)$ articles/$1 [R=301,L]
-
-  # -------------------------------------------------------
-  # CodeIgniter Front Controller
-  # -------------------------------------------------------
-  RewriteCond %{HTTP:Authorization} .
-  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-
+  # Send all requests that are not existing files/directories to index.php
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^([\s\S]*)$ index.php/$1 [L,NC,QSA]
+  RewriteRule ^(.*)$ index.php/$1 [L,NC,QSA]
+
+  # Ensure Authorization header is passed along
+  RewriteCond %{HTTP:Authorization} .
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
 
 <IfModule !mod_rewrite.c>
   ErrorDocument 404 index.php
 </IfModule>
-
-ServerSignature Off
