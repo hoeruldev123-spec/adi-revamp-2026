@@ -21,25 +21,28 @@ Options -Indexes
   RewriteCond %{REQUEST_URI} (.+)/$
   RewriteRule ^ %1 [L,R=301]
 
-  # ----------------------------------------------------------------------
-  # 3) SEO Redirect: old WordPress root URLs -> /articles/...
-  #    (Preserve path, avoid redirecting CI4 routes & assets)
-  # ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+# 3) SEO Redirect: old WordPress root URLs -> /articles/...
+#    (Preserve path, avoid redirecting CI4 routes & assets)
+# ----------------------------------------------------------------------
 
-  # Do not touch real files/folders (assets, images, etc.)
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
+# Do not touch real files/folders (assets, images, etc.)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-  # Do not redirect these CI4 routes (adjust if you have more)
-  RewriteCond %{REQUEST_URI} !^/(assets|css|js|images|uploads)(/|$) [NC]
-  RewriteCond %{REQUEST_URI} !^/(solutions|services|company|resources|contact|contact-us|search|home)(/|$) [NC]
+# Do not redirect static folders (support /index.php/... form too)
+RewriteCond %{REQUEST_URI} !^/(index\.php/)?(assets|css|js|images|uploads)(/|$) [NC]
 
-  # Do not redirect anything already under /articles (prevent loop)
-  RewriteCond %{REQUEST_URI} !^/articles(/|$) [NC]
+# Do not redirect CI4 routes (support /index.php/... form too)
+RewriteCond %{REQUEST_URI} !^/(index\.php/)?(solutions|services|company|resources|contact|contact-us|search|home)(/|$) [NC]
 
-  # Redirect everything else to /articles/<same-path>
-  RewriteRule ^(.+)$ /articles/$1 [R=301,L]
+# Do not redirect anything already under /articles (prevent loop)
+RewriteCond %{REQUEST_URI} !^/(index\.php/)?articles(/|$) [NC]
+
+# Redirect everything else to /articles/<same-path>
+RewriteRule ^(.+)$ /articles/$1 [R=301,L]
+
 
   # ----------------------------------------------------------------------
   # 4) CodeIgniter Front Controller
