@@ -1,57 +1,63 @@
 # Disable directory browsing
 Options -Indexes
 
-# ----------------------------------------------------------------------
-# Rewrite engine
-# ----------------------------------------------------------------------
-
-# Turning on the rewrite engine is necessary for the following rules and features.
-# FollowSymLinks must be enabled for this to work.
 <IfModule mod_rewrite.c>
-	Options +FollowSymlinks
-	RewriteEngine On
+  Options +FollowSymlinks
+  RewriteEngine On
 
-	# If you installed CodeIgniter in a subfolder, you will need to
-	# change the following line to match the subfolder you need.
-	# http://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase
-	# RewriteBase /
+  # ----------------------------------------------------------------------
+  # 1) Canonical: force HTTPS + non-www (single hop)
+  # ----------------------------------------------------------------------
 
-	# Redirect Trailing Slashes...
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_URI} (.+)/$
-	RewriteRule ^ %1 [L,R=301]
+  # If request is http OR has www, redirect to https://non-www
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
-	# ----------------------------------------------------------------------
-	# Canonical: force HTTPS + non-www (single hop)
-	# ----------------------------------------------------------------------
+  # ----------------------------------------------------------------------
+  # 2) Redirect Trailing Slashes (except real directories)
+  # ----------------------------------------------------------------------
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} (.+)/$
+  RewriteRule ^ %1 [L,R=301]
 
-	# www -> non-www (works for http and https)
-	RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-	RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+  # ----------------------------------------------------------------------
+  # 3) SEO Redirect: old WordPress root URLs -> /articles/...
+  #    (Preserve path, avoid redirecting CI4 routes & assets)
+  # ----------------------------------------------------------------------
 
-	# http -> https
-	RewriteCond %{HTTPS} !=on
-	RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  # Do not touch real files/folders (assets, images, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
 
+  # Do not redirect these CI4 routes (adjust if you have more)
+  RewriteCond %{REQUEST_URI} !^/(assets|css|js|images|uploads)(/|$) [NC]
+  RewriteCond %{REQUEST_URI} !^/(solutions|services|company|resources|contact|contact-us|search|home)(/|$) [NC]
 
-	# Checks to see if the user is attempting to access a valid file,
-	# such as an image or css document, if this isn't true it sends the
-	# request to the front controller, index.php
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule ^([\s\S]*)$ index.php/$1 [L,NC,QSA]
+  # Do not redirect anything already under /articles (prevent loop)
+  RewriteCond %{REQUEST_URI} !^/articles(/|$) [NC]
 
-	# Ensure Authorization header is passed along
-	RewriteCond %{HTTP:Authorization} .
-	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+  # Redirect everything else to /articles/<same-path>
+  RewriteRule ^(.+)$ /articles/$1 [R=301,L]
+
+  # ----------------------------------------------------------------------
+  # 4) CodeIgniter Front Controller
+  # ----------------------------------------------------------------------
+
+  # Pass through Authorization header
+  RewriteCond %{HTTP:Authorization} .
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+  # Send non-existing requests to index.php
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([\s\S]*)$ index.php/$1 [L,NC,QSA]
 </IfModule>
 
 <IfModule !mod_rewrite.c>
-	# If we don't have mod_rewrite installed, all 404's
-	# can be sent to index.php, and everything works as normal.
-	ErrorDocument 404 index.php
+  ErrorDocument 404 index.php
 </IfModule>
 
-# Disable server signature start
+# Disable server signature
 ServerSignature Off
-# Disable server signature end
