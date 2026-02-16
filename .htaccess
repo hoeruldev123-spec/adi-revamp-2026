@@ -1,8 +1,3 @@
-############################################
-# ROOT .htaccess (public_html)
-# CI4: /public
-# WP : /articles
-############################################
 Options -Indexes
 
 <IfModule mod_rewrite.c>
@@ -19,19 +14,12 @@ Options -Indexes
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
   # -------------------------
-  # WordPress stays on /articles
+  # Keep WordPress on /articles
   # -------------------------
   RewriteRule ^articles(?:/|$) - [L]
 
   # -------------------------
-  # Static assets live in /public/*
-  # (biar /assets/... tetap jalan)
-  # -------------------------
-  RewriteRule ^(assets|css|js|images|uploads)(/.*)?$ public/$0 [L]
-
-  # -------------------------
-  # Existing file/dir in root: allow
-  # (robots.txt, sitemap.xml, dll)
+  # Allow real files in root (robots, sitemap, dll)
   # -------------------------
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
@@ -39,10 +27,9 @@ Options -Indexes
 
   # -------------------------
   # SEO Redirect: old WP root slug -> /articles/<slug>
-  # whitelist route CI4 supaya gak ketangkep
+  # (Whitelist CI4 routes biar gak ikut ke WP)
   # -------------------------
-  RewriteRule ^(?!public(?:/|$))\
-(?!solutions(?:/|$))\
+  RewriteRule ^(?!solutions(?:/|$))\
 (?!services(?:/|$))\
 (?!company(?:/|$))\
 (?!resources(?:/|$))\
@@ -52,38 +39,7 @@ Options -Indexes
 (?!home(?:/|$))(.+)$ articles/$1 [R=301,L]
 
   # -------------------------
-  # CI4 Front Controller (SAFE): always hit the file
+  # CI4 front controller
   # -------------------------
-  RewriteRule ^$ public/index.php [L]
   RewriteRule ^(.*)$ public/index.php/$1 [L,NC,QSA]
-</IfModule>
-
-############################################
-# ENABLE GZIP COMPRESSION
-############################################
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css
-  AddOutputFilterByType DEFLATE application/javascript application/json
-  AddOutputFilterByType DEFLATE image/svg+xml
-</IfModule>
-
-############################################
-# BROWSER CACHING
-############################################
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-</IfModule>
-
-############################################
-# KEEP ALIVE (optional)
-############################################
-<IfModule mod_headers.c>
-  Header set Connection keep-alive
 </IfModule>

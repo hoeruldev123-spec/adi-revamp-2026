@@ -1,6 +1,6 @@
 Options -Indexes
 
-<IfModule mod_rewrite.c>
+<!-- <IfModule mod_rewrite.c>
   RewriteEngine On
 
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -10,4 +10,4 @@ Options -Indexes
 
 <IfModule !mod_rewrite.c>
   ErrorDocument 404 index.php
-</IfModule>
+</IfModule> -->
