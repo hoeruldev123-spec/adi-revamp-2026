@@ -24,7 +24,7 @@
 
 <?php
 // Pastikan og image absolut
-$ogImage = $og_image ?? base_url('assets/images/og-default.png');
+$ogImage = $og_image ?? base_url('assets/images/cloud-hero.webp');
 ?>
 <meta property="og:image" content="<?= esc($ogImage) ?>">
 <meta property="og:image:secure_url" content="<?= esc($ogImage) ?>">
