@@ -14,7 +14,7 @@
 <meta property="og:url" content="<?= current_url() ?>">
 
 <?php
-$ogImage = esc($og_image ?? base_url('assets/images/og-default.png'));
+$ogImage = esc($og_image ?? base_url('assets/images/cloud-hero.webp'));
 ?>
 <meta property="og:image" content="<?= $ogImage ?>">
 <meta property="og:image:width" content="1200">
