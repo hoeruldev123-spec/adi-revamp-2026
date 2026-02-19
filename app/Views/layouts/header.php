@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Google Analytics opt-out snippet added by Site Kit -->
 <script>
-    window["ga-disable-G-KXMWEJ37TX"] = true;
+    window["G-KXMWEJ37TX"] = true;
 </script>
 <!-- End Google Analytics opt-out snippet added by Site Kit -->
 <title><?= esc($title ?? 'All Data International') ?></title>
