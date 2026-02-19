@@ -1,10 +1,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google Analytics opt-out snippet added by Site Kit -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KXMWEJ37TX"></script>
 <script>
-    window["G-KXMWEJ37TX"] = true;
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KXMWEJ37TX');
 </script>
-<!-- End Google Analytics opt-out snippet added by Site Kit -->
+
 <title><?= esc($title ?? 'All Data International') ?></title>
 <link rel="canonical" href="<?= current_url() ?>">
 
