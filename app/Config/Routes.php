@@ -76,10 +76,20 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], function ($routes)
     $routes->post('contact/form', 'ContactController::submitAjax');
 });
 
+// Legacy WP root-slugs resolver (taruh paling bawah)
+$routes->get('(:segment)', 'LegacyRedirectController::index/$1');
+$routes->get('(:any)', 'LegacyRedirectController::index/$1');
+
 // Fallback untuk 404
+// $routes->set404Override(function () {
+//     return view('errors/404');
+// });
 $routes->set404Override(function () {
-    return view('errors/404');
+    return service('response')
+        ->setStatusCode(404)
+        ->setBody(view('errors/404'));
 });
+
 
 // CLI routes
 if (is_cli()) {

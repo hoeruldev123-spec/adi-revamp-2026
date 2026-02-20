@@ -32,23 +32,7 @@ Options -Indexes
   RewriteRule ^ - [L]
 
   # -------------------------
-  # SEO Redirect: old WP root slugs -> /articles/<slug>
-  # whitelist CI4 routes biar gak ikut ke WP
-  # (HATI-HATI: ini harus di atas front controller CI4)
+  # Everything else -> CI4
   # -------------------------
-  RewriteRule ^(?!$)(?!public(?:/|$))\
-(?!solutions(?:/|$))\
-(?!services(?:/|$))\
-(?!company(?:/|$))\
-(?!resources(?:/|$))\
-(?!contact(?:/|$))\
-(?!contact-us(?:/|$))\
-(?!search(?:/|$))\
-(?!home(?:/|$))(.+)$ articles/$1 [R=301,L]
-
-  # -------------------------
-  # CI4 Front Controller (NO PATH_INFO)
-  # ini yang paling aman di LiteSpeed
-  # -------------------------
-  RewriteRule ^ public/index.php [L,NC,QSA]
+  RewriteRule ^ public/index.php [L,QSA]
 </IfModule>
