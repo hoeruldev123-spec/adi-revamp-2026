@@ -97,5 +97,5 @@ if (is_cli()) {
 }
 
 // // Legacy WP root-slugs resolver (taruh paling bawah)
-// $routes->get('(:segment)', 'LegacyRedirectController::index/$1');
+$routes->get('(:segment)', 'LegacyRedirectController::index/$1');
 $routes->get('(:any)', 'LegacyRedirectController::index/$1');
