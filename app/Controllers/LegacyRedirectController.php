@@ -2,69 +2,69 @@
 
 namespace App\Controllers;
 
-class LegacyRedirectController extends BaseController
+use CodeIgniter\Controller;
+
+class LegacyRedirectController extends Controller
 {
-    public function index($path = null)
+    public function index()
     {
-        // kalau kosong, biarkan Home route yang handle
-        if (!$path) {
-            return redirect()->to('/', 302);
+        $request = service('request');
+        $path = trim($request->getUri()->getPath(), '/');
+
+        // kalau kosong, tetap 404 CI4
+        if ($path === '') {
+            return view('errors/404');
         }
 
-        // Jangan ganggu path yang memang CI4 punya (whitelist cepat)
-        $first = explode('/', trim($path, '/'))[0] ?? '';
-        $ciPrefixes = ['solutions', 'services', 'company', 'resources', 'contact', 'contact-us', 'search', 'home', 'api', 'public', 'assets', 'css', 'js', 'images', 'uploads'];
-        if (in_array($first, $ciPrefixes, true)) {
-            // biarkan 404 handler CI4 normal
-            return $this->showCi404();
+        // jangan ganggu area yang jelas bukan legacy
+        if (preg_match('#^(articles|assets|css|js|images|uploads)(/|$)#', $path)) {
+            return view('errors/404');
         }
 
-        // Jangan redirect file yang mengandung ekstensi (mis: .png, .xml, .txt)
-        if (preg_match('/\.[a-z0-9]{2,5}$/i', $path)) {
-            return $this->showCi404();
+        // OPTIONAL: whitelist prefix CI4 kamu biar gak perlu cek WP
+        if (preg_match('#^(solutions|services|company|resources|contact|contact-us|search|home)(/|$)#', $path)) {
+            return view('errors/404');
         }
 
-        // Cek apakah post ada di WordPress (REST API)
-        $slug = trim($path, '/');
-        $wpApi = 'https://alldataint.com/articles/wp-json/wp/v2/posts?slug=' . urlencode($slug) . '&_fields=link';
+        // Ambil "slug" terakhir untuk cek WP (bisa kamu ubah kalau legacy kamu multi-segmen)
+        $slug = basename($path);
 
-        $exists = $this->wpPostExists($wpApi);
+        // Cache biar gak berat (file cache bawaan CI4)
+        $cache = cache();
+        $cacheKey = 'wp_slug_exists_' . md5($slug);
+
+        $exists = $cache->get($cacheKey);
+        if ($exists === null) {
+            $exists = $this->checkWpSlugExists($slug); // true/false
+            $cache->save($cacheKey, $exists, 86400); // 1 hari
+        }
 
         if ($exists) {
-            // redirect permanen ke struktur baru
-            return redirect()->to('https://alldataint.com/articles/' . $slug . '/', 301);
+            // Redirect ke WP /articles/<slug>/ (pastikan trailing slash konsisten)
+            return redirect()->to(site_url('articles/' . $slug . '/'), 301);
         }
 
-        // kalau tidak ada, tampilkan 404 CI4
-        return $this->showCi404();
+        return view('errors/404');
     }
 
-    private function wpPostExists(string $url): bool
+    private function checkWpSlugExists(string $slug): bool
     {
-        // Simple curl (aman di shared hosting). Tambah timeout biar cepat.
-        $ch = curl_init($url);
-        curl_setopt_array($ch, [
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_TIMEOUT => 2,
-            CURLOPT_CONNECTTIMEOUT => 2,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_SSL_VERIFYPEER => true,
-            CURLOPT_HTTPHEADER => ['Accept: application/json'],
-        ]);
+        // WP kamu ada di /articles
+        $wpApi = site_url('articles/wp-json/wp/v2/posts?slug=' . urlencode($slug) . '&_fields=id&per_page=1');
 
-        $resp = curl_exec($ch);
-        $http = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
+        try {
+            $client = \Config\Services::curlrequest([
+                'timeout' => 3,
+                'http_errors' => false,
+            ]);
 
-        if ($http !== 200 || !$resp) return false;
+            $res = $client->get($wpApi);
+            if ($res->getStatusCode() !== 200) return false;
 
-        $json = json_decode($resp, true);
-        return is_array($json) && count($json) > 0 && !empty($json[0]['link']);
-    }
-
-    private function showCi404()
-    {
-        // kalau kamu punya view 404 sendiri:
-        return $this->response->setStatusCode(404)->setBody(view('errors/404'));
+            $json = json_decode($res->getBody(), true);
+            return is_array($json) && count($json) > 0;
+        } catch (\Throwable $e) {
+            return false;
+        }
     }
 }
