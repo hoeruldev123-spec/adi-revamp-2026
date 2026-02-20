@@ -76,10 +76,6 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], function ($routes)
     $routes->post('contact/form', 'ContactController::submitAjax');
 });
 
-// // Legacy WP root-slugs resolver (taruh paling bawah)
-// $routes->get('(:segment)', 'LegacyRedirectController::index/$1');
-// $routes->get('(:any)', 'LegacyRedirectController::index/$1');
-
 // Fallback untuk 404
 $routes->set404Override('LegacyRedirectController::index');
 // $routes->set404Override(function () {
@@ -99,3 +95,7 @@ if (is_cli()) {
     $routes->setDefaultController('HomeController');
     $routes->setDefaultMethod('index');
 }
+
+// // Legacy WP root-slugs resolver (taruh paling bawah)
+// $routes->get('(:segment)', 'LegacyRedirectController::index/$1');
+$routes->get('(:any)', 'LegacyRedirectController::index/$1');

@@ -3,67 +3,92 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use Config\Services;
 
 class LegacyRedirectController extends Controller
 {
-    public function index()
+    public function index($path = null)
     {
-        $request = service('request');
-        $path = trim($request->getUri()->getPath(), '/');
+        $path = trim((string) $path, "/");
 
-        // kalau kosong, tetap 404 CI4
+        // Kalau kosong, biar route '/' yang handle
         if ($path === '') {
-            return view('errors/404');
+            return $this->response->setStatusCode(404)->setBody(view('errors/404'));
         }
 
-        // jangan ganggu area yang jelas bukan legacy
-        if (preg_match('#^(articles|assets|css|js|images|uploads)(/|$)#', $path)) {
-            return view('errors/404');
+        // Safety: jangan ganggu area yang harusnya bukan legacy
+        $reserved = [
+            'articles',
+            'assets',
+            'css',
+            'js',
+            'images',
+            'uploads',
+            'solutions',
+            'services',
+            'company',
+            'resources',
+            'contact',
+            'contact-us',
+            'search',
+            'home',
+            'public'
+        ];
+
+        $firstSeg = strtolower(explode('/', $path)[0] ?? '');
+        if (in_array($firstSeg, $reserved, true)) {
+            return $this->response->setStatusCode(404)->setBody(view('errors/404'));
         }
 
-        // OPTIONAL: whitelist prefix CI4 kamu biar gak perlu cek WP
-        if (preg_match('#^(solutions|services|company|resources|contact|contact-us|search|home)(/|$)#', $path)) {
-            return view('errors/404');
-        }
+        // Target WP
+        $target = rtrim(base_url('articles/' . $path), '/') . '/';
 
-        // Ambil "slug" terakhir untuk cek WP (bisa kamu ubah kalau legacy kamu multi-segmen)
-        $slug = basename($path);
-
-        // Cache biar gak berat (file cache bawaan CI4)
-        $cache = cache();
-        $cacheKey = 'wp_slug_exists_' . md5($slug);
-
+        // Cache ringan biar gak HEAD terus (optional tapi bagus)
+        $cache = Services::cache();
+        $cacheKey = 'legacy_wp_exists_' . md5($target);
         $exists = $cache->get($cacheKey);
+
         if ($exists === null) {
-            $exists = $this->checkWpSlugExists($slug); // true/false
-            $cache->save($cacheKey, $exists, 86400); // 1 hari
+            $exists = $this->wpUrlExists($target);
+            $cache->save($cacheKey, $exists ? 1 : 0, 86400); // 1 hari
+        } else {
+            $exists = ((int)$exists) === 1;
         }
 
         if ($exists) {
-            // Redirect ke WP /articles/<slug>/ (pastikan trailing slash konsisten)
-            return redirect()->to(site_url('articles/' . $slug . '/'), 301);
+            return redirect()->to($target, 301);
         }
 
-        return view('errors/404');
+        // Tidak ada di WP => tampilkan 404 CI4
+        return $this->response->setStatusCode(404)->setBody(view('errors/404'));
     }
 
-    private function checkWpSlugExists(string $slug): bool
+    private function wpUrlExists(string $url): bool
     {
-        // WP kamu ada di /articles
-        $wpApi = site_url('articles/wp-json/wp/v2/posts?slug=' . urlencode($slug) . '&_fields=id&per_page=1');
-
         try {
-            $client = \Config\Services::curlrequest([
-                'timeout' => 3,
+            /** @var \CodeIgniter\HTTP\CURLRequest $client */
+            $client = Services::curlrequest([
+                'timeout'     => 2,
                 'http_errors' => false,
+                'verify'      => true,
             ]);
 
-            $res = $client->get($wpApi);
-            if ($res->getStatusCode() !== 200) return false;
+            // HEAD dulu (lebih ringan)
+            $res = $client->head($url, [
+                'allow_redirects' => [
+                    'max' => 3
+                ],
+                'headers' => [
+                    'User-Agent' => 'CI4-Legacy-Redirect'
+                ],
+            ]);
 
-            $json = json_decode($res->getBody(), true);
-            return is_array($json) && count($json) > 0;
+            $code = $res->getStatusCode();
+
+            // WP biasanya 200 kalau ada, 301/302 juga bisa (mis. canonical)
+            return in_array($code, [200, 301, 302], true);
         } catch (\Throwable $e) {
+            // kalau gagal cek (timeout / dns), jangan asal redirect
             return false;
         }
     }
