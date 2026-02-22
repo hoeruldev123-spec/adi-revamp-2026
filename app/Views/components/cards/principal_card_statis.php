@@ -74,7 +74,7 @@
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
                                     <div class="principal-statis-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-Dataiku.png') ?>" alt="Dataiku" class="img-fluid">
+                                        <img src="<?= base_url('assets/images/principals/logo_dataiku.png') ?>" alt="Dataiku" class="img-fluid">
                                     </div>
                                 </div>
                                 <div class="card-body">
