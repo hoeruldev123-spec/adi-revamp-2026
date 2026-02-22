@@ -76,18 +76,26 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], function ($routes)
     $routes->post('contact/form', 'ContactController::submitAjax');
 });
 
-// Fallback untuk 404
-$routes->set404Override('LegacyRedirectController::index');
-// $routes->set404Override(function () {
-//     return view('errors/404');
-// });
+// Route untuk 404 handler (jika perlu akses langsung)
+$routes->get('/404-handler', 'FourOhFour::handle');
 
-// $routes->set404Override(function () {
-//     return service('response')
-//         ->setStatusCode(404)
-//         ->setBody(view('errors/404'));
-// });
+// Fallback untuk 404 - PASTIKAN INI DI PALING BAWAH
+$routes->set404Override(function () {
+    // Gunakan service response langsung
+    $response = service('response');
+    $request = service('request');
 
+    $response->setStatusCode(404);
+
+    $requestedUrl = $request->getGet('url') ?? current_url();
+
+    $data = [
+        'requested_url' => $requestedUrl,
+        'base_url' => base_url()
+    ];
+
+    return $response->setBody(view('errors/404', $data));
+});
 
 // CLI routes
 if (is_cli()) {
@@ -95,7 +103,3 @@ if (is_cli()) {
     $routes->setDefaultController('HomeController');
     $routes->setDefaultMethod('index');
 }
-
-// // Legacy WP root-slugs resolver (taruh paling bawah)
-$routes->get('(:segment)', 'LegacyRedirectController::index/$1');
-$routes->get('(:any)', 'LegacyRedirectController::index/$1');

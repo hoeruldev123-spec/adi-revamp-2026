@@ -20,6 +20,7 @@ Options -Indexes
 
   # -------------------------
   # Static assets -> served from /public/...
+  # (sesuaikan kalau folder asset kamu beda)
   # -------------------------
   RewriteRule ^(assets|css|js|images|uploads)(/.*)?$ public/$0 [L]
 
@@ -31,7 +32,23 @@ Options -Indexes
   RewriteRule ^ - [L]
 
   # -------------------------
-  # CI4 Front Controller
+  # SEO Redirect: old WP root slugs -> /articles/<slug>
+  # whitelist CI4 routes biar gak ikut ke WP
+  # (HATI-HATI: ini harus di atas front controller CI4)
+  # -------------------------
+  RewriteRule ^(?!$)(?!public(?:/|$))\
+(?!solutions(?:/|$))\
+(?!services(?:/|$))\
+(?!company(?:/|$))\
+(?!resources(?:/|$))\
+(?!contact(?:/|$))\
+(?!contact-us(?:/|$))\
+(?!search(?:/|$))\
+(?!home(?:/|$))(.+)$ articles/$1 [R=301,L]
+
+  # -------------------------
+  # CI4 Front Controller (NO PATH_INFO)
+  # ini yang paling aman di LiteSpeed
   # -------------------------
   RewriteRule ^ public/index.php [L,NC,QSA]
 </IfModule>
