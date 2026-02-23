@@ -12,23 +12,33 @@
                 <h3 class="mb-3">Enterprise Architecture & Technology Modernization</h3>
                 <ul class="list-unstyled">
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Legacy system assessment and modernization</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Data Management Maturity Assessment</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>On-premises to cloud migration strategy</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Cloud-to-cloud migration and replatforming</span>
                     </li>
                     <li class="d-flex align-items-start">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Enterprise systems and platform integration</span>
                     </li>
                 </ul>
@@ -48,15 +58,21 @@
                 <h3 class="mb-3">Modern Data Storage for AI-Driven Enterprise</h3>
                 <ul class="list-unstyled">
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Existing technology and business needs assessment</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Data architecture design and optimization</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Next generation Data Lakehouse Solution to seamlessly enable AI Driven Workloads</span>
                     </li>
                 </ul>
@@ -75,23 +91,33 @@
                 <h3 class="mb-3">Data Engineering & Integration</h3>
                 <ul class="list-unstyled">
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Comprehensive assessment of current data ecosystem</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Data pipeline development (ETL/ELT and real-time streaming)</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>API management solution</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Implementation of data integration tools</span>
                     </li>
                     <li class="d-flex align-items-start">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Integration with data lakehouse and data warehouse platforms</span>
                     </li>
                 </ul>
@@ -110,23 +136,33 @@
                 <h3 class="mb-3">Data Virtualization</h3>
                 <ul class="list-unstyled">
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Feasibility assessment and architecture planning</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Deployment of data virtualization platforms</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Advanced data security (masking, RBAC) within virtualized environments</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Seamless integration with analytics and data platforms</span>
                     </li>
                     <li class="d-flex align-items-start">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Support for data discovery, access, and visualization</span>
                     </li>
                 </ul>
@@ -144,19 +180,27 @@
                 <h3 class="mb-3">Data Warehousing & Business Intelligence</h3>
                 <ul class="list-unstyled">
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Strategic analytics assessment based on business objectives</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Implementation of self-service BI dashboard and reporting tools</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Performance management and scorecard systems</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Enterprise data warehousing and analytical models</span>
                     </li>
                 </ul>
@@ -175,19 +219,27 @@
                 <h3 class="mb-3">Data Strategy & Governance</h3>
                 <ul class="list-unstyled">
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Development of enterprise wide data strategy and roadmaps</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Implementation of data governance frameworks</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Implementation of metadata, master data, and data lineage with enterprise tools</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Compliance with data privacy regulations (PDP, GDPR)</span>
                     </li>
                 </ul>
@@ -205,19 +257,27 @@
                 <h3 class="mb-3">Advanced Analytics & Machine Learning</h3>
                 <ul class="list-unstyled">
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>AI/ML platforms</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Development of customized ML models and training pipelines</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Generative AI solutions and conversational chatbots</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>AI integration with enterprise systems and applications</span>
                     </li>
                 </ul>
@@ -236,15 +296,21 @@
                 <h3 class="mb-3">Data Quality & Management</h3>
                 <ul class="list-unstyled">
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Data quality assessments and audits</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Deployment of data quality tools and remediation solutions</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Master Data Management (MDM) solutions and platform integration</span>
                     </li>
                 </ul>
@@ -262,11 +328,15 @@
                 <h3 class="mb-3">Infrastructure & Security Solutions</h3>
                 <ul class="list-unstyled">
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>On premises, cloud, and hybrid IT Infrastructure planning and management</span>
                     </li>
                     <li class="d-flex align-items-start mb-3">
-                        <i class="bi bi-check me-3 fs-5"></i>
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="#5DADEC" style="margin-right: 1rem;">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                         <span>Provision of hardware products including servers, storage systems, and AI optimized servers/workstations</span>
                     </li>
                 </ul>
