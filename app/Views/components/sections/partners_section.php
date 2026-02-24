@@ -52,13 +52,13 @@
                                     <!-- Column 2 (up) -->
                                     <div class="col partners-loops-col up">
                                         <div class="cert-track-partners">
-                                            <img src="<?= base_url('assets/images/principals/Logo-Dataiku.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/logo_dataiku.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Dell.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Denodo.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Hasura.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Helett Packard.png'); ?>">
 
-                                            <img src="<?= base_url('assets/images/principals/Logo-Dataiku.png'); ?>">
+                                            <img src="<?= base_url('assets/images/principals/logo_dataiku.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Dell.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Denodo.png'); ?>">
                                             <img src="<?= base_url('assets/images/principals/Logo-Hasura.png'); ?>">
