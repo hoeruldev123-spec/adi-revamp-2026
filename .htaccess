@@ -14,41 +14,207 @@ Options -Indexes
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
   # -------------------------
-  # WordPress stays on /articles
+  # SEO REDIRECTS - PALING ATAS (SETELAH HTTPS)
+  # Redirect slug lama ke /articles/ SEBELUM aturan lain
   # -------------------------
-  RewriteRule ^articles(?:/|$) - [L]
+  
+  # ============================================
+  # REDIRECT 301 DARI ROOT KE /ARTICLES/ (148 RULES)
+  # Generated from sitemap 2026-02-27
+  # ============================================
+
+  RewriteRule ^real-time-data-processing/?$ /articles/real-time-data-processing/ [R=301,L]
+RewriteRule ^mengapa-data-analytics-penting-dalam-pengambilan-keputusan-bisnis/?$ /articles/mengapa-data-analytics-penting-dalam-pengambilan-keputusan-bisnis/ [R=301,L]
+RewriteRule ^kelebihan-dan-kekurangan-dari-penggunaan-graph-database/?$ /articles/kelebihan-dan-kekurangan-dari-penggunaan-graph-database/ [R=301,L]
+RewriteRule ^pemahaman-mendalam-tentang-graph-database/?$ /articles/pemahaman-mendalam-tentang-graph-database/ [R=301,L]
+RewriteRule ^kamus-dalam-dunia-datacience/?$ /articles/kamus-dalam-dunia-datacience/ [R=301,L]
+RewriteRule ^data-stream-confluent/?$ /articles/data-stream-confluent/ [R=301,L]
+RewriteRule ^big-data-management/?$ /articles/big-data-management/ [R=301,L]
+RewriteRule ^tren-terbaru-dalam-data-analyticsyang-perlu-kamu-ketahui/?$ /articles/tren-terbaru-dalam-data-analyticsyang-perlu-kamu-ketahui/ [R=301,L]
+RewriteRule ^internet-of-things-iot-dalam-meningkatkan-efisiensi-logistik/?$ /articles/internet-of-things-iot-dalam-meningkatkan-efisiensi-logistik/ [R=301,L]
+RewriteRule ^solusi-terbaik-dsai-menjadi-lebih-sederhana/?$ /articles/solusi-terbaik-dsai-menjadi-lebih-sederhana/ [R=301,L]
+RewriteRule ^peran-data-analytics-untuk-efisiensi-logistik/?$ /articles/peran-data-analytics-untuk-efisiensi-logistik/ [R=301,L]
+RewriteRule ^mengoptimalkan-infrastruktur-untuk-big-data-analytics-kunci-sukses-di-era-data-driven/?$ /articles/mengoptimalkan-infrastruktur-untuk-big-data-analytics-kunci-sukses-di-era-data-driven/ [R=301,L]
+RewriteRule ^manfaat-utama-dari-big-data-analytics/?$ /articles/manfaat-utama-dari-big-data-analytics/ [R=301,L]
+RewriteRule ^tools-dan-teknik-terbaik-untuk-data-analytics-panduan-lengkap/?$ /articles/tools-dan-teknik-terbaik-untuk-data-analytics-panduan-lengkap/ [R=301,L]
+RewriteRule ^hadoop-pondasi-big-data-analytics/?$ /articles/hadoop-pondasi-big-data-analytics/ [R=301,L]
+RewriteRule ^apache-spark-dan-peran-pentingnya-dalam-data-analytics/?$ /articles/apache-spark-dan-peran-pentingnya-dalam-data-analytics/ [R=301,L]
+RewriteRule ^tools-data-visualisasi-memahami-data-dengan-lebih-baik/?$ /articles/tools-data-visualisasi-memahami-data-dengan-lebih-baik/ [R=301,L]
+RewriteRule ^cara-memanfaatkan-data-visualisasi-untuk-business-insight/?$ /articles/cara-memanfaatkan-data-visualisasi-untuk-business-insight/ [R=301,L]
+RewriteRule ^machine-learning-menggali-wawasan-dari-data/?$ /articles/machine-learning-menggali-wawasan-dari-data/ [R=301,L]
+RewriteRule ^best-practice-data-analytics-sukses-dalam-bisnis/?$ /articles/best-practice-data-analytics-sukses-dalam-bisnis/ [R=301,L]
+RewriteRule ^apa-itu-database-operasional/?$ /articles/apa-itu-database-operasional/ [R=301,L]
+RewriteRule ^database-adalah-pengertian-jenis-dan-manfaat-untuk-bisnis/?$ /articles/database-adalah-pengertian-jenis-dan-manfaat-untuk-bisnis/ [R=301,L]
+RewriteRule ^menjelajahi-dunia-data-apa-yang-kamu-perlu-ketahui/?$ /articles/menjelajahi-dunia-data-apa-yang-kamu-perlu-ketahui/ [R=301,L]
+RewriteRule ^struktur-data-dalam-database-operasional-memahami-organisasi-data-yang-vital-dalam-bisnis/?$ /articles/struktur-data-dalam-database-operasional-memahami-organisasi-data-yang-vital-dalam-bisnis/ [R=301,L]
+RewriteRule ^manajemen-data-dalam-bisnis-meningkatkan-efisiensi-melalui-database-operasional/?$ /articles/manajemen-data-dalam-bisnis-meningkatkan-efisiensi-melalui-database-operasional/ [R=301,L]
+RewriteRule ^migrasi-dari-database-operasional-ke-big-data-mengapa-perubahan-ini-penting/?$ /articles/migrasi-dari-database-operasional-ke-big-data-mengapa-perubahan-ini-penting/ [R=301,L]
+RewriteRule ^industri-big-data-mentransformasi-berbagai-sektor-bisnis/?$ /articles/industri-big-data-mentransformasi-berbagai-sektor-bisnis/ [R=301,L]
+RewriteRule ^pemanfaatan-big-data-dalam-analitik-transformasi-data-menjadi-keputusan/?$ /articles/pemanfaatan-big-data-dalam-analitik-transformasi-data-menjadi-keputusan/ [R=301,L]
+RewriteRule ^big-data-definisi-dan-tantangan/?$ /articles/big-data-definisi-dan-tantangan/ [R=301,L]
+RewriteRule ^7-tools-dan-teknik-dalam-big-data-analytics/?$ /articles/7-tools-dan-teknik-dalam-big-data-analytics/ [R=301,L]
+RewriteRule ^denodo-bergabung-dengan-presto-untuk-mempercepat-query-big-data/?$ /articles/denodo-bergabung-dengan-presto-untuk-mempercepat-query-big-data/ [R=301,L]
+RewriteRule ^big-data-analytics-mengapa-big-data-analytics-penting/?$ /articles/big-data-analytics-mengapa-big-data-analytics-penting/ [R=301,L]
+RewriteRule ^peran-data-dalam-transformasi-digital-perusahaan/?$ /articles/peran-data-dalam-transformasi-digital-perusahaan/ [R=301,L]
+RewriteRule ^pentingnya-kualitas-data-dasar-yang-kuat-untuk-analisis/?$ /articles/pentingnya-kualitas-data-dasar-yang-kuat-untuk-analisis/ [R=301,L]
+RewriteRule ^data-sebagai-aset-bisnis-meningkatkan-efisiensi-dan-inovasi/?$ /articles/data-sebagai-aset-bisnis-meningkatkan-efisiensi-dan-inovasi/ [R=301,L]
+RewriteRule ^big-data-demystified-definisi-dan-karakteristiknya/?$ /articles/big-data-demystified-definisi-dan-karakteristiknya/ [R=301,L]
+RewriteRule ^menggali-lebih-dalam-jenis-jenis-data-yang-perlu-anda-ketahui/?$ /articles/menggali-lebih-dalam-jenis-jenis-data-yang-perlu-anda-ketahui/ [R=301,L]
+RewriteRule ^perkembangan-teknologi-big-data-terbaru-mengikuti-jejak-transformasi-data/?$ /articles/perkembangan-teknologi-big-data-terbaru-mengikuti-jejak-transformasi-data/ [R=301,L]
+RewriteRule ^keamanan-dan-privasi-data-dalam-big-data-tantangan-dan-solusi/?$ /articles/keamanan-dan-privasi-data-dalam-big-data-tantangan-dan-solusi/ [R=301,L]
+RewriteRule ^data-analyst-apa-yang-bisa-dilakukan-dengan-tableau/?$ /articles/data-analyst-apa-yang-bisa-dilakukan-dengan-tableau/ [R=301,L]
+RewriteRule ^pemrograman-penting-untuk-analis-data-sql-gcp-dan-tableau/?$ /articles/pemrograman-penting-untuk-analis-data-sql-gcp-dan-tableau/ [R=301,L]
+RewriteRule ^tableau-meningkatkan-analisis-data-menjadi-seni-yang-dinamis/?$ /articles/tableau-meningkatkan-analisis-data-menjadi-seni-yang-dinamis/ [R=301,L]
+RewriteRule ^tableau-dan-gcp-kekuatan-untuk-analisis-data-skala-besar/?$ /articles/tableau-dan-gcp-kekuatan-untuk-analisis-data-skala-besar/ [R=301,L]
+RewriteRule ^tableau-partner-indonesia-solusi-analisis-data-untuk-bisnis-retail/?$ /articles/tableau-partner-indonesia-solusi-analisis-data-untuk-bisnis-retail/ [R=301,L]
+RewriteRule ^memaksimalkan-potensi-seorang-data-analyst-dengan-tableau-menarik-mudah-dan-efisien/?$ /articles/memaksimalkan-potensi-seorang-data-analyst-dengan-tableau-menarik-mudah-dan-efisien/ [R=301,L]
+RewriteRule ^talend-panduan-pengenalan-talend-data-integrasi/?$ /articles/talend-panduan-pengenalan-talend-data-integrasi/ [R=301,L]
+RewriteRule ^talend-mengelola-data-dengan-mudah-dan-efisien/?$ /articles/talend-mengelola-data-dengan-mudah-dan-efisien/ [R=301,L]
+RewriteRule ^talend-solusi-data-integration-untuk-semua-industri/?$ /articles/talend-solusi-data-integration-untuk-semua-industri/ [R=301,L]
+RewriteRule ^all-data-international-mitra-anda-dalam-data-integration/?$ /articles/all-data-international-mitra-anda-dalam-data-integration/ [R=301,L]
+RewriteRule ^talend-partner-indonesia-solusi-terbaik-untuk-data-integration/?$ /articles/talend-partner-indonesia-solusi-terbaik-untuk-data-integration/ [R=301,L]
+RewriteRule ^optimalkan-kinerja-operasional-dengan-solusi-terbaru-talend/?$ /articles/optimalkan-kinerja-operasional-dengan-solusi-terbaru-talend/ [R=301,L]
+RewriteRule ^machine-learning-dengan-dataiku-membangun-model-prediktif/?$ /articles/machine-learning-dengan-dataiku-membangun-model-prediktif/ [R=301,L]
+RewriteRule ^pemrosesan-data-tanpa-kode-dengan-dataiku-visual-flow/?$ /articles/pemrosesan-data-tanpa-kode-dengan-dataiku-visual-flow/ [R=301,L]
+RewriteRule ^dataiku-tutorial-lab-analisis-visual-data-preparation/?$ /articles/dataiku-tutorial-lab-analisis-visual-data-preparation/ [R=301,L]
+RewriteRule ^dataiku-dalam-data-analytics-transformasi-data-yang-efektif/?$ /articles/dataiku-dalam-data-analytics-transformasi-data-yang-efektif/ [R=301,L]
+RewriteRule ^dataiku-platform-ai-dan-ml-terlengkap-untuk-bisnis/?$ /articles/dataiku-platform-ai-dan-ml-terlengkap-untuk-bisnis/ [R=301,L]
+RewriteRule ^qlik-platform-analitik-data-yang-kuat-dan-fleksibel/?$ /articles/qlik-platform-analitik-data-yang-kuat-dan-fleksibel/ [R=301,L]
+RewriteRule ^apa-itu-qlikview-dan-bagaimana-cara-menggunakannya/?$ /articles/apa-itu-qlikview-dan-bagaimana-cara-menggunakannya/ [R=301,L]
+RewriteRule ^apa-itu-qlik-sense-dan-bagaimana-cara-kerjanya/?$ /articles/apa-itu-qlik-sense-dan-bagaimana-cara-kerjanya/ [R=301,L]
+RewriteRule ^confluent-solusi-streaming-data-terbaik-untuk-perusahaan/?$ /articles/confluent-solusi-streaming-data-terbaik-untuk-perusahaan/ [R=301,L]
+RewriteRule ^confluent-cara-membangun-aplikasi-data-streaming/?$ /articles/confluent-cara-membangun-aplikasi-data-streaming/ [R=301,L]
+RewriteRule ^confluent-cloud-data-streaming-dengan-layanan-cloud-terbaik/?$ /articles/confluent-cloud-data-streaming-dengan-layanan-cloud-terbaik/ [R=301,L]
+RewriteRule ^apache-kafka-fondasi-terkuat-untuk-data-streaming/?$ /articles/apache-kafka-fondasi-terkuat-untuk-data-streaming/ [R=301,L]
+RewriteRule ^apa-itu-confluent-partners/?$ /articles/apa-itu-confluent-partners/ [R=301,L]
+RewriteRule ^qlik-partner-indonesia-solusi-data-analytics-terdepan/?$ /articles/qlik-partner-indonesia-solusi-data-analytics-terdepan/ [R=301,L]
+RewriteRule ^all-data-international-partner-qlik-indonesia-terpercaya/?$ /articles/all-data-international-partner-qlik-indonesia-terpercaya/ [R=301,L]
+RewriteRule ^masa-depan-data-analytics-tren-dan-inovasi-dengan-dataiku/?$ /articles/masa-depan-data-analytics-tren-dan-inovasi-dengan-dataiku/ [R=301,L]
+RewriteRule ^talend-partner-terpercaya-di-indonesia-all-data-international/?$ /articles/talend-partner-terpercaya-di-indonesia-all-data-international/ [R=301,L]
+RewriteRule ^memilih-dan-bekerja-dengan-partner-tableau-di-indonesia/?$ /articles/memilih-dan-bekerja-dengan-partner-tableau-di-indonesia/ [R=301,L]
+RewriteRule ^manfaat-menggunakan-confluent-partner-di-indonesia/?$ /articles/manfaat-menggunakan-confluent-partner-di-indonesia/ [R=301,L]
+RewriteRule ^mengapa-qlik-partner-indonesia-penting-untuk-bisnis-anda/?$ /articles/mengapa-qlik-partner-indonesia-penting-untuk-bisnis-anda/ [R=301,L]
+RewriteRule ^peran-dataiku-dalam-pengembangan-generative-ai/?$ /articles/peran-dataiku-dalam-pengembangan-generative-ai/ [R=301,L]
+RewriteRule ^generative-ai-dataiku-mendorong-inovasi-melalui-kreativitas/?$ /articles/generative-ai-dataiku-mendorong-inovasi-melalui-kreativitas/ [R=301,L]
+RewriteRule ^integrasi-confluent-dengan-solusi-bisnis-di-indonesia/?$ /articles/integrasi-confluent-dengan-solusi-bisnis-di-indonesia/ [R=301,L]
+RewriteRule ^manfaat-kerja-sama-dengan-talend-partner-di-indonesia/?$ /articles/manfaat-kerja-sama-dengan-talend-partner-di-indonesia/ [R=301,L]
+RewriteRule ^mengoptimalkan-bisnis-dengan-solusi-analitik-qlik-di-indonesia/?$ /articles/mengoptimalkan-bisnis-dengan-solusi-analitik-qlik-di-indonesia/ [R=301,L]
+RewriteRule ^integrasi-tableau-dengan-solusi-bisnis-di-indonesia/?$ /articles/integrasi-tableau-dengan-solusi-bisnis-di-indonesia/ [R=301,L]
+RewriteRule ^confluent-cloud-solusi-terkemuka-untuk-data-streaming-di-cloud/?$ /articles/confluent-cloud-solusi-terkemuka-untuk-data-streaming-di-cloud/ [R=301,L]
+RewriteRule ^qlik-solusi-analisis-data-inovatif-untuk-transformasi-bisnis/?$ /articles/qlik-solusi-analisis-data-inovatif-untuk-transformasi-bisnis/ [R=301,L]
+RewriteRule ^sales-analytics-generator-memperkuat-penjualan-dengan-wawasan-generative-ai/?$ /articles/sales-analytics-generator-memperkuat-penjualan-dengan-wawasan-generative-ai/ [R=301,L]
+RewriteRule ^integrasi-talend-dengan-solusi-bisnis-anda/?$ /articles/integrasi-talend-dengan-solusi-bisnis-anda/ [R=301,L]
+RewriteRule ^mengoptimalkan-kinerja-dengan-confluent-cloud/?$ /articles/mengoptimalkan-kinerja-dengan-confluent-cloud/ [R=301,L]
+RewriteRule ^perlindungan-data-terdepan-dengan-talend-menjaga-privasi-dan-keamanan-data/?$ /articles/perlindungan-data-terdepan-dengan-talend-menjaga-privasi-dan-keamanan-data/ [R=301,L]
+RewriteRule ^qlik-sense-platform-analisis-data-yang-inovatif-dan-intuitif/?$ /articles/qlik-sense-platform-analisis-data-yang-inovatif-dan-intuitif/ [R=301,L]
+RewriteRule ^mengoptimalkan-visualisasi-data-dengan-tableau-ai/?$ /articles/mengoptimalkan-visualisasi-data-dengan-tableau-ai/ [R=301,L]
+RewriteRule ^training-tableau-indonesia-kuasai-tools-analisis-data-terbaik/?$ /articles/training-tableau-indonesia-kuasai-tools-analisis-data-terbaik/ [R=301,L]
+RewriteRule ^training-dataiku-solusi-tepat-optimalkan-bisnis-di-era-digital/?$ /articles/training-dataiku-solusi-tepat-optimalkan-bisnis-di-era-digital/ [R=301,L]
+RewriteRule ^kamus-data-analytics/?$ /articles/kamus-data-analytics/ [R=301,L]
+RewriteRule ^perbedaan-data-analyst-data-scientist/?$ /articles/perbedaan-data-analyst-data-scientist/ [R=301,L]
+RewriteRule ^pelatihan-tableau-all-data-international/?$ /articles/pelatihan-tableau-all-data-international/ [R=301,L]
+RewriteRule ^tableau-partner-indonesia-solusi-analisis-data-pemerintahan/?$ /articles/tableau-partner-indonesia-solusi-analisis-data-pemerintahan/ [R=301,L]
+RewriteRule ^tableau-partner-indonesia-solusi-analisis-big-data-terpercaya/?$ /articles/tableau-partner-indonesia-solusi-analisis-big-data-terpercaya/ [R=301,L]
+RewriteRule ^penyedia-layanan-confluent-di-indonesia/?$ /articles/penyedia-layanan-confluent-di-indonesia/ [R=301,L]
+RewriteRule ^confluent-fitur-fitur-utama-confluent-platform/?$ /articles/confluent-fitur-fitur-utama-confluent-platform/ [R=301,L]
+RewriteRule ^kraft-menyederhanakan-apache-kafka-dengan-raft-consensus/?$ /articles/kraft-menyederhanakan-apache-kafka-dengan-raft-consensus/ [R=301,L]
+RewriteRule ^predictive-analytics-bagaimana-ai-membantu-memprediksi-tren-bisnis/?$ /articles/predictive-analytics-bagaimana-ai-membantu-memprediksi-tren-bisnis/ [R=301,L]
+RewriteRule ^tools-terbaik-untuk-data-analytics-bi-perbandingan-tableau-power-bi-dan-looker/?$ /articles/tools-terbaik-untuk-data-analytics-bi-perbandingan-tableau-power-bi-dan-looker/ [R=301,L]
+RewriteRule ^clickhouse-database-olap-untuk-analisis-big-data-dengan-kecepatan-tinggi/?$ /articles/clickhouse-database-olap-untuk-analisis-big-data-dengan-kecepatan-tinggi/ [R=301,L]
+RewriteRule ^clickhouse-untuk-business-intelligence-mempercepat-analisis-data-dalam-skala-besar/?$ /articles/clickhouse-untuk-business-intelligence-mempercepat-analisis-data-dalam-skala-besar/ [R=301,L]
+RewriteRule ^ai-driven-data-analytics-bagaimana-dataiku-mempermudah-proses-analisis/?$ /articles/ai-driven-data-analytics-bagaimana-dataiku-mempermudah-proses-analisis/ [R=301,L]
+RewriteRule ^clickhouse-untuk-streaming-data-solusi-analitik-real-time-yang-efisien/?$ /articles/clickhouse-untuk-streaming-data-solusi-analitik-real-time-yang-efisien/ [R=301,L]
+RewriteRule ^confluent-partner-indonesia/?$ /articles/confluent-partner-indonesia/ [R=301,L]
+RewriteRule ^implementasi-kebijakan-privasi-data-yang-efektif-dengan-talend/?$ /articles/implementasi-kebijakan-privasi-data-yang-efektif-dengan-talend/ [R=301,L]
+RewriteRule ^pt-all-data-international-denodo-partner-resmi-di-indonesia-untuk-solusi-virtualisasi-data-modern/?$ /articles/pt-all-data-international-denodo-partner-resmi-di-indonesia-untuk-solusi-virtualisasi-data-modern/ [R=301,L]
+RewriteRule ^dataiku-answers-dan-llm-mesh-solusi-genai-untuk-perusahaan-modern/?$ /articles/dataiku-answers-dan-llm-mesh-solusi-genai-untuk-perusahaan-modern/ [R=301,L]
+RewriteRule ^clickhouse-workshop-migrasi-dari-bigquery-ke-clickhouse-untuk-performa-analitik-yang-lebih-optimal/?$ /articles/clickhouse-workshop-migrasi-dari-bigquery-ke-clickhouse-untuk-performa-analitik-yang-lebih-optimal/ [R=301,L]
+RewriteRule ^mengapa-perusahaan-membutuhkan-ai-ml-dengan-dataiku/?$ /articles/mengapa-perusahaan-membutuhkan-ai-ml-dengan-dataiku/ [R=301,L]
+RewriteRule ^generative-ai-dan-dataiku/?$ /articles/generative-ai-dan-dataiku/ [R=301,L]
+RewriteRule ^pengenalan-snowflake/?$ /articles/pengenalan-snowflake/ [R=301,L]
+RewriteRule ^snowflake-partner/?$ /articles/snowflake-partner/ [R=301,L]
+RewriteRule ^apa-itu-hasura/?$ /articles/apa-itu-hasura/ [R=301,L]
+RewriteRule ^api-instan-dengan-hasura/?$ /articles/api-instan-dengan-hasura/ [R=301,L]
+RewriteRule ^mengapa-perusahaan-anda-perlu-mengadopsi-hasura/?$ /articles/mengapa-perusahaan-anda-perlu-mengadopsi-hasura/ [R=301,L]
+RewriteRule ^qlik-ai-analitik-data-cerdas/?$ /articles/qlik-ai-analitik-data-cerdas/ [R=301,L]
+RewriteRule ^tren-business-intelligence-2025/?$ /articles/tren-business-intelligence-2025/ [R=301,L]
+RewriteRule ^ai-generatif-dan-ai-agen-dataiku/?$ /articles/ai-generatif-dan-ai-agen-dataiku/ [R=301,L]
+RewriteRule ^manfaat-business-intelligence/?$ /articles/manfaat-business-intelligence/ [R=301,L]
+RewriteRule ^redis-semantic-cache-llm/?$ /articles/redis-semantic-cache-llm/ [R=301,L]
+RewriteRule ^green-coding-jejak-karbon/?$ /articles/green-coding-jejak-karbon/ [R=301,L]
+RewriteRule ^kepemimpinan-perempuan-industri-teknologi/?$ /articles/kepemimpinan-perempuan-industri-teknologi/ [R=301,L]
+RewriteRule ^business-use-case-snowflake/?$ /articles/business-use-case-snowflake/ [R=301,L]
+RewriteRule ^perbandingan-snowflake-etl-vs-talend-dalam-migrasi-dari-oracle/?$ /articles/perbandingan-snowflake-etl-vs-talend-dalam-migrasi-dari-oracle/ [R=301,L]
+RewriteRule ^etl-dari-postgresql-ke-snowflake/?$ /articles/etl-dari-postgresql-ke-snowflake/ [R=301,L]
+RewriteRule ^optimasi-proses-etl-dari-mysql-ke-snowflake/?$ /articles/optimasi-proses-etl-dari-mysql-ke-snowflake/ [R=301,L]
+RewriteRule ^snowflake-solusi-data-cloud-modern/?$ /articles/snowflake-solusi-data-cloud-modern/ [R=301,L]
+RewriteRule ^data-lake-snowflake-transaksi-pembelian/?$ /articles/data-lake-snowflake-transaksi-pembelian/ [R=301,L]
+RewriteRule ^denodo-data-warehouse/?$ /articles/denodo-data-warehouse/ [R=301,L]
+RewriteRule ^denodo-vs-microsoft-sql-server/?$ /articles/denodo-vs-microsoft-sql-server/ [R=301,L]
+RewriteRule ^pengenalan-denodo-solusi-virtualisasi-data-modern/?$ /articles/pengenalan-denodo-solusi-virtualisasi-data-modern/ [R=301,L]
+RewriteRule ^pengenalan-tools-visualisasi-data-seperti-tableau-power-bi-dsb/?$ /articles/pengenalan-tools-visualisasi-data-seperti-tableau-power-bi-dsb/ [R=301,L]
+RewriteRule ^menggali-potensi-tableau-sebagai-tool-visualisasi-data/?$ /articles/menggali-potensi-tableau-sebagai-tool-visualisasi-data/ [R=301,L]
+RewriteRule ^tableau-integrasi-data-menjadi-lebih-mudah/?$ /articles/tableau-integrasi-data-menjadi-lebih-mudah/ [R=301,L]
+RewriteRule ^tableau-senjata-ampuh-menghadapi-tantangan-bisnis-di-indonesia/?$ /articles/tableau-senjata-ampuh-menghadapi-tantangan-bisnis-di-indonesia/ [R=301,L]
+RewriteRule ^membuka-wawasan-data-lewat-tableau/?$ /articles/membuka-wawasan-data-lewat-tableau/ [R=301,L]
+RewriteRule ^transformasi-data-dengan-tableau-ai/?$ /articles/transformasi-data-dengan-tableau-ai/ [R=301,L]
+RewriteRule ^tableau-konsultan-data-ai-indonesia/?$ /articles/tableau-konsultan-data-ai-indonesia/ [R=301,L]
+RewriteRule ^keamanan-data-dengan-denodo-perlindungan-dalam-virtualisasi-data/?$ /articles/keamanan-data-dengan-denodo-perlindungan-dalam-virtualisasi-data/ [R=301,L]
+RewriteRule ^panduan-instalasi-konfigurasi-denodo/?$ /articles/panduan-instalasi-konfigurasi-denodo/ [R=301,L]
+RewriteRule ^fitur-terbaru-tableau-tableau-2025-2/?$ /articles/fitur-terbaru-tableau-tableau-2025-2/ [R=301,L]
+RewriteRule ^fitur-tableau-creator-2025-2/?$ /articles/fitur-tableau-creator-2025-2/ [R=301,L]
+RewriteRule ^fitur-tableau-explorer-2025-2/?$ /articles/fitur-tableau-explorer-2025-2/ [R=301,L]
+RewriteRule ^fitur-tableau-viewer-2025-2/?$ /articles/fitur-tableau-viewer-2025-2/ [R=301,L]
+RewriteRule ^platform-denodo-solusi-virtualisasi-data/?$ /articles/platform-denodo-solusi-virtualisasi-data/ [R=301,L]
+RewriteRule ^strategi-backup-dalam-denodo-menjaga-keandalan-platform-virtualisasi-data/?$ /articles/strategi-backup-dalam-denodo-menjaga-keandalan-platform-virtualisasi-data/ [R=301,L]
+RewriteRule ^dataiku-llm-mesh-fondasi-untuk-genai-dan-ai-agents-di-skala-enterprise/?$ /articles/dataiku-llm-mesh-fondasi-untuk-genai-dan-ai-agents-di-skala-enterprise/ [R=301,L]
+RewriteRule ^dataiku-the-smart-universal-ai-platform/?$ /articles/dataiku-the-smart-universal-ai-platform/ [R=301,L]
+RewriteRule ^apa-itu-salesforce-customer360/?$ /articles/apa-itu-salesforce-customer360/ [R=301,L]
 
   # -------------------------
-  # Static assets -> served from /public/...
-  # (sesuaikan kalau folder asset kamu beda)
+  # WORDPRESS SECTION - PRIORITAS KEDUA
+  # Semua URL yang mengandung /articles/ langsung ke WordPress
+  # -------------------------
+  RewriteRule ^articles/ - [L]
+  RewriteRule ^articles$ - [L]
+
+  # -------------------------
+  # STATIC ASSETS
   # -------------------------
   RewriteRule ^(assets|css|js|images|uploads)(/.*)?$ public/$0 [L]
 
   # -------------------------
-  # Allow existing real files/dirs in root
+  # ALLOW EXISTING FILES/DIRS
   # -------------------------
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
   # -------------------------
-  # SEO Redirect: old WP root slugs -> /articles/<slug>
-  # whitelist CI4 routes biar gak ikut ke WP
-  # (HATI-HATI: ini harus di atas front controller CI4)
+  # WHITELIST CI4 ROUTES
   # -------------------------
-  RewriteRule ^(?!$)(?!public(?:/|$))\
-(?!solutions(?:/|$))\
-(?!services(?:/|$))\
-(?!company(?:/|$))\
-(?!resources(?:/|$))\
-(?!contact(?:/|$))\
-(?!contact-us(?:/|$))\
-(?!search(?:/|$))\
-(?!home(?:/|$))(.+)$ articles/$1 [R=301,L]
+  RewriteRule ^solutions/ - [L]
+  RewriteRule ^services/ - [L]
+  RewriteRule ^company/ - [L]
+  RewriteRule ^resources/ - [L]
+  RewriteRule ^contact/ - [L]
+  RewriteRule ^contact-us/ - [L]
+  RewriteRule ^search/ - [L]
+  RewriteRule ^home/ - [L]
+  RewriteRule ^public/ - [L]
 
   # -------------------------
-  # CI4 Front Controller (NO PATH_INFO)
-  # ini yang paling aman di LiteSpeed
+  # CI4 FRONT CONTROLLER
   # -------------------------
-  RewriteRule ^ public/index.php [L,NC,QSA]
+  RewriteCond %{REQUEST_URI} !^/articles/ [NC]
+  RewriteCond %{REQUEST_URI} !^/articles$ [NC]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ public/index.php/$1 [L,QSA]
+
 </IfModule>
+
+# -------------------------
+# Handle 404 errors
+# -------------------------
+ErrorDocument 404 /public/index.php

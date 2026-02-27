@@ -81,6 +81,16 @@ $routes->set404Override(function () {
     return view('errors/404');
 });
 
+// Di routes.php, setelah semua route
+
+// Tangkap semua URL /articles/ yang tidak ada di WordPress
+$routes->get('articles/(:any)', function ($slug) {
+    // Redirect ke halaman utama articles atau 404
+    return redirect()->to('/articles');
+});
+
+// Atau biarkan WordPress yang handle 404-nya sendiri
+
 // CLI routes
 if (is_cli()) {
     $routes->setDefaultNamespace('App\Controllers');
