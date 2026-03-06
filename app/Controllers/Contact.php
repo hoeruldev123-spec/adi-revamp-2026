@@ -13,6 +13,25 @@ class Contact extends Controller
 
     public function submit()
     {
+        // ========================================
+        // CEK HONEYPOT - LETAKKAN PALING ATAS
+        // ========================================
+        $honeypot = $this->request->getPost('website');
+
+        // Jika field website terisi (bot akan mengisinya, manusia tidak)
+        if (!empty($honeypot)) {
+            // Catat spam untuk monitoring
+            log_message('warning', 'Spam detected - Honeypot triggered from IP: ' . $this->request->getIPAddress());
+
+            // Redirect dengan pesan sukses PALSU (agar bot tidak tahu)
+            return redirect()->to('/contact')
+                ->with('success', 'Terima kasih! Pesan Anda telah terkirim.');
+
+            // BISA JUGA: redirect ke halaman sukses tanpa pesan
+            // return redirect()->to('/contact/success');
+        }
+        // ========================================
+
         // Validasi input
         $validation = \Config\Services::validation();
 

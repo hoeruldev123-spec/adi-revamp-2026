@@ -187,6 +187,17 @@
                     <form id="contactForm" action="<?= base_url('contact/submit') ?>" method="POST">
                         <?= csrf_field() ?>
 
+                        <!-- Di form, tambahkan ini (tersembunyi) -->
+                        <div style="display: none; opacity: 0; position: absolute; top: -9999px; left: -9999px;">
+                            <label for="website">Website (jangan diisi)</label>
+                            <input type="text"
+                                id="website"
+                                name="website"
+                                value=""
+                                autocomplete="off"
+                                tabindex="-1">
+                        </div>
+
                         <div class="row g-4">
 
                             <div class="col-md-6">
