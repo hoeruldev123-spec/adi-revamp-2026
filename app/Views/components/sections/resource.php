@@ -52,7 +52,7 @@
                                     </span>
                                     <span class="d-flex align-items-center">
                                         <i class="bi bi-person me-1"></i>
-                                        <span class="text-truncate" style="max-width: 100px;"><?= esc($article['author']) ?></span>
+                                        <span class="text-truncate" style="max-width: 1200px;"><?= esc($article['author']) ?></span>
                                     </span>
                                 </div>
                             </div>

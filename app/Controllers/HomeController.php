@@ -182,7 +182,7 @@ class HomeController extends BaseController
         ];
     }
 
-    // LATES ARTICLES
+    // LATEST ARTICLES
     private function getLatestArticles($limit = 3)
     {
         try {
@@ -210,6 +210,17 @@ class HomeController extends BaseController
         return [];
     }
 
+    private function cleanWpText($text)
+    {
+        $text = html_entity_decode($text, ENT_QUOTES, 'UTF-8');
+        $text = str_replace("\xc2\xa0", ' ', $text); // unicode nbsp
+        $text = str_replace('&nbsp;', ' ', $text);
+        $text = strip_tags($text);
+        $text = preg_replace('/\s+/', ' ', $text);
+
+        return trim($text);
+    }
+
     private function formatPosts($posts)
     {
         if (!is_array($posts)) {
@@ -219,9 +230,11 @@ class HomeController extends BaseController
         $formatted = [];
 
         foreach ($posts as $post) {
-            $excerpt = strip_tags($post['excerpt']['rendered'] ?? '');
-            $excerpt = trim($excerpt);
-            $excerpt = mb_substr($excerpt, 0, 150) . '...';
+
+            $title = $this->cleanWpText($post['title']['rendered'] ?? '');
+
+            $excerpt = $this->cleanWpText($post['excerpt']['rendered'] ?? '');
+            $excerpt = mb_strimwidth($excerpt, 0, 150, '...');
 
             $thumbnail = '';
             if (isset($post['_embedded']['wp:featuredmedia'][0]['source_url'])) {
@@ -252,10 +265,10 @@ class HomeController extends BaseController
 
             $formatted[] = [
                 'id' => $post['id'],
-                'title' => html_entity_decode($post['title']['rendered'], ENT_QUOTES),
+                'title' => $title,
                 'excerpt' => $excerpt,
-                'url' => $post['link'],
-                'date' => date('d M Y', strtotime($post['date'])),
+                'url' => $post['link'] ?? '',
+                'date' => isset($post['date']) ? date('d M Y', strtotime($post['date'])) : '',
                 'author' => $post['_embedded']['author'][0]['name'] ?? 'Admin',
                 'thumbnail' => $thumbnail,
                 'categories' => $categories,

@@ -29,8 +29,9 @@
                 <?php foreach (array_slice($latestArticles, 0, 3) as $index => $article): ?>
                     <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<?= $index * 100 ?>">
                         <article class="card h-100 border-0 shadow-sm hover-lift">
+
                             <?php if (!empty($article['thumbnail'])): ?>
-                                <div class="card-img-wrapper" style="height: 180px; overflow: hidden;">
+                                <div class="card-img-wrapper" style="height:180px;overflow:hidden;">
                                     <img
                                         src="<?= esc($article['thumbnail']) ?>"
                                         alt="<?= esc($article['title']) ?>"
@@ -40,10 +41,12 @@
                             <?php endif; ?>
 
                             <div class="card-body d-flex flex-column p-3 p-lg-4">
+
                                 <div class="mb-2 d-flex flex-wrap">
                                     <?php if (!empty($article['categories'])): ?>
                                         <?php foreach (array_slice($article['categories'], 0, 2) as $cat): ?>
-                                            <a href="<?= base_url('articles?category=' . $cat['id']) ?>" class="badge bg-primary-subtle text-primary text-decoration-none me-1 mb-1">
+                                            <a href="<?= base_url('articles?category=' . $cat['id']) ?>"
+                                                class="badge bg-primary-subtle text-primary text-decoration-none me-1 mb-1">
                                                 <?= esc($cat['name']) ?>
                                             </a>
                                         <?php endforeach; ?>
@@ -51,13 +54,15 @@
                                 </div>
 
                                 <h5 class="card-title mb-2 fs-6 fs-lg-5">
-                                    <a href="<?= esc($article['url']) ?>" class="text-dark text-decoration-none stretched-link" target="_blank">
-                                        <?= esc($article['title']) ?>
+                                    <a href="<?= esc($article['url']) ?>"
+                                        class="text-dark text-decoration-none stretched-link"
+                                        target="_blank">
+                                        <?= $article['title'] ?>
                                     </a>
                                 </h5>
 
                                 <p class="card-text text-muted small mb-3 flex-grow-1 d-none d-md-block">
-                                    <?= esc($article['excerpt']) ?>
+                                    <?= $article['excerpt'] ?>
                                 </p>
 
                                 <div class="d-flex flex-wrap align-items-center text-muted small mt-auto gap-2 gap-lg-3">
@@ -66,11 +71,15 @@
                                         <span class="d-none d-sm-inline"><?= esc($article['date']) ?></span>
                                         <span class="d-inline d-sm-none"><?= date('d/m/y', strtotime($article['date'])) ?></span>
                                     </span>
+
                                     <span class="d-flex align-items-center">
                                         <i class="bi bi-person me-1"></i>
-                                        <span class="text-truncate" style="max-width: 100px;"><?= esc($article['author']) ?></span>
+                                        <span class="text-truncate" style="max-width:140px;">
+                                            <?= esc($article['author']) ?>
+                                        </span>
                                     </span>
                                 </div>
+
                             </div>
                         </article>
                     </div>
@@ -122,57 +131,74 @@
                                 <article class="card border-0 shadow-sm hover-card overflow-hidden">
                                     <div class="card-body p-0">
                                         <div class="d-flex flex-column flex-md-row">
-                                            <!-- Thumbnail Container -->
+
+                                            <!-- Thumbnail -->
                                             <?php if (!empty($article['thumbnail'])): ?>
                                                 <div class="article-thumb-container">
-                                                    <img src="<?= esc($article['thumbnail']) ?>"
+                                                    <img
+                                                        src="<?= esc($article['thumbnail']) ?>"
                                                         alt="<?= esc($article['title']) ?>"
                                                         class="article-img"
                                                         loading="lazy">
-                                                    <!-- Category Badge Overlay for Mobile -->
+
+                                                    <!-- Category Badge Mobile -->
                                                     <div class="position-absolute top-0 start-0 p-2 d-md-none">
-                                                        <?php if (!empty($article['categories'])): ?>
-                                                            <span class="badge bg-primary shadow-sm"><?= esc($article['categories'][0]['name']) ?></span>
+                                                        <?php if (!empty($article['categories'][0])): ?>
+                                                            <span class="badge bg-primary shadow-sm">
+                                                                <?= esc($article['categories'][0]['name']) ?>
+                                                            </span>
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>
                                             <?php endif; ?>
 
-                                            <!-- Content Container -->
+                                            <!-- Content -->
                                             <div class="article-content p-3 p-md-4 flex-grow-1 d-flex flex-column">
+
                                                 <!-- Category Desktop -->
                                                 <div class="mb-2 d-none d-md-flex flex-wrap gap-1">
-                                                    <?php foreach (array_slice($article['categories'], 0, 2) as $cat): ?>
-                                                        <span class="badge bg-primary-subtle text-primary fw-normal">
-                                                            <?= esc($cat['name']) ?>
-                                                        </span>
-                                                    <?php endforeach; ?>
+                                                    <?php if (!empty($article['categories'])): ?>
+                                                        <?php foreach (array_slice($article['categories'], 0, 2) as $cat): ?>
+                                                            <span class="badge bg-primary-subtle text-primary fw-normal">
+                                                                <?= esc($cat['name']) ?>
+                                                            </span>
+                                                        <?php endforeach; ?>
+                                                    <?php endif; ?>
                                                 </div>
 
                                                 <h5 class="article-title mb-2">
-                                                    <a href="<?= esc($article['url']) ?>" class="text-dark text-decoration-none stretched-link">
-                                                        <?= esc($article['title']) ?>
+                                                    <a href="<?= esc($article['url']) ?>"
+                                                        class="text-dark text-decoration-none stretched-link">
+                                                        <?= $article['title'] ?>
                                                     </a>
                                                 </h5>
 
                                                 <p class="article-excerpt text-muted mb-3 d-none d-sm-block">
-                                                    <?= esc($article['excerpt']) ?>
+                                                    <?= $article['excerpt'] ?>
                                                 </p>
 
-                                                <!-- Meta Info -->
+                                                <!-- Meta -->
                                                 <div class="mt-auto pt-2 border-top-mobile">
                                                     <div class="d-flex flex-wrap align-items-center gap-3 text-muted small">
+
                                                         <span class="d-flex align-items-center">
                                                             <i class="bi bi-calendar3 me-1 text-primary"></i>
-                                                            <?= date('d M Y', strtotime($article['date'])) ?>
+                                                            <?= esc($article['date']) ?>
                                                         </span>
+
                                                         <span class="d-flex align-items-center">
                                                             <i class="bi bi-person me-1 text-primary"></i>
-                                                            <span class="text-truncate" style="max-width: 120px;"><?= esc($article['author']) ?></span>
+                                                            <span class="text-truncate" style="max-width:140px;">
+                                                                <?= esc($article['author']) ?>
+                                                            </span>
                                                         </span>
+
                                                     </div>
                                                 </div>
+
                                             </div>
+                                            <!-- end content -->
+
                                         </div>
                                     </div>
                                 </article>
