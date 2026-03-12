@@ -145,53 +145,65 @@ class Contact extends Controller
         );
 
         $message = "
-        <html>
-        <head>
-            <style>
-                body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-                .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-                .header { background-color: #007bff; color: white; padding: 20px; text-align: center; }
-                .content { background-color: #f8f9fa; padding: 20px; margin-top: 20px; }
-                .field { margin-bottom: 15px; }
-                .label { font-weight: bold; color: #555; }
-                .value { margin-top: 5px; padding: 10px; background-color: white; border-left: 3px solid #007bff; }
-            </style>
-        </head>
-        <body>
+            <html>
+            <head>
+                <style>
+                    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+                    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+                    .header { background-color: #007bff; color: white; padding: 20px; text-align: center; }
+                    .content { background-color: #f8f9fa; padding: 20px; margin-top: 20px; }
+                    .field { margin-bottom: 15px; }
+                    .label { font-weight: bold; color: #555; }
+                    .value { margin-top: 5px; padding: 10px; background-color: white; border-left: 3px solid #007bff; }
+                </style>
+            </head>
+            <body>
+
             <div class='container'>
-                <div class='header'>
-                    <h2>New Contact Form Submission All Data International</h2>
-                </div>
-                <div class='content'>
-                    <div class='field'>
-                        <div class='label'>Name:</div>
-                        <div class='value'>{$data['first_name']} {$data['last_name']}</div>
-                    </div>
-                    <div class='field'>
-                        <div class='label'>Email:</div>
-                        <div class='value'>{$data['email']}</div>
-                    </div>
-                    <div class='field'>
-                        <div class='label'>Phone:</div>
-                        <div class='value'>" . ($data['phone'] ?: 'Not provided') . "</div>
-                    </div>
-                    <div class='field'>
-                        <div class='label'>Company:</div>
-                        <div class='value'>" . ($data['company'] ?: 'Not provided') . "</div>
-                    </div>
-                    <div class='field'>
-                        <div class='label'>Subject:</div>
-                        <div class='value'>{$data['subject']}</div>
-                    </div>
-                    <div class='field'>
-                        <div class='label'>Message:</div>
-                        <div class='value'>" . nl2br(htmlspecialchars($data['message'])) . "</div>
-                    </div>
-                </div>
+
+            <div class='header'>
+            <h2>New Contact Form Submission - All Data International</h2>
             </div>
-        </body>
-        </html>
-        ";
+
+            <div class='content'>
+
+            <div class='field'>
+            <div class='label'>Name:</div>
+            <div class='value'>" . htmlspecialchars($data['first_name']) . " " . htmlspecialchars($data['last_name']) . "</div>
+            </div>
+
+            <div class='field'>
+            <div class='label'>Email:</div>
+            <div class='value'>" . htmlspecialchars($data['email']) . "</div>
+            </div>
+
+            <div class='field'>
+            <div class='label'>Phone:</div>
+            <div class='value'>" . htmlspecialchars($data['phone'] ?? 'Not provided') . "</div>
+            </div>
+
+            <div class='field'>
+            <div class='label'>Company:</div>
+            <div class='value'>" . htmlspecialchars($data['company'] ?? 'Not provided') . "</div>
+            </div>
+
+            <div class='field'>
+            <div class='label'>Subject:</div>
+            <div class='value'>" . htmlspecialchars($data['subject']) . "</div>
+            </div>
+
+            <div class='field'>
+            <div class='label'>Message:</div>
+            <div class='value'>" . nl2br(htmlspecialchars($data['message'])) . "</div>
+            </div>
+
+            </div>
+
+            </div>
+
+            </body>
+            </html>
+            ";
 
         $email->setMessage($message);
         $email->setMailType('html');
@@ -209,47 +221,66 @@ class Contact extends Controller
 
         $email->setSubject('Thank you for contacting us');
 
+        $logoUrl = base_url('assets/images/logo_coloured.png');
+
         $autoReply = "
-        <html>
-        <head>
-            <style>
-                body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-                .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-                .header { background-color: #28a745; color: white; padding: 20px; text-align: center; }
-                .content { padding: 20px; }
-            </style>
-        </head>
-        <body>
+            <html>
+            <head>
+                <style>
+                    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+                    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+                    .header { background-color: #28a745; color: white; padding: 20px; text-align: center; }
+                    .content { padding: 20px; }
+                    .box { background:#f8f9fa; padding:15px; border-left:4px solid #28a745; margin-top:10px;}
+                </style>
+            </head>
+            <body>
+
             <div class='container'>
-                <div class='header'>
-                    <h2>Thank You for Contacting Us!</h2>
-                </div>
-                <div class='content'>
-                    <p>Dear {$data['first_name']} {$data['last_name']},</p>
-                    <p>Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.</p>
 
-                    <p><strong>Your message details:</strong></p>
-                    <p><strong>Subject:</strong> {$data['subject']}</p>
-                    <p><strong>Message:</strong><br>
-                        " . nl2br(htmlspecialchars($data['message'])) . "
-                    </p>
-
-                    <br>
-                    <p>Best regards,<br>
-                    All Data International Team
-                    </p>
-
-                    <img 
-                        src='{$logoUrl}'
-                        alt='All Data International'
-                        width='140'
-                        style='margin-top:10px; display:block;'
-                    >
-                </div>
+            <div class='header'>
+            <h2>Thank You for Contacting Us!</h2>
             </div>
-        </body>
-        </html>
-        ";
+
+            <div class='content'>
+
+            <p>Dear " . htmlspecialchars($data['first_name']) . " " . htmlspecialchars($data['last_name']) . ",</p>
+
+            <p>
+            Thank you for reaching out to us. We have received your message and our team will respond as soon as possible.
+            </p>
+
+            <p><strong>Your message details:</strong></p>
+
+            <div class='box'>
+            <p><strong>Subject:</strong> " . htmlspecialchars($data['subject']) . "</p>
+
+            <p><strong>Message:</strong><br>
+            " . nl2br(htmlspecialchars($data['message'])) . "
+            </p>
+            </div>
+
+            <br>
+
+            <p>
+            Best regards,<br>
+            <strong>All Data International Team</strong>
+            </p>
+
+            <img 
+            src='" . $logoUrl . "'
+            alt='All Data International'
+            width='140'
+            style='margin-top:10px; display:block;'
+            >
+
+            </div>
+
+            </div>
+
+            </body>
+            </html>
+            ";
 
         $email->setMessage($autoReply);
         $email->setMailType('html');
