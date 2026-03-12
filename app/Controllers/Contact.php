@@ -8,31 +8,57 @@ class Contact extends Controller
 {
     public function index()
     {
-        return view('pages/contact_us');
+        // Random captcha
+        $num1 = rand(1, 9);
+        $num2 = rand(1, 9);
+
+        session()->set('captcha_answer', $num1 + $num2);
+
+        return view('pages/contact_us', [
+            'num1' => $num1,
+            'num2' => $num2,
+            'form_time' => time()
+        ]);
     }
 
     public function submit()
     {
+
         // ========================================
-        // CEK HONEYPOT - LETAKKAN PALING ATAS
+        // HONEYPOT CHECK
         // ========================================
         $honeypot = $this->request->getPost('website');
 
-        // Jika field website terisi (bot akan mengisinya, manusia tidak)
         if (!empty($honeypot)) {
-            // Catat spam untuk monitoring
-            log_message('warning', 'Spam detected - Honeypot triggered from IP: ' . $this->request->getIPAddress());
 
-            // Redirect dengan pesan sukses PALSU (agar bot tidak tahu)
+            log_message(
+                'warning',
+                'Spam detected - Honeypot triggered from IP: ' . $this->request->getIPAddress()
+            );
+
             return redirect()->to('/contact')
-                ->with('success', 'Terima kasih! Pesan Anda telah terkirim.');
-
-            // BISA JUGA: redirect ke halaman sukses tanpa pesan
-            // return redirect()->to('/contact/success');
+                ->with('success', 'Thank you! Your message has been submitted.');
         }
+
+        // ========================================
+        // TIME TRAP CHECK
+        // ========================================
+        $formTime = $this->request->getPost('form_time');
+
+        if ($formTime && (time() - $formTime) < 5) {
+
+            log_message(
+                'warning',
+                'Spam detected - Form submitted too fast from IP: ' . $this->request->getIPAddress()
+            );
+
+            return redirect()->to('/contact');
+        }
+
+        // ========================================
+        // VALIDATION
         // ========================================
 
-        // Validasi input
         $validation = \Config\Services::validation();
 
         $validation->setRules([
@@ -42,14 +68,40 @@ class Contact extends Controller
             'phone'      => 'required|min_length[10]|max_length[15]',
             'company'    => 'required|max_length[100]',
             'subject'    => 'required|min_length[3]|max_length[200]',
-            'message'    => 'required|max_length[1000]'
+            'message'    => 'required|max_length[1000]',
+            'captcha'    => 'required'
         ]);
 
         if (!$validation->withRequest($this->request)->run()) {
-            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+
+            return redirect()->back()
+                ->withInput()
+                ->with('errors', $validation->getErrors());
         }
 
-        // Ambil data dari form
+        // ========================================
+        // CAPTCHA VALIDATION
+        // ========================================
+
+        $captchaInput  = $this->request->getPost('captcha');
+        $captchaAnswer = session()->get('captcha_answer');
+
+        if ($captchaInput != $captchaAnswer) {
+
+            return redirect()->back()
+                ->withInput()
+                ->with('errors', [
+                    'captcha' => 'Incorrect captcha answer.'
+                ]);
+        }
+
+        // Hapus captcha session setelah dipakai
+        session()->remove('captcha_answer');
+
+        // ========================================
+        // AMBIL DATA
+        // ========================================
+
         $data = [
             'first_name' => $this->request->getPost('first_name'),
             'last_name'  => $this->request->getPost('last_name'),
@@ -60,25 +112,37 @@ class Contact extends Controller
             'message'    => $this->request->getPost('message')
         ];
 
-        // Send email
+        // ========================================
+        // SEND EMAIL
+        // ========================================
+
         if ($this->sendEmail($data)) {
+
             return redirect()->route('contact')
                 ->with('success', 'Your message has been successfully submitted. Our team will contact you shortly.');
         }
 
         return redirect()->back()
             ->withInput()
-            ->with('error', 'Sorry, there was an error sending your message. Please try again later.');
+            ->with('error', 'Sorry, there was an error sending your message.');
     }
+
 
     private function sendEmail($data)
     {
+
         $email = \Config\Services::email();
 
-        // Email ke admin (receiver)
-        $email->setFrom('alldatainternational2@gmail.com', 'Contact Form - ' . $data['first_name'] . ' ' . $data['last_name']);
+        $email->setFrom(
+            'alldatainternational2@gmail.com',
+            'Contact Form - ' . $data['first_name'] . ' ' . $data['last_name']
+        );
+
         $email->setTo('devops@alldataint.com');
-        $email->setSubject('New Contact Form Submission: ' . $data['subject']);
+
+        $email->setSubject(
+            'New Contact Form Submission: ' . $data['subject']
+        );
 
         $message = "
         <html>
@@ -132,18 +196,20 @@ class Contact extends Controller
         $email->setMessage($message);
         $email->setMailType('html');
 
-        // Kirim email ke admin
         $adminEmailSent = $email->send();
 
-        // Kirim auto-reply ke pengirim
+        // ========================================
+        // AUTO REPLY
+        // ========================================
+
         $email->clear();
+
         $email->setFrom('alldatainternational2@gmail.com', 'All Data International');
         $email->setTo($data['email']);
-        $email->setSubject('Thank you for contacting us - ' . $data['subject']);
 
-        $logoUrl = base_url('assets/images/logo_coloured.png');
+        $email->setSubject('Thank you for contacting us');
 
-        $autoReplyMessage = "
+        $autoReply = "
         <html>
         <head>
             <style>
@@ -185,9 +251,9 @@ class Contact extends Controller
         </html>
         ";
 
-
-        $email->setMessage($autoReplyMessage);
+        $email->setMessage($autoReply);
         $email->setMailType('html');
+
         $autoReplySent = $email->send();
 
         return $adminEmailSent && $autoReplySent;

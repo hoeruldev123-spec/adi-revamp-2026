@@ -198,6 +198,8 @@
                                 tabindex="-1">
                         </div>
 
+                        <input type="hidden" name="form_time" value="<?= $form_time ?>">
+
                         <div class="row g-4">
 
                             <div class="col-md-6">
@@ -300,6 +302,29 @@
                                         By submitting this form, you agree that we'll process data according to our
                                         <a href="<?= base_url('privacy-policy') ?>" class="text-decoration-none">Privacy Policy</a>.
                                     </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating">
+
+                                    <input type="text"
+                                        class="form-control <?= session('errors.captcha') ? 'is-invalid' : '' ?>"
+                                        id="captcha"
+                                        name="captcha"
+                                        placeholder="Captcha"
+                                        required>
+
+                                    <label for="captcha">
+                                        What is <?= $num1 ?> + <?= $num2 ?> ?
+                                    </label>
+
+                                    <?php if (session('errors.captcha')) : ?>
+                                        <div class="invalid-feedback">
+                                            <?= session('errors.captcha') ?>
+                                        </div>
+                                    <?php endif; ?>
+
                                 </div>
                             </div>
 
