@@ -195,19 +195,6 @@ RewriteRule ^apa-itu-salesforce-customer360/?$ /articles/apa-itu-salesforce-cust
   RewriteRule ^ - [L]
 
   # -------------------------
-  # WHITELIST CI4 ROUTES
-  # -------------------------
-  RewriteRule ^solutions/ - [L]
-  RewriteRule ^services/ - [L]
-  RewriteRule ^company/ - [L]
-  RewriteRule ^resources/ - [L]
-  RewriteRule ^contact/ - [L]
-  RewriteRule ^contact-us/ - [L]
-  RewriteRule ^search/ - [L]
-  RewriteRule ^home/ - [L]
-  RewriteRule ^public/ - [L]
-
-  # -------------------------
   # CI4 FRONT CONTROLLER
   # -------------------------
   RewriteCond %{REQUEST_URI} !^/articles/ [NC]

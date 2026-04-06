@@ -13,8 +13,7 @@ $routes->match(['get', 'head'], '/principal', 'HomeController::principal_card');
 
 // Solutions dengan submenu sesuai dropdown
 $routes->group('solutions', function ($routes) {
-    $routes->match(['get', 'head'], '/', 'SolutionsController::index');
-
+    // $routes->match(['get', 'head'], '/', 'SolutionsController::index');
     $routes->match(['get', 'head'], 'fmcg', 'SolutionsController::fmcg');
     $routes->match(['get', 'head'], 'telecom', 'SolutionsController::telecom');
     $routes->match(['get', 'head'], 'government', 'SolutionsController::government');
@@ -23,7 +22,7 @@ $routes->group('solutions', function ($routes) {
 
 // Services - sesuai navbar (tanpa dropdown)
 $routes->group('services', function ($routes) {
-    $routes->match(['get', 'head'], '/', 'ServicesController::index');
+    // $routes->match(['get', 'head'], '/', 'ServicesController::index');
 
     // Sub halaman Services
     $routes->match(['get', 'head'], 'consulting', 'ServicesController::consulting');
@@ -41,10 +40,11 @@ $routes->group('company', function ($routes) {
     $routes->match(['get', 'head'], 'our-competencies', 'CompanyController::ourCompetencies');
     $routes->match(['get', 'head'], 'team', 'CompanyController::team');
 });
+
 $routes->match(['get', 'head'], '/company/contact', 'ContactController::index');
 
 // Resources Routes
-$routes->match(['get', 'head'], 'resources', 'ResourcesController::index');
+// $routes->match(['get', 'head'], 'resources', 'ResourcesController::index');
 // $routes->match(['get','head'], 'resources/articles', 'ResourcesController::articles');
 // $routes->match(['get','head'], 'resources/events', 'ResourcesController::events');
 
