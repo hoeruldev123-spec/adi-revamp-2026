@@ -183,6 +183,10 @@ RewriteRule ^apa-itu-salesforce-customer360/?$ /articles/apa-itu-salesforce-cust
   # -------------------------
   RewriteRule ^(assets|css|js|images|uploads)(/.*)?$ public/$0 [L]
 
+  # 🔥 FIX INDEX.PHP (TAMBAHKAN INI)
+  RewriteCond %{THE_REQUEST} \s/index\.php [NC]
+  RewriteRule ^index\.php/?(.*)$ /$1 [R=301,L]
+
   # -------------------------
   # ALLOW EXISTING FILES/DIRS
   # -------------------------
