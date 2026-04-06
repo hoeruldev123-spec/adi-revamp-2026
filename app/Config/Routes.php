@@ -22,7 +22,7 @@ $routes->group('solutions', function ($routes) {
 
 // Services - sesuai navbar (tanpa dropdown)
 $routes->group('services', function ($routes) {
-    // $routes->match(['get', 'head'], '/', 'ServicesController::index');
+    $routes->match(['get', 'head'], '/', 'ServicesController::index');
 
     // Sub halaman Services
     $routes->match(['get', 'head'], 'consulting', 'ServicesController::consulting');
