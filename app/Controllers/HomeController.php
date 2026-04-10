@@ -121,6 +121,14 @@ class HomeController extends BaseController
     {
         return [
             [
+                'logo' => 'fif-group-icon.png',
+                'text' => 'All Data International sangat responsif, komunikatif, dan profesional dalam project management serta teknis, mampu memberikan solusi yang efektif, dengan kolaborasi yang baik dan sangat direkomendasikan untuk kerja sama selanjutnya.',
+                'name' => 'FIF',
+                'position' => 'Customer Relationship Management Analyst',
+                'avatar' => 'icons8-male-user.svg',
+                'video' => null
+            ],
+            [
                 'logo' => 'bpjs-ketenagakerjaan.png',
                 'text' => 'Tim All Data menunjukkan kemampuan yang sangat baik dalam penyelesaian masalah dengan komunikasi yang lancar. Tim PMO dan teknis bekerja profesional serta memiliki pemahaman produk yang mendalam sepanjang proyek.',
                 'name' => 'BPJSTK',
