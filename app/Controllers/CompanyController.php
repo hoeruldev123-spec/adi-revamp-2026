@@ -63,7 +63,7 @@ class CompanyController extends BaseController
             ['logo' => 'bri.webp', 'alt' => 'bri', 'name' => 'Bank BRI'],
             ['logo' => 'bsi.webp', 'alt' => 'bsi', 'name' => 'Bank Syariah Indonesia (BSI)'],
             ['logo' => 'dbs.webp', 'alt' => 'dbs', 'name' => 'DBS Bank'],
-            ['logo' => 'fif-group.png', 'alt' => 'FIF Group', 'name' => 'FIF Group'],
+            ['logo' => 'fif-group-icon.png', 'alt' => 'FIF Group', 'name' => 'FIF Group'],
             ['logo' => 'gtech-digital-asia.webp', 'alt' => 'gtech digital asia', 'name' => 'GTech Digital Asia'],
             ['logo' => 'ifg.webp', 'alt' => 'ifg', 'name' => 'IFG (Indonesia Financial Group)'],
             ['logo' => 'kai.webp', 'alt' => 'kai', 'name' => 'KAI (Kereta Api Indonesia)'],
