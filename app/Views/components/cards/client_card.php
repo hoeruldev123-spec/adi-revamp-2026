@@ -28,7 +28,7 @@
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bri.webp'); ?>" height="30" alt="bri">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bsi.webp'); ?>" height="30" alt="bsi">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/dbs.webp'); ?>" height="30" alt="dbs">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/fif-group.png'); ?>" height="30" alt="FIF Group">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/fif-group-icon.png'); ?>" height="30" alt="FIF Group">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/gtech-digital-asia.webp'); ?>" height="30" alt="gtech digital asia">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/ifg.webp'); ?>" height="30" alt="ifg">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kai.webp'); ?>" height="30" alt="kai">
@@ -59,7 +59,7 @@
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bri.webp'); ?>" height="30" alt="bri">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/bsi.webp'); ?>" height="30" alt="bsi">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/dbs.webp'); ?>" height="30" alt="dbs">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/fif-group.png'); ?>" height="30" alt="FIF Group">
+              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/fif-group-icon.png'); ?>" height="30" alt="FIF Group">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/gtech-digital-asia.webp'); ?>" height="30" alt="gtech digital asia">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/ifg.webp'); ?>" height="30" alt="ifg">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kai.webp'); ?>" height="30" alt="kai">
