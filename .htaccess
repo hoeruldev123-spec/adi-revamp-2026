@@ -1,5 +1,8 @@
 Options -Indexes
 
+# Redirect Sitemap Lama
+Redirect 301 /sitemap_index.xml /articles/sitemap_index.xml
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
