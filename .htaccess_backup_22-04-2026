@@ -8,7 +8,7 @@ Redirect 301 /sitemap_index.xml /articles/sitemap_index.xml
   RewriteBase /
 
   # -------------------------
-  # 1. Canonical HTTPS + non-www
+  # Canonical HTTPS + non-www
   # -------------------------
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
@@ -22,7 +22,7 @@ Redirect 301 /sitemap_index.xml /articles/sitemap_index.xml
   # -------------------------
   
   # ============================================
-  # 2. REDIRECT 301 DARI ROOT KE /ARTICLES/ (148 RULES)
+  # REDIRECT 301 DARI ROOT KE /ARTICLES/ (148 RULES)
   # Generated from sitemap 2026-02-27
   # ============================================
 
@@ -174,34 +174,32 @@ RewriteRule ^dataiku-llm-mesh-fondasi-untuk-genai-dan-ai-agents-di-skala-enterpr
 RewriteRule ^dataiku-the-smart-universal-ai-platform/?$ /articles/dataiku-the-smart-universal-ai-platform/ [R=301,L]
 RewriteRule ^apa-itu-salesforce-customer360/?$ /articles/apa-itu-salesforce-customer360/ [R=301,L]
 
-  # Redirect sitemap lama
-  RewriteRule ^sitemap_index\.xml$ /articles/sitemap_index.xml [R=301,L]
-  RewriteRule ^sitemap\.xml$ /articles/sitemap_index.xml [R=301,L]
+  # -------------------------
+  # WORDPRESS SECTION - PRIORITAS KEDUA
+  # Semua URL yang mengandung /articles/ langsung ke WordPress
+  # -------------------------
+  RewriteRule ^articles/ - [L]
+  RewriteRule ^articles$ - [L]
 
-  # ============================================
-  # 3. WORDPRESS HANDLER (FIX - INI YANG DIPERBAIKI)
-  # ============================================
-  # Jika URL mengandung /articles/, kirim ke WordPress index.php
-  RewriteCond %{REQUEST_URI} ^/articles/ [OR]
-  RewriteCond %{REQUEST_URI} ^/articles$
-  RewriteRule ^ /articles/index.php [L]
-
-  # ============================================
-  # 4. CI4 FRONT CONTROLLER
-  # ============================================
-  # Static assets
+  # -------------------------
+  # STATIC ASSETS
+  # -------------------------
   RewriteRule ^(assets|css|js|images|uploads)(/.*)?$ public/$0 [L]
 
-  # Hapus index.php dari URL CI4
+  # 🔥 FIX INDEX.PHP (TAMBAHKAN INI)
   RewriteCond %{THE_REQUEST} \s/index\.php [NC]
   RewriteRule ^index\.php/?(.*)$ /$1 [R=301,L]
 
-  # Existing files/directories
+  # -------------------------
+  # ALLOW EXISTING FILES/DIRS
+  # -------------------------
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # CI4 routing (hanya jika bukan /articles/)
+  # -------------------------
+  # CI4 FRONT CONTROLLER
+  # -------------------------
   RewriteCond %{REQUEST_URI} !^/articles/ [NC]
   RewriteCond %{REQUEST_URI} !^/articles$ [NC]
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -210,4 +208,7 @@ RewriteRule ^apa-itu-salesforce-customer360/?$ /articles/apa-itu-salesforce-cust
 
 </IfModule>
 
+# -------------------------
+# Handle 404 errors
+# -------------------------
 ErrorDocument 404 /public/index.php
