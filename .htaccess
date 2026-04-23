@@ -175,8 +175,8 @@ RewriteRule ^dataiku-the-smart-universal-ai-platform/?$ /articles/dataiku-the-sm
 RewriteRule ^apa-itu-salesforce-customer360/?$ /articles/apa-itu-salesforce-customer360/ [R=301,L]
 
   # Redirect sitemap lama
-  RewriteRule ^sitemap_index\.xml$ /articles/sitemap_index.xml [R=301,L]
-  RewriteRule ^sitemap\.xml$ /articles/sitemap_index.xml [R=301,L]
+  # RewriteRule ^sitemap_index\.xml$ /articles/sitemap_index.xml [R=301,L]
+  # RewriteRule ^sitemap\.xml$ /articles/sitemap_index.xml [R=301,L]
 
   # ============================================
   # 3. WORDPRESS HANDLER (FIX - INI YANG DIPERBAIKI)
