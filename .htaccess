@@ -178,6 +178,11 @@ RewriteRule ^apa-itu-salesforce-customer360/?$ /articles/apa-itu-salesforce-cust
   RewriteRule ^sitemap_index\.xml$ /articles/sitemap_index.xml [R=301,L]
   RewriteRule ^sitemap\.xml$ /articles/sitemap_index.xml [R=301,L]
 
+  # Redirect asset WordPress yang salah path
+  RewriteRule ^wp-content/(.*)$ /articles/wp-content/$1 [R=301,L]
+  RewriteRule ^wp-includes/(.*)$ /articles/wp-includes/$1 [R=301,L]
+
+
   # ============================================
   # 3. WORDPRESS HANDLER (FIX - INI YANG DIPERBAIKI)
   # ============================================
