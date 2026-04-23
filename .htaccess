@@ -182,9 +182,9 @@ RewriteRule ^apa-itu-salesforce-customer360/?$ /articles/apa-itu-salesforce-cust
   # 3. WORDPRESS HANDLER (FIX - INI YANG DIPERBAIKI)
   # ============================================
   # Jika URL mengandung /articles/, kirim ke WordPress index.php
-  RewriteCond %{REQUEST_URI} ^/articles/ [OR]
-  RewriteCond %{REQUEST_URI} ^/articles$
-  RewriteRule ^ - [L]
+  # RewriteCond %{REQUEST_URI} ^/articles/ [OR]
+  # RewriteCond %{REQUEST_URI} ^/articles$
+  # RewriteRule ^ - [L]
 
   # ============================================
   # 4. CI4 FRONT CONTROLLER
