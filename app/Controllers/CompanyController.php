@@ -46,6 +46,11 @@ class CompanyController extends BaseController
         return view('pages/company/our_partners', $data);
     }
 
+    public function partnerDataiku()
+    {
+        return view('pages/partners/dataiku'); // layout untuk Dataiku
+    }
+
     public function ourClients()
     {
         $clients = [

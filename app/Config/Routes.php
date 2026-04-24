@@ -33,13 +33,23 @@ $routes->group('services', function ($routes) {
 });
 
 // Company dengan submenu sesuai dropdown
-$routes->group('company', function ($routes) {
-    $routes->match(['get', 'head'], 'about-us', 'CompanyController::about');
-    $routes->match(['get', 'head'], 'our-partners', 'CompanyController::ourPartners');
-    $routes->match(['get', 'head'], 'our-clients', 'CompanyController::ourClients');
-    $routes->match(['get', 'head'], 'our-competencies', 'CompanyController::ourCompetencies');
-    $routes->match(['get', 'head'], 'team', 'CompanyController::team');
-});
+// Halaman statis tanpa group company
+$routes->match(['get', 'head'], 'about-us', 'CompanyController::about');
+
+$routes->match(['get', 'head'], 'our-partners', 'CompanyController::ourPartners');
+$routes->match(['get', 'head'], 'our-partners/dataiku', 'CompanyController::partnerDataiku');
+
+$routes->match(['get', 'head'], 'our-clients', 'CompanyController::ourClients');
+$routes->match(['get', 'head'], 'our-competencies', 'CompanyController::ourCompetencies');
+$routes->match(['get', 'head'], 'team', 'CompanyController::team');
+
+// $routes->group('company', function ($routes) {
+//     $routes->match(['get', 'head'], 'about-us', 'CompanyController::about');
+//     $routes->match(['get', 'head'], 'our-partners', 'CompanyController::ourPartners');
+//     $routes->match(['get', 'head'], 'our-clients', 'CompanyController::ourClients');
+//     $routes->match(['get', 'head'], 'our-competencies', 'CompanyController::ourCompetencies');
+//     $routes->match(['get', 'head'], 'team', 'CompanyController::team');
+// });
 
 $routes->match(['get', 'head'], '/company/contact', 'ContactController::index');
 
