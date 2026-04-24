@@ -32,8 +32,47 @@
     gtag('config', 'G-KXMWEJ37TX');
 </script>
 
+<?php
+$url = current_url();
+$query = $_GET ?? [];
+
+// DETEKSI HALAMAN ARTIKEL DETAIL
+$isArticleDetail = preg_match('#^https://alldataint\.com/articles/[^/]+/?$#', $url);
+
+// DEFAULT
+$noindex = false;
+$canonical = $url;
+
+// KONDISI YANG HARUS NOINDEX
+if (
+    strpos($url, '/feed/') !== false ||
+    strpos($url, '/page/') !== false ||
+    strpos($url, '/author/') !== false ||
+    strpos($url, '/tag/') !== false ||
+    strpos($url, '/category/') !== false ||
+    strpos($url, '/index.php/') !== false ||
+    strpos($url, '/blog/') !== false ||
+    !empty($query)
+) {
+    $noindex = true;
+    $canonical = base_url('articles');
+}
+
+// KHUSUS ARTIKEL DETAIL → BOLEH INDEX
+if ($isArticleDetail) {
+    $noindex = false;
+    $canonical = $url;
+}
+?>
+
 <title><?= esc($title ?? 'All Data International') ?></title>
-<link rel="canonical" href="<?= current_url() ?>">
+<link rel="canonical" href="<?= $canonical ?>">
+
+<?php if ($noindex): ?>
+    <meta name="robots" content="noindex, follow">
+<?php else: ?>
+    <meta name="robots" content="index, follow">
+<?php endif; ?>
 
 <meta name="description" content="<?= esc($meta_description ?? 'Solusi Data dan Teknologi untuk Bisnis Modern') ?>">
 <meta name="keywords" content="<?= esc($meta_keywords ?? 'Data, Big Data, AI, Cloud, Integration') ?>">
