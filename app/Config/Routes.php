@@ -70,6 +70,9 @@ $routes->match(['get', 'head'], 'resources/articles/page/1', function () {
     return redirect()->to('resources/articles', 301);
 });
 
+// Events
+$routes->get('/events/aws-end-to-end-data-solution', 'Events::awsEndToEndDataSolution');
+
 // Contact
 $routes->match(['get', 'head'], '/contact', 'Contact::index', ['as' => 'contact']);
 $routes->match(['get', 'head'], '/contact-us', 'Contact::index'); // Alternatif
