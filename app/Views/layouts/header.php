@@ -39,12 +39,16 @@ $query = $_GET ?? [];
 // DETEKSI HALAMAN ARTIKEL DETAIL
 $isArticleDetail = preg_match('#^https://alldataint\.com/articles/[^/]+/?$#', $url);
 
+// DETEKSI HALAMAN ARTIKEL DETAIL
+$isArticleDetail = preg_match('#^https://alldataint\.com/articles/[^/]+/?$#', $url);
+
 // DEFAULT
 $noindex = false;
 $canonical = $url;
 
 // KONDISI YANG HARUS NOINDEX
 if (
+    strpos($url, '/resources/articles') !== false ||  // <---- TAMBAHKAN BARIS INI
     strpos($url, '/feed/') !== false ||
     strpos($url, '/page/') !== false ||
     strpos($url, '/author/') !== false ||
