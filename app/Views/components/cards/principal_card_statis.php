@@ -74,13 +74,18 @@
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
                                     <div class="principal-statis-logo">
-                                        <img src="<?= base_url('assets/images/principals/logo_dataiku.png') ?>" alt="Dataiku" class="img-fluid">
+                                        <img src="<?= base_url('assets/images/principals/Dataiku-logo.png') ?>" alt="Dataiku" class="img-fluid">
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <p class="principal-statis-description text-muted">
                                         Collaborative AI platform to build, deploy, and manage enterprise machine learning.
                                     </p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                                    <a href="<?= base_url('our-partners/dataiku'); ?>" class="btn btn-primary btn-sm">
+                                        Learn More
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -213,7 +218,7 @@
                             </div>
                         </div>
 
-                        <!-- New Card 8 -->
+                        <!-- AWS -->
                         <div class="col-lg-6 col-md-6 principal-statis-item">
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
@@ -225,6 +230,11 @@
                                     <p class="principal-statis-description text-muted">
                                         World's most comprehensive and broadly adopted cloud platform for scalable computing, storage, and AI services.
                                     </p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                                    <a href="https://aws.alldataint.com/" class="btn btn-primary btn-sm">
+                                        Learn More
+                                    </a>
                                 </div>
                             </div>
                         </div>

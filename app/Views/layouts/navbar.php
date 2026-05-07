@@ -115,56 +115,58 @@ $segment2 = getSafeSegment(2);
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-between
-            <?= ($segment1 == 'company' || $segment1 == 'about') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
-            href="<?= base_url('company') ?>"
+    <?= ($segment1 == 'about-us' || $segment1 == 'our-partners' || $segment1 == 'our-clients' || $segment1 == 'our-competencies') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
+            href="javascript:void(0)"
             id="companyDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false">
             <span>Company</span>
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
-              class="ms-1 <?= ($segment1 == 'company' || $segment1 == 'about') ? 'text-primary' : '' ?>">
+              class="ms-1 <?= ($segment1 == 'about-us' || $segment1 == 'our-partners' || $segment1 == 'our-clients' || $segment1 == 'our-competencies') ? 'text-primary' : '' ?>">
               <path d="M7.646 10.854a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0-.708-.708L8 9.793 4.354 6.146a.5.5 0 1 0-.708.708z" />
             </svg>
           </a>
           <ul class="dropdown-menu border-0 shadow-lg rounded-3 py-2 mt-1 mt-lg-2" aria-labelledby="companyDropdown">
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our-partners') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('company/our-partners'); ?>">
+
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment1 == 'our-partners') ? 'active bg-primary text-white' : '' ?>"
+                href="<?= base_url('our-partners'); ?>">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
-                  class="me-2 <?= ($segment2 == 'our-partners') ? 'text-white' : 'text-muted' ?>">
+                  class="me-2 <?= ($segment1 == 'our-partners') ? 'text-white' : 'text-muted' ?>">
                   <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z" />
                   <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
                 </svg>
                 Our Partners
               </a></li>
 
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our-clients') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('company/our-clients'); ?>">
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment1 == 'our-clients') ? 'active bg-primary text-white' : '' ?>"
+                href="<?= base_url('our-clients'); ?>">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
-                  class="me-2 <?= ($segment2 == 'our-clients') ? 'text-white' : 'text-muted' ?>">
+                  class="me-2 <?= ($segment1 == 'our-clients') ? 'text-white' : 'text-muted' ?>">
                   <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
                 </svg>
                 Our Clients
               </a></li>
 
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'our-competencies') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('company/our-competencies'); ?>">
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment1 == 'our-competencies') ? 'active bg-primary text-white' : '' ?>"
+                href="<?= base_url('our-competencies'); ?>">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
-                  class="me-2 <?= ($segment2 == 'our-competencies') ? 'text-white' : 'text-muted' ?>">
+                  class="me-2 <?= ($segment1 == 'our-competencies') ? 'text-white' : 'text-muted' ?>">
                   <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.46 1.46 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.46 1.46 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.46 1.46 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.46 1.46 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.46 1.46 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.46 1.46 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.46 1.46 0 0 1-2.105-.872zM8 10.93a2.93 2.93 0 1 1 0-5.86 2.93 2.93 0 0 1 0 5.858z" />
                 </svg>
                 Our Competencies
               </a></li>
 
-            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'about-us') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('company/about-us'); ?>">
+            <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment1 == 'about-us') ? 'active bg-primary text-white' : '' ?>"
+                href="<?= base_url('about-us'); ?>">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
-                  class="me-2 <?= ($segment2 == 'about-us') ? 'text-white' : 'text-muted' ?>">
+                  class="me-2 <?= ($segment1 == 'about-us') ? 'text-white' : 'text-muted' ?>">
                   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                   <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
                 </svg>
                 About Us
               </a></li>
+
           </ul>
         </li>
 
