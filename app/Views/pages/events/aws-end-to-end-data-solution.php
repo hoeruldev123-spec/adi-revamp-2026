@@ -1751,7 +1751,7 @@
             <div class="agenda-list">
 
                 <div class="agenda-item">
-                    <div class="agenda-time">12.30 - 13.00<br><span>30 minutes</span></div>
+                    <div class="agenda-time">12:30 – 13:00<br><span>30 minutes</span></div>
                     <div class="agenda-card">Open Registration</div>
                 </div>
 
@@ -1769,54 +1769,43 @@
                 </div>
 
                 <div class="agenda-item">
-                    <div class="agenda-time">13:45 – 14:15<br><span>30 minutes</span></div>
+                    <div class="agenda-time">13:45 – 14:30<br><span>45 minutes</span></div>
                     <div class="agenda-card">
-                        Data Storage with AWS<br>
-                        <small>(S3, RDS, Redshift) & Medallion Architecture</small>
+                        Modern Data Architecture on AWS: From Ingestion to Analytics
                     </div>
                 </div>
 
                 <div class="agenda-item">
-                    <div class="agenda-time">14:15 – 14:45<br><span>30 minutes</span></div>
-                    <div class="agenda-card">
-                        Data Engineering with AWS<br>
-                        <small>(Ingestion, Data Quality, Cleansing, Glue, DMS)</small>
-                    </div>
-                </div>
-
-                <div class="agenda-item">
-                    <div class="agenda-time">14:45 – 15:00<br><span>15 minutes</span></div>
+                    <div class="agenda-time">14:30 – 14:45<br><span>15 minutes</span></div>
                     <div class="agenda-card highlight-agenda">Q&A</div>
                 </div>
 
                 <div class="agenda-item">
-                    <div class="agenda-time">15:00 – 15:15<br><span>15 minutes</span></div>
+                    <div class="agenda-time">14:45 – 15:15<br><span>30 minutes</span></div>
+                    <div class="agenda-card">
+                        Implementing Data Governance on AWS with Catalog, RBAC, and Data Masking
+                    </div>
+                </div>
+
+                <div class="agenda-item">
+                    <div class="agenda-time">15:15 – 15:30<br><span>15 minutes</span></div>
                     <div class="agenda-card highlight-agenda">Break</div>
                 </div>
 
                 <div class="agenda-item">
-                    <div class="agenda-time">15:15 – 15:45<br><span>30 minutes</span></div>
+                    <div class="agenda-time">15:30 – 16:15<br><span>45 minutes</span></div>
                     <div class="agenda-card">
-                        Data Governance with AWS<br>
-                        <small>(Metadata, Catalog, RBAC, Masking)</small>
+                        Customer 360: Driving Retention, Segmentation, and Revenue Growth with SageMaker & QuickSight
                     </div>
                 </div>
 
                 <div class="agenda-item">
-                    <div class="agenda-time">15:45 – 16:30<br><span>45 minutes</span></div>
-                    <div class="agenda-card">
-                        Sample Analysis of Customer 360<br>
-                        <small>(Upselling, CLV, Churn, Segmentation with SageMaker & QuickSight)</small>
-                    </div>
-                </div>
-
-                <div class="agenda-item">
-                    <div class="agenda-time">16:30 – 16:35<br><span>5 minutes</span></div>
+                    <div class="agenda-time">16:15 – 16:35<br><span>20 minutes</span></div>
                     <div class="agenda-card highlight-agenda">Q&A</div>
                 </div>
 
                 <div class="agenda-item">
-                    <div class="agenda-time">16:35 – 16:40<br><span>15 minutes</span></div>
+                    <div class="agenda-time">16:20 – 16:35<br><span>15 minutes</span></div>
                     <div class="agenda-card highlight-agenda">
                         Closing & Sales Session<br>
                         <small>(How to Contact All Data)</small>
