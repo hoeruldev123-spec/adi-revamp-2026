@@ -15,7 +15,7 @@
     <meta property="og:type" content="event">
     <meta property="og:site_name" content="All Data International">
     <meta property="og:title" content="End-to-End Data Solution: Customer 360 | All Data International - AWS Partner">
-    <meta property="og:description" content="Diskusi komprehensif tentang arsitektur data modern - dari data pipeline hingga Customer 360, analytics, dan AI/ML. 2 Juni 2026 | Jakarta Selatan">
+    <meta property="og:description" content="Diskusi komprehensif tentang arsitektur data modern - dari data pipeline hingga Customer 360, analytics, dan AI/ML. 10 Juni 2026 | Jakarta Selatan">
     <meta property="og:url" content="https://alldataint.com/events/end-to-end-data-solution">
     <meta property="og:image" content="https://alldataint.com/assets/images/og/event-customer-360.webp">
     <meta property="og:image:width" content="1200">
@@ -1531,7 +1531,7 @@
                         </div>
                         <div>
                             <div class="hero-info-label">Tanggal</div>
-                            <div class="hero-info-value plain">Rabu, 2 Juni 2026</div>
+                            <div class="hero-info-value plain">Rabu, 10 Juni 2026</div>
                         </div>
                     </div>
                     <div class="hero-info-row">
