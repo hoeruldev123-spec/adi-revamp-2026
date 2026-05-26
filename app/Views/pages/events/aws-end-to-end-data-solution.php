@@ -1489,12 +1489,12 @@
                         <div class="hero-speaker-card">
                             <div class="hero-speaker-avatar">
                                 <img
-                                    src="<?= base_url('assets/images/events/speakers/shandy.webp') ?>"
+                                    src="<?= base_url('assets/images/events/speakers/fajar.jpg') ?>"
                                     alt="shandy"
                                     onerror="this.onerror=null; this.src='https://placehold.co/70x70/1a1a2e/FF9900?text=N'">
                             </div>
                             <div>
-                                <div class="hero-speaker-name">Shandy Tsalasa</div>
+                                <div class="hero-speaker-name">Fajar Agustian</div>
                                 <div class="hero-speaker-role">Solution Architect</br>All Data International</div>
                             </div>
                         </div>
