@@ -1499,6 +1499,19 @@
                             </div>
                         </div>
 
+                        <div class="hero-speaker-card">
+                            <div class="hero-speaker-avatar">
+                                <img
+                                    src="<?= base_url('assets/images/events/speakers/aditya.webp') ?>"
+                                    alt="shandy"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/70x70/1a1a2e/FF9900?text=N'">
+                            </div>
+                            <div>
+                                <div class="hero-speaker-name">Aditya Permana</div>
+                                <div class="hero-speaker-role">Platform Squad Lead</br>All Data International</div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="hero-actions">
                         <a href="#overview" class="btn btn-primary">Lihat Detail Event</a>
