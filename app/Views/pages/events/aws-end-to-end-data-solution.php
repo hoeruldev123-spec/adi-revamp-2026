@@ -401,8 +401,12 @@
         }
 
         .nav-brand img {
-            height: 42px;
-            width: auto;
+            height: auto;
+            /* Ubah dari 42px menjadi auto agar tinggi mengikuti lebar */
+            width: 250px;
+            /* Atur lebar spesifik yang Anda inginkan (misal: 250px atau 300px) */
+            max-width: 100%;
+            /* Memastikan gambar tetap responsif di layar HP */
             object-fit: contain;
             transition: all .3s ease;
             filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
@@ -1434,7 +1438,7 @@
         <div class="container">
             <a href="https://alldataint.com/" class="nav-brand">
                 <img
-                    src="<?= base_url('assets/images/events/banner/alldatainternational-aws-logo-light.png') ?>" alr="aldata-aws" />
+                    src="<?= base_url('assets/images/events/banner/alldatainternational-aws-westcon-logo.png') ?>" alr="aldata-aws-westcon" />
             </a>
             <ul class="nav-links">
                 <li><a href="https://alldataint.com/solutions/fmcg">Solutions</a></li>
