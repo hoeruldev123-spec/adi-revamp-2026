@@ -3298,6 +3298,12 @@ section.py-5 {
   transform: translateY(0) scale(1);
 }
 
+.wa-fab svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
 .wa-fab:hover{ transform: translateY(-1px); box-shadow: 0 14px 32px rgba(0,0,0,.22); }
 .wa-fab:active{ transform: translateY(0px); }
 
