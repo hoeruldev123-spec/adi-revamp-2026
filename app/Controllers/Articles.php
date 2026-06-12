@@ -60,6 +60,8 @@ class Articles extends BaseController
 
     private function renderArticles($page, $search, $category, $tag)
     {
+        helper('pagination');
+
         // Get latest 3 articles for featured section
         $latestArticles = $this->getLatestArticles(3);
         $featuredIds = array_column($latestArticles, 'id');
@@ -173,16 +175,36 @@ class Articles extends BaseController
         ]);
 
         $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
         curl_close($ch);
+
+        // Handle HTTP error (e.g., 400 Bad Request for invalid page number)
+        if ($httpCode >= 400) {
+            return [
+                'posts' => [],
+                'total_pages' => 0
+            ];
+        }
 
         $header = substr($response, 0, $headerSize);
         $body   = substr($response, $headerSize);
 
         preg_match('/X-WP-TotalPages:\s*(\d+)/i', $header, $matches);
 
+        $decodedBody = json_decode($body, true);
+
+        // Handle case when WP API returns error response (e.g., category not found)
+        // WP error response format: {"code":"...","message":"...","data":{"status":400}}
+        if (!is_array($decodedBody) || isset($decodedBody['code'])) {
+            return [
+                'posts' => [],
+                'total_pages' => 0
+            ];
+        }
+
         return [
-            'posts' => $this->formatPosts(json_decode($body, true)),
+            'posts' => $this->formatPosts($decodedBody),
             'total_pages' => (int)($matches[1] ?? 1)
         ];
     }
@@ -240,13 +262,18 @@ class Articles extends BaseController
 
     private function formatPosts($posts)
     {
-        if (!is_array($posts)) {
+        if (!is_array($posts) || empty($posts)) {
             return [];
         }
 
         $formatted = [];
 
         foreach ($posts as $post) {
+            // Skip invalid posts
+            if (!isset($post['title']['rendered'])) {
+                continue;
+            }
+
             $excerpt = strip_tags($post['excerpt']['rendered'] ?? '');
             $excerpt = trim($excerpt);
             $excerpt = mb_substr($excerpt, 0, 150) . '...';
