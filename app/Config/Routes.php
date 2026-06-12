@@ -60,11 +60,18 @@ $routes->match(['get', 'head'], '/company/contact', 'ContactController::index');
 
 // Articles Routes
 $routes->match(['get', 'head'], 'resources/articles', 'Articles::index');
+$routes->match(['get', 'head'], 'resources/articles/page', 'Articles::index');
 $routes->match(['get', 'head'], 'resources/articles/page/(:num)', 'Articles::index/$1');
 
 $routes->match(['get', 'head'], 'resources/articles/search', 'Articles::search');
+
+// Category routes (with optional pagination)
 $routes->match(['get', 'head'], 'resources/articles/category/(:segment)', 'Articles::category/$1');
+$routes->match(['get', 'head'], 'resources/articles/category/(:segment)/page/(:num)', 'Articles::category/$1/$2');
+
+// Tag routes (with optional pagination)
 $routes->match(['get', 'head'], 'resources/articles/tag/(:segment)', 'Articles::tag/$1');
+$routes->match(['get', 'head'], 'resources/articles/tag/(:segment)/page/(:num)', 'Articles::tag/$1/$2');
 
 $routes->match(['get', 'head'], 'resources/articles/page/1', function () {
     return redirect()->to('resources/articles', 301);

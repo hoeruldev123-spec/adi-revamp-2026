@@ -27,7 +27,7 @@
                                 <div class="mb-2 d-flex flex-wrap">
                                     <?php if (!empty($article['categories'])): ?>
                                         <?php foreach (array_slice($article['categories'], 0, 2) as $cat): ?>
-                                            <a href="<?= base_url('articles?category=' . $cat['id']) ?>" class="badge bg-primary-subtle text-primary text-decoration-none me-1 mb-1">
+                                            <a href="<?= base_url('resources/articles/category/' . $cat['id']) ?>" class="badge bg-primary-subtle text-primary text-decoration-none me-1 mb-1">
                                                 <?= esc($cat['name']) ?>
                                             </a>
                                         <?php endforeach; ?>

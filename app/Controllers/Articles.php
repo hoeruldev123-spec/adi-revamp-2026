@@ -12,16 +12,54 @@ class Articles extends BaseController
         $this->wpApiUrl = 'https://alldataint.com/articles/wp-json/wp/v2/';
     }
 
-    public function index($page = 1)
+    public function index($page = null)
     {
         helper('pagination');
-        $page = max(1, (int) $page);
+        $page = max(1, (int) ($page ?? 1));
 
         $search   = $this->request->getGet('search') ?? '';
         $category = $this->request->getGet('category') ?? '';
         $tag      = $this->request->getGet('tag') ?? '';
 
+        // Redirect old query-parameter URLs to clean URLs for SEO
+        // e.g., /resources/articles?category=271 → /resources/articles/category/271
+        if ($category || $tag) {
+            $param = $category ? 'category/' . $category : 'tag/' . $tag;
+            $cleanUrl = 'resources/articles/' . $param;
 
+            // If page > 1, append /page/{num}
+            if ($page > 1) {
+                $cleanUrl .= '/page/' . $page;
+            }
+
+            return redirect()->to($cleanUrl, 301);
+        }
+
+        return $this->renderArticles($page, $search, $category, $tag);
+    }
+
+    public function category($categoryId = null, $page = 1)
+    {
+        if (!$categoryId) {
+            return redirect()->to('resources/articles');
+        }
+
+        $page = max(1, (int) $page);
+        return $this->renderArticles($page, '', $categoryId, '');
+    }
+
+    public function tag($tagId = null, $page = 1)
+    {
+        if (!$tagId) {
+            return redirect()->to('resources/articles');
+        }
+
+        $page = max(1, (int) $page);
+        return $this->renderArticles($page, '', '', $tagId);
+    }
+
+    private function renderArticles($page, $search, $category, $tag)
+    {
         // Get latest 3 articles for featured section
         $latestArticles = $this->getLatestArticles(3);
         $featuredIds = array_column($latestArticles, 'id');
@@ -59,14 +97,21 @@ class Articles extends BaseController
             'selectedTag' => $tag
         ];
 
+        // Build segment param for clean URLs (category/{id} or tag/{id})
+        $segmentParam = '';
+        if ($category) {
+            $segmentParam = 'category/' . $category;
+        } elseif ($tag) {
+            $segmentParam = 'tag/' . $tag;
+        }
+
         $pagination = build_pagination_links([
-            'basePath'    => 'resources/articles/page',
-            'currentPage' => $page,
-            'totalPages'  => $totalPages,
-            'queryParams' => [
-                'search'   => $search,
-                'category' => $category,
-                'tag'      => $tag,
+            'basePath'     => 'resources/articles',
+            'currentPage'  => $page,
+            'totalPages'   => $totalPages,
+            'segmentParam' => $segmentParam,
+            'queryParams'  => [
+                'search' => $search,
             ]
         ]);
 

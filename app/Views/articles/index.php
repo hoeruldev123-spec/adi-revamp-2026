@@ -45,7 +45,7 @@
                                 <div class="mb-2 d-flex flex-wrap">
                                     <?php if (!empty($article['categories'])): ?>
                                         <?php foreach (array_slice($article['categories'], 0, 2) as $cat): ?>
-                                            <a href="<?= base_url('articles?category=' . $cat['id']) ?>"
+                                            <a href="<?= base_url('resources/articles/category/' . $cat['id']) ?>"
                                                 class="badge bg-primary-subtle text-primary text-decoration-none me-1 mb-1">
                                                 <?= esc($cat['name']) ?>
                                             </a>
@@ -251,7 +251,7 @@
                             <h6 class="fw-bold mb-3">Categories</h6>
                             <div class="d-flex flex-column gap-1">
                                 <?php foreach (array_slice($categories, 0, 8) as $cat): ?>
-                                    <a href="?category=<?= $cat['id'] ?>" class="text-decoration-none d-flex justify-content-between align-items-center py-2 px-3 rounded category-link <?= $selectedCategory == $cat['id'] ? 'active' : '' ?>">
+                                    <a href="<?= base_url('resources/articles/category/' . $cat['id']) ?>" class="text-decoration-none d-flex justify-content-between align-items-center py-2 px-3 rounded category-link <?= $selectedCategory == $cat['id'] ? 'active' : '' ?>">
                                         <span class="small"><?= esc($cat['name']) ?></span>
                                         <span class="badge rounded-pill bg-light text-dark border fw-normal"><?= $cat['count'] ?></span>
                                     </a>
@@ -269,7 +269,7 @@
                                 </h5>
                                 <div class="d-flex flex-wrap gap-2">
                                     <?php foreach (array_slice($tags, 0, 15) as $tag): ?>
-                                        <a href="<?= base_url('resources/articles?tag=' . $tag['id']) ?>"
+                                        <a href="<?= base_url('resources/articles/tag/' . $tag['id']) ?>"
                                             class="badge text-decoration-none py-2 px-3 rounded-3 tag-item
                                             <?= $selectedTag == $tag['id']
                                                 ? 'bg-primary text-white'
