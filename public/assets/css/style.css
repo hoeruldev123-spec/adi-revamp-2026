@@ -3179,7 +3179,7 @@ section.py-5 {
 @media (min-width: 992px) {
     .sidebar-sticky {
         position: sticky;
-        top: 2rem;
+        top: 6rem;
     }
 }
 

@@ -35,7 +35,7 @@
                                 </div>
 
                                 <h5 class="card-title mb-2 fs-6 fs-lg-5">
-                                    <a href="<?= esc($article['url']) ?>" class="text-dark text-decoration-none stretched-link" target="_blank">
+                                    <a href="<?= esc($article['url']) ?>" class="text-dark text-decoration-none stretched-link">
                                         <?= esc($article['title']) ?>
                                     </a>
                                 </h5>
