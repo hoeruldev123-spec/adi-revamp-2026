@@ -1548,7 +1548,7 @@
                         </div>
                         <div>
                             <div class="hero-info-label">Tanggal</div>
-                            <div class="hero-info-value plain">Rabu, 10 Juni 2026</div>
+                            <div class="hero-info-value plain">Rabu, 30 Juni 2026</div>
                         </div>
                     </div>
                     <div class="hero-info-row">
