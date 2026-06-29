@@ -88,7 +88,7 @@ if ($isArticleDetail) {
 <meta property="og:url" content="<?= current_url() ?>">
 
 <?php
-$ogImage = esc($og_image ?? base_url('assets/images/cloud-hero.webp'));
+$ogImage = esc($og_image ?? base_url('assets/images/logo_coloured.png'));
 ?>
 <meta property="og:image" content="<?= $ogImage ?>">
 <meta property="og:image:width" content="1200">

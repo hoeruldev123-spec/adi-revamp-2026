@@ -73,7 +73,6 @@ class CompanyController extends BaseController
             ['logo' => 'ifg.webp', 'alt' => 'ifg', 'name' => 'IFG (Indonesia Financial Group)'],
             ['logo' => 'kai.webp', 'alt' => 'kai', 'name' => 'KAI (Kereta Api Indonesia)'],
             ['logo' => 'kalbe.webp', 'alt' => 'Kalbe', 'name' => 'Kalbe Farma'],
-            ['logo' => 'kino.webp', 'alt' => 'kino', 'name' => 'Kino Indonesia'],
             ['logo' => 'otsuka.webp', 'alt' => 'otsuka', 'name' => 'Otsuka Indonesia'],
             ['logo' => 'pama.webp', 'alt' => 'pama', 'name' => 'PAMA (Persada Amanah Makmur Abadi)'],
             ['logo' => 'pln-epi.webp', 'alt' => 'pln epi', 'name' => 'PLN EPI (Energi Prima Indonesia)'],

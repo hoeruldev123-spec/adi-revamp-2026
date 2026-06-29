@@ -256,7 +256,7 @@
                         </div>
 
                         <!-- New Card 10 -->
-                        <div class="col-lg-6 col-md-6 principal-statis-item">
+                        <!-- <div class="col-lg-6 col-md-6 principal-statis-item">
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
                                     <div class="principal-statis-logo">
@@ -269,7 +269,7 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>

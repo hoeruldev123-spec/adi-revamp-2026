@@ -33,7 +33,6 @@
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/ifg.webp'); ?>" height="30" alt="ifg">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kai.webp'); ?>" height="30" alt="kai">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kalbe.webp'); ?>" height="30" alt="Kalbe">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kino.webp'); ?>" height="30" alt="kino">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/otsuka.webp'); ?>" height="30" alt="otsuka">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pama.webp'); ?>" height="30" alt="pama">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pln-epi.webp'); ?>" height="30" alt="pln epi">
@@ -64,7 +63,6 @@
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/ifg.webp'); ?>" height="30" alt="ifg">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kai.webp'); ?>" height="30" alt="kai">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kalbe.webp'); ?>" height="30" alt="Kalbe">
-              <img class="img-hover-zoom" src="<?= base_url('assets/images/client/kino.webp'); ?>" height="30" alt="kino">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/otsuka.webp'); ?>" height="30" alt="otsuka">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pama.webp'); ?>" height="30" alt="pama">
               <img class="img-hover-zoom" src="<?= base_url('assets/images/client/pln-epi.webp'); ?>" height="30" alt="pln epi">
