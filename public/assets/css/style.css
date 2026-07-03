@@ -1441,6 +1441,32 @@ section.py-5 {
    PRINCIPAL / PARTNERSHIP
    =========================== */
 
+/* badge start */
+.principal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.principal-statis-logo{
+    flex: 1;
+}
+
+.principal-statis-badges{
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.principal-statis-badges img{
+    height: 36px;
+    width: auto;
+    display: block;
+}
+/* badge end */
+
 .partnership-section{
   padding: 80px 0;
   background-color: #f9fafb;

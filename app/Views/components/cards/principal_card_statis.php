@@ -106,7 +106,7 @@
                             </div>
                         </div>
 
-                        <!-- New Card 1 -->
+                        <!-- Tableau Card -->
                         <div class="col-lg-6 col-md-6 principal-statis-item">
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
@@ -122,7 +122,7 @@
                             </div>
                         </div>
 
-                        <!-- New Card 2 -->
+                        <!-- YugabyteDB Card -->
                         <div class="col-lg-6 col-md-6 principal-statis-item">
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
@@ -138,7 +138,7 @@
                             </div>
                         </div>
 
-                        <!-- New Card 3 -->
+                        <!-- Hasura Card -->
                         <div class="col-lg-6 col-md-6 principal-statis-item">
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
@@ -154,12 +154,20 @@
                             </div>
                         </div>
 
-                        <!-- New Card 4 -->
+                        <!-- ClickHouse Card -->
                         <div class="col-lg-6 col-md-6 principal-statis-item">
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
-                                    <div class="principal-statis-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-ClickHouse.png') ?>" alt="New principal-statis 4" class="img-fluid">
+                                    <div class="principal-header">
+                                        <div class="principal-statis-logo">
+                                            <img src="<?= base_url('assets/images/principals/Logo-ClickHouse.png') ?>"
+                                                alt="ClickHouse"
+                                                class="img-fluid">
+                                        </div>
+
+                                        <div class="principal-statis-badges">
+                                            <img src="<?= base_url('assets/images/principals/badges/Service-Partner-ACCELERATE.webp') ?>" alt="Service-Partner-ACCELERATE">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -170,7 +178,7 @@
                             </div>
                         </div>
 
-                        <!-- New Card 5 -->
+                        <!-- Alibaba-Cloud Card -->
                         <div class="col-lg-6 col-md-6 principal-statis-item">
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
@@ -186,7 +194,7 @@
                             </div>
                         </div>
 
-                        <!-- New Card 6 -->
+                        <!-- redis Card -->
                         <div class="col-lg-6 col-md-6 principal-statis-item">
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
@@ -202,7 +210,7 @@
                             </div>
                         </div>
 
-                        <!-- New Card 7 -->
+                        <!-- Dell Card -->
                         <div class="col-lg-6 col-md-6 principal-statis-item">
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
@@ -222,8 +230,16 @@
                         <div class="col-lg-6 col-md-6 principal-statis-item">
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
-                                    <div class="principal-statis-logo">
-                                        <img src="<?= base_url('assets/images/principals/Logo-AWS.png') ?>" alt="New principal-statis 8" class="img-fluid">
+                                    <div class="principal-header">
+                                        <div class="principal-statis-logo">
+                                            <img src="<?= base_url('assets/images/principals/Logo-AWS.png') ?>"
+                                                alt="AWS"
+                                                class="img-fluid">
+                                        </div>
+
+                                        <div class="principal-statis-badges">
+                                            <img src="https://aws.alldataint.com/assets/img/awsb-1.png" alt="awsb">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -239,7 +255,7 @@
                             </div>
                         </div>
 
-                        <!-- New Card 9 -->
+                        <!-- Hewlett Packard Card 9 -->
                         <div class="col-lg-6 col-md-6 principal-statis-item">
                             <div class="principal-statis-card h-100">
                                 <div class="card-header mb-3">
