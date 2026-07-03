@@ -5,7 +5,7 @@
         <div class="row align-items-center gy-4 mb-5" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
-                    <img src="<?= base_url('assets/images/conpetencies/competencies-Enterprise-Architecture.png') ?>" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/images/conpetencies/Enterprise Architecture & Technology Modernization.webp') ?>" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
@@ -51,7 +51,7 @@
         <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
-                    <img src="<?= base_url('assets/images/conpetencies/competencies-modern-data-storage-ai-driven-enterprise.png') ?>" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/images/conpetencies/Modern Data Storage for AI-Driven Enterprise.webp') ?>" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
@@ -84,7 +84,7 @@
         <div class="row align-items-center gy-4" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
-                    <img src="<?= base_url('assets/images/conpetencies/competencies-data-engineering-integration-solutions.png') ?>" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/images/conpetencies/Data Engineering & Integration.webp') ?>" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
@@ -129,7 +129,7 @@
         <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
-                    <img src="<?= base_url('assets/images/conpetencies/competencies-data-virtualization-solutions.png') ?>" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/images/conpetencies/Data Virtualization.webp') ?>" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
@@ -173,7 +173,7 @@
         <div class="row align-items-center gy-4" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
-                    <img src="<?= base_url('assets/images/conpetencies/competencies-data-warehousing-business-intelligence.png') ?>" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/images/conpetencies/Data Warehousing & Business Intelligence.webp') ?>" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
@@ -212,7 +212,7 @@
         <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
-                    <img src="<?= base_url('assets/images/conpetencies/competencies-data-strategy-governance.png') ?>" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/images/conpetencies/Data Strategy & Governance.webp') ?>" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
@@ -250,7 +250,7 @@
         <div class="row align-items-center gy-4" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
-                    <img src="<?= base_url('assets/images/conpetencies/competencies-advanced-analytics-machine-learning.png') ?>" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/images/conpetencies/Advanced Analytics & Machine Learning.webp') ?>" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
@@ -289,7 +289,7 @@
         <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
-                    <img src="<?= base_url('assets/images/conpetencies/competencies-data-quality-management-solutions.png') ?>" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/images/conpetencies/Data Quality & Management.webp') ?>" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
@@ -321,7 +321,7 @@
         <div class="row align-items-center gy-4" data-aos="fade-up">
             <div class="col-lg-5">
                 <div class="solution-image">
-                    <img src="<?= base_url('assets/images/conpetencies/competencies-data-infrastructure-security-solutions.png') ?>" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/images/conpetencies/Infrastructure & Security Solutions.webp') ?>" alt="" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
