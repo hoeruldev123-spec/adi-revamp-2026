@@ -1,3 +1,22 @@
+# ============================================
+# BLOCK HIDDEN FILES (.env, .git, dll)
+# ============================================
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule "(^|/)\." - [F,L]
+</IfModule>
+
+# ============================================
+# Disable Directory Listing
+# ============================================
+
+
 Options -Indexes
 
 # Redirect Sitemap Lama
