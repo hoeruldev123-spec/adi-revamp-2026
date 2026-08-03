@@ -88,11 +88,11 @@ if ($isArticleDetail) {
 <meta property="og:url" content="<?= current_url() ?>">
 
 <?php
-$ogImage = esc($og_image ?? base_url('assets/images/logo_coloured.png'));
+$ogImage = esc($og_image ?? base_url('assets/images/Open-Graph-Image-ADI-2026.png'));
 ?>
 <meta property="og:image" content="<?= $ogImage ?>">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:height" content="628">
 <meta property="og:image:alt" content="<?= esc($og_image_alt ?? ($title ?? 'All Data International')) ?>">
 
 <meta name="twitter:card" content="summary_large_image">
