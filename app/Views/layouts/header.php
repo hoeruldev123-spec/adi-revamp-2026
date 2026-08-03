@@ -88,7 +88,7 @@ if ($isArticleDetail) {
 <meta property="og:url" content="<?= current_url() ?>">
 
 <?php
-$ogImage = esc($og_image ?? base_url('assets/images/Open-Graph-Image-ADI-2026.png'));
+$ogImage = esc($og_image ?? base_url('assets/images/og/Open-Graph-Image-ADI-2026.webp'));
 ?>
 <meta property="og:image" content="<?= $ogImage ?>">
 <meta property="og:image:width" content="1200">
