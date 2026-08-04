@@ -102,7 +102,7 @@ $ogImage = esc($og_image ?? base_url('assets/images/og/Open-Graph-Image-ADI-2026
 
 <meta name="google-site-verification" content="LJP2yBM57vgqcF3jhnJJSiGeMF3TwLSe74e1vc5yFiw" />
 
-<link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico') ?>">
+<link rel="icon" type="image/x-icon" href="<?= base_url('assets/favicon/favicon.ico') ?>">
 <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/favicon/favicon-16x16.png') ?>">
 <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('assets/favicon/favicon-32x32.png') ?>">
 <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/favicon/apple-touch-icon.png') ?>">
