@@ -103,12 +103,12 @@ $ogImage = esc($og_image ?? base_url('assets/images/og/Open-Graph-Image-ADI-2026
 <meta name="google-site-verification" content="LJP2yBM57vgqcF3jhnJJSiGeMF3TwLSe74e1vc5yFiw" />
 
 <link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico') ?>">
-<link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('favicon-16x16.png') ?>">
-<link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('favicon-32x32.png') ?>">
-<link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('apple-touch-icon.png') ?>">
-<link rel="icon" type="image/png" sizes="192x192" href="<?= base_url('android-chrome-192x192.png') ?>">
-<link rel="icon" type="image/png" sizes="512x512" href="<?= base_url('android-chrome-512x512.png') ?>">
-<link rel="manifest" href="<?= base_url('site.webmanifest') ?>">
+<link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('/favicon/favicon-16x16.png') ?>">
+<link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('/favicon/favicon-32x32.png') ?>">
+<link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('/favicon/apple-touch-icon.png') ?>">
+<link rel="icon" type="image/png" sizes="192x192" href="<?= base_url('/favicon/android-chrome-192x192.png') ?>">
+<link rel="icon" type="image/png" sizes="512x512" href="<?= base_url('/favicon/android-chrome-512x512.png') ?>">
+<link rel="manifest" href="<?= base_url('/favicon/site.webmanifest') ?>">
 
 <meta name="theme-color" content="#008bf9">
 <meta name="msapplication-TileColor" content="#008bf9">
