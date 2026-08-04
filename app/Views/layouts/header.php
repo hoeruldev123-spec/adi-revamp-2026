@@ -102,8 +102,16 @@ $ogImage = esc($og_image ?? base_url('assets/images/og/Open-Graph-Image-ADI-2026
 
 <meta name="google-site-verification" content="LJP2yBM57vgqcF3jhnJJSiGeMF3TwLSe74e1vc5yFiw" />
 
-<link rel="icon" href="<?= base_url('assets/images/all-data-international-logo-site.png') ?>">
-<link rel="apple-touch-icon" href="<?= base_url('assets/images/all-data-international-logo-site.png') ?>">
+<link rel="icon" type="image/x-icon" href="<?= base_url('favicon.ico') ?>">
+<link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('favicon-16x16.png') ?>">
+<link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('favicon-32x32.png') ?>">
+<link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('apple-touch-icon.png') ?>">
+<link rel="icon" type="image/png" sizes="192x192" href="<?= base_url('android-chrome-192x192.png') ?>">
+<link rel="icon" type="image/png" sizes="512x512" href="<?= base_url('android-chrome-512x512.png') ?>">
+<link rel="manifest" href="<?= base_url('site.webmanifest') ?>">
+
+<meta name="theme-color" content="#008bf9">
+<meta name="msapplication-TileColor" content="#008bf9">
 
 <link rel="preload" href="<?= base_url('assets/fonts/plus-jakarta-sans-v12-latin-600.woff2') ?>" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="<?= base_url('assets/fonts/outfit-v15-latin-600.woff2') ?>" as="font" type="font/woff2" crossorigin>
