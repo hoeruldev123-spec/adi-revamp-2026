@@ -8,11 +8,12 @@ $translations = [
         'title' => 'All Data Cloud PACS Launching - Digital Radiology Transformation',
         'badge' => 'All Data Cloud PACS Launching',
         'hero_title' => 'Digital Radiology Transformation & Navigating SATUSEHAT EMR for BPJS Claim',
-        'hero_subtitle' => 'Integrasi Rekam Medis Elektronik (RME) dengan platform SATUSEHAT menjadi standar mutlak bagi faskes di Indonesia. All Data bersama Huawei Cloud mempersembahkan Cloud Radiology untuk memodernisasi alur kerja radiologi dan mengamankan pendapatan rumah sakit Anda dari potensi gagal klaim.',
+        'hero_subtitle' => 'Secure Your Revenue, Transform Your Radiology Workflow.',
+        'description' => 'Integrasi Rekam Medis Elektronik (RME) dengan platform SATUSEHAT menjadi standar mutlak bagi fasilitas kesehatan di Indonesia. All Data bersama Huawei Cloud mempersembahkan Cloud Radiology untuk memodernisasi alur kerja radiologi dan mengamankan pendapatan rumah sakit Anda dari potensi gagal klaim.',
         'date_time_label' => 'Waktu & Tanggal',
         'date_time_value' => 'Kamis, 8 Oktober 2026 | 09.00 - 13.00 WIB',
-        'location_label' => 'Slogan Utama',
-        'location_value' => 'Secure Your Revenue, Transform Your Radiology Workflow.',
+        'location_label' => 'Lokasi',
+        'location_value' => 'Wisma Mulia 2 - Jl. Gatot Subroto No.6, Jakarta Selatan ',
         'btn_register' => 'Daftar Sekarang',
         'btn_agenda' => 'Lihat Agenda',
         'stat_1_val' => '100%',
@@ -25,12 +26,6 @@ $translations = [
         'nav_topics' => 'Topik',
         'nav_agenda' => 'Agenda',
         'nav_audience' => 'Target Peserta',
-        'form_title' => 'Formulir Registrasi Event',
-        'form_subtitle' => 'Registrasi eksklusif untuk jajaran manajemen dan tenaga medis Rumah Sakit.',
-        'form_name' => 'Nama Lengkap *',
-        'form_email' => 'Email Instansi / Kerja *',
-        'form_hospital' => 'Nama Rumah Sakit / Faskes *',
-        'form_role' => 'Jabatan / Unit Kerja',
         'topics_title' => 'Topik Yang Akan Dibahas',
         'topics_subtitle' => 'Mengupas tuntas modernisasi alur kerja radiologi dan interoperabilitas RME untuk mencegah potensi revenue loss.',
         'topic_1_title' => 'The Future of Radiology Infrastructure',
@@ -56,11 +51,12 @@ $translations = [
         'title' => 'All Data Cloud PACS Launching - Digital Radiology Transformation',
         'badge' => 'All Data Cloud PACS Launching',
         'hero_title' => 'Digital Radiology Transformation & Navigating SATUSEHAT EMR for BPJS Claim',
-        'hero_subtitle' => 'Electronic Medical Record (EMR) integration with SATUSEHAT is essential for Indonesian healthcare facilities. All Data and Huawei Cloud present Cloud Radiology to modernize workflows and protect hospital revenue from failed claims.',
+        'hero_subtitle' => 'Secure Your Revenue, Transform Your Radiology Workflow.',
+        'description' => 'Electronic Medical Record (EMR) integration with SATUSEHAT is essential for Indonesian healthcare facilities. All Data and Huawei Cloud present Cloud Radiology to modernize workflows and protect hospital revenue from failed claims.',
         'date_time_label' => 'Date & Time',
         'date_time_value' => 'Thursday, October 8, 2026 | 09.00 - 13.00 WIB',
-        'location_label' => 'Main Slogan',
-        'location_value' => 'Secure Your Revenue, Transform Your Radiology Workflow.',
+        'location_label' => 'Location',
+        'location_value' => 'Wisma Mulia 2 - Jl. Gatot Subroto No.6, Jakarta Selatan',
         'btn_register' => 'Register Now',
         'btn_agenda' => 'View Agenda',
         'stat_1_val' => '100%',
@@ -73,12 +69,6 @@ $translations = [
         'nav_topics' => 'Key Topics',
         'nav_agenda' => 'Agenda',
         'nav_audience' => 'Target Audience',
-        'form_title' => 'Event Registration Form',
-        'form_subtitle' => 'Exclusive registration for hospital executives and medical professionals.',
-        'form_name' => 'Full Name *',
-        'form_email' => 'Work Email *',
-        'form_hospital' => 'Hospital / Facility Name *',
-        'form_role' => 'Job Title / Unit',
         'topics_title' => 'Topics To Be Discussed',
         'topics_subtitle' => 'In-depth breakdown of radiology workflow modernization and EMR interoperability to prevent revenue loss.',
         'topic_1_title' => 'The Future of Radiology Infrastructure',
@@ -261,12 +251,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <?php echo $t['hero_title']; ?>
                     </h1>
 
-                    <!-- Subtitle -->
-                    <p class="text-slate-600 text-base md:text-lg leading-relaxed">
+                    <!-- Subtitle (Lebih Besar & Tebal) -->
+                    <h2 class="text-xl md:text-2xl font-bold text-huawei-red leading-snug">
                         <?php echo $t['hero_subtitle']; ?>
+                    </h2>
+
+                    <!-- Deskripsi -->
+                    <p class="text-slate-600 text-base md:text-lg leading-relaxed">
+                        <?php echo $t['description']; ?>
                     </p>
 
-                    <!-- Info Waktu & Slogan -->
+                    <!-- Info Waktu & Lokasi -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700 border-l-2 border-huawei-red pl-4 py-1">
                         <div>
                             <span class="block text-slate-500 font-medium"><?php echo $t['date_time_label']; ?></span>
@@ -431,7 +426,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <td class="py-4 px-6 font-semibold text-slate-900">12:00 - 13:00 WIB</td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">Networking Lunch</span>
-                                    Diskusi Interaktif, Konsultasi Kebutuhan RS, & Ramah Tamah
+                                    Diskusi Interaktif, Konsultasi Kebutuhan Rumah Sakit, & Ramah Tamah
                                 </td>
                                 <td class="py-4 px-6 text-slate-500">Networking & Lunch</td>
                             </tr>
@@ -450,28 +445,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p class="text-slate-400"><?php echo $t['audience_subtitle']; ?></p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300">
+            <!-- Container Flexbox untuk meratakan susunan kartu ke tengah -->
+            <div class="flex flex-wrap justify-center gap-6">
+
+                <!-- Card 1 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300 text-left">
                     <h4 class="font-bold text-lg mb-2 text-blue-400">Direktur / CEO Rumah Sakit</h4>
                     <p class="text-xs text-slate-300 leading-relaxed">Fokus pada tata kelola strategis, kepatuhan regulasi RME, dan keberlangsungan finansial RS.</p>
                 </div>
-                <div class="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300">
+
+                <!-- Card 2 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300 text-left">
                     <h4 class="font-bold text-lg mb-2 text-blue-400">Manajer IT & Sistem Informasi RS</h4>
                     <p class="text-xs text-slate-300 leading-relaxed">Fokus pada implementasi teknologi cloud, integrasi API SATUSEHAT, dan interoperabilitas PACS.</p>
                 </div>
-                <div class="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300">
+
+                <!-- Card 3 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300 text-left">
                     <h4 class="font-bold text-lg mb-2 text-blue-400">Kepala Instalasi & Dokter Radiologi</h4>
                     <p class="text-xs text-slate-300 leading-relaxed">Fokus pada efisiensi alur kerja klinis radiologi, alur data modalitas, serta akurasi pelaporan.</p>
                 </div>
-                <div class="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300">
+
+                <!-- Card 4 (Otomatis ke baris bawah & rata tengah) -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300 text-left">
                     <h4 class="font-bold text-lg mb-2 text-blue-400">Manajer Keuangan / Klaim BPJS</h4>
                     <p class="text-xs text-slate-300 leading-relaxed">Fokus pada eliminasi potensi gagal klaim dan mencegah kebocoran pendapatan (revenue loss).</p>
                 </div>
-                <div class="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300">
+
+                <!-- Card 5 (Otomatis ke baris bawah & rata tengah) -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300 text-left">
                     <h4 class="font-bold text-lg mb-2 text-blue-400">Manajer Pelayanan Medis (Yanmed)</h4>
                     <p class="text-xs text-slate-300 leading-relaxed">Fokus pada peningkatan kualitas layanan medis dan pemenuhan standar mutu dokumentasi klinis.</p>
                 </div>
+
             </div>
+
         </div>
     </section>
 
