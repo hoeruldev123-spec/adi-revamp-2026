@@ -56,7 +56,7 @@ $routes->match(['get', 'head'], '/company/contact', 'ContactController::index');
 // Resources Routes
 // $routes->match(['get', 'head'], 'resources', 'ResourcesController::index');
 // $routes->match(['get','head'], 'resources/articles', 'ResourcesController::articles');
-// $routes->match(['get','head'], 'resources/events', 'ResourcesController::events');
+$routes->match(['get', 'head'], 'events', 'EventsController::index');
 
 // Articles Routes
 $routes->match(['get', 'head'], 'resources/articles', 'Articles::index');
@@ -78,7 +78,8 @@ $routes->match(['get', 'head'], 'resources/articles/page/1', function () {
 });
 
 // Events
-$routes->get('/events/aws-end-to-end-data-solution', 'Events::awsEndToEndDataSolution');
+$routes->get('/events/aws-end-to-end-data-solution', 'EventsController::awsEndToEndDataSolution');
+$routes->get('/events/digital-radiology-transformation', 'EventsController::digitalRadiologyTransformation');
 
 // Contact
 $routes->match(['get', 'head'], '/contact', 'Contact::index', ['as' => 'contact']);
