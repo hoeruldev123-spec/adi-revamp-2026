@@ -13,31 +13,19 @@ class EventsController extends BaseController
             'active_subpage'   => 'events',
 
             'upcoming_events' => [
+
                 [
-                    'title'        => 'AI Governance & Responsible AI for Enterprise',
+                    'title'        => 'Redis & AWS Workshop Jakarta: Build Faster AI Apps with Redis Iris',
                     'type'         => 'Workshop',
-                    'day'          => '17',
-                    'month'        => 'Sep',
-                    'date_text'    => 'Kamis, 17 September 2026',
-                    'time'         => '14:00 – 16:00 WIB',
-                    'location'     => 'Jakarta Selatan',
-                    'excerpt'      => 'Diskusi interaktif tentang kerangka kerja tata kelola AI, mitigasi risiko, dan praktik Responsible AI yang aman serta sesuai regulasi.',
-                    'register_url' => '#',
-                    'detail_url'   => null,
-                    'image'        => '',
-                ],
-                [
-                    'title'        => 'Data & AI Innovation Summit 2026',
-                    'type'         => 'Conference',
-                    'day'          => '02',
+                    'day'          => '23',
                     'month'        => 'Oct',
-                    'date_text'    => 'Kamis, 8 Oktober 2026',
-                    'time'         => '09:00 – 17:00 WIB',
-                    'location'     => 'Jakarta Selatan',
-                    'excerpt'      => 'Konferensi tahunan bersama partner cloud dan analytics untuk berbagi best practice transformasi data, AI/ML, hingga skenario produksi.',
-                    'register_url' => '#',
+                    'date_text'    => 'Rabu, 23 Oktober 2024',
+                    'time'         => '13:00 – 17:00 WIB',
+                    'location'     => 'Jakarta',
+                    'excerpt'      => 'Technical workshop hands-on bersama Redis & AWS untuk membangun AI Banking Chatbot menggunakan Redis Iris dan Amazon Bedrock, mencakup Vector Search, Semantic Router, LangCache, hingga Context Retriever.',
+                    'register_url' => 'https://redis.io/events/redis-aws-workshop-id/?utm_medium=referral-other&utm_source=alldata&utm_campaign=ev-2026-09-15-redis-aws-workshop-indonesia',
                     'detail_url'   => null,
-                    'image'        => '',
+                    'image'        => 'assets/images/events/banner/redis-aws-workshop-id.webp', // Ganti dengan path gambar Anda
                 ],
                 [
                     'title'        => 'Digital Radiology Transformation & Navigating SATUSEHAT EMR for BPJS Claim',
@@ -48,9 +36,9 @@ class EventsController extends BaseController
                     'time'         => '09:00 – 13:00 WIB',
                     'location'     => 'Jakarta',
                     'excerpt'      => 'Acara peluncuran dan sesi sharing eksklusif All Data International bersama Huawei Cloud yang mengupas tuntas teknologi Cloud Radiology, kepatuhan RME & standar DICOM, serta strategi mencegah potensi revenue loss pada klaim BPJS Rumah Sakit.',
-                    'register_url' => '#register',
+                    'register_url' => base_url('events/digital-radiology-transformation'),
                     'detail_url'   => null,
-                    'image'        => '',
+                    'image'        => 'assets/images/events/digital-radiology-transformation-hero-2.webp',
                 ],
             ],
 

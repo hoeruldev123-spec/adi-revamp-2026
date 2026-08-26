@@ -131,16 +131,16 @@
                 <?php foreach ($upcoming_events as $i => $event): ?>
                     <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<?= $i * 120 ?>">
                         <article class="card h-100 border-0 shadow-sm hover-lift overflow-hidden">
-                            <div class="position-relative" style="aspect-ratio: 16 / 9;">
+                            <div class="position-relative w-100 overflow-hidden" style="aspect-ratio: 16 / 9;">
                                 <?php if (!empty($event['image'])): ?>
                                     <img
                                         src="<?= base_url($event['image']) ?>"
                                         alt="<?= esc($event['title']) ?>"
-                                        class="w-100 h-100 object-fit-cover"
+                                        class="w-100 h-100 object-fit-cover position-absolute top-0 start-0"
                                         loading="lazy">
                                 <?php else: ?>
-                                    <div class="event-thumb-placeholder w-100 h-100">
-                                        <i class="bi bi-calendar-event"></i>
+                                    <div class="event-thumb-placeholder w-100 h-100 d-flex align-items-center justify-content-center position-absolute top-0 start-0">
+                                        <i class="bi bi-calendar-event fs-1"></i>
                                     </div>
                                 <?php endif; ?>
 
@@ -223,16 +223,16 @@
                 <?php foreach ($finished_events as $i => $event): ?>
                     <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<?= $i * 120 ?>">
                         <article class="card h-100 border-0 shadow-sm hover-lift overflow-hidden">
-                            <div class="position-relative" style="aspect-ratio: 16 / 9;">
+                            <div class="position-relative w-100 overflow-hidden" style="aspect-ratio: 16 / 9;">
                                 <?php if (!empty($event['image'])): ?>
                                     <img
                                         src="<?= base_url($event['image']) ?>"
                                         alt="<?= esc($event['title']) ?>"
-                                        class="w-100 h-100 object-fit-cover"
+                                        class="w-100 h-100 object-fit-cover position-absolute top-0 start-0"
                                         loading="lazy">
                                 <?php else: ?>
-                                    <div class="event-thumb-placeholder w-100 h-100">
-                                        <i class="bi bi-calendar-event"></i>
+                                    <div class="event-thumb-placeholder w-100 h-100 d-flex align-items-center justify-content-center position-absolute top-0 start-0">
+                                        <i class="bi bi-calendar-event fs-1"></i>
                                     </div>
                                 <?php endif; ?>
 
@@ -240,7 +240,7 @@
                                     <span class="day"><?= esc($event['day']) ?></span>
                                     <span class="month"><?= esc($event['month']) ?></span>
                                 </div>
-                                <span class="badge bg-secondary event-status-badge">Selesai</span>
+                                <span class="badge bg-secondary event-status-badge">Ended</span>
                             </div>
 
                             <div class="card-body d-flex flex-column p-3 p-lg-4">
