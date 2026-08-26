@@ -112,6 +112,45 @@ $routes->get('articles/(:any)', function ($slug) {
 
 // Atau biarkan WordPress yang handle 404-nya sendiri
 
+// --------------------------------------------------------------------
+// ADMIN FOUNDATION ROUTES
+// --------------------------------------------------------------------
+$routes->get('/admin/login', 'Admin\AuthController::login');
+$routes->post('/admin/login', 'Admin\AuthController::authenticate');
+$routes->get('/admin/logout', 'Admin\AuthController::logout');
+
+$routes->group('admin', ['filter' => 'auth'], function ($routes) {
+    // Dashboard
+    $routes->get('/', 'Admin\Dashboard::index', ['filter' => 'permission:dashboard.view']);
+    $routes->get('dashboard', 'Admin\Dashboard::index', ['filter' => 'permission:dashboard.view']);
+    $routes->get('settings', static function () {
+        return view('admin/settings/index');
+    });
+
+    // Users
+    $routes->get('users', 'Admin\Users::index', ['filter' => 'permission:users.view']);
+    $routes->get('users/create', 'Admin\Users::create', ['filter' => 'permission:users.create']);
+    $routes->post('users/store', 'Admin\Users::store', ['filter' => 'permission:users.create']);
+    $routes->get('users/edit/(:num)', 'Admin\Users::edit/$1', ['filter' => 'permission:users.edit']);
+    $routes->post('users/update/(:num)', 'Admin\Users::update/$1', ['filter' => 'permission:users.edit']);
+    $routes->get('users/delete/(:num)', 'Admin\Users::delete/$1', ['filter' => 'permission:users.delete']);
+    $routes->get('users/toggle/(:num)', 'Admin\Users::toggleStatus/$1', ['filter' => 'permission:users.edit']);
+    $routes->post('users/reset/(:num)', 'Admin\Users::resetPassword/$1', ['filter' => 'permission:users.edit']);
+
+    // Roles
+    $routes->get('roles', 'Admin\Roles::index', ['filter' => 'permission:roles.view']);
+    $routes->get('roles/create', 'Admin\Roles::create', ['filter' => 'permission:roles.create']);
+    $routes->post('roles/store', 'Admin\Roles::store', ['filter' => 'permission:roles.create']);
+    $routes->get('roles/edit/(:num)', 'Admin\Roles::edit/$1', ['filter' => 'permission:roles.edit']);
+    $routes->post('roles/update/(:num)', 'Admin\Roles::update/$1', ['filter' => 'permission:roles.edit']);
+    $routes->get('roles/delete/(:num)', 'Admin\Roles::delete/$1', ['filter' => 'permission:roles.delete']);
+    $routes->get('roles/permissions/(:num)', 'Admin\Roles::permissions/$1', ['filter' => 'permission:roles.edit']);
+    $routes->post('roles/permissions/save/(:num)', 'Admin\Roles::savePermissions/$1', ['filter' => 'permission:roles.edit']);
+
+    // Permissions
+    $routes->get('permissions', 'Admin\Permissions::index', ['filter' => 'permission:permissions.view']);
+});
+
 // CLI routes
 if (is_cli()) {
     $routes->setDefaultNamespace('App\Controllers');
