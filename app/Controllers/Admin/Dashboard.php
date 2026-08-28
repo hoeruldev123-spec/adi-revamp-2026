@@ -6,12 +6,14 @@ class Dashboard extends BaseAdminController
 {
     public function index()
     {
-        // Statistik tahap pertama menggunakan placeholder.
-        // Setelah modul Event & Registration tersedia, sambungkan ke database.
+        // Statistik terhubung ke modul Event & Registration.
+        $eventModel = new \App\Models\EventModel();
+        $regModel   = new \App\Models\RegistrationModel();
+
         $stats = [
-            'total_events'    => '-',
-            'registrants'     => '-',
-            'active_events'   => '-',
+            'total_events'    => $eventModel->countAllResults(),
+            'registrants'     => $regModel->countAllResults(),
+            'active_events'   => $eventModel->where('status', \App\Models\EventModel::STATUS_ACTIVE)->countAllResults(),
             'total_users'     => $this->userModel->countAllResults(),
         ];
 

@@ -103,4 +103,24 @@ class EventsController extends BaseController
 
         return view('pages/events/digital-radiology-transformation', compact('seo'));
     }
+
+    /**
+     * CONTOH halaman detail event yang mengintegrasikan Form Builder.
+     * Ditambahkan untuk testing manual form (native method: eventForm()).
+     * Wiring list -> detail dari resources/events.php akan dikerjakan di tahap berikutnya.
+     */
+    public function enterpriseAiDataiku()
+    {
+        helper(['form', 'form_builder']);
+
+        $data = [
+            'title'            => 'Akselerasi Kapabilitas Enterprise AI dengan Dataiku | All Data International',
+            'meta_description' => 'Ikuti sesi Enterprise AI dengan Dataiku. Pelajari bagaimana AI dapat mempercepat transformasi bisnis Anda.',
+            'active_page'      => 'resources',
+            'active_subpage'   => 'events',
+            'event_code'       => 'EVT-2026-DATAIKU-001',
+        ];
+
+        return view('pages/events/enterprise-ai-dataiku', $data);
+    }
 }

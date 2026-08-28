@@ -80,6 +80,8 @@ $routes->match(['get', 'head'], 'resources/articles/page/1', function () {
 // Events
 $routes->get('/events/aws-end-to-end-data-solution', 'EventsController::awsEndToEndDataSolution');
 $routes->get('/events/digital-radiology-transformation', 'EventsController::digitalRadiologyTransformation');
+// CONTOH: halaman detail event dengan integrasi Form Builder (testing manual).
+$routes->get('/events/enterprise-ai-dataiku', 'EventsController::enterpriseAiDataiku');
 
 // Contact
 $routes->match(['get', 'head'], '/contact', 'Contact::index', ['as' => 'contact']);
@@ -149,7 +151,41 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
 
     // Permissions
     $routes->get('permissions', 'Admin\Permissions::index', ['filter' => 'permission:permissions.view']);
+
+    // Events
+    $routes->get('events', 'Admin\Events::index', ['filter' => 'permission:events.view']);
+    $routes->get('events/create', 'Admin\Events::create', ['filter' => 'permission:events.create']);
+    $routes->post('events/store', 'Admin\Events::store', ['filter' => 'permission:events.create']);
+    $routes->get('events/edit/(:num)', 'Admin\Events::edit/$1', ['filter' => 'permission:events.edit']);
+    $routes->post('events/update/(:num)', 'Admin\Events::update/$1', ['filter' => 'permission:events.edit']);
+    $routes->get('events/delete/(:num)', 'Admin\Events::delete/$1', ['filter' => 'permission:events.delete']);
+    $routes->get('events/toggle/(:num)', 'Admin\Events::toggle/$1', ['filter' => 'permission:events.edit']);
+
+    // Forms
+    $routes->get('forms', 'Admin\Forms::index', ['filter' => 'permission:forms.view']);
+    $routes->get('forms/create', 'Admin\Forms::create', ['filter' => 'permission:forms.create']);
+    $routes->post('forms/store', 'Admin\Forms::store', ['filter' => 'permission:forms.create']);
+    $routes->get('forms/edit/(:num)', 'Admin\Forms::edit/$1', ['filter' => 'permission:forms.edit']);
+    $routes->post('forms/update/(:num)', 'Admin\Forms::update/$1', ['filter' => 'permission:forms.edit']);
+    $routes->get('forms/delete/(:num)', 'Admin\Forms::delete/$1', ['filter' => 'permission:forms.delete']);
+    $routes->post('forms/addField/(:num)', 'Admin\Forms::addField/$1', ['filter' => 'permission:forms.edit']);
+    $routes->post('forms/updateField/(:num)', 'Admin\Forms::updateField/$1', ['filter' => 'permission:forms.edit']);
+    $routes->get('forms/deleteField/(:num)', 'Admin\Forms::deleteField/$1', ['filter' => 'permission:forms.delete']);
+    $routes->get('forms/preview/(:num)', 'Admin\Forms::preview/$1', ['filter' => 'permission:forms.view']);
+
+    // Registrations
+    $routes->get('registrations', 'Admin\Registrations::index', ['filter' => 'permission:registrations.view']);
+    $routes->get('registrations/view/(:num)', 'Admin\Registrations::view/$1', ['filter' => 'permission:registrations.view']);
+    $routes->get('registrations/delete/(:num)', 'Admin\Registrations::delete/$1', ['filter' => 'permission:registrations.delete']);
+    $routes->get('registrations/export/(:num)', 'Admin\Registrations::export/$1', ['filter' => 'permission:registrations.export']);
 });
+
+// --------------------------------------------------------------------
+// PUBLIC FORM BUILDER ROUTES
+// --------------------------------------------------------------------
+$routes->post('form/submit', 'FormController::submit');
+$routes->get('register/(:segment)', 'FormController::standalone/$1');
+$routes->get('api/forms/(:segment)', 'FormController::config/$1');
 
 // CLI routes
 if (is_cli()) {

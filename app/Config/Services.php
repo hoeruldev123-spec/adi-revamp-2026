@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Services\FormBuilder;
 use CodeIgniter\Config\BaseService;
 
 /**
@@ -29,4 +30,16 @@ class Services extends BaseService
      *     return new \CodeIgniter\Example();
      * }
      */
+
+    /**
+     * Form Builder service untuk me-render form berdasarkan Event ID.
+     */
+    public static function formBuilder($getShared = true)
+    {
+        if ($getShared) {
+            return static::getSharedInstance('formBuilder');
+        }
+
+        return new FormBuilder();
+    }
 }
