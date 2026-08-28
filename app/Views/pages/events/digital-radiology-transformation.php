@@ -2,7 +2,36 @@
 // 1. Logika Pemilihan Bahasa
 $lang = isset($_GET['lang']) && $_GET['lang'] === 'en' ? 'en' : 'id';
 
-// 2. Kamus Penerjemahan (Translation Dictionary)
+// 2. Data Pembicara (Fleksibel: Tambah/Hapus data dari array ini)
+$speakers = [
+
+    [
+        'photo' => base_url('assets/images/events/speakers/yoga.webp'),
+        'nama' => 'Yoga Fatwanto',
+        'posisi' => 'Representative',
+        'perusahaan' => 'Huawei Cloud'
+    ],
+    [
+        'photo' => base_url('assets/images/events/speakers/setiaji.webp'),
+        'nama' => 'Setiaji, ST, MSI',
+        'posisi' => 'IT Director',
+        'perusahaan' => 'BPJS Kesehatan'
+    ],
+    [
+        'photo' => 'https://i.pinimg.com/236x/13/74/20/137420f5b9c39bc911e472f5d20f053e.jpg',
+        'nama' => 'Proposed Hospital Speaker',
+        'posisi' => 'CEO',
+        'perusahaan' => 'Potential Hospital Group'
+    ],
+    [
+        'photo' => base_url('assets/images/events/speakers/bimantoro.webp'),
+        'nama' => 'dr. G. Bimantoro',
+        'posisi' => 'Director of Product',
+        'perusahaan' => 'All Data PACS'
+    ]
+];
+
+// 3. Kamus Penerjemahan (Translation Dictionary)
 $translations = [
     'id' => [
         'title' => 'All Data Cloud PACS Launching - Digital Radiology Transformation',
@@ -24,6 +53,7 @@ $translations = [
         'stat_3_lbl' => 'Infrastruktur Radiologi Tangguh',
 
         'nav_topics' => 'Topik',
+        'nav_speakers' => 'Pembicara',
         'nav_agenda' => 'Agenda',
         'nav_audience' => 'Target Peserta',
         'topics_title' => 'Topik Yang Akan Dibahas',
@@ -34,6 +64,8 @@ $translations = [
         'topic_2_desc' => 'Membedah potensi revenue loss pada klaim radiologi BPJS dan bagaimana menghindarinya melalui dokumentasi digital yang tepat.',
         'topic_3_title' => 'Seamless Integration & Live Demo',
         'topic_3_desc' => 'Cara All Data Cloud PACS menjembatani operasional radiologi klinis dengan RME Kemenkes, dilengkapi Live Demo alur kerja dari modalitas hingga laporan terintegrasi.',
+        'speakers_title' => 'Pembicara',
+        'speakers_subtitle' => 'Dengarkan wawasan mendalam dari para pakar dan praktisi industri kesehatan digital.',
         'agenda_title' => 'Agenda Acara',
         'agenda_subtitle' => 'Kamis, 8 Oktober 2026',
         'th_time' => 'Waktu',
@@ -67,6 +99,7 @@ $translations = [
         'stat_3_lbl' => 'Scalable Radiology Infrastructure',
 
         'nav_topics' => 'Key Topics',
+        'nav_speakers' => 'Speakers',
         'nav_agenda' => 'Agenda',
         'nav_audience' => 'Target Audience',
         'topics_title' => 'Topics To Be Discussed',
@@ -77,6 +110,8 @@ $translations = [
         'topic_2_desc' => 'Analyzing potential revenue loss in BPJS radiology claims and how to prevent it through proper digital documentation.',
         'topic_3_title' => 'Seamless Integration & Live Demo',
         'topic_3_desc' => 'How All Data Cloud PACS bridges clinical radiology operations with MoH EMR requirements, featuring a Live Demo from modality to integrated reporting.',
+        'speakers_title' => 'Featured Speakers',
+        'speakers_subtitle' => 'Gain insights from leading experts and healthcare digital transformation practitioners.',
         'agenda_title' => 'Event Agenda',
         'agenda_subtitle' => 'Thursday, October 8, 2026',
         'th_time' => 'Time',
@@ -94,7 +129,7 @@ $translations = [
 
 $t = $translations[$lang];
 
-// 3. Form Handling (Dummy)
+// 4. Form Handling (Dummy)
 $isSubmitted = false;
 $statusMessage = "";
 
@@ -133,18 +168,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         huawei: {
                             red: '#e60012',
                             dark: '#1e293b',
-                            /* Untuk teks utama & elemen kontras tinggi */
                             light: '#f8fafc',
-                            /* Warna latar belakang utama (Slate-50) */
                             card: '#ffffff',
-                            /* Latar belakang kartu/form (Putih Bersih) */
                             cardBorder: '#e2e8f0',
-                            /* Border kartu yang halus (Slate-200) */
                             blue: '#2563eb',
-                            /* Akses biru modern (Blue-600) */
                             accent: '#3b82f6',
-                            /* Akses biru terang untuk highlight */
-                            muted: '#64748b' /* Warna teks sekunder (Slate-500) */
+                            muted: '#64748b'
                         }
                     }
                 }
@@ -152,17 +181,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </script>
     <style>
-        /* Smooth Scrolling Native Backup */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Hexagon Presisi 1:1 (Sama Sisi) */
         .hexagon-shape {
             clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
         }
 
-        /* Keyframes Animasi Floating Smooth Naik-Turun */
         @keyframes float {
 
             0%,
@@ -172,23 +198,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             50% {
                 transform: translateY(-14px);
-                /* Jarak naik-turun */
             }
         }
 
-        /* Class Animasi dengan Durasi Variatif */
         .animate-float-1 {
             animation: float 6s ease-in-out infinite;
         }
 
         .animate-float-2 {
             animation: float 5s ease-in-out 1s infinite;
-            /* Delay 1 detik */
         }
 
         .animate-float-3 {
             animation: float 4.5s ease-in-out 0.5s infinite;
-            /* Delay 0.5 detik */
         }
     </style>
 </head>
@@ -200,7 +222,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <a class="navbar-brand flex items-center" href="<?= base_url() ?>">
-                    <!-- h-7 (28px) di layar HP, naik menjadi h-9 (36px) di layar laptop/desktop -->
                     <img src="<?= base_url('assets/images/logo_coloured.png'); ?>" alt="All Data" class="h-7 sm:h-9 w-auto object-contain">
                 </a>
                 <span class="font-semibold text-lg tracking-wide hidden sm:inline">Cloud PACS</span>
@@ -209,6 +230,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- Navigation Links -->
             <nav class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="#topics" class="hover:text-huawei-red transition-colors duration-200"><?php echo $t['nav_topics']; ?></a>
+                <a href="#speakers" class="hover:text-huawei-red transition-colors duration-200"><?php echo $t['nav_speakers']; ?></a>
                 <a href="#agenda" class="hover:text-huawei-red transition-colors duration-200"><?php echo $t['nav_agenda']; ?></a>
                 <a href="#audience" class="hover:text-huawei-red transition-colors duration-200"><?php echo $t['nav_audience']; ?></a>
             </nav>
@@ -232,36 +254,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </header>
 
-    <!-- Hero Section Tema Terang -->
+    <!-- Hero Section -->
     <section id="about" class="bg-gradient-to-b from-slate-50 via-white to-slate-100 text-slate-800 py-16 md:py-24 relative overflow-hidden border-b border-slate-200">
-        <!-- Pattern Grid Terang -->
         <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#2563eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
                 <div class="lg:col-span-7 space-y-6">
-                    <!-- Badge -->
                     <span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
                         <?php echo $t['badge']; ?>
                     </span>
 
-                    <!-- Judul Utama -->
                     <h1 class="text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-slate-900">
                         <?php echo $t['hero_title']; ?>
                     </h1>
 
-                    <!-- Subtitle (Lebih Besar & Tebal) -->
                     <h2 class="text-xl md:text-2xl font-bold text-huawei-red leading-snug">
                         <?php echo $t['hero_subtitle']; ?>
                     </h2>
 
-                    <!-- Deskripsi -->
                     <p class="text-slate-600 text-base md:text-lg leading-relaxed">
                         <?php echo $t['description']; ?>
                     </p>
 
-                    <!-- Info Waktu & Lokasi -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700 border-l-2 border-huawei-red pl-4 py-1">
                         <div>
                             <span class="block text-slate-500 font-medium"><?php echo $t['date_time_label']; ?></span>
@@ -273,7 +289,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                     </div>
 
-                    <!-- Tombol CTA -->
                     <div class="flex flex-wrap gap-4 pt-4">
                         <a href="#agenda" class="bg-huawei-red hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold transition-all duration-300 transform hover:-translate-y-0.5 shadow-md shadow-red-500/20">
                             <?php echo $t['btn_register']; ?>
@@ -281,40 +296,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <a href="#agenda" class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 px-6 py-3 rounded-md font-semibold transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm">
                             <?php echo $t['btn_agenda']; ?>
                         </a>
+                        <a class="navbar-brand flex items-center" href="https://www.huaweicloud.com/intl/id-id/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://res-static.hc-cdn.cn/cloudbu-site/intl/en-us/yunying/new-header/logo.png" alt="Huawei" class="h-7 sm:h-9 w-auto object-contain">
+                        </a>
                     </div>
                 </div>
 
-                <!-- 3 Hexagon Image Frames (Tema Terang) -->
+                <!-- Hexagon Images -->
                 <div class="lg:col-span-5 relative flex justify-center items-center py-6">
                     <div class="grid grid-cols-2 gap-3 w-full max-w-md relative">
-
-                        <!-- Frame Hexagon 1 -->
                         <div class="animate-float-1">
                             <div class="w-full aspect-square hexagon-shape overflow-hidden bg-slate-200 shadow-xl transform hover:scale-105 transition-transform duration-300">
-                                <img src="<?= base_url('assets/images/events/digital-radiology-transformation-hero-1.webp') ?>"
-                                    alt="Digital Radiology Transformation 1"
-                                    class="w-full h-full object-cover">
+                                <img src="<?= base_url('assets/images/events/digital-radiology-transformation-hero-1.webp') ?>" alt="Digital Radiology Transformation 1" class="w-full h-full object-cover">
                             </div>
                         </div>
-
-                        <!-- Frame Hexagon 2 -->
                         <div class="translate-y-8 animate-float-2">
                             <div class="w-full aspect-square hexagon-shape overflow-hidden bg-slate-200 shadow-xl transform hover:scale-105 transition-transform duration-300">
-                                <img src="<?= base_url('assets/images/events/digital-radiology-transformation-hero-2.webp') ?>"
-                                    alt="Digital Radiology Transformation 2"
-                                    class="w-full h-full object-cover">
+                                <img src="<?= base_url('assets/images/events/digital-radiology-transformation-hero-2.webp') ?>" alt="Digital Radiology Transformation 2" class="w-full h-full object-cover">
                             </div>
                         </div>
-
-                        <!-- Frame Hexagon 3 -->
                         <div class="col-span-2 justify-self-center w-1/2 -mt-6 animate-float-3">
                             <div class="w-full aspect-square hexagon-shape overflow-hidden bg-slate-200 shadow-xl transform hover:scale-105 transition-transform duration-300">
-                                <img src="<?= base_url('assets/images/events/digital-radiology-transformation-hero-3.webp') ?>"
-                                    alt="Digital Radiology Transformation 3"
-                                    class="w-full h-full object-cover">
+                                <img src="<?= base_url('assets/images/events/digital-radiology-transformation-hero-3.webp') ?>" alt="Digital Radiology Transformation 3" class="w-full h-full object-cover">
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -351,7 +356,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
                 <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                     <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                         01
@@ -362,7 +366,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </p>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                     <div class="w-12 h-12 bg-red-100 text-huawei-red rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-huawei-red group-hover:text-white transition-colors duration-300">
                         02
@@ -373,7 +376,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </p>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                     <div class="w-12 h-12 bg-slate-100 text-slate-800 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-slate-800 group-hover:text-white transition-colors duration-300">
                         03
@@ -387,15 +389,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </section>
 
+    <!-- SECTION PEMBICARA / SPEAKERS (Fleksibel Flexbox Layout) -->
+    <section id="speakers" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mb-4"><?php echo $t['speakers_title']; ?></h2>
+                <p class="text-slate-600"><?php echo $t['speakers_subtitle']; ?></p>
+            </div>
+
+            <!-- Container Flexbox Fleksibel untuk Menampung Kartu Pembicara -->
+            <div class="flex flex-wrap justify-center gap-8">
+                <?php foreach ($speakers as $speaker): ?>
+                    <div class="w-full sm:w-[calc(50%-16px)] lg:w-[calc(25%-24px)] min-w-[250px] max-w-[320px] bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+
+                        <!-- Container Foto dengan Aspect Ratio Pas -->
+                        <div class="w-full aspect-[4/3] bg-slate-200 overflow-hidden relative">
+                            <img src="<?php echo $speaker['photo']; ?>"
+                                alt="<?php echo $speaker['nama']; ?>"
+                                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+                        </div>
+
+                        <!-- Info Detail Pembicara -->
+                        <div class="p-5 flex flex-col justify-between flex-grow text-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 mb-1"><?php echo $speaker['nama']; ?></h3>
+                                <p class="text-xs font-semibold text-huawei-red mb-2"><?php echo $speaker['posisi']; ?></p>
+                            </div>
+                            <div class="pt-3 border-t border-slate-200">
+                                <p class="text-xs text-slate-500 font-medium"><?php echo $speaker['perusahaan']; ?></p>
+                            </div>
+                        </div>
+
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
     <!-- Agenda Table Section -->
-    <section id="agenda" class="py-20 bg-white">
+    <section id="agenda" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mb-4"><?php echo $t['agenda_title']; ?></h2>
                 <p class="text-slate-600 font-semibold"><?php echo $t['agenda_subtitle']; ?></p>
             </div>
 
-            <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-sm text-slate-700">
                         <thead class="bg-slate-900 text-white uppercase text-xs">
@@ -445,41 +484,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p class="text-slate-400"><?php echo $t['audience_subtitle']; ?></p>
             </div>
 
-            <!-- Container Flexbox untuk meratakan susunan kartu ke tengah -->
             <div class="flex flex-wrap justify-center gap-6">
-
-                <!-- Card 1 -->
                 <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300 text-left">
                     <h4 class="font-bold text-lg mb-2 text-blue-400">Direktur / CEO Rumah Sakit</h4>
                     <p class="text-xs text-slate-300 leading-relaxed">Fokus pada tata kelola strategis, kepatuhan regulasi RME, dan keberlangsungan finansial RS.</p>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300 text-left">
                     <h4 class="font-bold text-lg mb-2 text-blue-400">Manajer IT & Sistem Informasi RS</h4>
                     <p class="text-xs text-slate-300 leading-relaxed">Fokus pada implementasi teknologi cloud, integrasi API SATUSEHAT, dan interoperabilitas PACS.</p>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300 text-left">
                     <h4 class="font-bold text-lg mb-2 text-blue-400">Kepala Instalasi & Dokter Radiologi</h4>
                     <p class="text-xs text-slate-300 leading-relaxed">Fokus pada efisiensi alur kerja klinis radiologi, alur data modalitas, serta akurasi pelaporan.</p>
                 </div>
 
-                <!-- Card 4 (Otomatis ke baris bawah & rata tengah) -->
                 <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300 text-left">
                     <h4 class="font-bold text-lg mb-2 text-blue-400">Manajer Keuangan / Klaim BPJS</h4>
                     <p class="text-xs text-slate-300 leading-relaxed">Fokus pada eliminasi potensi gagal klaim dan mencegah kebocoran pendapatan (revenue loss).</p>
                 </div>
 
-                <!-- Card 5 (Otomatis ke baris bawah & rata tengah) -->
                 <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300 text-left">
                     <h4 class="font-bold text-lg mb-2 text-blue-400">Manajer Pelayanan Medis (Yanmed)</h4>
                     <p class="text-xs text-slate-300 leading-relaxed">Fokus pada peningkatan kualitas layanan medis dan pemenuhan standar mutu dokumentasi klinis.</p>
                 </div>
-
             </div>
-
         </div>
     </section>
 
