@@ -8,7 +8,7 @@ $speakers = [
     [
         'photo' => base_url('assets/images/events/speakers/yoga-fatwanto.webp'),
         'nama' => 'Yoga Fatwanto',
-        'posisi' => 'Representative',
+        'posisi' => 'Partner Solution Architect',
         'perusahaan' => 'Huawei Cloud'
     ],
     [
