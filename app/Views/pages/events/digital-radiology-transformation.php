@@ -248,7 +248,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <!-- Registration CTA Button -->
-                <a href="#register" class="bg-huawei-red hover:bg-red-700 text-white px-4 py-2 rounded text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-red-600/30">
+                <a href="https://forms.cloud.microsoft/r/us6YRhnQDq" target="_blank" rel="noopener noreferrer" class="bg-huawei-red hover:bg-red-700 text-white px-4 py-2 rounded text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-red-600/30">
                     <?php echo $t['btn_register']; ?>
                 </a>
             </div>
@@ -300,7 +300,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="flex flex-wrap gap-4 pt-4">
-                        <a href="#agenda" class="bg-huawei-red hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold transition-all duration-300 transform hover:-translate-y-0.5 shadow-md shadow-red-500/20">
+                        <a href="https://forms.cloud.microsoft/r/us6YRhnQDq" target="_blank" rel="noopener noreferrer" class="bg-huawei-red hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold transition-all duration-300 transform hover:-translate-y-0.5 shadow-md shadow-red-500/20">
                             <?php echo $t['btn_register']; ?>
                         </a>
                         <a href="#agenda" class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 px-6 py-3 rounded-md font-semibold transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm">
@@ -528,7 +528,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-2xl md:text-3xl font-extrabold mb-4"><?php echo $t['cta_bottom_title']; ?></h2>
             <p class="text-white/80 max-w-2xl mx-auto mb-8 text-sm md:text-base"><?php echo $t['cta_bottom_subtitle']; ?></p>
-            <a href="#register" class="inline-block bg-red-700 hover:bg-red-800 text-white font-bold px-8 py-3 rounded-md transition-all duration-300 text-sm uppercase tracking-wider transform hover:scale-105">
+            <a href="https://forms.cloud.microsoft/r/us6YRhnQDq" target="_blank" rel="noopener noreferrer" class="inline-block bg-red-700 hover:bg-red-800 text-white font-bold px-8 py-3 rounded-md transition-all duration-300 text-sm uppercase tracking-wider transform hover:scale-105">
                 <?php echo $t['cta_bottom_btn']; ?>
             </a>
         </div>
