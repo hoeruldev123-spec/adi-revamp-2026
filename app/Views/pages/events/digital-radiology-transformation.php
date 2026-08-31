@@ -51,6 +51,7 @@ $translations = [
         'stat_2_lbl' => 'Potensi Gagal Klaim BPJS',
         'stat_3_val' => 'Cloud',
         'stat_3_lbl' => 'Infrastruktur Radiologi Tangguh',
+        'th_speaker' => 'Pembicara',
 
         'nav_topics' => 'Topik',
         'nav_speakers' => 'Pembicara',
@@ -97,6 +98,7 @@ $translations = [
         'stat_2_lbl' => 'BPJS Claim Failure Risk',
         'stat_3_val' => 'Cloud',
         'stat_3_lbl' => 'Scalable Radiology Infrastructure',
+        'th_speaker' => 'Speaker',
 
         'nav_topics' => 'Key Topics',
         'nav_speakers' => 'Speakers',
@@ -471,35 +473,62 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <table class="w-full text-left text-sm text-slate-700">
                         <thead class="bg-slate-900 text-white uppercase text-xs">
                             <tr>
-                                <th class="py-4 px-6 w-1/4"><?php echo $t['th_time']; ?></th>
-                                <th class="py-4 px-6 w-1/2"><?php echo $t['th_session']; ?></th>
-                                <th class="py-4 px-6 w-1/4"><?php echo $t['th_type']; ?></th>
+                                <th class="py-4 px-6 w-1/6"><?php echo $t['th_time']; ?></th>
+                                <th class="py-4 px-6 w-2/5"><?php echo $t['th_session']; ?></th>
+                                <th class="py-4 px-6 w-1/5"><?php echo $t['th_type']; ?></th>
+                                <th class="py-4 px-6 w-1/4"><?php echo $t['th_speaker']; ?></th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-200">
+                            <!-- Sesi 1 -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900">09:00 - 10:00 WIB</td>
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">09:00 - 10:00 WIB</td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">Huawei Solution Showcase</span>
-                                    Empowering Healthcare IT: Infrastruktur Cloud Tangguh untuk Ekosistem Radiologi Digital
+                                    <span class="text-slate-600">Empowering Healthcare IT: Infrastruktur Cloud Tangguh untuk Ekosistem Radiologi Digital. Building a secure, scalable foundation.</span>
                                 </td>
-                                <td class="py-4 px-6 text-slate-500">Solution Showcase</td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">Solution Showcase</td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">Yoga <span class="block text-xs font-normal text-slate-500">(Huawei Cloud)</span></td>
                             </tr>
+                            <!-- Sesi 2 -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900">10:00 - 12:00 WIB</td>
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">10:00 - 10:45 WIB</td>
+                                <td class="py-4 px-6">
+                                    <span class="font-bold block text-slate-900">Regulator & Tech Keynote</span>
+                                    <span class="text-slate-600">Navigating SATUSEHAT EMR & BPJS Claims: Strategi Mencegah Potensi "Revenue Loss" pada Layanan Radiologi.</span>
+                                </td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">Keynote Presentation</td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">Setiaji, ST, MSI <span class="block text-xs font-normal text-slate-500">(BPJS Kesehatan)</span></td>
+                            </tr>
+                            <!-- Sesi 3 -->
+                            <tr class="hover:bg-slate-100/80 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">10:45 - 11:30 WIB</td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">Executive Sharing Session</span>
-                                    Navigating SATUSEHAT EMR & BPJS Claims: Strategi Mencegah Potensi "Revenue Loss" pada Layanan Radiologi
+                                    <span class="text-slate-600">Real-world challenges and economic strategies for cloud HIS/PACS migration in mid-sized hospital networks.</span>
                                 </td>
-                                <td class="py-4 px-6 text-slate-500">Sharing Session</td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">Hospital Case Study</td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">CEO of Hospital Group <span class="block text-xs font-normal text-slate-500">(Proposed)</span></td>
                             </tr>
+                            <!-- Sesi 4 -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900">12:00 - 13:00 WIB</td>
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">11:30 - 12:00 WIB</td>
+                                <td class="py-4 px-6">
+                                    <span class="font-bold block text-slate-900">Seamless Integration & Live Demo</span>
+                                    <span class="text-slate-600">Bridging Cloud Radiology solution. Live demonstration of workflow from modality to integrated reporting.</span>
+                                </td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">Live Demonstration</td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">dr. G. Bimantoro <span class="block text-xs font-normal text-slate-500">(All-Data PACS)</span></td>
+                            </tr>
+                            <!-- Sesi 5 -->
+                            <tr class="hover:bg-slate-100/80 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">12:00 - 13:00 WIB</td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">Networking Lunch</span>
-                                    Diskusi Interaktif, Konsultasi Kebutuhan Rumah Sakit, & Ramah Tamah
+                                    <span class="text-slate-600">Diskusi Interaktif, Konsultasi Kebutuhan Rumah Sakit, & Ramah Tamah.</span>
                                 </td>
-                                <td class="py-4 px-6 text-slate-500">Networking & Lunch</td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">Networking & Lunch</td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">All Attendees</td>
                             </tr>
                         </tbody>
                     </table>
