@@ -153,6 +153,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $t['title']; ?></title>
+    <meta name="title" content="<?php echo $t['title']; ?>">
+    <meta name="description" content="<?php echo $t['description']; ?>">
+    <meta name="keywords" content="Cloud PACS, Digital Radiology, SATUSEHAT, RME, BPJS Claim, Healthcare IT, Huawei Cloud, All Data International">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="All Data International">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?= current_url(); ?>">
+    <meta property="og:title" content="<?php echo $t['title']; ?>">
+    <meta property="og:description" content="<?php echo $t['description']; ?>">
+    <meta property="og:image" content="<?= base_url('assets/images/og/digital-radiology-transformation.webp'); ?>">
+    <meta property="og:image:width" content="1875">
+    <meta property="og:image:height" content="625">
+    <meta property="og:locale" content="<?php echo $lang === 'en' ? 'en_US' : 'id_ID'; ?>">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="<?= current_url(); ?>">
+    <meta name="twitter:title" content="<?php echo $t['title']; ?>">
+    <meta name="twitter:description" content="<?php echo $t['description']; ?>">
+    <meta name="twitter:image" content="<?= base_url('assets/images/twitter/digital-radiology-transformation.webp'); ?>">
 
     <!-- Favicon -->
     <link rel="icon" href="<?= base_url('assets/images/all-data-international-logo-site.png') ?>">
