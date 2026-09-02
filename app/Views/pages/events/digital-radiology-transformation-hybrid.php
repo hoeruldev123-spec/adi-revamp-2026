@@ -38,7 +38,7 @@ $translations = [
         'badge' => 'All Data Cloud PACS Launching',
         'hero_title' => 'Digital Radiology Transformation & Navigating SATUSEHAT EMR for BPJS Claim',
         'hero_subtitle' => 'Secure Your Revenue, Transform Your Radiology Workflow.',
-        'collab_text' => 'In Collaboration',
+        'collab_text' => 'In Collaboration With',
         'description' => 'Integrasi Rekam Medis Elektronik (RME) dengan platform SATUSEHAT menjadi standar mutlak bagi fasilitas kesehatan di Indonesia. All Data bersama Huawei Cloud mempersembahkan Cloud Radiology untuk memodernisasi alur kerja radiologi dan mengamankan pendapatan rumah sakit Anda dari potensi gagal klaim.',
         'date_time_label' => 'Waktu & Tanggal',
         'date_time_value' => 'Kamis, 22 Oktober 2026 | 09.00 - 13.00 WIB',
@@ -81,7 +81,7 @@ $translations = [
         'agenda_showcase_type' => 'Solution Showcase',
         'agenda_exec_desc' => 'Tantangan nyata dan strategi ekonomi migrasi HIS/PACS ke cloud pada jaringan rumah sakit skala menengah.',
         'agenda_case_study' => 'Hospital Case Study',
-        'agenda_hospital_proposed' => 'Grup Rumah Sakit (Proposed)',
+        'agenda_hospital_proposed' => 'Grup Rumah Sakit (Dalam Konfirmasi)',
         'agenda_demo_desc' => 'Solusi penghubung Cloud Radiology. Demonstrasi langsung alur kerja dari modalitas hingga pelaporan terintegrasi.',
         'agenda_live_demo' => 'Live Demonstration',
         'agenda_qa_title' => 'Sesi Tanya Jawab',
@@ -150,7 +150,7 @@ $translations = [
         'agenda_showcase_type' => 'Solution Showcase',
         'agenda_exec_desc' => 'Real-world challenges and economic strategies for cloud HIS/PACS migration in mid-sized hospital networks.',
         'agenda_case_study' => 'Hospital Case Study',
-        'agenda_hospital_proposed' => 'Hospital Group (Proposed)',
+        'agenda_hospital_proposed' => 'Hospital Group (In Confirmation)',
         'agenda_demo_desc' => 'Bridging Cloud Radiology solution. Live demonstration of workflow from modality to integrated reporting.',
         'agenda_live_demo' => 'Live Demonstration',
         'agenda_qa_title' => 'Q & A Session',
@@ -290,7 +290,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <a class="navbar-brand flex items-center" href="<?= base_url() ?>">
-                    <img src="<?= base_url('assets/images/logo_coloured.png'); ?>" alt="All Data" class="h-7 sm:h-9 w-auto object-contain">
+                    <img src="<?= base_url('assets/images/events/All_Data_Logo-putih.png'); ?>" alt="All Data" class="h-7 sm:h-9 w-auto object-contain">
                 </a>
                 <span class="font-semibold text-lg tracking-wide hidden sm:inline">Cloud PACS</span>
 
@@ -418,15 +418,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
                 <div class="pt-4 md:pt-0">
-                    <div class="text-3xl font-extrabold text-blue-500 mb-1"><?php echo $t['stat_1_val']; ?></div>
+                    <div class="text-3xl font-extrabold text-white mb-1"><?php echo $t['stat_1_val']; ?></div>
                     <div class="text-sm text-slate-400"><?php echo $t['stat_1_lbl']; ?></div>
                 </div>
                 <div class="pt-4 md:pt-0">
-                    <div class="text-3xl font-extrabold text-blue-500 mb-1"><?php echo $t['stat_2_val']; ?></div>
+                    <div class="text-3xl font-extrabold text-white mb-1"><?php echo $t['stat_2_val']; ?></div>
                     <div class="text-sm text-slate-400"><?php echo $t['stat_2_lbl']; ?></div>
                 </div>
                 <div class="pt-4 md:pt-0">
-                    <div class="text-3xl font-extrabold text-blue-500 mb-1"><?php echo $t['stat_3_val']; ?></div>
+                    <div class="text-3xl font-extrabold text-white mb-1"><?php echo $t['stat_3_val']; ?></div>
                     <div class="text-sm text-slate-400"><?php echo $t['stat_3_lbl']; ?></div>
                 </div>
             </div>
@@ -453,7 +453,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-red-100 text-huawei-red rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-huawei-red group-hover:text-white transition-colors duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                         02
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_2_title']; ?></h3>
@@ -463,7 +463,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-slate-100 text-slate-800 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-slate-800 group-hover:text-white transition-colors duration-300">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                         03
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_3_title']; ?></h3>
