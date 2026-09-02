@@ -333,6 +333,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="lg:col-span-7 space-y-6">
                     <!-- Badge Group -->
                     <div class="flex flex-wrap items-center gap-2">
+                        <!-- Badge Hybrid Event -->
+                        <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Hybrid Event
+                        </span>
 
                         <span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
                             <?php echo $t['badge']; ?>

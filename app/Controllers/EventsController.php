@@ -94,6 +94,7 @@ class EventsController extends BaseController
         return view('pages/events/aws-end-to-end-data-solution', $data);
     }
 
+    // Page Event 1 
     public function digitalRadiologyTransformation()
     {
         $seo = [
@@ -102,5 +103,16 @@ class EventsController extends BaseController
         ];
 
         return view('pages/events/digital-radiology-transformation', compact('seo'));
+    }
+
+    // Page Event 2 (Hybrid Event)
+    public function digitalRadiologyTransformationHybrid()
+    {
+        $seo = [
+            'description' => 'Ikuti All Data Cloud PACS Hybrid Launching & Sharing Session (Supported by Huawei Cloud). Pelajari solusi integrasi RME SATUSEHAT & strategi cegah revenue loss klaim BPJS radiologi RS secara online & offline.',
+            'keywords'    => 'AllData Cloud PACS Hybrid, Digital Radiology, SATUSEHAT EMR, Klaim BPJS Radiologi, Huawei Cloud Healthcare, SIMRS Radiologi',
+        ];
+
+        return view('pages/events/digital-radiology-transformation-hybrid', compact('seo'));
     }
 }

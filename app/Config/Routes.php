@@ -80,6 +80,7 @@ $routes->match(['get', 'head'], 'resources/articles/page/1', function () {
 // Events
 $routes->get('/events/aws-end-to-end-data-solution', 'EventsController::awsEndToEndDataSolution');
 $routes->get('/events/digital-radiology-transformation', 'EventsController::digitalRadiologyTransformation');
+$routes->get('/events/digital-radiology-transformation-hybrid', 'EventsController::digitalRadiologyTransformationHybrid');
 
 // Contact
 $routes->match(['get', 'head'], '/contact', 'Contact::index', ['as' => 'contact']);
