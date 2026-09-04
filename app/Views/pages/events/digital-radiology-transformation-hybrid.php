@@ -210,7 +210,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta property="og:url" content="<?= current_url(); ?>">
     <meta property="og:title" content="<?php echo $t['title']; ?>">
     <meta property="og:description" content="<?php echo $t['description']; ?>">
-    <meta property="og:image" content="<?= base_url('assets/images/og/digital-radiology-transformation.webp'); ?>">
+    <meta property="og:image" content="<?= base_url('assets/images/og/digital-radiology-transformation-hybrid.webp'); ?>">
     <meta property="og:image:width" content="1875">
     <meta property="og:image:height" content="625">
     <meta property="og:locale" content="<?php echo $lang === 'en' ? 'en_US' : 'id_ID'; ?>">
@@ -220,7 +220,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="twitter:url" content="<?= current_url(); ?>">
     <meta name="twitter:title" content="<?php echo $t['title']; ?>">
     <meta name="twitter:description" content="<?php echo $t['description']; ?>">
-    <meta name="twitter:image" content="<?= base_url('assets/images/twitter/digital-radiology-transformation.webp'); ?>">
+    <meta name="twitter:image" content="<?= base_url('assets/images/twitter/digital-radiology-transformation-hybrid.webp'); ?>">
 
     <!-- Favicon -->
     <link rel="icon" href="<?= base_url('assets/images/all-data-international-logo-site.png') ?>">
