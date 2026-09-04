@@ -115,13 +115,15 @@ $segment2 = getSafeSegment(2);
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-between
-    <?= ($segment1 == 'about-us' || $segment1 == 'our-partners' || $segment1 == 'our-clients' || $segment1 == 'our-competencies') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
+              <?= ($segment1 == 'about-us' || $segment1 == 'our-partners' || $segment1 == 'our-clients' || $segment1 == 'our-competencies') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
             href="javascript:void(0)"
             id="companyDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false">
-            <span>Company</span>
+            <span>
+              Company
+            </span>
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
               class="ms-1 <?= ($segment1 == 'about-us' || $segment1 == 'our-partners' || $segment1 == 'our-clients' || $segment1 == 'our-competencies') ? 'text-primary' : '' ?>">
               <path d="M7.646 10.854a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0-.708-.708L8 9.793 4.354 6.146a.5.5 0 1 0-.708.708z" />
@@ -170,54 +172,19 @@ $segment2 = getSafeSegment(2);
           </ul>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-between
-            <?= ($segment1 == 'resources') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
-            href="<?= base_url('resources') ?>"
-            id="resourcesDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <span>Resources</span>
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
-              class="ms-1 <?= ($segment1 == 'resources') ? 'text-primary' : '' ?>">
-              <path d="M7.646 10.854a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0-.708-.708L8 9.793 4.354 6.146a.5.5 0 1 0-.708.708z" />
-            </svg>
+        <li class="nav-item">
+          <a class="nav-link <?= (uri_string() === 'resources/articles') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
+            href="<?= base_url('resources/articles'); ?>">
+            Articles
           </a>
-          <ul class="dropdown-menu border-0 shadow-lg rounded-3 py-2 mt-1 mt-lg-2" aria-labelledby="resourcesDropdown">
-            <li>
-            <li>
-              <a class="dropdown-item py-2 px-3 px-lg-4 <?= (uri_string() === 'resources/articles') ? 'active bg-primary text-white' : '' ?>"
-                href="<?= base_url('resources/articles'); ?>">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
-                  class="me-2 <?= (uri_string() === 'resources/articles') ? 'text-white' : 'text-muted' ?>">
-                  <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z" />
-                  <path d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z" />
-                </svg>
-                Articles
-              </a>
-            </li>
         </li>
-        <!-- <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'careers') ? 'active bg-primary text-white' : '' ?>"
-            href="<?= base_url('company/careers'); ?>">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
-              class="me-2 <?= ($segment2 == 'careers') ? 'text-white' : 'text-muted' ?>">
-              <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
-            </svg>
-            Careers
-          </a></li>
 
-        <li><a class="dropdown-item py-2 px-3 px-lg-4 <?= ($segment2 == 'events') ? 'active bg-primary text-white' : '' ?>"
-            href="<?= base_url('resources/events'); ?>">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
-              class="me-2 <?= ($segment2 == 'events') ? 'text-white' : 'text-muted' ?>">
-              <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
-              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-            </svg>
+        <li class="nav-item">
+          <a class="nav-link <?= ($segment1 == 'events') ? 'active text-primary fw-semibold' : 'text-dark'; ?>"
+            href="<?= base_url('events'); ?>">
             Events
-          </a></li> -->
-      </ul>
-      </li>
+          </a>
+        </li>
 
       </ul>
 
