@@ -19,7 +19,7 @@ class EventsController extends BaseController
                     'type'         => 'Workshop',
                     'day'          => '15',
                     'month'        => 'Sep',
-                    'date_text'    => 'Rabu, 15 September 2024',
+                    'date_text'    => 'Rabu, 15 September 2026',
                     'time'         => '13:00 – 17:00 WIB',
                     'location'     => 'Jakarta',
                     'excerpt'      => 'Technical workshop hands-on bersama Redis & AWS untuk membangun AI Banking Chatbot menggunakan Redis Iris dan Amazon Bedrock, mencakup Vector Search, Semantic Router, LangCache, hingga Context Retriever.',
