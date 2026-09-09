@@ -134,20 +134,22 @@
                             <div class="position-relative w-100 overflow-hidden" style="aspect-ratio: 16 / 9;">
                                 <?php if (!empty($event['image'])): ?>
                                     <img
-                                        src="<?= base_url($event['image']) ?>"
+                                        src="<?= (filter_var($event['image'], FILTER_VALIDATE_URL)) ? esc($event['image']) : base_url($event['image']) ?>"
                                         alt="<?= esc($event['title']) ?>"
                                         class="w-100 h-100 object-fit-cover position-absolute top-0 start-0"
-                                        loading="lazy">
+                                        style="object-position: left center;"
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer">
                                 <?php else: ?>
                                     <div class="event-thumb-placeholder w-100 h-100 d-flex align-items-center justify-content-center position-absolute top-0 start-0">
                                         <i class="bi bi-calendar-event fs-1"></i>
                                     </div>
                                 <?php endif; ?>
 
-                                <div class="event-date-badge">
-                                    <span class="day"><?= esc($event['day']) ?></span>
-                                    <span class="month"><?= esc($event['month']) ?></span>
-                                </div>
+                                <!-- <div class="event-date-badge">
+                                        <span class="day"><?= esc($event['day']) ?></span>
+                                        <span class="month"><?= esc($event['month']) ?></span>
+                                    </div> -->
                                 <span class="badge bg-primary event-status-badge">Upcoming</span>
                             </div>
 
@@ -181,7 +183,7 @@
                                     <?php if (!empty($event['register_url'])): ?>
                                         <a href="<?= esc($event['register_url']) ?>"
                                             class="btn btn-primary rounded-pill px-4 btn-hover-up"
-                                            <?= $event['register_url'] === '#' ? 'onclick="return false;"' : '' ?>
+                                            <?= $event['register_url'] === '#' ? 'onclick="return false;"' : 'target="_blank" rel="noopener noreferrer"' ?>
                                             title="Link pendaftaran event">
                                             Detail Event
                                         </a>
@@ -226,20 +228,22 @@
                             <div class="position-relative w-100 overflow-hidden" style="aspect-ratio: 16 / 9;">
                                 <?php if (!empty($event['image'])): ?>
                                     <img
-                                        src="<?= base_url($event['image']) ?>"
+                                        src="<?= (filter_var($event['image'], FILTER_VALIDATE_URL)) ? esc($event['image']) : base_url($event['image']) ?>"
                                         alt="<?= esc($event['title']) ?>"
                                         class="w-100 h-100 object-fit-cover position-absolute top-0 start-0"
-                                        loading="lazy">
+                                        style="object-position: left center;"
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer">
                                 <?php else: ?>
                                     <div class="event-thumb-placeholder w-100 h-100 d-flex align-items-center justify-content-center position-absolute top-0 start-0">
                                         <i class="bi bi-calendar-event fs-1"></i>
                                     </div>
                                 <?php endif; ?>
 
-                                <div class="event-date-badge">
+                                <!-- <div class="event-date-badge">
                                     <span class="day"><?= esc($event['day']) ?></span>
                                     <span class="month"><?= esc($event['month']) ?></span>
-                                </div>
+                                </div> -->
                                 <span class="badge bg-secondary event-status-badge">Ended</span>
                             </div>
 
