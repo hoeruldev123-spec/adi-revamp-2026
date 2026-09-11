@@ -43,6 +43,20 @@ class EventsController extends BaseController
                     'image'        => 'https://alldataint.com/articles/wp-content/uploads/2026/08/dataiku-summit-jakarta-2026-pre.jpeg',
                 ],
                 [
+                    'title'        => 'Hands-On Build It, End-to-End Workshop with ClickHouse Cloud',
+                    'type'         => 'Workshop',
+                    'day'          => '08',
+                    'month'        => 'Oct',
+                    'date_text'    => 'Thursday, 8 October 2026',
+                    'time'         => '09:00 – 13:00 WIB',
+                    'location'     => 'AWS Office, Sinarmas MSIG Tower 16th Floor, Jakarta',
+                    'excerpt'      => 'Take a real analytics app live on ClickHouse Cloud — hands-on with CDC pipelines, AI SRE observability, and conversational BI in a 3-hour sitting.',
+                    'register_url' => base_url('/events/clickhouse-build-it-end-to-end-workshop'),
+                    'detail_url'   => null,
+                    'target'       => '_self',
+                    'image'        => 'assets/images/events/banner/clickhouse-build-workshop.webp',
+                ],
+                [
                     'title'        => 'Digital Radiology Transformation & Navigating SATUSEHAT EMR for BPJS Claim',
                     'type'         => 'All Data Cloud PACS Launching',
                     'day'          => '22',
@@ -108,6 +122,11 @@ class EventsController extends BaseController
         ];
 
         return view('pages/events/aws-end-to-end-data-solution', $data);
+    }
+
+    public function clickhouseBuildItEndToEndWorkshop()
+    {
+        return view('pages/events/clickhouse-build-it-end-to-end-workshop');
     }
 
     // Page Event 1 
