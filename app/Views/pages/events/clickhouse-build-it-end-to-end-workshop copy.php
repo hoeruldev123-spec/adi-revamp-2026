@@ -13,24 +13,8 @@
  * -----------------------------------------------------------------
  */
 
-$adiLogo              = 'https://alldataint.com/assets/images/logo_coloured.png';
-$clickhouseLogoNav     = '
-<svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 135 40"
-     width="115"
-     height="34"
-     fill="currentColor"
-     role="img"
-     aria-label="ClickHouse">
-
-    <rect width="2.25" height="20.25" x="2.71" y="9.88" rx="0.24"></rect>
-    <rect width="2.25" height="20.25" x="7.21" y="9.88" rx="0.24"></rect>
-    <rect width="2.25" height="20.25" x="11.71" y="9.88" rx="0.24"></rect>
-    <rect width="2.25" height="20.25" x="16.21" y="9.88" rx="0.24"></rect>
-    <rect width="2.25" height="4.5" x="20.71" y="17.75" rx="0.24"></rect>
-
-    <path d="M40.03 15.14q-.95 0-1.7.34-.76.33-1.3.98-.52.64-.81 1.56-.27.91-.27 2.07a7 7 0 0 0 .45 2.63q.45 1.1 1.35 1.7t2.27.59q.83 0 1.58-.15.78-.15 1.57-.41v1.67q-.75.3-1.55.42-.8.15-1.84.14-1.96 0-3.27-.81a5 5 0 0 1-1.95-2.3q-.65-1.5-.65-3.5 0-1.46.4-2.66.42-1.23 1.19-2.1a5 5 0 0 1 1.9-1.36 7 7 0 0 1 2.65-.48 8.5 8.5 0 0 1 3.6.79l-.72 1.62q-.62-.3-1.37-.5a5 5 0 0 0-1.53-.24m7.6 11.36h-1.91V12.82h1.9zm4.9-9.7v9.7h-1.9v-9.7zm-.94-3.7q.44.01.76.26t.32.85q0 .57-.32.84a1.2 1.2 0 0 1-.76.25q-.45 0-.79-.25-.3-.27-.3-.84 0-.6.3-.85.33-.25.8-.25m7.84 13.58q-1.34 0-2.34-.52a3.6 3.6 0 0 1-1.56-1.62 6 6 0 0 1-.56-2.83q0-1.8.6-2.91.6-1.13 1.63-1.64a5 5 0 0 1 2.38-.54q.81 0 1.5.18.73.15 1.2.38l-.58 1.54q-.51-.2-1.08-.34-.56-.15-1.06-.14-.9 0-1.5.4-.57.37-.86 1.15-.27.76-.27 1.9 0 1.1.29 1.86.3.75.84 1.15.58.38 1.43.38a5 5 0 0 0 2.57-.65v1.66q-.53.3-1.13.45t-1.5.14m6.81-7.02q0 .38-.04.86-.01.5-.05.9h.05l.78-.97q.2-.26.4-.47l2.96-3.18h2.22l-3.9 4.16 4.15 5.54h-2.25l-3.2-4.34-1.12.94v3.4h-1.89V12.82h1.9zm18.4 6.84H82.7v-5.87h-6.13v5.87h-1.95V13.65h1.95v5.33h6.13v-5.33h1.95zm11.78-4.86q0 1.2-.32 2.14a5 5 0 0 1-.92 1.59q-.6.65-1.44.99a5.3 5.3 0 0 1-3.71 0 4.1 4.1 0 0 1-2.38-2.58 6 6 0 0 1-.34-2.16q0-1.6.54-2.72.56-1.1 1.59-1.69 1.04-.6 2.44-.6 1.34 0 2.34.6 1.03.58 1.6 1.7.6 1.11.6 2.73m-7.15 0q0 1.08.27 1.87.28.78.85 1.19t1.48.41q.9 0 1.47-.41.58-.42.85-1.19.27-.8.27-1.87 0-1.11-.29-1.87-.27-.76-.85-1.15a2.4 2.4 0 0 0-1.47-.42q-1.36 0-1.96.9-.62.9-.62 2.54m17.92-4.84v9.7h-1.53l-.27-1.28h-.09q-.3.5-.8.83-.47.33-1.05.47-.58.16-1.2.16-1.13 0-1.92-.36a2.6 2.6 0 0 1-1.18-1.15 4.5 4.5 0 0 1-.4-2.02V16.8h1.92v6.06q0 1.14.47 1.7.5.55 1.5.55t1.58-.4q.59-.39.81-1.14.25-.78.25-1.86V16.8zm9.43 6.96q0 .96-.47 1.6a3 3 0 0 1-1.35 1q-.88.32-2.12.32-1.03 0-1.77-.16-.71-.15-1.33-.43v-1.7q.65.31 1.5.56a6 6 0 0 0 1.65.23q1.08 0 1.55-.34.5-.34.49-.92 0-.31-.18-.57a2 2 0 0 0-.69-.54q-.48-.3-1.44-.65a15 15 0 0 1-1.56-.74 3 3 0 0 1-1-.88q-.34-.53-.34-1.33 0-1.26 1.01-1.93a5 5 0 0 1 2.7-.68 7 7 0 0 1 3.19.68l-.63 1.46a7 7 0 0 0-1.75-.56 4 4 0 0 0-.9-.09q-.86 0-1.31.27a.8.8 0 0 0-.45.76q0 .34.2.6.21.24.73.5.53.25 1.43.6t1.53.71q.64.36.97.88.34.53.34 1.33m6.1-7.14q1.27 0 2.19.54.92.52 1.4 1.51.5.99.5 2.34v1.04h-6.51q.03 1.5.77 2.29.75.8 2.11.8a8 8 0 0 0 1.66-.17q.74-.19 1.5-.52v1.58a7 7 0 0 1-3.23.65q-1.41 0-2.49-.56a4 4 0 0 1-1.69-1.65q-.6-1.12-.6-2.74 0-1.65.55-2.77a4.1 4.1 0 0 1 3.83-2.34m0 1.47q-1.04 0-1.66.67-.62.66-.72 1.89h4.57q0-.76-.24-1.33-.23-.59-.72-.9a2.2 2.2 0 0 0-1.24-.33"></path>
-</svg>';
+$adiLogo              = 'assets/images/adi-logo.png';
+$clickhouseLogoNav     = 'assets/images/clickhouse-logo-nav.png';
 $clickhouseLogoFooter  = 'assets/images/clickhouse-logo-footer.png';
 
 /** Escape aman untuk output HTML. */
@@ -63,7 +47,7 @@ $copy = [
         'eyebrow' => 'Hands on workshop for data and AI architects and the leaders they advise',
         'h1a' => 'See real time analytics and AI',
         'h1b' => 'built end to end, in one morning.',
-        'heroSub' => 'A working analytics app goes live on ClickHouse Cloud in front of you: streaming data from Postgres, conversational BI, full observability, and an AI SRE that diagnoses a live incident. You build it with an AI coding agent doing the typing, and you take the result back to your team. Want to experience lightning-fast query performance firsthand and see just how cost-effective ClickHouse can be? Join this workshop and see it in action.',
+        'heroSub' => 'A working analytics app goes live on ClickHouse Cloud in front of you: streaming data from Postgres, conversational BI, full observability, and an AI SRE that diagnoses a live incident. You build it with an AI coding agent doing the typing, and you take the result back to your team.',
         'heroCta' => 'Reserve your seat',
         'heroCta2' => 'See the agenda',
         'heroNote' => 'Free to attend. Seats are limited. Bring a lead engineer or architect as your plus one.',
@@ -173,7 +157,7 @@ $copy = [
         'eyebrow' => 'Workshop praktik untuk arsitek data dan AI serta pemimpin yang mereka dampingi',
         'h1a' => 'Lihat analitik real time dan AI',
         'h1b' => 'dibangun tuntas dalam satu pagi.',
-        'heroSub' => 'Saksikan langsung bagaimana aplikasi analitik berjalan di ClickHouse Cloud: mulai dari streaming data dari Postgres, conversational BI, full observability, hingga AI SRE yang mampu mendiagnosis insiden secara real-time. Anda akan membangun aplikasi ini dengan bantuan AI coding agent yang menangani proses coding, lalu membawa hasilnya kembali untuk diterapkan bersama tim Anda. Ingin merasakan langsung performa query yang sangat cepat sekaligus melihat seberapa cost-effective ClickHouse untuk kebutuhan analitik Anda? Ikuti workshop ini dan lihat langsung bagaimana ClickHouse bekerja.',
+        'heroSub' => 'Sebuah aplikasi analitik nyata berjalan di ClickHouse Cloud di depan Anda: data streaming dari Postgres, BI percakapan, observabilitas penuh, dan AI SRE yang mendiagnosis insiden secara langsung. Anda membangunnya bersama AI coding agent yang mengerjakan pengetikan, lalu membawa hasilnya kembali ke tim Anda.',
         'heroCta' => 'Amankan kursi Anda',
         'heroCta2' => 'Lihat agenda',
         'heroNote' => 'Gratis. Kursi terbatas. Ajak lead engineer atau arsitek Anda sebagai pendamping.',
@@ -373,84 +357,28 @@ $t = $copy[$lang];
     <div style="min-height:100vh;display:flex;flex-direction:column;">
 
         <!-- Nav -->
-
         <header style="position:sticky;top:0;z-index:20;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:1px solid #e6edf5;">
             <div style="max-width:1160px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
-
-                <!-- Logos -->
                 <div style="display:flex;align-items:center;gap:18px;">
-
-                    <!-- All Data International -->
-                    <a href="https://alldataint.com/" style="display:flex;align-items:center;text-decoration:none;">
-                        <img
-                            src="https://alldataint.com/assets/images/logo_coloured.png"
-                            alt="All Data International Logo"
-                            style="height:40px;width:auto;display:block;object-fit:contain;">
-                    </a>
-
-                    <!-- Separator -->
+                    <img src="<?= $adiLogo ?>" alt="All Data International" style="height:40px;width:auto;display:block;">
                     <span style="width:1px;height:28px;background:#d5dfeb;display:block;"></span>
-
-                    <!-- ClickHouse -->
-                    <a
-                        href="https://clickhouse.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style="display:flex;align-items:center;text-decoration:none;color:#000;">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 135 40"
-                            width="115"
-                            height="34"
-                            fill="currentColor"
-                            role="img"
-                            aria-label="ClickHouse">
-                            <rect width="2.25" height="20.25" x="2.71" y="9.88" rx="0.24"></rect>
-                            <rect width="2.25" height="20.25" x="7.21" y="9.88" rx="0.24"></rect>
-                            <rect width="2.25" height="20.25" x="11.71" y="9.88" rx="0.24"></rect>
-                            <rect width="2.25" height="20.25" x="16.21" y="9.88" rx="0.24"></rect>
-                            <rect width="2.25" height="4.5" x="20.71" y="17.75" rx="0.24"></rect>
-
-                            <path d="M40.03 15.14q-.95 0-1.7.34-.76.33-1.3.98-.52.64-.81 1.56-.27.91-.27 2.07a7 7 0 0 0 .45 2.63q.45 1.1 1.35 1.7t2.27.59q.83 0 1.58-.15.78-.15 1.57-.41v1.67q-.75.3-1.55.42-.8.15-1.84.14-1.96 0-3.27-.81a5 5 0 0 1-1.95-2.3q-.65-1.5-.65-3.5 0-1.46.4-2.66.42-1.23 1.19-2.1a5 5 0 0 1 1.9-1.36 7 7 0 0 1 2.65-.48 8.5 8.5 0 0 1 3.6.79l-.72 1.62q-.62-.3-1.37-.5a5 5 0 0 0-1.53-.24m7.6 11.36h-1.91V12.82h1.9zm4.9-9.7v9.7h-1.9v-9.7zm-.94-3.7q.44.01.76.26t.32.85q0 .57-.32.84a1.2 1.2 0 0 1-.76.25q-.45 0-.79-.25-.3-.27-.3-.84 0-.6.3-.85.33-.25.8-.25m7.84 13.58q-1.34 0-2.34-.52a3.6 3.6 0 0 1-1.56-1.62 6 6 0 0 1-.56-2.83q0-1.8.6-2.91.6-1.13 1.63-1.64a5 5 0 0 1 2.38-.54q.81 0 1.5.18.73.15 1.2.38l-.58 1.54q-.51-.2-1.08-.34-.56-.15-1.06-.14-.9 0-1.5.4-.57.37-.86 1.15-.27.76-.27 1.9 0 1.1.29 1.86.3.75.84 1.15.58.38 1.43.38a5 5 0 0 0 2.57-.65v1.66q-.53.3-1.13.45t-1.5.14m6.81-7.02q0 .38-.04.86-.01.5-.05.9h.05l.78-.97q.2-.26.4-.47l2.96-3.18h2.22l-3.9 4.16 4.15 5.54h-2.25l-3.2-4.34-1.12.94v3.4h-1.89V12.82h1.9zm18.4 6.84H82.7v-5.87h-6.13v5.87h-1.95V13.65h1.95v5.33h6.13v-5.33h1.95zm11.78-4.86q0 1.2-.32 2.14a5 5 0 0 1-.92 1.59q-.6.65-1.44.99a5.3 5.3 0 0 1-3.71 0 4.1 4.1 0 0 1-2.38-2.58 6 6 0 0 1-.34-2.16q0-1.6.54-2.72.56-1.1 1.59-1.69 1.04-.6 2.44-.6 1.34 0 2.34.6 1.03.58 1.6 1.7.6 1.11.6 2.73m-7.15 0q0 1.08.27 1.87.28.78.85 1.19t1.48.41q.9 0 1.47-.41.58-.42.85-1.19.27-.8.27-1.87 0-1.11-.29-1.87-.27-.76-.85-1.15a2.4 2.4 0 0 0-1.47-.42q-1.36 0-1.96.9-.62.9-.62 2.54m17.92-4.84v9.7h-1.53l-.27-1.28h-.09q-.3.5-.8.83-.47.33-1.05.47-.58.16-1.2.16-1.13 0-1.92-.36a2.6 2.6 0 0 1-1.18-1.15 4.5 4.5 0 0 1-.4-2.02V16.8h1.92v6.06q0 1.14.47 1.7.5.55 1.5.55t1.58-.4q.59-.39.81-1.14.25-.78.25-1.86V16.8zm9.43 6.96q0 .96-.47 1.6a3 3 0 0 1-1.35 1q-.88.32-2.12.32-1.03 0-1.77-.16-.71-.15-1.33-.43v-1.7q.65.31 1.5.56a6 6 0 0 0 1.65.23q1.08 0 1.55-.34.5-.34.49-.92 0-.31-.18-.57a2 2 0 0 0-.69-.54q-.48-.3-1.44-.65a15 15 0 0 1-1.56-.74 3 3 0 0 1-1-.88q-.34-.53-.34-1.33 0-1.26 1.01-1.93a5 5 0 0 1 2.7-.68 7 7 0 0 1 3.19.68l-.63 1.46a7 7 0 0 0-1.75-.56 4 4 0 0 0-.9-.09q-.86 0-1.31.27a.8.8 0 0 0-.45.76q0 .34.2.6.21.24.73.5.53.25 1.43.6t1.53.71q.64.36.97.88.34.53.34 1.33m6.1-7.14q1.27 0 2.19.54.92.52 1.4 1.51.5.99.5 2.34v1.04h-6.51q.03 1.5.77 2.29.75.8 2.11.8a8 8 0 0 0 1.66-.17q.74-.19 1.5-.52v1.58a7 7 0 0 1-3.23.65q-1.41 0-2.49-.56a4 4 0 0 1-1.69-1.65q-.6-1.12-.6-2.74 0-1.65.55-2.77a4.1 4.1 0 0 1 3.83-2.34m0 1.47q-1.04 0-1.66.67-.62.66-.72 1.89h4.57q0-.76-.24-1.33-.23-.59-.72-.9a2.2 2.2 0 0 0-1.24-.33"></path>
-                        </svg>
-                    </a>
-
+                    <img src="<?= $clickhouseLogoNav ?>" alt="ClickHouse" style="height:26px;width:auto;display:block;">
                 </div>
-
-                <!-- Navigation -->
                 <nav class="navlinks" style="display:flex;gap:28px;font-size:14px;font-weight:500;color:#3b4d63;">
                     <a href="#why" style="color:#3b4d63;"><?= e($t['navWhy']) ?></a>
                     <a href="#who" style="color:#3b4d63;"><?= e($t['navWho']) ?></a>
                     <a href="#agenda" style="color:#3b4d63;"><?= e($t['navAgenda']) ?></a>
                     <a href="#partners" style="color:#3b4d63;"><?= e($t['navPartners']) ?></a>
                 </nav>
-
-                <!-- Right Actions -->
                 <div style="display:flex;align-items:center;gap:12px;">
-
-                    <!-- Language -->
                     <div style="display:flex;border:1px solid #d5dfeb;border-radius:999px;overflow:hidden;font-size:12px;font-weight:600;">
-                        <a
-                            href="?lang=en"
-                            style="padding:6px 12px;border:none;text-decoration:none;display:inline-block;<?= $lang === 'en' ? 'background:#0b1f3a;color:#ffffff;' : 'background:#ffffff;color:#3b4d63;' ?>">EN</a>
-
-                        <a
-                            href="?lang=id"
-                            style="padding:6px 12px;border:none;text-decoration:none;display:inline-block;<?= $lang === 'id' ? 'background:#0b1f3a;color:#ffffff;' : 'background:#ffffff;color:#3b4d63;' ?>">ID</a>
+                        <a href="?lang=en" style="padding:6px 12px;border:none;text-decoration:none;display:inline-block;<?= $lang === 'en' ? 'background:#0b1f3a;color:#ffffff;' : 'background:#ffffff;color:#3b4d63;' ?>">EN</a>
+                        <a href="?lang=id" style="padding:6px 12px;border:none;text-decoration:none;display:inline-block;<?= $lang === 'id' ? 'background:#0b1f3a;color:#ffffff;' : 'background:#ffffff;color:#3b4d63;' ?>">ID</a>
                     </div>
-
-                    <!-- Register -->
-                    <a
-                        href="https://forms.cloud.microsoft/r/GCQDj3tTW5"
-                        class="btn-primary"
-                        style="background:#008bf9;color:#ffffff;padding:10px 18px;border-radius:999px;font-size:14px;font-weight:600;white-space:nowrap;"><?= e($t['register']) ?></a>
-
+                    <a href="#register" class="btn-primary" style="background:#008bf9;color:#ffffff;padding:10px 18px;border-radius:999px;font-size:14px;font-weight:600;white-space:nowrap;"><?= e($t['register']) ?></a>
                 </div>
-
             </div>
         </header>
-
-
 
         <!-- Hero -->
         <section style="background:linear-gradient(180deg,#f3f8fe 0%,#ffffff 100%);border-bottom:1px solid #e6edf5;">
@@ -611,9 +539,7 @@ $t = $copy[$lang];
                     <p style="margin:0;font-size:15px;line-height:1.6;color:#c4d1e0;text-wrap:pretty;"><?= e($t['btTogetherBody']) ?></p>
                 </div>
                 <div style="border:1px solid #dfe8f2;border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:18px;">
-                    <div style="height:34px;display:flex;align-items:center;align-self:flex-start;margin:7px 0;color:#000000;">
-                        <?= $clickhouseLogoNav ?>
-                    </div>
+                    <img src="<?= $clickhouseLogoNav ?>" alt="ClickHouse" style="height:30px;width:auto;align-self:flex-start;margin:7px 0;">
                     <h3 style="margin:0;font-size:20px;font-weight:700;color:#0b1f3a;"><?= e($t['btChTitle']) ?></h3>
                     <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.5;color:#3b4d63;">
                         <?php foreach ($t['btChPoints'] as $p): ?><li style="display:flex;gap:10px;"><span style="color:#008bf9;font-weight:700;">·</span><span><?= e($p) ?></span></li><?php endforeach; ?>
@@ -649,14 +575,8 @@ $t = $copy[$lang];
                     </div>
                     <div style="display:flex;flex-direction:column;gap:14px;">
                         <div style="display:flex;gap:16px;align-items:center;background:#ffffff;border:1px solid #dfe8f2;border-radius:16px;padding:18px 20px;">
-                            <img
-                                src="<?= base_url('assets/images/events/speakers/rizki.webp') ?>"
-                                alt="Rizki Ramadhan"
-                                style="width:56px;height:56px;border-radius:50%;object-fit:cover;display:block;flex:none;">
-                            <div style="display:flex;flex-direction:column;gap:2px;">
-                                <strong style="font-size:17px;color:#0b1f3a;">Rizki Ramadhan</strong>
-                                <span style="font-size:14px;color:#3b4d63;">Solution Architect, All Data International</span>
-                            </div>
+                            <span style="width:56px;height:56px;border-radius:50%;background:#e3effb;color:#008bf9;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;flex:none;">RR</span>
+                            <div style="display:flex;flex-direction:column;gap:2px;"><strong style="font-size:17px;color:#0b1f3a;">Rizky Ramadhan</strong><span style="font-size:14px;color:#3b4d63;">Solution Architect, All Data International</span></div>
                         </div>
                         <div style="display:flex;gap:16px;align-items:center;background:#ffffff;border:1px solid #dfe8f2;border-radius:16px;padding:18px 20px;">
                             <span style="width:56px;height:56px;border-radius:50%;background:#161616;color:#faff69;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;flex:none;">SY</span>
@@ -687,30 +607,40 @@ $t = $copy[$lang];
                     </div>
                 </div>
                 <div style="background:#ffffff;border:1px solid #dfe8f2;border-radius:20px;padding:32px;box-shadow:0 20px 50px rgba(11,31,58,0.06);">
-
-                    <a
-                        href="https://forms.cloud.microsoft/r/GCQDj3tTW5"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-primary"
-                        style="
-            display:inline-flex;
-            align-items:center;
-            justify-content:center;
-            background:#008bf9;
-            color:#ffffff;
-            border:none;
-            padding:15px 26px;
-            border-radius:999px;
-            font-size:16px;
-            font-weight:700;
-            cursor:pointer;
-            margin-top:4px;
-            text-decoration:none;
-        ">
-                        <?= e($t['fSubmit']) ?>
-                    </a>
-
+                    <?php if ($submitted): ?>
+                        <div style="display:flex;flex-direction:column;gap:12px;padding:20px 0;">
+                            <span style="width:48px;height:48px;border-radius:50%;background:#faff69;display:flex;align-items:center;justify-content:center;font-weight:800;color:#161616;">✓</span>
+                            <h3 style="margin:0;font-size:24px;font-weight:800;color:#0b1f3a;"><?= e($t['thanksTitle']) ?></h3>
+                            <p style="margin:0;font-size:15px;line-height:1.6;color:#3b4d63;"><?= e($t['thanksBody']) ?></p>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!$submitted): ?>
+                        <form method="post" action="?lang=<?= e($lang) ?>#register" style="display:flex;flex-direction:column;gap:16px;">
+                            <div class="two" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+                                <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#0b1f3a;"><?= e($t['fName']) ?><input name="name" required class="form-input" style="padding:12px 14px;border:1px solid #c9d6e5;border-radius:10px;font-size:15px;color:#0b1f3a;background:#ffffff;outline:none;"></label>
+                                <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#0b1f3a;"><?= e($t['fEmail']) ?><input name="email" type="email" required class="form-input" style="padding:12px 14px;border:1px solid #c9d6e5;border-radius:10px;font-size:15px;color:#0b1f3a;background:#ffffff;outline:none;"></label>
+                            </div>
+                            <div class="two" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+                                <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#0b1f3a;"><?= e($t['fCompany']) ?><input name="company" required class="form-input" style="padding:12px 14px;border:1px solid #c9d6e5;border-radius:10px;font-size:15px;color:#0b1f3a;background:#ffffff;outline:none;"></label>
+                                <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#0b1f3a;"><?= e($t['fRole']) ?><input name="role" required class="form-input" placeholder="<?= e($t['fRolePh']) ?>" style="padding:12px 14px;border:1px solid #c9d6e5;border-radius:10px;font-size:15px;color:#0b1f3a;background:#ffffff;outline:none;"></label>
+                            </div>
+                            <label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:#0b1f3a;"><?= e($t['fIndustry']) ?>
+                                <select name="industry" style="padding:12px 14px;border:1px solid #c9d6e5;border-radius:10px;font-size:15px;color:#0b1f3a;background:#ffffff;outline:none;">
+                                    <?php foreach ($t['whoIndustries'] as $i): ?><option value="<?= e($i) ?>"><?= e($i) ?></option><?php endforeach; ?>
+                                    <option value="other"><?= e($t['fOther']) ?></option>
+                                </select>
+                            </label>
+                            <div style="display:flex;flex-direction:column;gap:12px;padding:16px 18px;background:#f3f8fe;border-radius:12px;">
+                                <span style="font-size:13px;font-weight:700;color:#0b1f3a;"><?= e($t['fPlusTitle']) ?></span>
+                                <div class="two" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                                    <input name="guestName" class="form-input-sm" placeholder="<?= e($t['fPlusName']) ?>" style="padding:11px 14px;border:1px solid #c9d6e5;border-radius:10px;font-size:14px;color:#0b1f3a;background:#ffffff;outline:none;">
+                                    <input name="guestRole" class="form-input-sm" placeholder="<?= e($t['fPlusRole']) ?>" style="padding:11px 14px;border:1px solid #c9d6e5;border-radius:10px;font-size:14px;color:#0b1f3a;background:#ffffff;outline:none;">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary" style="background:#008bf9;color:#ffffff;border:none;padding:15px 26px;border-radius:999px;font-size:16px;font-weight:700;cursor:pointer;margin-top:4px;"><?= e($t['fSubmit']) ?></button>
+                            <span style="font-size:12px;line-height:1.5;color:#5b6b80;text-align:center;"><?= e($t['fFine']) ?></span>
+                        </form>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
@@ -718,46 +648,9 @@ $t = $copy[$lang];
         <footer style="margin-top:auto;background:#0b1f3a;color:#c4d1e0;">
             <div style="max-width:1160px;margin:0 auto;padding:40px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;">
                 <div style="display:flex;align-items:center;gap:18px;">
-
-                    <!-- All Data International Logo -->
-                    <a
-                        href="https://alldataint.com/"
-                        style="display:flex;align-items:center;text-decoration:none;">
-                        <img
-                            src="https://alldataint.com/assets/images/events/All_Data_Logo-putih.png"
-                            alt="All Data International Logo"
-                            style="height:36px;width:auto;object-fit:contain;display:block;">
-                    </a>
-
-                    <!-- Separator -->
-                    <span style="font-size:20px;color:#8fa4bd;font-weight:300;line-height:1;">
-                        ×
-                    </span>
-
-                    <!-- ClickHouse Logo -->
-                    <a
-                        href="https://clickhouse.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style="display:flex;align-items:center;text-decoration:none;color:#ffffff;">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 135 40"
-                            width="115"
-                            height="34"
-                            fill="currentColor"
-                            role="img"
-                            aria-label="ClickHouse">
-                            <rect width="2.25" height="20.25" x="2.71" y="9.88" rx="0.24"></rect>
-                            <rect width="2.25" height="20.25" x="7.21" y="9.88" rx="0.24"></rect>
-                            <rect width="2.25" height="20.25" x="11.71" y="9.88" rx="0.24"></rect>
-                            <rect width="2.25" height="20.25" x="16.21" y="9.88" rx="0.24"></rect>
-                            <rect width="2.25" height="4.5" x="20.71" y="17.75" rx="0.24"></rect>
-
-                            <path d="M40.03 15.14q-.95 0-1.7.34-.76.33-1.3.98-.52.64-.81 1.56-.27.91-.27 2.07a7 7 0 0 0 .45 2.63q.45 1.1 1.35 1.7t2.27.59q.83 0 1.58-.15.78-.15 1.57-.41v1.67q-.75.3-1.55.42-.8.15-1.84.14-1.96 0-3.27-.81a5 5 0 0 1-1.95-2.3q-.65-1.5-.65-3.5 0-1.46.4-2.66.42-1.23 1.19-2.1a5 5 0 0 1 1.9-1.36 7 7 0 0 1 2.65-.48 8.5 8.5 0 0 1 3.6.79l-.72 1.62q-.62-.3-1.37-.5a5 5 0 0 0-1.53-.24m7.6 11.36h-1.91V12.82h1.9zm4.9-9.7v9.7h-1.9v-9.7zm-.94-3.7q.44.01.76.26t.32.85q0 .57-.32.84a1.2 1.2 0 0 1-.76.25q-.45 0-.79-.25-.3-.27-.3-.84 0-.6.3-.85.33-.25.8-.25m7.84 13.58q-1.34 0-2.34-.52a3.6 3.6 0 0 1-1.56-1.62 6 6 0 0 1-.56-2.83q0-1.8.6-2.91.6-1.13 1.63-1.64a5 5 0 0 1 2.38-.54q.81 0 1.5.18.73.15 1.2.38l-.58 1.54q-.51-.2-1.08-.34-.56-.15-1.06-.14-.9 0-1.5.4-.57.37-.86 1.15-.27.76-.27 1.9 0 1.1.29 1.86.3.75.84 1.15.58.38 1.43.38a5 5 0 0 0 2.57-.65v1.66q-.53.3-1.13.45t-1.5.14m6.81-7.02q0 .38-.04.86-.01.5-.05.9h.05l.78-.97q.2-.26.4-.47l2.96-3.18h2.22l-3.9 4.16 4.15 5.54h-2.25l-3.2-4.34-1.12.94v3.4h-1.89V12.82h1.9zm18.4 6.84H82.7v-5.87h-6.13v5.87h-1.95V13.65h1.95v5.33h6.13v-5.33h1.95zm11.78-4.86q0 1.2-.32 2.14a5 5 0 0 1-.92 1.59q-.6.65-1.44.99a5.3 5.3 0 0 1-3.71 0 4.1 4.1 0 0 1-2.38-2.58 6 6 0 0 1-.34-2.16q0-1.6.54-2.72.56-1.1 1.59-1.69 1.04-.6 2.44-.6 1.34 0 2.34.6 1.03.58 1.6 1.7.6 1.11.6 2.73m-7.15 0q0 1.08.27 1.87.28.78.85 1.19t1.48.41q.9 0 1.47-.41.58-.42.85-1.19.27-.8.27-1.87 0-1.11-.29-1.87-.27-.76-.85-1.15a2.4 2.4 0 0 0-1.47-.42q-1.36 0-1.96.9-.62.9-.62 2.54m17.92-4.84v9.7h-1.53l-.27-1.28h-.09q-.3.5-.8.83-.47.33-1.05.47-.58.16-1.2.16-1.13 0-1.92-.36a2.6 2.6 0 0 1-1.18-1.15 4.5 4.5 0 0 1-.4-2.02V16.8h1.92v6.06q0 1.14.47 1.7.5.55 1.5.55t1.58-.4q.59-.39.81-1.14.25-.78.25-1.86V16.8zm9.43 6.96q0 .96-.47 1.6a3 3 0 0 1-1.35 1q-.88.32-2.12.32-1.03 0-1.77-.16-.71-.15-1.33-.43v-1.7q.65.31 1.5.56a6 6 0 0 0 1.65.23q1.08 0 1.55-.34.5-.34.49-.92 0-.31-.18-.57a2 2 0 0 0-.69-.54q-.48-.3-1.44-.65a15 15 0 0 1-1.56-.74 3 3 0 0 1-1-.88q-.34-.53-.34-1.33 0-1.26 1.01-1.93a5 5 0 0 1 2.7-.68 7 7 0 0 1 3.19.68l-.63 1.46a7 7 0 0 0-1.75-.56 4 4 0 0 0-.9-.09q-.86 0-1.31.27a.8.8 0 0 0-.45.76q0 .34.2.6.21.24.73.5.53.25 1.43.6t1.53.71q.64.36.97.88.34.53.34 1.33m6.1-7.14q1.27 0 2.19.54.92.52 1.4 1.51.5.99.5 2.34v1.04h-6.51q.03 1.5.77 2.29.75.8 2.11.8a8 8 0 0 0 1.66-.17q.74-.19 1.5-.52v1.58a7 7 0 0 1-3.23.65q-1.41 0-2.49-.56a4 4 0 0 1-1.69-1.65q-.6-1.12-.6-2.74 0-1.65.55-2.77a4.1 4.1 0 0 1 3.83-2.34m0 1.47q-1.04 0-1.66.67-.62.66-.72 1.89h4.57q0-.76-.24-1.33-.23-.59-.72-.9a2.2 2.2 0 0 0-1.24-.33"></path>
-                        </svg>
-                    </a>
-
+                    <img src="<?= $adiLogo ?>" alt="All Data International" style="height:36px;width:auto;background:#ffffff;padding:4px 8px;border-radius:8px;">
+                    <span style="font-size:13px;color:#8fa4bd;">×</span>
+                    <img src="<?= $clickhouseLogoFooter ?>" alt="ClickHouse" style="height:24px;width:auto;">
                 </div>
                 <div style="display:flex;flex-direction:column;gap:4px;font-size:13px;line-height:1.5;">
                     <span><?= e($t['footContact']) ?>: <a href="mailto:info@alldataint.com" style="color:#ffffff;">info@alldataint.com</a> · <a href="tel:+622129319396" style="color:#ffffff;">+62 21 2931 9396</a></span>
