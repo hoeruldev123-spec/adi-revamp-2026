@@ -54,7 +54,7 @@ class EventsController extends BaseController
                     'register_url' => base_url('/events/clickhouse-build-it-end-to-end-workshop'),
                     'detail_url'   => null,
                     'target'       => '_self',
-                    'image'        => 'assets/images/events/banner/clickhouse-build-workshop.webp',
+                    'image'        => 'assets/images/events/banner/Hands-On-buiild-it-end-to-end.webp',
                 ],
                 [
                     'title'        => 'Digital Radiology Transformation & Navigating SATUSEHAT EMR for BPJS Claim',

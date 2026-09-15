@@ -1,18 +1,5 @@
 <?php
 
-/**
- * Build It, End to End | All Data International x ClickHouse
- * -----------------------------------------------------------------
- * File PHP statis standar (tanpa framework/JS build).
- * Dikonversi dari file bundel HTML asli tanpa mengubah layout/konten.
- * -----------------------------------------------------------------
- * AGAR MUDAH DIEDIT: seluruh path/URL gambar didefinisikan sebagai
- * variabel PHP di bawah ini. Ganti nilainya dengan path lokal
- * (mis. "assets/images/nama-file.png") atau dengan URL lengkap dari
- * API/CDN gambar Anda sendiri (mis. "https://cdn.punyaanda.com/...").
- * -----------------------------------------------------------------
- */
-
 $adiLogo              = 'https://alldataint.com/assets/images/logo_coloured.png';
 $clickhouseLogoNav     = '
 <svg xmlns="http://www.w3.org/2000/svg"
@@ -652,15 +639,22 @@ $t = $copy[$lang];
                             <img
                                 src="<?= base_url('assets/images/events/speakers/rizki.webp') ?>"
                                 alt="Rizki Ramadhan"
-                                style="width:56px;height:56px;border-radius:50%;object-fit:cover;display:block;flex:none;">
+                                style="width:56px;height:56px;border-radius:50%;object-fit:cover;display:block;flex:none;border:3px solid #ffffff;box-shadow:0 0 0 2px #008bf9;">
                             <div style="display:flex;flex-direction:column;gap:2px;">
                                 <strong style="font-size:17px;color:#0b1f3a;">Rizki Ramadhan</strong>
                                 <span style="font-size:14px;color:#3b4d63;">Solution Architect, All Data International</span>
                             </div>
                         </div>
+
                         <div style="display:flex;gap:16px;align-items:center;background:#ffffff;border:1px solid #dfe8f2;border-radius:16px;padding:18px 20px;">
-                            <span style="width:56px;height:56px;border-radius:50%;background:#161616;color:#faff69;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;flex:none;">SY</span>
-                            <div style="display:flex;flex-direction:column;gap:2px;"><strong style="font-size:17px;color:#0b1f3a;">Si Shuo Yang</strong><span style="font-size:14px;color:#3b4d63;">Partner Solution Architect, ClickHouse</span></div>
+                            <img
+                                src="<?= base_url('assets/images/events/speakers/shuo.webp') ?>"
+                                alt="Si Shuo Yang"
+                                style="width:56px;height:56px;border-radius:50%;object-fit:cover;display:block;flex:none;border:3px solid #ffffff;box-shadow:0 0 0 2px #008bf9;">
+                            <div style="display:flex;flex-direction:column;gap:2px;">
+                                <strong style="font-size:17px;color:#0b1f3a;">Si Shuo Yang</strong>
+                                <span style="font-size:14px;color:#3b4d63;">Partner Solution Architect, ClickHouse</span>
+                            </div>
                         </div>
                     </div>
                     <div style="display:flex;flex-direction:column;gap:12px;background:#ffffff;border:1px solid #dfe8f2;border-radius:16px;padding:22px 24px;">
@@ -760,8 +754,25 @@ $t = $copy[$lang];
 
                 </div>
                 <div style="display:flex;flex-direction:column;gap:4px;font-size:13px;line-height:1.5;">
-                    <span><?= e($t['footContact']) ?>: <a href="mailto:info@alldataint.com" style="color:#ffffff;">info@alldataint.com</a> · <a href="tel:+622129319396" style="color:#ffffff;">+62 21 2931 9396</a></span>
-                    <span style="color:#8fa4bd;">© 2026 PT All Data International. <?= e($t['footPartner']) ?></span>
+                    <span style="color:#ffffff;font-weight:600;">
+                        <?= e($t['footContact']) ?>
+                    </span>
+
+                    <span>
+                        <strong style="color:#ffffff;">Aji Nugroho</strong>
+                        |
+                        <a href="mailto:aji.nugroho@alldataint.com" style="color:#ffffff;text-decoration:none;">
+                            aji.nugroho@alldataint.com
+                        </a>
+                        |
+                        <a href="https://wa.me/6281283938595" target="_blank" rel="noopener noreferrer" style="color:#ffffff;text-decoration:none;">
+                            +62 812-8393-8595
+                        </a>
+                    </span>
+
+                    <span style="color:#8fa4bd;">
+                        © 2026 PT All Data International. <?= e($t['footPartner']) ?>
+                    </span>
                 </div>
             </div>
         </footer>
