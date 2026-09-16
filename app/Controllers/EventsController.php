@@ -13,21 +13,6 @@ class EventsController extends BaseController
             'active_subpage'   => 'events',
 
             'upcoming_events' => [
-
-                [
-                    'title'        => 'Redis & AWS Workshop Jakarta: Build Faster AI Apps with Redis Iris',
-                    'type'         => 'Workshop',
-                    'day'          => '15',
-                    'month'        => 'Sep',
-                    'date_text'    => 'Rabu, 15 September 2026',
-                    'time'         => '13:00 – 17:00 WIB',
-                    'location'     => 'Jakarta',
-                    'excerpt'      => 'Technical workshop hands-on bersama Redis & AWS untuk membangun AI Banking Chatbot menggunakan Redis Iris dan Amazon Bedrock, mencakup Vector Search, Semantic Router, LangCache, hingga Context Retriever.',
-                    'register_url' => 'https://redis.io/events/redis-aws-workshop-id/?utm_medium=referral-other&utm_source=alldata&utm_campaign=ev-2026-09-15-redis-aws-workshop-indonesia',
-                    'detail_url'   => null,
-                    'target'       => '_blank',
-                    'image'        => 'assets/images/events/banner/redis-aws-workshop-id.webp', // Ganti dengan path gambar Anda
-                ],
                 [
                     'title'        => 'Dataiku Summit Jakarta 2026',
                     'type'         => 'Conference',
@@ -59,6 +44,20 @@ class EventsController extends BaseController
             ],
 
             'finished_events' => [
+                [
+                    'title'        => 'Redis & AWS Workshop Jakarta: Build Faster AI Apps with Redis Iris',
+                    'type'         => 'Workshop',
+                    'day'          => '15',
+                    'month'        => 'Sep',
+                    'date_text'    => 'Rabu, 15 September 2026',
+                    'time'         => '13:00 – 17:00 WIB',
+                    'location'     => 'Jakarta',
+                    'excerpt'      => 'Technical workshop hands-on bersama Redis & AWS untuk membangun AI Banking Chatbot menggunakan Redis Iris dan Amazon Bedrock, mencakup Vector Search, Semantic Router, LangCache, hingga Context Retriever.',
+                    'register_url' => 'https://redis.io/events/redis-aws-workshop-id/?utm_medium=referral-other&utm_source=alldata&utm_campaign=ev-2026-09-15-redis-aws-workshop-indonesia',
+                    'detail_url'   => null,
+                    'target'       => '_blank',
+                    'image'        => 'assets/images/events/banner/redis-aws-workshop-id.webp', // Ganti dengan path gambar Anda
+                ],
                 [
                     'title'      => 'End-to-End Data Solution: Customer 360',
                     'type'       => 'Workshop',
