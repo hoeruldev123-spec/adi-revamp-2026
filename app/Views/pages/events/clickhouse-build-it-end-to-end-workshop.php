@@ -29,14 +29,6 @@ function e($value)
 /** Bahasa aktif: ?lang=id untuk Indonesia, default Inggris. */
 $lang = (isset($_GET['lang']) && $_GET['lang'] === 'id') ? 'id' : 'en';
 
-/**
- * Status form pendaftaran. Di versi asli ini hanya state di browser
- * (tidak benar-benar mengirim data kemana pun). Di sini disederhanakan
- * menjadi: form dikirim via POST -> tampilkan pesan terima kasih.
- * Sambungkan ke database/email Anda sendiri di blok ini bila perlu.
- */
-$submitted = ($_SERVER['REQUEST_METHOD'] === 'POST');
-
 // -----------------------------------------------------------------
 // Teks konten dua bahasa (EN / ID)
 // -----------------------------------------------------------------
@@ -49,18 +41,18 @@ $copy = [
         'register' => 'Register',
         'eyebrow' => 'Hands on workshop for data and AI architects and the leaders they advise',
         'h1a' => 'See real time analytics and AI',
-        'h1b' => 'built end to end, in one morning.',
+        'h1b' => 'built end to end, in one morning',
         'heroSub' => 'A working analytics app goes live on ClickHouse Cloud in front of you: streaming data from Postgres, conversational BI, full observability, and an AI SRE that diagnoses a live incident. You build it with an AI coding agent doing the typing, and you take the result back to your team. Want to experience lightning-fast query performance firsthand and see just how cost-effective ClickHouse can be? Join this workshop and see it in action.',
         'heroCta' => 'Reserve your seat',
         'heroCta2' => 'See the agenda',
-        'heroNote' => 'Free to attend. Seats are limited. Bring a lead engineer or architect as your plus one.',
+        'heroNote' => 'Free to attend. Seats are limited. Bring a lead engineer or architect.',
         'dateLabel' => 'Date',
         'dateValue' => 'Wednesday, 8 October 2026',
         'timeValue' => '09:00 to 13:00 WIB',
         'locationLabel' => 'Location',
         'stat1' => 'one morning',
         'stat2' => 'on trial credits',
-        'stat3' => 'leader plus one',
+        'stat3' => null,
         'whyEyebrow' => 'Why attend',
         'whyTitle' => 'Decide with evidence, not slideware.',
         'whyBody' => 'Boards are asking for real time dashboards, AI agents on company data, and lower platform cost, all at once. Most evaluations run on vendor decks and six week proofs of concept. This session compresses that into one morning, so you can judge what the stack looks like, how long it takes, and what it costs before you commit budget.',
@@ -91,7 +83,7 @@ $copy = [
         'whoRoles' => ['Lead Data and AI Architects', 'Enterprise and Solution Architects', 'Heads of Data Platform and Engineering', 'Chief Data Officers, CTOs, and Heads of Analytics and AI'],
         'whoIndustriesLabel' => 'Especially relevant for',
         'whoIndustries' => ['Banking and finance', 'Telecom', 'Retail and FMCG', 'Digital natives and fintech'],
-        'plusOneTitle' => 'Bring a plus one.',
+        'plusOneTitle' => null,
         'plusOneBody' => 'Architects, bring the leader who signs off on the platform. Leaders, bring the architect who will run the proof of concept. One of you evaluates the design, the other decides. Both leave with the same evidence.',
         'outEyebrow' => 'What you leave with',
         'outTitle' => 'A working stack on a ClickHouse Cloud trial account you keep.',
@@ -130,10 +122,10 @@ $copy = [
         'spTitle' => 'Guided by the people who built it.',
         'bringTitle' => 'What to bring',
         'bring' => ['A laptop with Docker running', 'An AI coding tool you are signed into: Claude Code, Cursor, Codex CLI, or Windsurf', 'A ClickHouse Cloud trial account. Setup instructions arrive after you register.', 'No company data. The workshop uses a public dataset only.'],
-        'bringNote' => 'Prefer to watch rather than type? Bring your plus one and follow along on the shared screen.',
+        'bringNote' => null,
         'regEyebrow' => 'Register',
         'regTitle' => 'Reserve your seat.',
-        'regBody' => 'Seats are limited to keep the session hands on and well supported. Registrations from data and AI architects and platform leaders are prioritised. Add your plus one and we will hold both places.',
+        'regBody' => 'Seats are limited to keep the session hands on and well supported. Registrations from data and AI architects and platform leaders are prioritised.',
         'thanksTitle' => 'You are on the list.',
         'thanksBody' => 'We will confirm your seat by email within two working days, along with setup instructions for the morning.',
         'fName' => 'Full name',
@@ -159,18 +151,18 @@ $copy = [
         'register' => 'Daftar',
         'eyebrow' => 'Workshop praktik untuk arsitek data dan AI serta pemimpin yang mereka dampingi',
         'h1a' => 'Lihat analitik real time dan AI',
-        'h1b' => 'dibangun tuntas dalam satu pagi.',
+        'h1b' => 'dibangun tuntas dalam satu pagi',
         'heroSub' => 'Saksikan langsung bagaimana aplikasi analitik berjalan di ClickHouse Cloud: mulai dari streaming data dari Postgres, conversational BI, full observability, hingga AI SRE yang mampu mendiagnosis insiden secara real-time. Anda akan membangun aplikasi ini dengan bantuan AI coding agent yang menangani proses coding, lalu membawa hasilnya kembali untuk diterapkan bersama tim Anda. Ingin merasakan langsung performa query yang sangat cepat sekaligus melihat seberapa cost-effective ClickHouse untuk kebutuhan analitik Anda? Ikuti workshop ini dan lihat langsung bagaimana ClickHouse bekerja.',
         'heroCta' => 'Amankan kursi Anda',
         'heroCta2' => 'Lihat agenda',
-        'heroNote' => 'Gratis. Kursi terbatas. Ajak lead engineer atau arsitek Anda sebagai pendamping.',
+        'heroNote' => 'Gratis. Kursi terbatas. Ajak lead engineer atau arsitek Anda.',
         'dateLabel' => 'Tanggal',
         'dateValue' => 'Rabu, 8 Oktober 2026',
         'timeValue' => '09.00 sampai 13.00 WIB',
         'locationLabel' => 'Lokasi',
         'stat1' => 'satu pagi',
         'stat2' => 'dengan kredit trial',
-        'stat3' => 'pemimpin plus satu',
+        'stat3' => null,
         'whyEyebrow' => 'Mengapa hadir',
         'whyTitle' => 'Putuskan berdasarkan bukti, bukan slide.',
         'whyBody' => 'Direksi meminta dasbor real time, AI agent di atas data perusahaan, dan biaya platform yang lebih rendah, semuanya sekaligus. Kebanyakan evaluasi berjalan lewat deck vendor dan proof of concept enam minggu. Sesi ini memadatkannya menjadi satu pagi, sehingga Anda dapat menilai seperti apa arsitekturnya, berapa lama, dan berapa biayanya sebelum berkomitmen anggaran.',
@@ -201,7 +193,7 @@ $copy = [
         'whoRoles' => ['Lead Data dan AI Architect', 'Enterprise dan Solution Architect', 'Head of Data Platform dan Engineering', 'Chief Data Officer, CTO, dan Head of Analytics dan AI'],
         'whoIndustriesLabel' => 'Sangat relevan untuk',
         'whoIndustries' => ['Perbankan dan keuangan', 'Telekomunikasi', 'Ritel dan FMCG', 'Digital native dan fintech'],
-        'plusOneTitle' => 'Ajak satu pendamping.',
+        'plusOneTitle' => null,
         'plusOneBody' => 'Arsitek, ajak pemimpin yang menyetujui platform. Pemimpin, ajak arsitek yang akan menjalankan proof of concept. Satu mengevaluasi desain, yang lain memutuskan. Keduanya pulang dengan bukti yang sama.',
         'outEyebrow' => 'Yang Anda bawa pulang',
         'outTitle' => 'Stack yang berjalan di akun trial ClickHouse Cloud yang Anda simpan.',
@@ -240,10 +232,10 @@ $copy = [
         'spTitle' => 'Dipandu oleh orang yang membangunnya.',
         'bringTitle' => 'Yang perlu dibawa',
         'bring' => ['Laptop dengan Docker berjalan', 'AI coding tool yang sudah Anda login: Claude Code, Cursor, Codex CLI, atau Windsurf', 'Akun trial ClickHouse Cloud. Petunjuk persiapan dikirim setelah Anda mendaftar.', 'Tanpa data perusahaan. Workshop hanya menggunakan dataset publik.'],
-        'bringNote' => 'Lebih suka menyimak daripada mengetik? Ajak pendamping Anda dan ikuti melalui layar bersama.',
+        'bringNote' => null,
         'regEyebrow' => 'Pendaftaran',
         'regTitle' => 'Amankan kursi Anda.',
-        'regBody' => 'Kursi dibatasi agar sesi tetap praktik dan terdampingi dengan baik. Pendaftaran dari arsitek data dan AI serta pemimpin platform diprioritaskan. Tambahkan pendamping Anda dan kami akan menahan kedua kursi.',
+        'regBody' => 'Kursi dibatasi agar sesi tetap praktik dan terdampingi dengan baik. Pendaftaran dari arsitek data dan AI serta pemimpin platform diprioritaskan.',
         'thanksTitle' => 'Anda sudah terdaftar.',
         'thanksBody' => 'Kami akan mengonfirmasi kursi Anda melalui email dalam dua hari kerja, beserta petunjuk persiapan untuk pagi itu.',
         'fName' => 'Nama lengkap',
@@ -281,6 +273,14 @@ $t = $copy[$lang];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            scroll-margin-top: 90px;
+        }
+
         html,
         body {
             margin: 0;
@@ -465,10 +465,16 @@ $t = $copy[$lang];
                         <span style="font-size:15px;line-height:1.5;color:#3b4d63;">Sinarmas MSIG Tower, 16th Floor<br>Jl. Jend. Sudirman No. Kav 21, South Jakarta</span>
                     </div>
                     <div style="height:1px;background:#e6edf5;"></div>
-                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
-                        <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:22px;font-weight:800;color:#0b1f3a;">4h</span><span style="font-size:12px;color:#5b6b80;"><?= e($t['stat1']) ?></span></div>
-                        <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:22px;font-weight:800;color:#0b1f3a;">$0</span><span style="font-size:12px;color:#5b6b80;"><?= e($t['stat2']) ?></span></div>
-                        <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:22px;font-weight:800;color:#0b1f3a;">1+1</span><span style="font-size:12px;color:#5b6b80;"><?= e($t['stat3']) ?></span></div>
+                    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;">
+                        <div style="display:flex;flex-direction:column;gap:2px;">
+                            <span style="font-size:22px;font-weight:800;color:#0b1f3a;">4h</span>
+                            <span style="font-size:12px;color:#5b6b80;"><?= e($t['stat1']) ?></span>
+                        </div>
+
+                        <div style="display:flex;flex-direction:column;gap:2px;">
+                            <span style="font-size:22px;font-weight:800;color:#0b1f3a;">$0</span>
+                            <span style="font-size:12px;color:#5b6b80;"><?= e($t['stat2']) ?></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -635,23 +641,23 @@ $t = $copy[$lang];
                         <h2 style="margin:0;font-size:clamp(26px,2.6vw,32px);line-height:1.15;font-weight:800;letter-spacing:-0.02em;color:#0b1f3a;"><?= e($t['spTitle']) ?></h2>
                     </div>
                     <div style="display:flex;flex-direction:column;gap:14px;">
-                        <div style="display:flex;gap:16px;align-items:center;background:#ffffff;border:1px solid #dfe8f2;border-radius:16px;padding:18px 20px;">
+                        <div style="display:flex;gap:20px;align-items:center;background:#ffffff;border:1px solid #dfe8f2;border-radius:16px;padding:20px 24px;">
                             <img
                                 src="<?= base_url('assets/images/events/speakers/rizki.webp') ?>"
                                 alt="Rizki Ramadhan"
-                                style="width:56px;height:56px;border-radius:50%;object-fit:cover;display:block;flex:none;border:3px solid #ffffff;box-shadow:0 0 0 2px #008bf9;">
-                            <div style="display:flex;flex-direction:column;gap:2px;">
+                                style="width:112px;height:112px;border-radius:50%;object-fit:cover;display:block;flex:none;border:3px solid #ffffff;box-shadow:0 0 0 2px #008bf9;">
+                            <div style="display:flex;flex-direction:column;gap:4px;">
                                 <strong style="font-size:17px;color:#0b1f3a;">Rizki Ramadhan</strong>
                                 <span style="font-size:14px;color:#3b4d63;">Solution Architect, All Data International</span>
                             </div>
                         </div>
 
-                        <div style="display:flex;gap:16px;align-items:center;background:#ffffff;border:1px solid #dfe8f2;border-radius:16px;padding:18px 20px;">
+                        <div style="display:flex;gap:20px;align-items:center;background:#ffffff;border:1px solid #dfe8f2;border-radius:16px;padding:20px 24px;">
                             <img
                                 src="<?= base_url('assets/images/events/speakers/shuo.webp') ?>"
                                 alt="Si Shuo Yang"
-                                style="width:56px;height:56px;border-radius:50%;object-fit:cover;display:block;flex:none;border:3px solid #ffffff;box-shadow:0 0 0 2px #008bf9;">
-                            <div style="display:flex;flex-direction:column;gap:2px;">
+                                style="width:112px;height:112px;border-radius:50%;object-fit:cover;display:block;flex:none;border:3px solid #ffffff;box-shadow:0 0 0 2px #008bf9;">
+                            <div style="display:flex;flex-direction:column;gap:4px;">
                                 <strong style="font-size:17px;color:#0b1f3a;">Si Shuo Yang</strong>
                                 <span style="font-size:14px;color:#3b4d63;">Partner Solution Architect, ClickHouse</span>
                             </div>
