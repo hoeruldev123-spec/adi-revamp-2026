@@ -268,7 +268,7 @@ $t = $copy[$lang];
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Build It, End to End | All Data International and ClickHouse">
-    <meta property="og:description" content="Join the Hands-On Build It, End-to-End Workshop with ClickHouse Cloud, hosted by All Data International and ClickHouse.">
+    <meta property="og:description" content="Join Hands-On Build It, End-to-End Workshop with ClickHouse and All Data International.">
     <meta property="og:image" content="https://alldataint.com/assets/images/events/banner/Hands-On-buiild-it-end-to-end.webp">
     <meta property="og:image:alt" content="Hands-On Build It, End-to-End Workshop with ClickHouse Cloud">
     <meta property="og:url" content="https://alldataint.com/">
