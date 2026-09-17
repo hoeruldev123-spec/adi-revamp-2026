@@ -33,7 +33,7 @@ class EventsController extends BaseController
                     'day'          => '08',
                     'month'        => 'Oct',
                     'date_text'    => 'Thursday, 8 October 2026',
-                    'time'         => '09:00 – 13:00 WIB',
+                    'time'         => '12:15 – 16:10 WIB',
                     'location'     => 'AWS Office, Sinarmas MSIG Tower 16th Floor, Jakarta',
                     'excerpt'      => 'Take a real analytics app live on ClickHouse Cloud — hands-on with CDC pipelines, AI SRE observability, and conversational BI in a 3-hour sitting.',
                     'register_url' => base_url('/events/clickhouse-build-it-end-to-end-workshop'),
