@@ -13,20 +13,7 @@ class EventsController extends BaseController
             'active_subpage'   => 'events',
 
             'upcoming_events' => [
-                [
-                    'title'        => 'Dataiku Summit Jakarta 2026',
-                    'type'         => 'Conference',
-                    'day'          => '17',
-                    'month'        => 'Sep',
-                    'date_text'    => 'Kamis, 17 September 2026',
-                    'time'         => '08:30 – 16:00 WIB',
-                    'location'     => 'Jakarta',
-                    'excerpt'      => 'Acara flagship Dataiku di Indonesia untuk membahas bagaimana memadukan orang, orkestrasi, dan tata kelola guna mengubah AI menjadi sistem yang terukur untuk dampak bisnis nyata.',
-                    'register_url' => 'https://meet.dataiku.com/dataiku-summit-jakarta-2026/?utm_campaign=44754496-APAC+EVENT+Dataiku+Summit+Jakarta+Sep+2026&utm_source=sponsor&utm_medium=alldata/',
-                    'detail_url'   => null,
-                    'target'       => '_blank',
-                    'image'        => 'https://alldataint.com/articles/wp-content/uploads/2026/08/dataiku-summit-jakarta-2026-pre.jpeg',
-                ],
+
                 [
                     'title'        => 'Hands-On Build It, End-to-End Workshop with ClickHouse Cloud',
                     'type'         => 'Workshop',
@@ -58,6 +45,20 @@ class EventsController extends BaseController
             ],
 
             'finished_events' => [
+                [
+                    'title'        => 'Dataiku Summit Jakarta 2026',
+                    'type'         => 'Conference',
+                    'day'          => '17',
+                    'month'        => 'Sep',
+                    'date_text'    => 'Kamis, 17 September 2026',
+                    'time'         => '08:30 – 16:00 WIB',
+                    'location'     => 'Jakarta',
+                    'excerpt'      => 'Acara flagship Dataiku di Indonesia untuk membahas bagaimana memadukan orang, orkestrasi, dan tata kelola guna mengubah AI menjadi sistem yang terukur untuk dampak bisnis nyata.',
+                    'register_url' => 'https://meet.dataiku.com/dataiku-summit-jakarta-2026/?utm_campaign=44754496-APAC+EVENT+Dataiku+Summit+Jakarta+Sep+2026&utm_source=sponsor&utm_medium=alldata/',
+                    'detail_url'   => null,
+                    'target'       => '_blank',
+                    'image'        => 'https://alldataint.com/articles/wp-content/uploads/2026/08/dataiku-summit-jakarta-2026-pre.jpeg',
+                ],
                 [
                     'title'        => 'Redis & AWS Workshop Jakarta: Build Faster AI Apps with Redis Iris',
                     'type'         => 'Workshop',
