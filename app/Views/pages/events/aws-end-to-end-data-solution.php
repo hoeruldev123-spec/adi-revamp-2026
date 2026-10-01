@@ -1337,6 +1337,15 @@
             transform: translateY(-2px);
         }
 
+        .event-ended {
+            display: inline-block;
+            color: #dc3545;
+            background-color: #fff1f2;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
         /* ═══════════════════════════════════════════════════════════════
    12. ANIMATIONS & REVEAL
    ═══════════════════════════════════════════════════════════════ */
@@ -1546,9 +1555,17 @@
                                 <line x1="3" y1="10" x2="21" y2="10" />
                             </svg>
                         </div>
+
+                        <?php
+                        $eventDate = '2026-06-30';
+                        $isEnded = strtotime($eventDate) < strtotime(date('Y-m-d'));
+                        ?>
+
                         <div>
                             <div class="hero-info-label">Tanggal</div>
-                            <div class="hero-info-value plain">Rabu, 30 Juni 2026</div>
+                            <div class="hero-info-value plain <?= $isEnded ? 'event-ended' : '' ?>">
+                                <?= $isEnded ? 'Event Selesai' : 'Rabu, 30 Juni 2026' ?>
+                            </div>
                         </div>
                     </div>
                     <div class="hero-info-row">
