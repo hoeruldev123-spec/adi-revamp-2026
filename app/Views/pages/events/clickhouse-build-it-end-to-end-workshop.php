@@ -271,7 +271,7 @@ $t = $copy[$lang];
     <meta property="og:type" content="website">
     <meta property="og:title" content="Build It, End to End | All Data International and ClickHouse">
     <meta property="og:description" content="Join Hands-On Build It, End-to-End Workshop with ClickHouse and All Data International.">
-    <meta property="og:image" content="https://alldataint.com/assets/images/events/banner/Hands-On-buiild-it-end-to-end.webp">
+    <meta property="og:image" content="https://alldataint.com/assets/images/events/banner/clickhouse-build-it-end-to-end-workshop-aws">
     <meta property="og:image:alt" content="Hands-On Build It, End-to-End Workshop with ClickHouse Cloud">
     <meta property="og:url" content="https://alldataint.com/">
 
@@ -279,7 +279,7 @@ $t = $copy[$lang];
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Build It, End to End | All Data International and ClickHouse">
     <meta name="twitter:description" content="Hands-On Build It, End-to-End Workshop with ClickHouse Cloud.">
-    <meta name="twitter:image" content="https://alldataint.com/assets/images/events/banner/Hands-On-buiild-it-end-to-end.webp">
+    <meta name="twitter:image" content="https://alldataint.com/assets/images/events/banner/clickhouse-build-it-end-to-end-workshop-aws.webp">
 
     <!-- Favicon -->
     <link rel="icon" href="<?= base_url('assets/images/all-data-international-logo-site.png') ?>">

@@ -12,13 +12,14 @@ class EventsController extends BaseController
             'active_page'      => 'resources',
             'active_subpage'   => 'events',
 
-            'upcoming_events' => [
+            'events' => [
 
                 [
                     'title'        => 'Hands-On Build It, End-to-End Workshop with ClickHouse Cloud',
                     'type'         => 'Workshop',
                     'day'          => '08',
                     'month'        => 'Oct',
+                    'date_raw'     => '2026-10-08',
                     'date_text'    => 'Thursday, 8 October 2026',
                     'time'         => '12:15 – 16:10 WIB',
                     'location'     => 'AWS Office, Sinarmas MSIG Tower 16th Floor, Jakarta',
@@ -26,13 +27,15 @@ class EventsController extends BaseController
                     'register_url' => base_url('/events/clickhouse-build-it-end-to-end-workshop'),
                     'detail_url'   => null,
                     'target'       => '_self',
-                    'image'        => 'assets/images/events/banner/Hands-On-buiild-it-end-to-end.webp',
+                    'image'        => 'assets/images/events/banner/Hands-On-buiild-it-end-to-end-aws.webp',
                 ],
+
                 [
                     'title'        => 'Digital Radiology Transformation & Navigating SATUSEHAT EMR for BPJS Claim',
                     'type'         => 'All Data Cloud PACS Launching',
                     'day'          => '22',
                     'month'        => 'Oct',
+                    'date_raw'     => '2026-10-22',
                     'date_text'    => 'Kamis, 22 Oktober 2026',
                     'time'         => '09:00 – 13:00 WIB',
                     'location'     => 'Jakarta',
@@ -42,14 +45,12 @@ class EventsController extends BaseController
                     'target'       => '_blank',
                     'image'        => 'assets/images/og/digital-radiology-transformation.webp',
                 ],
-            ],
-
-            'finished_events' => [
                 [
                     'title'        => 'Dataiku Summit Jakarta 2026',
                     'type'         => 'Conference',
                     'day'          => '17',
                     'month'        => 'Sep',
+                    'date_raw'     => '2026-09-17',
                     'date_text'    => 'Kamis, 17 September 2026',
                     'time'         => '08:30 – 16:00 WIB',
                     'location'     => 'Jakarta',
@@ -59,11 +60,13 @@ class EventsController extends BaseController
                     'target'       => '_blank',
                     'image'        => 'https://alldataint.com/articles/wp-content/uploads/2026/08/dataiku-summit-jakarta-2026-pre.jpeg',
                 ],
+
                 [
                     'title'        => 'Redis & AWS Workshop Jakarta: Build Faster AI Apps with Redis Iris',
                     'type'         => 'Workshop',
                     'day'          => '15',
                     'month'        => 'Sep',
+                    'date_raw'     => '2026-09-15',
                     'date_text'    => 'Rabu, 15 September 2026',
                     'time'         => '13:00 – 17:00 WIB',
                     'location'     => 'Jakarta',
@@ -71,13 +74,15 @@ class EventsController extends BaseController
                     'register_url' => 'https://redis.io/events/redis-aws-workshop-id/?utm_medium=referral-other&utm_source=alldata&utm_campaign=ev-2026-09-15-redis-aws-workshop-indonesia',
                     'detail_url'   => null,
                     'target'       => '_blank',
-                    'image'        => 'assets/images/events/banner/redis-aws-workshop-id.webp', // Ganti dengan path gambar Anda
+                    'image'        => 'assets/images/events/banner/redis-aws-workshop-id.webp',
                 ],
+
                 [
                     'title'      => 'End-to-End Data Solution: Customer 360',
                     'type'       => 'Workshop',
                     'day'        => '30',
                     'month'      => 'Jun',
+                    'date_raw'   => '2026-06-30',
                     'date_text'  => 'Rabu, 30 Juni 2026',
                     'time'       => '12:30 – Selesai (WIB)',
                     'location'   => 'Jl. Jenderal Sudirman, Jakarta Selatan',
@@ -85,6 +90,7 @@ class EventsController extends BaseController
                     // 'detail_url' => base_url('events/aws-end-to-end-data-solution'),
                     'image'      => 'assets/images/events/banner/event-customer-360-2.webp',
                 ],
+
             ],
         ];
 

@@ -109,6 +109,35 @@
     </div>
 </section>
 
+<?php
+$today = date('Y-m-d');
+
+$upcoming_events = [];
+$finished_events = [];
+
+foreach ($events ?? [] as $event) {
+    if (empty($event['date_raw'])) {
+        continue;
+    }
+
+    if ($event['date_raw'] >= $today) {
+        $upcoming_events[] = $event;
+    } else {
+        $finished_events[] = $event;
+    }
+}
+
+// Upcoming: tanggal terdekat → paling jauh
+usort($upcoming_events, function ($a, $b) {
+    return strcmp($a['date_raw'], $b['date_raw']);
+});
+
+// Finished: event terbaru → terlama
+usort($finished_events, function ($a, $b) {
+    return strcmp($b['date_raw'], $a['date_raw']);
+});
+?>
+
 <!-- ================= UPCOMING EVENTS ================= -->
 <section id="upcoming-events" class="py-5 position-relative overflow-hidden" data-aos="fade-up">
     <div class="container py-3">
