@@ -460,21 +460,22 @@ $t = $copy[$lang];
         <!-- Nav -->
 
         <header style="position:sticky;top:0;z-index:20;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:1px solid #e6edf5;">
-            <div style="max-width:1160px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+            <div class="header-container" style="max-width:1160px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
 
                 <!-- Logos -->
-                <div style="display:flex;align-items:center;gap:18px;">
+                <div class="header-logos" style="display:flex;align-items:center;gap:12px;">
 
                     <!-- All Data International -->
                     <a href="https://alldataint.com/" style="display:flex;align-items:center;text-decoration:none;">
                         <img
                             src="https://alldataint.com/assets/images/logo_coloured.png"
                             alt="All Data International Logo"
-                            style="height:26px;width:auto;display:block;object-fit:contain;">
+                            class="logo-adi"
+                            style="height:24px;width:auto;display:block;object-fit:contain;">
                     </a>
 
                     <!-- Separator -->
-                    <span style="width:1px;height:24px;background:#d5dfeb;display:block;"></span>
+                    <span class="header-sep" style="width:1px;height:18px;background:#d5dfeb;display:block;"></span>
 
                     <!-- ClickHouse -->
                     <a
@@ -485,8 +486,8 @@ $t = $copy[$lang];
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 135 40"
-                            width="115"
-                            height="34"
+                            class="logo-ch"
+                            style="width:90px;height:auto;display:block;"
                             fill="currentColor"
                             role="img"
                             aria-label="ClickHouse">
@@ -501,7 +502,7 @@ $t = $copy[$lang];
                     </a>
 
                     <!-- Separator -->
-                    <span style="width:1px;height:24px;background:#d5dfeb;display:block;"></span>
+                    <span class="header-sep" style="width:1px;height:18px;background:#d5dfeb;display:block;"></span>
 
                     <!-- AWS -->
                     <a
@@ -512,13 +513,14 @@ $t = $copy[$lang];
                         <img
                             src="/assets/images/principals/Logo-AWS.png"
                             alt="Amazon Web Services Logo"
-                            style="height:22px;width:auto;display:block;object-fit:contain;">
+                            class="logo-aws"
+                            style="height:18px;width:auto;display:block;object-fit:contain;">
                     </a>
 
                 </div>
 
-                <!-- Navigation -->
-                <nav class="navlinks" style="display:flex;gap:28px;font-size:14px;font-weight:500;color:#3b4d63;">
+                <!-- Navigation (Desktop Only, disembunyikan di mobile lewat CSS .navlinks) -->
+                <nav class="navlinks" style="display:flex;gap:24px;font-size:14px;font-weight:500;color:#3b4d63;">
                     <a href="#why" style="color:#3b4d63;"><?= e($t['navWhy']) ?></a>
                     <a href="#who" style="color:#3b4d63;"><?= e($t['navWho']) ?></a>
                     <a href="#agenda" style="color:#3b4d63;"><?= e($t['navAgenda']) ?></a>
@@ -526,24 +528,24 @@ $t = $copy[$lang];
                 </nav>
 
                 <!-- Right Actions -->
-                <div style="display:flex;align-items:center;gap:12px;">
+                <div class="header-actions" style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
 
                     <!-- Language -->
-                    <div style="display:flex;border:1px solid #d5dfeb;border-radius:999px;overflow:hidden;font-size:12px;font-weight:600;">
+                    <div style="display:flex;border:1px solid #d5dfeb;border-radius:999px;overflow:hidden;font-size:11px;font-weight:600;">
                         <a
                             href="?lang=en"
-                            style="padding:6px 12px;border:none;text-decoration:none;display:inline-block;<?= $lang === 'en' ? 'background:#0b1f3a;color:#ffffff;' : 'background:#ffffff;color:#3b4d63;' ?>">EN</a>
+                            style="padding:5px 9px;border:none;text-decoration:none;display:inline-block;<?= $lang === 'en' ? 'background:#0b1f3a;color:#ffffff;' : 'background:#ffffff;color:#3b4d63;' ?>">EN</a>
 
                         <a
                             href="?lang=id"
-                            style="padding:6px 12px;border:none;text-decoration:none;display:inline-block;<?= $lang === 'id' ? 'background:#0b1f3a;color:#ffffff;' : 'background:#ffffff;color:#3b4d63;' ?>">ID</a>
+                            style="padding:5px 9px;border:none;text-decoration:none;display:inline-block;<?= $lang === 'id' ? 'background:#0b1f3a;color:#ffffff;' : 'background:#ffffff;color:#3b4d63;' ?>">ID</a>
                     </div>
 
                     <!-- Register -->
                     <a
                         href="https://forms.cloud.microsoft/r/GCQDj3tTW5"
-                        class="btn-primary"
-                        style="background:#008bf9;color:#ffffff;padding:10px 18px;border-radius:999px;font-size:14px;font-weight:600;white-space:nowrap;"><?= e($t['register']) ?></a>
+                        class="btn-primary btn-register"
+                        style="background:#008bf9;color:#ffffff;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap;"><?= e($t['register']) ?></a>
 
                 </div>
 
