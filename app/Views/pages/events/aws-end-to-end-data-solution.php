@@ -1567,6 +1567,7 @@
                                 <?= $isEnded ? 'Event Selesai' : 'Rabu, 30 Juni 2026' ?>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="hero-info-row">
                         <div class="hero-info-icon">

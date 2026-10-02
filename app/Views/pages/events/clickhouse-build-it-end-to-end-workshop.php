@@ -42,7 +42,7 @@ $copy = [
         'eyebrow' => 'Hands on workshop for data and AI architects and the leaders they advise',
         'h1a' => 'See real time analytics and AI',
         'h1b' => 'built end to end',
-        'heroSub' => 'A working analytics app goes live on ClickHouse Cloud in front of you: streaming data from Postgres, conversational BI, full observability, and an AI SRE that diagnoses a live incident. You build it with an AI coding agent doing the typing, and you take the result back to your team. Want to experience lightning-fast query performance firsthand and see just how cost-effective ClickHouse can be? Join this workshop and see it in action.',
+        'heroSub' => 'Hosted by AWS, All Data International, and ClickHouse, this workshop puts a working analytics app goes live on ClickHouse Cloud on AWS in front of you: streaming data from Postgres, conversational BI, full observability, and an AI SRE that diagnoses a live incident. You build it with an AI coding agent doing the typing, and you take the result back to your team. Want to experience lightning-fast query performance firsthand and see just how cost-effective ClickHouse can be? Join this workshop and see it in action.',
         'heroCta' => 'Reserve your seat',
         'heroCta2' => 'See the agenda',
         'heroNote' => 'Free to attend. Seats are limited. Bring a lead engineer or architect. Lunch is provided.',
@@ -99,25 +99,32 @@ $copy = [
         ],
         'btEyebrow' => 'Better together',
         'btTitle' => 'Global platform. Local delivery.',
-        'btBody' => 'ClickHouse brings the real time analytics platform. All Data International brings eleven years of delivering data and AI programmes for Indonesian enterprises. You get one accountable team from first workshop to production.',
+        'btBody' => 'ClickHouse brings the real-time analytics platform. AWS brings the scalable cloud infrastructure. All Data International brings eleven years of delivering data and AI programmes for Indonesian enterprises. You get one accountable team from first workshop to production.',
         'btAdiTitle' => 'All Data International',
-        'btAdiPoints' => ['Trusted technology partner to leading Indonesian banks, insurers, telcos, and state enterprises', 'Consulting, use case development, managed services, and support, delivered locally', 'ISO 27001, ISO 45001, and ISO 14001 certified', 'Official ClickHouse partner in Indonesia'],
+        'btAdiPoints' => ['Trusted technology partner to leading Indonesian banks, insurers, telcos, and state enterprises', 'Consulting, use case development, managed services, and support, delivered locally', 'ISO 27001, ISO 45001, and ISO 14001 certified', 'Official ClickHouse partner in Indonesia', 'Official AWS Partner in Indonesia', 'Official CPPO Partner / AWS MarketPlace Seller'],
         'btTogetherTag' => 'Together',
         'btTogetherTitle' => 'From this workshop to your production roadmap.',
-        'btTogetherBody' => 'After the session, All Data International and ClickHouse are happy to extend your trial for a deeper proof of concept, one to one, in your own environment and with your own sources. The prototype you build here becomes the first milestone.',
+        'btTogetherBody' => 'After the session, we are happy to extend your trial for a deeper proof of concept, one to one, in your own environment and with your own sources. The prototype you build here becomes the first milestone.',
         'btChTitle' => 'ClickHouse',
         'btChPoints' => ['The open source real time analytics database, used by thousands of companies worldwide', 'ClickHouse Cloud: fully managed, with ClickPipes, ClickStack, and ClickHouse Agents on one platform', 'Millions of rows queried in milliseconds, at a fraction of the cost of traditional warehouses', 'Built for the workloads AI agents and real time products demand'],
+        'btAwsTitle' => 'Amazon Web Services (AWS)',
+        'btAwsPoints' => [
+            'Strategic partner to ClickHouse Cloud with deep native integrations across Amazon RDS, Aurora, S3, and Kinesis',
+            'Seamless agentic AI capabilities via Amazon Bedrock, MCP protocol support, and ClickHouse Agents',
+            'Validated expertise with AWS AI and Cloud Operations Competencies for enterprise-grade workloads',
+            'Enterprise deployment made simple with AWS PrivateLink connectivity and AWS Marketplace procurement',
+        ],
         'agEyebrow' => 'Agenda',
         'agTitle' => 'One afternoon, ten stops.',
         'agenda' => [
             ['time' => '12:15', 'title' => 'Registration and Lunch', 'body' => 'Laptops open, accounts verified, agent connected.'],
-            ['time' => '13:00', 'title' => 'Opening: why real time and AI, now', 'body' => 'What has changed in the market, and what the afternoon will prove.'],
+            ['time' => '13:00', 'title' => 'Why Real-Time Data and AI Now?', 'body'  => 'What has changed in the market, how Amazon Bedrock provides an agentic AI platform, and how ClickHouse brings real-time data into actionable insights.'],
             ['time' => '13:15', 'title' => 'ClickHouse Cloud and the base app', 'body' => 'Create the schema, seed 3.2 million rows, and tour the live dashboards.'],
             ['time' => '13:45', 'title' => 'Real time CDC and ClickHouse Agents', 'body' => 'Stream Postgres into ClickHouse, then query it in plain language.'],
             ['time' => '14:30', 'title' => 'Observability and the AI SRE', 'body' => 'Send traces and logs to ClickStack. Your agent builds a dashboard and an alert.'],
             ['time' => '15:15', 'title' => 'Break and fix', 'body' => 'A realistic fault is injected. The AI SRE diagnoses it from telemetry and ships the fix.'],
             ['time' => '15:45', 'title' => 'Traced AI chat with Langfuse', 'body' => 'Follow every generation and its cost end to end.'],
-            ['time' => '16:10', 'title' => 'Wrap up and next steps', 'body' => 'What you built, how to extend your trial for a proof of concept, and how All Data International and ClickHouse can help.']
+            ['time' => '16:10', 'title' => 'Wrap up and next steps', 'body' => 'What you built, how to extend your trial for a proof of concept, and how ClickHouse and All Data International, as an AWS CPPO Partner and Marketplace seller, can help you take the next step.']
         ],
         'spEyebrow' => 'Your hosts',
         'spTitle' => 'Guided by the people who built it.',
@@ -142,7 +149,7 @@ $copy = [
         'fSubmit' => 'Register',
         'fFine' => 'By registering you agree to be contacted by All Data International and ClickHouse about this event.',
         'footContact' => 'Contact',
-        'footPartner' => 'Official partner of ClickHouse in Indonesia.'
+        'footPartner' => 'Official partner of ClickHouse and AWS in Indonesia.'
     ],
     'id' => [
         'navWhy' => 'Mengapa hadir',
@@ -153,12 +160,12 @@ $copy = [
         'eyebrow' => 'Workshop praktik untuk arsitek data dan AI serta pemimpin yang mereka dampingi',
         'h1a' => 'Lihat analitik real time dan AI',
         'h1b' => 'dibangun tuntas',
-        'heroSub' => 'Saksikan langsung bagaimana aplikasi analitik berjalan di ClickHouse Cloud: mulai dari streaming data dari Postgres, conversational BI, full observability, hingga AI SRE yang mampu mendiagnosis insiden secara real-time. Anda akan membangun aplikasi ini dengan bantuan AI coding agent yang menangani proses coding, lalu membawa hasilnya kembali untuk diterapkan bersama tim Anda. Ingin merasakan langsung performa query yang sangat cepat sekaligus melihat seberapa cost-effective ClickHouse untuk kebutuhan analitik Anda? Ikuti workshop ini dan lihat langsung bagaimana ClickHouse bekerja.',
+        'heroSub' => 'Diselenggarakan oleh AWS, All Data International, dan ClickHouse, workshop ini menghadirkan aplikasi analitik yang berjalan langsung di ClickHouse Cloud di atas AWS: mengalirkan data streaming dari Postgres, conversational BI, observabilitas penuh, dan AI SRE yang mendiagnosis insiden secara langsung. Anda akan membangunnya dengan bantuan AI coding agent yang menangani pengetikan kode, dan Anda membawa hasilnya kembali untuk tim Anda. Ingin merasakan langsung performa kueri yang sangat cepat sekaligus melihat seberapa efisien biaya ClickHouse? Ikuti workshop ini dan lihat langsung dalam aksi.',
         'heroCta' => 'Amankan kursi Anda',
         'heroCta2' => 'Lihat agenda',
         'heroNote' => 'Gratis. Kursi terbatas. Ajak lead engineer atau arsitek Anda. Makan siang disediakan.',
         'dateLabel' => 'Tanggal',
-        'dateValue' => 'Rabu, 8 Oktober 2026',
+        'dateValue' => 'Kamis, 8 Oktober 2026',
         'dateRaw' => '2026-10-08',
         'timeValue' => '12:15 sampai 16:10 WIB',
         'locationLabel' => 'Lokasi',
@@ -203,32 +210,51 @@ $copy = [
         'outcomes' => [
             ['n' => '01', 'title' => 'Dasbor operasional langsung', 'body' => 'Jutaan baris dimuat dari object storage, dengan kueri yang cukup cepat untuk terasa bedanya.'],
             ['n' => '02', 'title' => 'Pipeline CDC real time', 'body' => 'Managed Postgres yang disediakan untuk sesi, mengalir terus menerus ke ClickHouse melalui ClickPipes.'],
-            ['n' => '03', 'title' => 'BI percakapan', 'body' => 'Tanyakan data dalam bahasa sehari hari dengan ClickHouse Agents, diatur oleh akses berbasis peran. Tanpa SQL.'],
+            ['n' => '03', 'title' => 'BI percakapan', 'body' => 'Tanyakan data dalam bahasa sehari-hari dengan ClickHouse Agents, diatur oleh akses berbasis peran. Tanpa SQL.'],
             ['n' => '04', 'title' => 'Observabilitas penuh dan AI SRE', 'body' => 'Trace dan log aplikasi mengalir ke ClickStack. Agent Anda membangun dasbor dan alert, lalu mendiagnosis dan memperbaiki insiden langsung.'],
             ['n' => '05', 'title' => 'AI chat yang tertelusur', 'body' => 'AI chat di dalam aplikasi dengan setiap giliran, generasi, dan biaya tertelusur tuntas di Langfuse.'],
             ['n' => '+', 'title' => 'Seluruh repositori', 'body' => 'Milik Anda untuk disimpan dan dikembangkan setelah sesi selesai, beserta akun trial yang aktif hingga 30 hari.']
         ],
         'btEyebrow' => 'Lebih kuat bersama',
         'btTitle' => 'Platform global. Pelaksanaan lokal.',
-        'btBody' => 'ClickHouse menghadirkan platform analitik real time. All Data International menghadirkan sebelas tahun pengalaman menjalankan program data dan AI untuk enterprise Indonesia. Anda mendapatkan satu tim yang bertanggung jawab dari workshop pertama hingga produksi.',
+        'btBody' => 'ClickHouse menghadirkan engine analitik real-time yang berjalan secara native di AWS dengan integrasi mendalam ke Amazon Bedrock dan data cloud. All Data International membawa sebelas tahun pengalaman penyampaian enterprise lokal, kemitraan AWS, dan dukungan terdedikasi. Bersama-sama, kami menyediakan satu ekosistem yang dapat diandalkan dari workshop pertama hingga produksi.',
         'btAdiTitle' => 'All Data International',
-        'btAdiPoints' => ['Mitra teknologi tepercaya bagi bank, asuransi, telko, dan BUMN terkemuka di Indonesia', 'Konsultasi, pengembangan use case, managed services, dan dukungan, dilaksanakan secara lokal', 'Tersertifikasi ISO 27001, ISO 45001, dan ISO 14001', 'Mitra resmi ClickHouse di Indonesia'],
+        'btAdiPoints' => [
+            'Mitra teknologi tepercaya bagi bank, asuransi, telko, dan BUMN terkemuka di Indonesia',
+            'Konsultasi, pengembangan use case, managed services, dan dukungan, dilaksanakan secara lokal',
+            'Tersertifikasi ISO 27001, ISO 45001, dan ISO 14001',
+            'Mitra resmi ClickHouse di Indonesia',
+            'Mitra resmi AWS di Indonesia',
+            'Mitra Resmi CPPO / Penjual AWS Marketplace'
+        ],
         'btTogetherTag' => 'Bersama',
         'btTogetherTitle' => 'Dari workshop ini ke roadmap produksi Anda.',
-        'btTogetherBody' => 'Setelah sesi, All Data International dan ClickHouse dengan senang hati memperpanjang trial Anda untuk proof of concept yang lebih dalam, satu lawan satu, di lingkungan Anda sendiri dan dengan sumber data Anda sendiri. Prototipe yang Anda bangun di sini menjadi milestone pertama.',
+        'btTogetherBody' => 'Setelah sesi, kami dengan senang hati memperpanjang trial Anda untuk proof of concept yang lebih dalam, satu lawan satu, di lingkungan Anda sendiri dan dengan sumber data Anda sendiri. Prototipe yang Anda bangun di sini menjadi milestone pertama.',
         'btChTitle' => 'ClickHouse',
-        'btChPoints' => ['Database analitik real time open source, digunakan ribuan perusahaan di seluruh dunia', 'ClickHouse Cloud: terkelola penuh, dengan ClickPipes, ClickStack, dan ClickHouse Agents dalam satu platform', 'Jutaan baris dikueri dalam milidetik, dengan biaya jauh lebih rendah dari warehouse tradisional', 'Dibangun untuk beban kerja yang dituntut AI agent dan produk real time'],
+        'btChPoints' => [
+            'Database analitik real time open source, digunakan ribuan perusahaan di seluruh dunia',
+            'ClickHouse Cloud: terkelola penuh, dengan ClickPipes, ClickStack, dan ClickHouse Agents dalam satu platform',
+            'Jutaan baris dikueri dalam milidetik, dengan biaya jauh lebih rendah dari warehouse tradisional',
+            'Dibangun untuk beban kerja yang dituntut AI agent dan produk real time'
+        ],
+        'btAwsTitle' => 'Amazon Web Services (AWS)',
+        'btAwsPoints' => [
+            'Mitra strategis ClickHouse Cloud dengan integrasi native mendalam di seluruh Amazon RDS, Aurora, S3, dan Kinesis',
+            'Kapabilitas agentic AI yang mulus melalui Amazon Bedrock, dukungan protokol MCP, dan ClickHouse Agents',
+            'Keahlian teruji dengan kompetensi AWS AI dan Cloud Operations untuk beban kerja skala enterprise',
+            'Penggelaran enterprise menjadi mudah dengan konektivitas AWS PrivateLink dan pengadaan AWS Marketplace'
+        ],
         'agEyebrow' => 'Agenda',
         'agTitle' => 'Satu siang, sepuluh pemberhentian.',
         'agenda' => [
             ['time' => '12:15', 'title' => 'Registrasi dan Makan Siang', 'body' => 'Membuka laptop, memastikan akun terverifikasi, dan menghubungkan agent.'],
-            ['time' => '13:00', 'title' => 'Pembukaan: Mengapa Real-Time dan AI Sekarang', 'body' => 'Perubahan yang terjadi di pasar dan hal-hal yang akan dibuktikan dalam sesi hari ini.'],
-            ['time' => '13:15', 'title' => 'ClickHouse Cloud dan Aplikasi Dasar', 'body' => 'Membuat schema, memasukkan 3,2 juta baris data, dan melihat dashboard secara langsung.'],
-            ['time' => '13:45', 'title' => 'Real-Time CDC dan ClickHouse Agents', 'body' => 'Mengalirkan data PostgreSQL ke ClickHouse, kemudian melakukan query menggunakan bahasa natural.'],
-            ['time' => '14:30', 'title' => 'Observability dan AI SRE', 'body' => 'Mengirim trace dan log ke ClickStack. Agent akan membuat dashboard dan alert secara otomatis.'],
-            ['time' => '15:15', 'title' => 'Break dan Perbaikan', 'body' => 'Simulasi gangguan akan dilakukan. AI SRE menganalisis masalah berdasarkan telemetry dan menerapkan perbaikannya.'],
-            ['time' => '15:45', 'title' => 'AI Chat dengan Tracing menggunakan Langfuse', 'body' => 'Melihat setiap proses generation dan biaya AI secara menyeluruh dari awal hingga akhir.'],
-            ['time' => '16:10', 'title' => 'Penutup dan Langkah Selanjutnya', 'body' => 'Membahas apa yang telah dibangun, cara memperpanjang trial untuk proof of concept, serta bagaimana All Data International dan ClickHouse dapat membantu.']
+            ['time' => '13:00', 'title' => 'Mengapa Data Real-Time dan AI Sekarang?', 'body' => 'Perubahan yang terjadi di pasar, bagaimana Amazon Bedrock menyediakan platform agentic AI, dan bagaimana ClickHouse mengubah data real-time menjadi wawasan yang dapat ditindaklanjuti.'],
+            ['time' => '13:15', 'title' => 'ClickHouse Cloud dan Aplikasi Dasar', 'body' => 'Membuat schema, memasukkan 3,2 juta baris data, dan melihat dasbor secara langsung.'],
+            ['time' => '13:45', 'title' => 'Real-Time CDC dan ClickHouse Agents', 'body' => 'Mengalirkan data Postgres ke ClickHouse, kemudian melakukan kueri menggunakan bahasa sehari-hari.'],
+            ['time' => '14:30', 'title' => 'Observabilitas dan AI SRE', 'body' => 'Mengirim trace dan log ke ClickStack. Agent Anda membangun dasbor dan alert secara otomatis.'],
+            ['time' => '15:15', 'title' => 'Break dan Perbaikan', 'body' => 'Simulasi gangguan akan dilakukan. AI SRE menganalisis masalah berdasarkan telemetri dan menerapkan perbaikannya.'],
+            ['time' => '15:45', 'title' => 'AI Chat Tertelusur dengan Langfuse', 'body' => 'Melihat setiap proses generasi dan biaya AI secara menyeluruh dari awal hingga akhir.'],
+            ['time' => '16:10', 'title' => 'Penutup dan Langkah Selanjutnya', 'body' => 'Membahas apa yang telah dibangun, cara memperpanjang uji coba untuk proof of concept, serta bagaimana ClickHouse dan All Data International, sebagai AWS CPPO Partner dan penjual Marketplace, dapat membantu Anda melangkah ke tahap berikutnya.']
         ],
         'spEyebrow' => 'Pemandu Anda',
         'spTitle' => 'Dipandu oleh orang yang membangunnya.',
@@ -253,7 +279,7 @@ $copy = [
         'fSubmit' => 'Daftar',
         'fFine' => 'Dengan mendaftar Anda setuju dihubungi oleh All Data International dan ClickHouse terkait acara ini.',
         'footContact' => 'Kontak',
-        'footPartner' => 'Mitra resmi ClickHouse di Indonesia.'
+        'footPartner' => 'Mitra resmi ClickHouse dan AWS di Indonesia.'
     ],
 ];
 
@@ -388,11 +414,11 @@ $t = $copy[$lang];
                         <img
                             src="https://alldataint.com/assets/images/logo_coloured.png"
                             alt="All Data International Logo"
-                            style="height:40px;width:auto;display:block;object-fit:contain;">
+                            style="height:26px;width:auto;display:block;object-fit:contain;">
                     </a>
 
                     <!-- Separator -->
-                    <span style="width:1px;height:28px;background:#d5dfeb;display:block;"></span>
+                    <span style="width:1px;height:24px;background:#d5dfeb;display:block;"></span>
 
                     <!-- ClickHouse -->
                     <a
@@ -418,8 +444,8 @@ $t = $copy[$lang];
                         </svg>
                     </a>
 
-                    <span style="width:1px;height:28px;background:#d5dfeb;display:block;"></span>
-
+                    <!-- Separator -->
+                    <span style="width:1px;height:24px;background:#d5dfeb;display:block;"></span>
 
                     <!-- AWS -->
                     <a
@@ -430,7 +456,7 @@ $t = $copy[$lang];
                         <img
                             src="/assets/images/principals/Logo-AWS.png"
                             alt="Amazon Web Services Logo"
-                            style="height:32px;width:auto;display:block;object-fit:contain;">
+                            style="height:22px;width:auto;display:block;object-fit:contain;">
                     </a>
 
                 </div>
@@ -632,31 +658,44 @@ $t = $copy[$lang];
                 <h2 style="margin:0;font-size:clamp(30px,3.4vw,42px);line-height:1.1;font-weight:800;letter-spacing:-0.025em;color:#0b1f3a;text-wrap:balance;"><?= e($t['btTitle']) ?></h2>
                 <p style="margin:0;font-size:17px;line-height:1.6;color:#3b4d63;text-wrap:pretty;"><?= e($t['btBody']) ?></p>
             </div>
-            <div class="three" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch;">
-                <div style="border:1px solid #dfe8f2;border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:18px;">
-                    <img src="<?= $adiLogo ?>" alt="All Data International" style="height:44px;width:auto;align-self:flex-start;">
-                    <h3 style="margin:0;font-size:20px;font-weight:700;color:#0b1f3a;"><?= e($t['btAdiTitle']) ?></h3>
-                    <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.5;color:#3b4d63;">
+            <div class="four" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch;">
+                <!-- Card 1: ADI -->
+                <div style="border:1px solid #dfe8f2;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;">
+                    <img src="<?= $adiLogo ?>" alt="All Data International" style="height:40px;width:auto;align-self:flex-start;">
+                    <h3 style="margin:0;font-size:18px;font-weight:700;color:#0b1f3a;"><?= e($t['btAdiTitle']) ?></h3>
+                    <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.5;color:#3b4d63;">
                         <?php foreach ($t['btAdiPoints'] as $p): ?><li style="display:flex;gap:10px;"><span style="color:#008bf9;font-weight:700;">·</span><span><?= e($p) ?></span></li><?php endforeach; ?>
                     </ul>
                 </div>
-                <div style="background:#0b1f3a;border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:18px;color:#ffffff;">
-                    <span style="display:inline-flex;align-self:flex-start;background:#faff69;color:#161616;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;"><?= e($t['btTogetherTag']) ?></span>
-                    <h3 style="margin:0;font-size:22px;font-weight:800;line-height:1.2;letter-spacing:-0.02em;"><?= e($t['btTogetherTitle']) ?></h3>
-                    <p style="margin:0;font-size:15px;line-height:1.6;color:#c4d1e0;text-wrap:pretty;"><?= e($t['btTogetherBody']) ?></p>
-                </div>
-                <div style="border:1px solid #dfe8f2;border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:18px;">
-                    <div style="height:34px;display:flex;align-items:center;align-self:flex-start;margin:7px 0;color:#000000;">
+
+                <!-- Card 2: ClickHouse -->
+                <div style="border:1px solid #dfe8f2;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;">
+                    <div style="height:34px;display:flex;align-items:center;align-self:flex-start;margin:3px 0;color:#000000;">
                         <?= $clickhouseLogoNav ?>
                     </div>
-                    <h3 style="margin:0;font-size:20px;font-weight:700;color:#0b1f3a;"><?= e($t['btChTitle']) ?></h3>
-                    <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.5;color:#3b4d63;">
+                    <h3 style="margin:0;font-size:18px;font-weight:700;color:#0b1f3a;"><?= e($t['btChTitle']) ?></h3>
+                    <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.5;color:#3b4d63;">
                         <?php foreach ($t['btChPoints'] as $p): ?><li style="display:flex;gap:10px;"><span style="color:#008bf9;font-weight:700;">·</span><span><?= e($p) ?></span></li><?php endforeach; ?>
                     </ul>
                 </div>
+
+                <!-- Card 3: AWS -->
+                <div style="border:1px solid #dfe8f2;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;">
+                    <img src="/assets/images/principals/Logo-AWS.png" alt="Amazon Web Services" style="height:34px;width:auto;align-self:flex-start;object-fit:contain;">
+                    <h3 style="margin:0;font-size:18px;font-weight:700;color:#0b1f3a;"><?= e($t['btAwsTitle']) ?></h3>
+                    <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.5;color:#3b4d63;">
+                        <?php foreach ($t['btAwsPoints'] as $p): ?><li style="display:flex;gap:10px;"><span style="color:#008bf9;font-weight:700;">·</span><span><?= e($p) ?></span></li><?php endforeach; ?>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Together (Highlight) -->
+                <div style="background:#0b1f3a;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;color:#ffffff;">
+                    <span style="display:inline-flex;align-self:flex-start;background:#faff69;color:#161616;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;"><?= e($t['btTogetherTag']) ?></span>
+                    <h3 style="margin:0;font-size:20px;font-weight:800;line-height:1.2;letter-spacing:-0.02em;"><?= e($t['btTogetherTitle']) ?></h3>
+                    <p style="margin:0;font-size:14px;line-height:1.6;color:#c4d1e0;text-wrap:pretty;"><?= e($t['btTogetherBody']) ?></p>
+                </div>
             </div>
         </section>
-
         <!-- Agenda + speakers -->
         <section id="agenda" style="background:#f3f8fe;border-top:1px solid #e6edf5;border-bottom:1px solid #e6edf5;">
             <div class="two" style="max-width:1160px;margin:0 auto;padding:88px 24px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:start;">
@@ -779,13 +818,11 @@ $t = $copy[$lang];
                         <img
                             src="https://alldataint.com/assets/images/events/All_Data_Logo-putih.png"
                             alt="All Data International Logo"
-                            style="height:36px;width:auto;object-fit:contain;display:block;">
+                            style="height:26px;width:auto;object-fit:contain;display:block;">
                     </a>
 
                     <!-- Separator -->
-                    <span style="font-size:20px;color:#8fa4bd;font-weight:300;line-height:1;">
-                        ×
-                    </span>
+                    <span style="width:1px;height:28px;background:#d5dfeb;display:block;"></span>
 
                     <!-- ClickHouse Logo -->
                     <a
@@ -813,8 +850,6 @@ $t = $copy[$lang];
 
                     <span style="width:1px;height:28px;background:#d5dfeb;display:block;"></span>
 
-
-                    <!-- AWS -->
                     <!-- AWS -->
                     <a
                         href="https://aws.amazon.com/"
@@ -825,7 +860,7 @@ $t = $copy[$lang];
                             src="/assets/images/principals/Logo-AWS.png"
                             alt="Amazon Web Services Logo"
                             style="
-                            height:32px;
+                            height:22px;
                             width:auto;
                             display:block;
                             object-fit:contain;
