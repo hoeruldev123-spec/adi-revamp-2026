@@ -354,25 +354,7 @@ $t = $copy[$lang];
             font-family: inherit;
         }
 
-        @media (max-width:820px) {
-            .two {
-                grid-template-columns: 1fr !important;
-            }
-
-            .three {
-                grid-template-columns: 1fr !important;
-            }
-
-            .hero {
-                grid-template-columns: 1fr !important;
-            }
-
-            .navlinks {
-                display: none !important;
-            }
-        }
-
-        /* Hover & focus (menggantikan style-hover/style-focus versi bundel asli) */
+        /* Hover & focus */
         .btn-primary:hover {
             background: #006fd1 !important;
             color: #ffffff !important;
@@ -394,6 +376,80 @@ $t = $copy[$lang];
         .form-input-sm:focus {
             border-color: #008bf9 !important;
             outline: none;
+        }
+
+        /* Default Grid untuk Desktop */
+        .four,
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        /* ====================================================
+       RESPONSIVE MEDIA QUERIES
+       ==================================================== */
+
+        /* Tablet & Mobile Layout (<= 820px) */
+        @media (max-width: 820px) {
+
+            .two,
+            .three,
+            .hero {
+                grid-template-columns: 1fr !important;
+            }
+
+            .navlinks {
+                display: none !important;
+            }
+        }
+
+        /* Target Layar Mobile/Tablet (<= 768px): Grid .four / .partners-grid jadi 2 Kolom x 2 Baris */
+        @media (max-width: 768px) {
+
+            .four,
+            .partners-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                gap: 12px !important;
+            }
+
+            /* Penyesuaian isi card agar rapi di 2 kolom mobile */
+            #partners .four>div,
+            .partners-card {
+                padding: 16px !important;
+                gap: 12px !important;
+            }
+
+            #partners .four h3,
+            .partners-card h3 {
+                font-size: 15px !important;
+            }
+
+            #partners .four ul,
+            .partners-card ul {
+                font-size: 12px !important;
+                gap: 6px !important;
+            }
+
+            #partners .four img,
+            .partners-card img {
+                height: 26px !important;
+            }
+        }
+
+        /* Layar Kecil / HP Portrait (<= 480px) */
+        @media (max-width: 480px) {
+
+            .four,
+            .partners-grid {
+                gap: 10px !important;
+            }
+
+            #partners .four>div,
+            .partners-card {
+                padding: 14px 10px !important;
+            }
         }
     </style>
 </head>
@@ -658,9 +714,12 @@ $t = $copy[$lang];
                 <h2 style="margin:0;font-size:clamp(30px,3.4vw,42px);line-height:1.1;font-weight:800;letter-spacing:-0.025em;color:#0b1f3a;text-wrap:balance;"><?= e($t['btTitle']) ?></h2>
                 <p style="margin:0;font-size:17px;line-height:1.6;color:#3b4d63;text-wrap:pretty;"><?= e($t['btBody']) ?></p>
             </div>
-            <div class="four" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch;">
+
+            <!-- Class partners-grid & partners-card ditambahkan di bawah ini -->
+            <div class="four partners-grid" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch;">
+
                 <!-- Card 1: ADI -->
-                <div style="border:1px solid #dfe8f2;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;">
+                <div class="partners-card" style="border:1px solid #dfe8f2;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;">
                     <img src="<?= $adiLogo ?>" alt="All Data International" style="height:40px;width:auto;align-self:flex-start;">
                     <h3 style="margin:0;font-size:18px;font-weight:700;color:#0b1f3a;"><?= e($t['btAdiTitle']) ?></h3>
                     <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.5;color:#3b4d63;">
@@ -669,7 +728,7 @@ $t = $copy[$lang];
                 </div>
 
                 <!-- Card 2: ClickHouse -->
-                <div style="border:1px solid #dfe8f2;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;">
+                <div class="partners-card" style="border:1px solid #dfe8f2;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;">
                     <div style="height:34px;display:flex;align-items:center;align-self:flex-start;margin:3px 0;color:#000000;">
                         <?= $clickhouseLogoNav ?>
                     </div>
@@ -680,7 +739,7 @@ $t = $copy[$lang];
                 </div>
 
                 <!-- Card 3: AWS -->
-                <div style="border:1px solid #dfe8f2;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;">
+                <div class="partners-card" style="border:1px solid #dfe8f2;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;">
                     <img src="/assets/images/principals/Logo-AWS.png" alt="Amazon Web Services" style="height:34px;width:auto;align-self:flex-start;object-fit:contain;">
                     <h3 style="margin:0;font-size:18px;font-weight:700;color:#0b1f3a;"><?= e($t['btAwsTitle']) ?></h3>
                     <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.5;color:#3b4d63;">
@@ -689,11 +748,12 @@ $t = $copy[$lang];
                 </div>
 
                 <!-- Card 4: Together (Highlight) -->
-                <div style="background:#0b1f3a;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;color:#ffffff;">
+                <div class="partners-card" style="background:#0b1f3a;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:18px;color:#ffffff;">
                     <span style="display:inline-flex;align-self:flex-start;background:#faff69;color:#161616;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;"><?= e($t['btTogetherTag']) ?></span>
                     <h3 style="margin:0;font-size:20px;font-weight:800;line-height:1.2;letter-spacing:-0.02em;"><?= e($t['btTogetherTitle']) ?></h3>
                     <p style="margin:0;font-size:14px;line-height:1.6;color:#c4d1e0;text-wrap:pretty;"><?= e($t['btTogetherBody']) ?></p>
                 </div>
+
             </div>
         </section>
         <!-- Agenda + speakers -->
