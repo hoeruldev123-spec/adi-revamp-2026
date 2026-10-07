@@ -20,7 +20,7 @@ $speakers = [
     [
         'photo' => base_url('assets/images/events/speakers/bimantoro-2.webp'),
         'nama' => 'dr. G. Bimantoro',
-        'posisi' => 'Director of Product',
+        'posisi' => 'PACS Product Specialist Consultant',
         'perusahaan' => 'All Data PACS'
     ],
     [
@@ -585,7 +585,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <span class="text-slate-600"><?php echo $t['agenda_demo_desc']; ?></span>
                                 </td>
                                 <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_live_demo']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900">dr. G. Bimantoro <span class="block text-xs font-normal text-slate-500">Director of Product (All Data PACS)</span></td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">dr. G. Bimantoro <span class="block text-xs font-normal text-slate-500">PACS Product Specialist Consultant (All Data International)</span></td>
                             </tr>
                             <!-- Sesi 7: Q&A -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
