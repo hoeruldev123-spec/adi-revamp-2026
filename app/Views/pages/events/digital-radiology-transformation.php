@@ -11,12 +11,12 @@ $speakers = [
         'posisi' => 'Information Technology Director',
         'perusahaan' => 'BPJS Kesehatan'
     ],
-    // [
-    //     'photo' => 'https://i.pinimg.com/236x/13/74/20/137420f5b9c39bc911e472f5d20f053e.jpg',
-    //     'nama' => 'Proposed Hospital Speaker',
-    //     'posisi' => 'CEO',
-    //     'perusahaan' => 'Potential Hospital Group'
-    // ],
+    [
+        'photo' =>  base_url('assets/images/events/speakers/dr-drg-iing-ichsan-hanafi-mars-mh.webp'),
+        'nama' => 'Dr. drg. Iing Ichsan Hanafi, MARS., MH.',
+        'posisi' => 'Ketua Umum',
+        'perusahaan' => 'Asosiasi Rumah Sakit Swasta Indonesia (ARSSI)'
+    ],
     [
         'photo' => base_url('assets/images/events/speakers/bimantoro-2.webp'),
         'nama' => 'dr. G. Bimantoro',
@@ -81,7 +81,7 @@ $translations = [
         'agenda_showcase_type' => 'Solution Showcase',
         'agenda_exec_desc' => 'Tantangan nyata dan strategi ekonomi migrasi HIS/PACS ke cloud pada jaringan rumah sakit skala menengah.',
         'agenda_case_study' => 'Hospital Case Study',
-        'agenda_hospital_proposed' => 'Grup Rumah Sakit (Dalam Konfirmasi)',
+        'agenda_hospital_proposed' => 'Ketua Umum Asosiasi Rumah Sakit Swasta Indonesia (ARSSI)',
         'agenda_demo_desc' => 'Solusi penghubung Cloud Radiology. Demonstrasi langsung alur kerja dari modalitas hingga pelaporan terintegrasi.',
         'agenda_live_demo' => 'Live Demonstration',
         'agenda_qa_title' => 'Sesi Tanya Jawab',
@@ -150,7 +150,7 @@ $translations = [
         'agenda_showcase_type' => 'Solution Showcase',
         'agenda_exec_desc' => 'Real-world challenges and economic strategies for cloud HIS/PACS migration in mid-sized hospital networks.',
         'agenda_case_study' => 'Hospital Case Study',
-        'agenda_hospital_proposed' => 'Hospital Group (In Confirmation)',
+        'agenda_hospital_proposed' => 'Ketua Umum Asosiasi Rumah Sakit Swasta Indonesia (ARSSI)',
         'agenda_demo_desc' => 'Bridging Cloud Radiology solution. Live demonstration of workflow from modality to integrated reporting.',
         'agenda_live_demo' => 'Live Demonstration',
         'agenda_qa_title' => 'Q & A Session',
@@ -575,7 +575,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <span class="text-slate-600"><?php echo $t['agenda_exec_desc']; ?></span>
                                 </td>
                                 <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_case_study']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900">CEO <span class="block text-xs font-normal text-slate-500"><?php echo $t['agenda_hospital_proposed']; ?></span></td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">Dr. drg. Iing Ichsan Hanafi, MARS., MH. <span class="block text-xs font-normal text-slate-500"><?php echo $t['agenda_hospital_proposed']; ?></span></td>
                             </tr>
                             <!-- Sesi 6: Live Demo -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
