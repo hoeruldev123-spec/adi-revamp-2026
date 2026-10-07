@@ -60,12 +60,18 @@ $translations = [
         'nav_audience' => 'Target Peserta',
         'topics_title' => 'Topik Yang Akan Dibahas',
         'topics_subtitle' => 'Mengupas tuntas modernisasi alur kerja radiologi dan interoperabilitas RME untuk mencegah potensi revenue loss.',
-        'topic_1_title' => 'The Future of Radiology Infrastructure',
-        'topic_1_desc' => 'Membangun ekosistem radiologi yang aman, cepat, dan scalable menggunakan teknologi Huawei Cloud.',
+
+        'topic_1_title' => 'The Future of Digital Radiology Infrastructure',
+        'topic_1_desc'  => 'Membangun infrastruktur radiologi yang aman, scalable, dan reliable untuk mendukung pertumbuhan kebutuhan imaging rumah sakit di era cloud.',
+
         'topic_2_title' => 'SATUSEHAT & BPJS Claim Readiness',
-        'topic_2_desc' => 'Membedah potensi revenue loss pada klaim radiologi BPJS dan bagaimana menghindarinya melalui dokumentasi digital yang tepat.',
-        'topic_3_title' => 'Seamless Integration & Live Demo',
-        'topic_3_desc' => 'Cara All Data Cloud PACS menjembatani operasional radiologi klinis dengan RME Kemenkes, dilengkapi Live Demo alur kerja dari modalitas hingga laporan terintegrasi.',
+        'topic_2_desc'  => 'Memahami kesiapan data dan dokumentasi RME untuk mendukung proses klaim BPJS yang lebih akurat, efisien, dan mengurangi risiko terkait kualitas data.',
+
+        'topic_3_title' => 'Seamless Radiology Workflow & Integration',
+        'topic_3_desc'  => 'Menghubungkan modality, PACS, RME, dan SATUSEHAT dalam alur kerja radiologi yang terintegrasi—dari pemeriksaan hingga laporan.',
+
+        'topic_4_title' => 'From Digital Transformation to Hospital Value',
+        'topic_4_desc'  => 'Mengubah digitalisasi radiologi menjadi nilai nyata bagi rumah sakit melalui peningkatan efisiensi operasional, kualitas layanan, data readiness, dan sustainable healthcare operations.',
         'speakers_title' => 'Pembicara',
         'speakers_subtitle' => 'Dengarkan wawasan mendalam dari para pakar dan praktisi industri kesehatan digital.',
         'agenda_title' => 'Agenda Acara',
@@ -129,12 +135,17 @@ $translations = [
         'nav_audience' => 'Target Audience',
         'topics_title' => 'Topics To Be Discussed',
         'topics_subtitle' => 'In-depth breakdown of radiology workflow modernization and EMR interoperability to prevent revenue loss.',
-        'topic_1_title' => 'The Future of Radiology Infrastructure',
-        'topic_1_desc' => 'Building a secure, fast, and scalable radiology ecosystem using Huawei Cloud technology.',
+        'topic_1_title' => 'The Future of Digital Radiology Infrastructure',
+        'topic_1_desc'  => 'Building a secure, scalable, and reliable radiology infrastructure to support the growing imaging needs of modern hospitals in the cloud era.',
+
         'topic_2_title' => 'SATUSEHAT & BPJS Claim Readiness',
-        'topic_2_desc' => 'Analyzing potential revenue loss in BPJS radiology claims and how to prevent it through proper digital documentation.',
-        'topic_3_title' => 'Seamless Integration & Live Demo',
-        'topic_3_desc' => 'How All Data Cloud PACS bridges clinical radiology operations with MoH EMR requirements, featuring a Live Demo from modality to integrated reporting.',
+        'topic_2_desc'  => 'Understanding data readiness and EMR documentation to support more accurate and efficient BPJS claim processes while mitigating data-quality risks.',
+
+        'topic_3_title' => 'Seamless Radiology Workflow & Integration',
+        'topic_3_desc'  => 'Connecting modalities, PACS, EMR, and SATUSEHAT into an integrated radiology workflow—from examination to reporting.',
+
+        'topic_4_title' => 'From Digital Transformation to Hospital Value',
+        'topic_4_desc'  => 'Translating radiology digitization into tangible value for hospitals by improving operational efficiency, service quality, data readiness, and sustainable healthcare operations.',
         'speakers_title' => 'Featured Speakers',
         'speakers_subtitle' => 'Gain insights from leading experts and healthcare digital transformation practitioners.',
         'agenda_title' => 'Event Agenda',
@@ -436,35 +447,57 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p class="text-slate-600"><?php echo $t['topics_subtitle']; ?></p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                        01
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Topic 01 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_1_title']; ?></h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            <?php echo $t['topic_1_desc']; ?>
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_1_title']; ?></h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        <?php echo $t['topic_1_desc']; ?>
-                    </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                        02
+                <!-- Topic 02 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_2_title']; ?></h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            <?php echo $t['topic_2_desc']; ?>
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_2_title']; ?></h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        <?php echo $t['topic_2_desc']; ?>
-                    </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                        03
+                <!-- Topic 03 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_3_title']; ?></h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            <?php echo $t['topic_3_desc']; ?>
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_3_title']; ?></h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        <?php echo $t['topic_3_desc']; ?>
-                    </p>
+                </div>
+
+                <!-- Topic 04 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            04
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_4_title']; ?></h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            <?php echo $t['topic_4_desc']; ?>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
