@@ -382,15 +382,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <?php echo $t['btn_agenda']; ?>
                         </a>
 
-                        <!-- Wrapper Teks & Logo Huawei -->
-                        <div class="flex flex-col items-start justify-center ml-auto sm:ml-2">
-                            <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider mb-0.5">
-                                <?php echo $t['collab_text']; ?>
-                            </span>
-                            <a class="navbar-brand flex items-center" href="https://www.huaweicloud.com/intl/id-id/" target="_blank" rel="noopener noreferrer">
-                                <img src="<?= base_url('assets/images/events/HW_POS_RGB_Horizontal-300ppi.webp') ?>" alt="Huawei" class="h-6 sm:h-8 w-auto object-contain">
-                            </a>
-                        </div>
+
                     </div>
                 </div>
 
@@ -434,6 +426,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="pt-4 md:pt-0">
                     <div class="text-3xl font-extrabold text-white mb-1"><?php echo $t['stat_3_val']; ?></div>
                     <div class="text-sm text-slate-400"><?php echo $t['stat_3_lbl']; ?></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section class="py-12 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xs uppercase tracking-widest font-semibold text-slate-400 mb-8">
+                In Collaboration With
+            </h3>
+
+            <!-- Perubahan 1: items-stretch pada grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+                <!-- Partner 1: Huawei Cloud -->
+                <div class="w-full h-full flex items-center justify-center p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-slate-200 transition-colors duration-200">
+                    <a href="https://www.huaweicloud.com/intl/id-id/" target="_blank" rel="noopener noreferrer" class="inline-block transition-transform hover:scale-105 duration-200">
+                        <img src="<?= base_url('assets/images/events/HW_POS_RGB_Horizontal-300ppi.webp') ?>" alt="Huawei Cloud" class="h-8 md:h-10 w-auto object-contain">
+                    </a>
+                </div>
+
+                <!-- Partner 2: ARSSI -->
+                <div class="w-full h-full flex items-center justify-center p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-slate-200 transition-colors duration-200">
+                    <a href="https://arssipusat.org/" target="_blank" rel="noopener noreferrer" class="inline-block transition-transform hover:scale-105 duration-200">
+                        <img src="https://arssipusat.org/wp-content/uploads/2023/03/logo3.png" alt="ARSSI" class="h-16 md:h-20 w-auto object-contain">
+                    </a>
                 </div>
             </div>
         </div>
