@@ -11,16 +11,16 @@ $speakers = [
         'posisi' => 'Information Technology Director',
         'perusahaan' => 'BPJS Kesehatan'
     ],
-    // [
-    //     'photo' => 'https://i.pinimg.com/236x/13/74/20/137420f5b9c39bc911e472f5d20f053e.jpg',
-    //     'nama' => 'Proposed Hospital Speaker',
-    //     'posisi' => 'CEO',
-    //     'perusahaan' => 'Potential Hospital Group'
-    // ],
+    [
+        'photo' =>  base_url('assets/images/events/speakers/dr-drg-iing-ichsan-hanafi-mars-mh.webp'),
+        'nama' => 'Dr. drg. Iing Ichsan Hanafi, MARS., MH.',
+        'posisi' => 'Ketua Umum',
+        'perusahaan' => 'Asosiasi Rumah Sakit Swasta Indonesia (ARSSI)'
+    ],
     [
         'photo' => base_url('assets/images/events/speakers/bimantoro-2.webp'),
         'nama' => 'dr. G. Bimantoro',
-        'posisi' => 'Director of Product',
+        'posisi' => 'PACS Product Specialist Consultant',
         'perusahaan' => 'All Data PACS'
     ],
     [
@@ -60,12 +60,18 @@ $translations = [
         'nav_audience' => 'Target Peserta',
         'topics_title' => 'Topik Yang Akan Dibahas',
         'topics_subtitle' => 'Mengupas tuntas modernisasi alur kerja radiologi dan interoperabilitas RME untuk mencegah potensi revenue loss.',
-        'topic_1_title' => 'The Future of Radiology Infrastructure',
-        'topic_1_desc' => 'Membangun ekosistem radiologi yang aman, cepat, dan scalable menggunakan teknologi Huawei Cloud.',
+
+        'topic_1_title' => 'The Future of Digital Radiology Infrastructure',
+        'topic_1_desc'  => 'Membangun infrastruktur radiologi yang aman, scalable, dan reliable untuk mendukung pertumbuhan kebutuhan imaging rumah sakit di era cloud.',
+
         'topic_2_title' => 'SATUSEHAT & BPJS Claim Readiness',
-        'topic_2_desc' => 'Membedah potensi revenue loss pada klaim radiologi BPJS dan bagaimana menghindarinya melalui dokumentasi digital yang tepat.',
-        'topic_3_title' => 'Seamless Integration & Live Demo',
-        'topic_3_desc' => 'Cara All Data Cloud PACS menjembatani operasional radiologi klinis dengan RME Kemenkes, dilengkapi Live Demo alur kerja dari modalitas hingga laporan terintegrasi.',
+        'topic_2_desc'  => 'Memahami kesiapan data dan dokumentasi RME untuk mendukung proses klaim BPJS yang lebih akurat, efisien, dan mengurangi risiko terkait kualitas data.',
+
+        'topic_3_title' => 'Seamless Radiology Workflow & Integration',
+        'topic_3_desc'  => 'Menghubungkan modality, PACS, RME, dan SATUSEHAT dalam alur kerja radiologi yang terintegrasi—dari pemeriksaan hingga laporan.',
+
+        'topic_4_title' => 'From Digital Transformation to Hospital Value',
+        'topic_4_desc'  => 'Mengubah digitalisasi radiologi menjadi nilai nyata bagi rumah sakit melalui peningkatan efisiensi operasional, kualitas layanan, data readiness, dan sustainable healthcare operations.',
         'speakers_title' => 'Pembicara',
         'speakers_subtitle' => 'Dengarkan wawasan mendalam dari para pakar dan praktisi industri kesehatan digital.',
         'agenda_title' => 'Agenda Acara',
@@ -79,9 +85,9 @@ $translations = [
         'agenda_keynote_type' => 'Keynote Presentation',
         'agenda_huawei_desc' => 'Empowering Healthcare IT: Infrastruktur Cloud Tangguh untuk Ekosistem Radiologi Digital. Building a secure, scalable foundation.',
         'agenda_showcase_type' => 'Solution Showcase',
-        'agenda_exec_desc' => 'Tantangan nyata dan strategi ekonomi migrasi HIS/PACS ke cloud pada jaringan rumah sakit skala menengah.',
+        'agenda_exec_desc' => 'No RME, No Klaim: Strategi RS Swasta Mengamankan Cash Flow Lewat Digitalisasi Radiologi Menghadapi Resiko Pending Klaim',
         'agenda_case_study' => 'Hospital Case Study',
-        'agenda_hospital_proposed' => 'Grup Rumah Sakit (Dalam Konfirmasi)',
+        'agenda_hospital_proposed' => 'Ketua Umum Asosiasi Rumah Sakit Swasta Indonesia (ARSSI)',
         'agenda_demo_desc' => 'Solusi penghubung Cloud Radiology. Demonstrasi langsung alur kerja dari modalitas hingga pelaporan terintegrasi.',
         'agenda_live_demo' => 'Live Demonstration',
         'agenda_qa_title' => 'Sesi Tanya Jawab',
@@ -107,7 +113,7 @@ $translations = [
         'badge' => 'All Data Cloud PACS Launching',
         'hero_title' => 'Digital Radiology Transformation & Navigating SATUSEHAT EMR for BPJS Claim',
         'hero_subtitle' => 'Secure Your Revenue, Transform Your Radiology Workflow.',
-        'collab_text' => 'In Collaboration',
+        'collab_text' => 'In Collaboration With',
         'description' => 'Electronic Medical Record (EMR) integration with SATUSEHAT is essential for Indonesian healthcare facilities. All Data and Huawei Cloud present Cloud Radiology to modernize workflows and protect hospital revenue from failed claims.',
         'date_time_label' => 'Date & Time',
         'date_time_value' => 'Thursday, October 22, 2026 | 09.00 - 13.00 WIB',
@@ -129,12 +135,17 @@ $translations = [
         'nav_audience' => 'Target Audience',
         'topics_title' => 'Topics To Be Discussed',
         'topics_subtitle' => 'In-depth breakdown of radiology workflow modernization and EMR interoperability to prevent revenue loss.',
-        'topic_1_title' => 'The Future of Radiology Infrastructure',
-        'topic_1_desc' => 'Building a secure, fast, and scalable radiology ecosystem using Huawei Cloud technology.',
+        'topic_1_title' => 'The Future of Digital Radiology Infrastructure',
+        'topic_1_desc'  => 'Building a secure, scalable, and reliable radiology infrastructure to support the growing imaging needs of modern hospitals in the cloud era.',
+
         'topic_2_title' => 'SATUSEHAT & BPJS Claim Readiness',
-        'topic_2_desc' => 'Analyzing potential revenue loss in BPJS radiology claims and how to prevent it through proper digital documentation.',
-        'topic_3_title' => 'Seamless Integration & Live Demo',
-        'topic_3_desc' => 'How All Data Cloud PACS bridges clinical radiology operations with MoH EMR requirements, featuring a Live Demo from modality to integrated reporting.',
+        'topic_2_desc'  => 'Understanding data readiness and EMR documentation to support more accurate and efficient BPJS claim processes while mitigating data-quality risks.',
+
+        'topic_3_title' => 'Seamless Radiology Workflow & Integration',
+        'topic_3_desc'  => 'Connecting modalities, PACS, EMR, and SATUSEHAT into an integrated radiology workflow—from examination to reporting.',
+
+        'topic_4_title' => 'From Digital Transformation to Hospital Value',
+        'topic_4_desc'  => 'Translating radiology digitization into tangible value for hospitals by improving operational efficiency, service quality, data readiness, and sustainable healthcare operations.',
         'speakers_title' => 'Featured Speakers',
         'speakers_subtitle' => 'Gain insights from leading experts and healthcare digital transformation practitioners.',
         'agenda_title' => 'Event Agenda',
@@ -148,9 +159,9 @@ $translations = [
         'agenda_keynote_type' => 'Keynote Presentation',
         'agenda_huawei_desc' => 'Empowering Healthcare IT: Resilient Cloud Infrastructure for Digital Radiology Ecosystem. Building a secure, scalable foundation.',
         'agenda_showcase_type' => 'Solution Showcase',
-        'agenda_exec_desc' => 'Real-world challenges and economic strategies for cloud HIS/PACS migration in mid-sized hospital networks.',
+        'agenda_exec_desc' => 'No RME, No Claims: Private Hospital Strategy to Secure Cash Flow Through Digitalization of Radiology Facing the Risk of Pending Claims',
         'agenda_case_study' => 'Hospital Case Study',
-        'agenda_hospital_proposed' => 'Hospital Group (In Confirmation)',
+        'agenda_hospital_proposed' => 'Ketua Umum Asosiasi Rumah Sakit Swasta Indonesia (ARSSI)',
         'agenda_demo_desc' => 'Bridging Cloud Radiology solution. Live demonstration of workflow from modality to integrated reporting.',
         'agenda_live_demo' => 'Live Demonstration',
         'agenda_qa_title' => 'Q & A Session',
@@ -376,15 +387,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <?php echo $t['btn_agenda']; ?>
                         </a>
 
-                        <!-- Wrapper Teks & Logo Huawei -->
-                        <div class="flex flex-col items-start justify-center ml-auto sm:ml-2">
-                            <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider mb-0.5">
-                                <?php echo $t['collab_text']; ?>
-                            </span>
-                            <a class="navbar-brand flex items-center" href="https://www.huaweicloud.com/intl/id-id/" target="_blank" rel="noopener noreferrer">
-                                <img src="<?= base_url('assets/images/events/HW_POS_RGB_Horizontal-300ppi.webp') ?>" alt="Huawei" class="h-6 sm:h-8 w-auto object-contain">
-                            </a>
-                        </div>
+
                     </div>
                 </div>
 
@@ -433,6 +436,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </section>
 
+    <!-- Collaboration Section -->
+    <section class="py-12 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xs uppercase tracking-widest font-semibold text-slate-400 mb-8">
+                In Collaboration With
+            </h3>
+
+            <!-- Perubahan 1: items-stretch pada grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+                <!-- Partner 1: Huawei Cloud -->
+                <div class="w-full h-full flex items-center justify-center p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-slate-200 transition-colors duration-200">
+                    <a href="https://www.huaweicloud.com/intl/id-id/" target="_blank" rel="noopener noreferrer" class="inline-block transition-transform hover:scale-105 duration-200">
+                        <img src="<?= base_url('assets/images/events/HW_POS_RGB_Horizontal-300ppi.webp') ?>" alt="Huawei Cloud" class="h-8 md:h-10 w-auto object-contain">
+                    </a>
+                </div>
+
+                <!-- Partner 2: ARSSI -->
+                <div class="w-full h-full flex items-center justify-center p-6 bg-slate-50 rounded-xl border border-slate-100 hover:border-slate-200 transition-colors duration-200">
+                    <a href="https://arssipusat.org/" target="_blank" rel="noopener noreferrer" class="inline-block transition-transform hover:scale-105 duration-200">
+                        <img src="https://arssipusat.org/wp-content/uploads/2023/03/logo3.png" alt="ARSSI" class="h-16 md:h-20 w-auto object-contain">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Key Topics Section -->
     <section id="topics" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -441,35 +470,57 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p class="text-slate-600"><?php echo $t['topics_subtitle']; ?></p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                        01
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Topic 01 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_1_title']; ?></h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            <?php echo $t['topic_1_desc']; ?>
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_1_title']; ?></h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        <?php echo $t['topic_1_desc']; ?>
-                    </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                        02
+                <!-- Topic 02 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_2_title']; ?></h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            <?php echo $t['topic_2_desc']; ?>
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_2_title']; ?></h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        <?php echo $t['topic_2_desc']; ?>
-                    </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                        03
+                <!-- Topic 03 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_3_title']; ?></h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            <?php echo $t['topic_3_desc']; ?>
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_3_title']; ?></h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        <?php echo $t['topic_3_desc']; ?>
-                    </p>
+                </div>
+
+                <!-- Topic 04 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                            04
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3"><?php echo $t['topic_4_title']; ?></h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            <?php echo $t['topic_4_desc']; ?>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -580,7 +631,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <span class="text-slate-600"><?php echo $t['agenda_exec_desc']; ?></span>
                                 </td>
                                 <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_case_study']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900">CEO <span class="block text-xs font-normal text-slate-500"><?php echo $t['agenda_hospital_proposed']; ?></span></td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">Dr. drg. Iing Ichsan Hanafi, MARS., MH. <span class="block text-xs font-normal text-slate-500"><?php echo $t['agenda_hospital_proposed']; ?></span></td>
                             </tr>
                             <!-- Sesi 6: Live Demo -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
@@ -590,7 +641,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <span class="text-slate-600"><?php echo $t['agenda_demo_desc']; ?></span>
                                 </td>
                                 <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_live_demo']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900">dr. G. Bimantoro <span class="block text-xs font-normal text-slate-500">Director of Product (All Data PACS)</span></td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">dr. G. Bimantoro <span class="block text-xs font-normal text-slate-500">PACS Product Specialist Consultant (All Data International)</span></td>
                             </tr>
                             <!-- Sesi 7: Q&A -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
