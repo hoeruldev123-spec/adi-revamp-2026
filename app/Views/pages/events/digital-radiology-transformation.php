@@ -77,25 +77,40 @@ $translations = [
         'agenda_title' => 'Agenda Acara',
         'agenda_subtitle' => 'Kamis, 22 Oktober 2026',
         'agenda_reg_desc' => 'Registrasi ulang peserta.',
-        'agenda_welcoming' => 'Welcoming Session',
-        'agenda_committee' => 'Panitia Acara',
-        'agenda_welcome_desc' => 'Sambutan pembuka mengenai visi transformasi digital dan kolaborasi ekosistem radiologi di Indonesia.',
-        'agenda_opening_speech' => 'Opening Speech',
-        'agenda_keynote_desc' => 'Navigating SATUSEHAT EMR & BPJS Claims: Strategi Mencegah Potensi "Revenue Loss" pada Layanan Radiologi.',
-        'agenda_keynote_type' => 'Keynote Presentation',
-        'agenda_huawei_desc' => 'Empowering Healthcare IT: Infrastruktur Cloud Tangguh untuk Ekosistem Radiologi Digital. Building a secure, scalable foundation.',
-        'agenda_showcase_type' => 'Solution Showcase',
-        'agenda_exec_desc' => 'No RME, No Klaim: Strategi RS Swasta Mengamankan Cash Flow Lewat Digitalisasi Radiologi Menghadapi Resiko Pending Klaim',
-        'agenda_case_study' => 'Hospital Case Study',
-        'agenda_hospital_proposed' => 'Ketua Umum Asosiasi Rumah Sakit Swasta Indonesia (ARSSI)',
-        'agenda_demo_desc' => 'Solusi penghubung Cloud Radiology. Demonstrasi langsung alur kerja dari modalitas hingga pelaporan terintegrasi.',
-        'agenda_live_demo' => 'Live Demonstration',
-        'agenda_qa_title' => 'Sesi Tanya Jawab',
-        'agenda_qa_desc' => 'Sesi tanya jawab interaktif bersama para panelis dan pembicara mengenai integrasi teknis, kepatuhan klaim, dan implementasi sistem.',
-        'agenda_qa_type' => 'Panel Interaktif Q&A',
+        'agenda_committee' => 'Event Committee',
+        'agenda_welcoming' => 'Sesi Penyambutan',
+        'agenda_opening_speech' => 'Sambutan Pembuka',
+
+        'agenda_hospital_proposed' =>
+        'Ketua Umum Asosiasi Rumah Sakit Swasta Indonesia (ARSSI)',
+
+        'agenda_keynote_desc' =>
+        'Menavigasi SATUSEHAT EMR & Klaim BPJS: Strategi Mencegah Potensi "Revenue Loss" pada Layanan Radiologi.',
+
+        'agenda_keynote_type' => 'Presentasi Utama',
+
+        'agenda_huawei_desc' =>
+        'Memberdayakan TI Layanan Kesehatan: Infrastruktur Cloud yang Tangguh untuk Ekosistem Radiologi Digital. Membangun fondasi yang aman dan skalabel.',
+
+        'agenda_showcase_type' => 'Presentasi Solusi',
+
+        'agenda_demo_desc' =>
+        'Solusi integrasi Cloud Radiology. Demonstrasi langsung alur kerja mulai dari modalitas hingga pelaporan yang terintegrasi.',
+
+        'agenda_live_demo' => 'Demonstrasi Langsung',
+
+        'agenda_qa_title' => 'Q & A Session',
+
+        'agenda_qa_desc' =>
+        'Sesi tanya jawab interaktif bersama para pembicara dan panelis mengenai integrasi teknis, kepatuhan klaim, dan implementasi sistem.',
+
+        'agenda_qa_type' => 'Tanya Jawab Panel Interaktif',
         'agenda_qa_speaker' => 'Pembicara & Moderator',
-        'agenda_lunch_desc' => 'Diskusi interaktif, konsultasi kebutuhan rumah sakit, dan ramah tamah.',
-        'agenda_lunch_type' => 'Networking & Makan Siang',
+
+        'agenda_lunch_desc' =>
+        'Diskusi interaktif, konsultasi kebutuhan rumah sakit, dan membangun jejaring.',
+
+        'agenda_lunch_type' => 'Jejaring & Makan Siang',
         'agenda_lunch_speaker' => 'Seluruh Peserta',
         'th_time' => 'Waktu',
         'th_session' => 'Sesi & Pembahasan',
@@ -151,24 +166,39 @@ $translations = [
         'agenda_title' => 'Event Agenda',
         'agenda_subtitle' => 'Thursday, October 22, 2026',
         'agenda_reg_desc' => 'On-site registration.',
-        'agenda_welcoming' => 'Welcoming Session',
         'agenda_committee' => 'Event Committee',
-        'agenda_welcome_desc' => 'Opening remarks on digital transformation vision and radiology ecosystem collaboration in Indonesia.',
+        'agenda_welcoming' => 'Welcoming Session',
         'agenda_opening_speech' => 'Opening Speech',
-        'agenda_keynote_desc' => 'Navigating SATUSEHAT EMR & BPJS Claims: Strategies to Prevent Potential "Revenue Loss" in Radiology Services.',
+
+        'agenda_hospital_proposed' =>
+        'Chairman of the Indonesian Private Hospitals Association (ARSSI)',
+
+        'agenda_keynote_desc' =>
+        'Navigating SATUSEHAT EMR & BPJS Claims: Strategies to Prevent Potential "Revenue Loss" in Radiology Services.',
+
         'agenda_keynote_type' => 'Keynote Presentation',
-        'agenda_huawei_desc' => 'Empowering Healthcare IT: Resilient Cloud Infrastructure for Digital Radiology Ecosystem. Building a secure, scalable foundation.',
+
+        'agenda_huawei_desc' =>
+        'Empowering Healthcare IT: Resilient Cloud Infrastructure for Digital Radiology Ecosystem. Building a secure, scalable foundation.',
+
         'agenda_showcase_type' => 'Solution Showcase',
-        'agenda_exec_desc' => 'No RME, No Claims: Private Hospital Strategy to Secure Cash Flow Through Digitalization of Radiology Facing the Risk of Pending Claims',
-        'agenda_case_study' => 'Hospital Case Study',
-        'agenda_hospital_proposed' => 'Ketua Umum Asosiasi Rumah Sakit Swasta Indonesia (ARSSI)',
-        'agenda_demo_desc' => 'Bridging Cloud Radiology solution. Live demonstration of workflow from modality to integrated reporting.',
+
+        'agenda_demo_desc' =>
+        'Cloud Radiology integration solution. Live demonstration of the workflow from modality to integrated reporting.',
+
         'agenda_live_demo' => 'Live Demonstration',
-        'agenda_qa_title' => 'Q & A Session',
-        'agenda_qa_desc' => 'Interactive Q&A session with panelists and speakers covering technical integration, claim compliance, and system implementation.',
+
+        'agenda_qa_title' => 'Q&A Session',
+
+        'agenda_qa_desc' =>
+        'Interactive Q&A session with speakers and panelists covering technical integration, claim compliance, and system implementation.',
+
         'agenda_qa_type' => 'Interactive Panel Q&A',
         'agenda_qa_speaker' => 'Speakers & Moderator',
-        'agenda_lunch_desc' => 'Interactive discussion, hospital needs consultation, and networking.',
+
+        'agenda_lunch_desc' =>
+        'Interactive discussion, hospital needs consultation, and networking.',
+
         'agenda_lunch_type' => 'Networking & Lunch',
         'agenda_lunch_speaker' => 'All Attendees',
         'th_time' => 'Time',
@@ -580,83 +610,174 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <tbody class="divide-y divide-slate-200">
                             <!-- Sesi 1: Registration -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">08:45 - 09:30 WIB</td>
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
+                                    08:45 - 09:30 WIB
+                                </td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">Registration & Welcome Tea</span>
-
                                 </td>
-                                <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_welcoming']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900"><?php echo $t['agenda_committee']; ?></td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">
+                                    <?php echo $t['agenda_welcoming']; ?>
+                                </td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">
+                                    <?php echo $t['agenda_committee']; ?>
+                                </td>
                             </tr>
-                            <!-- Sesi 2: Welcome Speech -->
+
+                            <!-- Sesi 2: Welcome Speech ARSSI -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">09:30 - 09:45 WIB</td>
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
+                                    09:30 - 09:50 WIB
+                                </td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">Welcome Speech</span>
-                                    <span class="text-slate-600"><?php echo $t['agenda_welcome_desc']; ?></span>
+                                    <span class="text-slate-600">
+                                        Sambutan Private Hospital ARSSI
+                                    </span>
                                 </td>
-                                <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_opening_speech']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900">Melody Ma <span class="block text-xs font-normal text-slate-500">Partner Ecosystem Director (Huawei Cloud)</span></td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">
+                                    <?php echo $t['agenda_opening_speech']; ?>
+                                </td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">
+                                    Dr. drg. Iing Ichsan Hanafi, MARS., MH.
+                                    <span class="block text-xs font-normal text-slate-500">
+                                        <?php echo $t['agenda_hospital_proposed']; ?>
+                                    </span>
+                                </td>
                             </tr>
-                            <!-- Sesi 3: Keynote -->
+
+                            <!-- Sesi 3: Welcome Speech Huawei Cloud -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">09:45 - 10:05 WIB</td>
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
+                                    09:50 - 10:00 WIB
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="font-bold block text-slate-900">Welcome Speech</span>
+                                    <span class="text-slate-600">
+                                        Sambutan pembuka mengenai visi transformasi digital dan kolaborasi ekosistem radiologi di Indonesia.
+                                    </span>
+                                </td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">
+                                    <?php echo $t['agenda_opening_speech']; ?>
+                                </td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">
+                                    Melody Ma
+                                    <span class="block text-xs font-normal text-slate-500">
+                                        Partner Ecosystem Director (Huawei Cloud)
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- Sesi 4: Keynote -->
+                            <tr class="hover:bg-slate-100/80 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
+                                    10:00 - 10:20 WIB
+                                </td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">Keynote</span>
-                                    <span class="text-slate-600"><?php echo $t['agenda_keynote_desc']; ?></span>
+                                    <span class="text-slate-600">
+                                        <?php echo $t['agenda_keynote_desc']; ?>
+                                    </span>
                                 </td>
-                                <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_keynote_type']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900">Setiaji, ST, MSI <span class="block text-xs font-normal text-slate-500">Information Technology Director (BPJS Kesehatan)</span></td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">
+                                    <?php echo $t['agenda_keynote_type']; ?>
+                                </td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">
+                                    Setiaji, ST, MSI
+                                    <span class="block text-xs font-normal text-slate-500">
+                                        Information Technology Director (BPJS Kesehatan)
+                                    </span>
+                                </td>
                             </tr>
-                            <!-- Sesi 4: Huawei Showcase -->
+
+                            <!-- Sesi 5: Huawei Solution Showcase -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">10:05 - 10:50 WIB</td>
-                                <td class="py-4 px-6">
-                                    <span class="font-bold block text-slate-900">Huawei Solution Showcase</span>
-                                    <span class="text-slate-600"><?php echo $t['agenda_huawei_desc']; ?></span>
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
+                                    10:20 - 11:05 WIB
                                 </td>
-                                <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_showcase_type']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900">Yoga Fatwanto <span class="block text-xs font-normal text-slate-500">Partner Solution Architect (Huawei Cloud)</span></td>
+                                <td class="py-4 px-6">
+                                    <span class="font-bold block text-slate-900">
+                                        Huawei Solution Showcase
+                                    </span>
+                                    <span class="text-slate-600">
+                                        <?php echo $t['agenda_huawei_desc']; ?>
+                                    </span>
+                                </td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">
+                                    <?php echo $t['agenda_showcase_type']; ?>
+                                </td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">
+                                    Yoga Fatwanto
+                                    <span class="block text-xs font-normal text-slate-500">
+                                        Partner Solution Architect (Huawei Cloud)
+                                    </span>
+                                </td>
                             </tr>
-                            <!-- Sesi 5: Executive Sharing -->
+
+                            <!-- Sesi 6: Seamless Integration & Live Demo -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">10:50 - 11:10 WIB</td>
-                                <td class="py-4 px-6">
-                                    <span class="font-bold block text-slate-900">Executive Sharing Session</span>
-                                    <span class="text-slate-600"><?php echo $t['agenda_exec_desc']; ?></span>
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
+                                    11:05 - 11:35 WIB
                                 </td>
-                                <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_case_study']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900">Dr. drg. Iing Ichsan Hanafi, MARS., MH. <span class="block text-xs font-normal text-slate-500"><?php echo $t['agenda_hospital_proposed']; ?></span></td>
-                            </tr>
-                            <!-- Sesi 6: Live Demo -->
-                            <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">11:10 - 11:30 WIB</td>
                                 <td class="py-4 px-6">
-                                    <span class="font-bold block text-slate-900">Seamless Integration & Live Demo</span>
-                                    <span class="text-slate-600"><?php echo $t['agenda_demo_desc']; ?></span>
+                                    <span class="font-bold block text-slate-900">
+                                        Seamless Integration & Live Demo
+                                    </span>
+                                    <span class="text-slate-600">
+                                        <?php echo $t['agenda_demo_desc']; ?>
+                                    </span>
                                 </td>
-                                <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_live_demo']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900">dr. G. Bimantoro <span class="block text-xs font-normal text-slate-500">PACS Product Specialist Consultant (All Data International)</span></td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">
+                                    <?php echo $t['agenda_live_demo']; ?>
+                                </td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">
+                                    dr. G. Bimantoro
+                                    <span class="block text-xs font-normal text-slate-500">
+                                        PACS Product Specialist Consultant (All Data International)
+                                    </span>
+                                </td>
                             </tr>
+
                             <!-- Sesi 7: Q&A -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">11:30 - 12:00 WIB</td>
-                                <td class="py-4 px-6">
-                                    <span class="font-bold block text-slate-900"><?php echo $t['agenda_qa_title']; ?></span>
-                                    <span class="text-slate-600"><?php echo $t['agenda_qa_desc']; ?></span>
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
+                                    11:35 - 11:55 WIB
                                 </td>
-                                <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_qa_type']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900"><?php echo $t['agenda_qa_speaker']; ?></td>
+                                <td class="py-4 px-6">
+                                    <span class="font-bold block text-slate-900">
+                                        <?php echo $t['agenda_qa_title']; ?>
+                                    </span>
+                                    <span class="text-slate-600">
+                                        <?php echo $t['agenda_qa_desc']; ?>
+                                    </span>
+                                </td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">
+                                    <?php echo $t['agenda_qa_type']; ?>
+                                </td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">
+                                    <?php echo $t['agenda_qa_speaker']; ?>
+                                </td>
                             </tr>
+
                             <!-- Sesi 8: Networking Lunch -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">12:00 - 13:00 WIB</td>
-                                <td class="py-4 px-6">
-                                    <span class="font-bold block text-slate-900">Networking Lunch</span>
-                                    <span class="text-slate-600"><?php echo $t['agenda_lunch_desc']; ?></span>
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
+                                    11:55 - 13:00 WIB
                                 </td>
-                                <td class="py-4 px-6 text-slate-500 font-medium"><?php echo $t['agenda_lunch_type']; ?></td>
-                                <td class="py-4 px-6 font-semibold text-slate-900"><?php echo $t['agenda_lunch_speaker']; ?></td>
+                                <td class="py-4 px-6">
+                                    <span class="font-bold block text-slate-900">
+                                        Networking Lunch
+                                    </span>
+                                    <span class="text-slate-600">
+                                        <?php echo $t['agenda_lunch_desc']; ?>
+                                    </span>
+                                </td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">
+                                    <?php echo $t['agenda_lunch_type']; ?>
+                                </td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">
+                                    <?php echo $t['agenda_lunch_speaker']; ?>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
