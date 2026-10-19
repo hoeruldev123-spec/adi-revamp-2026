@@ -661,9 +661,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <?php echo $t['agenda_opening_speech']; ?>
                                 </td>
                                 <td class="py-4 px-6 font-semibold text-slate-900">
-                                    Melody Ma
+                                    Luthfan Oktitama
                                     <span class="block text-xs font-normal text-slate-500">
-                                        Partner Ecosystem Director (Huawei Cloud)
+                                        Sr. Partner Sales Manager (Huawei Cloud)
                                     </span>
                                 </td>
                             </tr>
