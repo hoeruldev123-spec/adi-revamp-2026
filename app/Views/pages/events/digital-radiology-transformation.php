@@ -99,19 +99,24 @@ $translations = [
 
         'agenda_live_demo' => 'Demonstrasi Langsung',
 
-        'agenda_qa_title' => 'Q & A Session',
+        // Penyesuaian Q&A Pertama
+        'agenda_qa1_title' => 'Q&A Pertama (Keynote & Seamless Integration)',
+        'agenda_qa1_desc' => 'Sesi tanya jawab interaktif untuk Keynote dan Seamless Integration.',
+        'agenda_qa1_type' => 'Tanya Jawab Panel Interaktif',
+        'agenda_qa1_speaker' => 'Setiaji, ST, MSI & dr. G. Bimantoro',
 
-        'agenda_qa_desc' =>
-        'Sesi tanya jawab interaktif bersama para pembicara dan panelis mengenai integrasi teknis, kepatuhan klaim, dan implementasi sistem.',
-
-        'agenda_qa_type' => 'Tanya Jawab Panel Interaktif',
-        'agenda_qa_speaker' => 'Pembicara & Moderator',
+        // Penyesuaian Q&A Kedua
+        'agenda_qa2_title' => 'Q&A Kedua (Huawei)',
+        'agenda_qa2_desc' => 'Sesi tanya jawab interaktif untuk materi Huawei Solution Showcase.',
+        'agenda_qa2_type' => 'Tanya Jawab Panel Interaktif',
+        'agenda_qa2_speaker' => 'Yoga Fatwanto & dr. G. Bimantoro',
 
         'agenda_lunch_desc' =>
         'Diskusi interaktif, konsultasi kebutuhan rumah sakit, dan membangun jejaring.',
 
         'agenda_lunch_type' => 'Jejaring & Makan Siang',
         'agenda_lunch_speaker' => 'Seluruh Peserta',
+
         'th_time' => 'Waktu',
         'th_session' => 'Sesi & Pembahasan',
         'th_type' => 'Tipe Sesi',
@@ -188,13 +193,17 @@ $translations = [
 
         'agenda_live_demo' => 'Live Demonstration',
 
-        'agenda_qa_title' => 'Q&A Session',
+        // Penyesuaian Q&A Pertama (English)
+        'agenda_qa1_title' => 'First Q&A (Keynote & Seamless Integration)',
+        'agenda_qa1_desc' => 'Interactive Q&A session for Keynote and Seamless Integration.',
+        'agenda_qa1_type' => 'Interactive Panel Q&A',
+        'agenda_qa1_speaker' => 'Setiaji, ST, MSI & dr. G. Bimantoro',
 
-        'agenda_qa_desc' =>
-        'Interactive Q&A session with speakers and panelists covering technical integration, claim compliance, and system implementation.',
-
-        'agenda_qa_type' => 'Interactive Panel Q&A',
-        'agenda_qa_speaker' => 'Speakers & Moderator',
+        // Penyesuaian Q&A Kedua (English)
+        'agenda_qa2_title' => 'Second Q&A (Huawei)',
+        'agenda_qa2_desc' => 'Interactive Q&A session for the Huawei Solution Showcase material.',
+        'agenda_qa2_type' => 'Interactive Panel Q&A',
+        'agenda_qa2_speaker' => 'Yoga Fatwanto & dr. G. Bimantoro',
 
         'agenda_lunch_desc' =>
         'Interactive discussion, hospital needs consultation, and networking.',
@@ -612,6 +621,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <tr class="hover:bg-slate-100/80 transition-colors">
                                 <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
                                     08:45 - 09:30 WIB
+                                    <span class="block text-xs font-normal text-slate-500">45 menit</span>
                                 </td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">Registration & Welcome Tea</span>
@@ -628,9 +638,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <tr class="hover:bg-slate-100/80 transition-colors">
                                 <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
                                     09:30 - 09:50 WIB
+                                    <span class="block text-xs font-normal text-slate-500">20 menit</span>
                                 </td>
                                 <td class="py-4 px-6">
-                                    <span class="font-bold block text-slate-900">Welcome Speech</span>
+                                    <span class="font-bold block text-slate-900">Welcome Speech ARSSI</span>
                                     <span class="text-slate-600">
                                         Sambutan Private Hospital ARSSI
                                     </span>
@@ -646,13 +657,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </td>
                             </tr>
 
-                            <!-- Sesi 3: Welcome Speech Huawei Cloud -->
+                            <!-- Sesi 3: Welcome Speech Huawei -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
                                 <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
                                     09:50 - 10:00 WIB
+                                    <span class="block text-xs font-normal text-slate-500">10 menit</span>
                                 </td>
                                 <td class="py-4 px-6">
-                                    <span class="font-bold block text-slate-900">Welcome Speech</span>
+                                    <span class="font-bold block text-slate-900">Welcome Speech Huawei</span>
                                     <span class="text-slate-600">
                                         Sambutan pembuka mengenai visi transformasi digital dan kolaborasi ekosistem radiologi di Indonesia.
                                     </span>
@@ -663,7 +675,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <td class="py-4 px-6 font-semibold text-slate-900">
                                     Luthfan Oktitama
                                     <span class="block text-xs font-normal text-slate-500">
-                                        Sr. Partner Sales Manager (Huawei Cloud)
+                                        Sr. Partner Sales Manager<br>(Huawei Cloud)
                                     </span>
                                 </td>
                             </tr>
@@ -672,6 +684,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <tr class="hover:bg-slate-100/80 transition-colors">
                                 <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
                                     10:00 - 10:20 WIB
+                                    <span class="block text-xs font-normal text-slate-500">20 menit</span>
                                 </td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">Keynote</span>
@@ -685,39 +698,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <td class="py-4 px-6 font-semibold text-slate-900">
                                     Setiaji, ST, MSI
                                     <span class="block text-xs font-normal text-slate-500">
-                                        Information Technology Director (BPJS Kesehatan)
+                                        Information Technology Director</br>(BPJS Kesehatan)
                                     </span>
                                 </td>
                             </tr>
 
-                            <!-- Sesi 5: Huawei Solution Showcase -->
+                            <!-- Sesi 5: Seamless Integration & Live Demo -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
                                 <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
-                                    10:20 - 11:05 WIB
-                                </td>
-                                <td class="py-4 px-6">
-                                    <span class="font-bold block text-slate-900">
-                                        Huawei Solution Showcase
-                                    </span>
-                                    <span class="text-slate-600">
-                                        <?php echo $t['agenda_huawei_desc']; ?>
-                                    </span>
-                                </td>
-                                <td class="py-4 px-6 text-slate-500 font-medium">
-                                    <?php echo $t['agenda_showcase_type']; ?>
-                                </td>
-                                <td class="py-4 px-6 font-semibold text-slate-900">
-                                    Yoga Fatwanto
-                                    <span class="block text-xs font-normal text-slate-500">
-                                        Partner Solution Architect (Huawei Cloud)
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- Sesi 6: Seamless Integration & Live Demo -->
-                            <tr class="hover:bg-slate-100/80 transition-colors">
-                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
-                                    11:05 - 11:35 WIB
+                                    10:20 - 10:40 WIB
+                                    <span class="block text-xs font-normal text-slate-500">20 menit</span>
                                 </td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">
@@ -738,31 +728,81 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </td>
                             </tr>
 
-                            <!-- Sesi 7: Q&A -->
+                            <!-- Sesi 6: Q&A Pertama -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
                                 <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
-                                    11:35 - 11:55 WIB
+                                    10:40 - 11:10 WIB
+                                    <span class="block text-xs font-normal text-slate-500">30 menit</span>
                                 </td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">
-                                        <?php echo $t['agenda_qa_title']; ?>
+                                        <?php echo $t['agenda_qa1_title']; ?>
                                     </span>
                                     <span class="text-slate-600">
-                                        <?php echo $t['agenda_qa_desc']; ?>
+                                        <?php echo $t['agenda_qa1_desc']; ?>
                                     </span>
                                 </td>
                                 <td class="py-4 px-6 text-slate-500 font-medium">
-                                    <?php echo $t['agenda_qa_type']; ?>
+                                    <?php echo $t['agenda_qa1_type']; ?>
                                 </td>
                                 <td class="py-4 px-6 font-semibold text-slate-900">
-                                    <?php echo $t['agenda_qa_speaker']; ?>
+                                    <?php echo $t['agenda_qa1_speaker']; ?>
+
                                 </td>
                             </tr>
 
-                            <!-- Sesi 8: Networking Lunch -->
+                            <!-- Sesi 7: Huawei Solution Showcase -->
                             <tr class="hover:bg-slate-100/80 transition-colors">
                                 <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
-                                    11:55 - 13:00 WIB
+                                    11:10 - 11:50 WIB
+                                    <span class="block text-xs font-normal text-slate-500">40 menit</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="font-bold block text-slate-900">
+                                        Huawei Solution Showcase
+                                    </span>
+                                    <span class="text-slate-600">
+                                        <?php echo $t['agenda_huawei_desc']; ?>
+                                    </span>
+                                </td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">
+                                    <?php echo $t['agenda_showcase_type']; ?>
+                                </td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">
+                                    Yoga Fatwanto
+                                    <span class="block text-xs font-normal text-slate-500">
+                                        Partner Solution Architect<br>(Huawei Cloud)
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- Sesi 8: Q&A Kedua -->
+                            <tr class="hover:bg-slate-100/80 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
+                                    11:50 - 12:00 WIB
+                                    <span class="block text-xs font-normal text-slate-500">10 menit</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="font-bold block text-slate-900">
+                                        <?php echo $t['agenda_qa2_title']; ?>
+                                    </span>
+                                    <span class="text-slate-600">
+                                        <?php echo $t['agenda_qa2_desc']; ?>
+                                    </span>
+                                </td>
+                                <td class="py-4 px-6 text-slate-500 font-medium">
+                                    <?php echo $t['agenda_qa2_type']; ?>
+                                </td>
+                                <td class="py-4 px-6 font-semibold text-slate-900">
+                                    <?php echo $t['agenda_qa2_speaker']; ?>
+                                </td>
+                            </tr>
+
+                            <!-- Sesi 9: Networking Lunch -->
+                            <tr class="hover:bg-slate-100/80 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
+                                    12:00 - 13:00 WIB
+                                    <span class="block text-xs font-normal text-slate-500">60 menit</span>
                                 </td>
                                 <td class="py-4 px-6">
                                     <span class="font-bold block text-slate-900">
