@@ -36,6 +36,16 @@ $rundown = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Agentic SDLC Workshop | Postman x All Data International</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="<?= base_url('assets/favicon/favicon.ico') ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/favicon/favicon-16x16.png') ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('assets/favicon/favicon-32x32.png') ?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/favicon/apple-touch-icon.png') ?>">
+    <link rel="icon" type="image/png" sizes="192x192" href="<?= base_url('assets/favicon/android-chrome-192x192.png') ?>">
+    <link rel="icon" type="image/png" sizes="512x512" href="<?= base_url('assets/favicon/android-chrome-512x512.png') ?>">
+    <link rel="manifest" href="<?= base_url('assets/favicon/site.webmanifest') ?>">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -135,7 +145,7 @@ $rundown = [
             <img
               src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
               alt="AWS"
-              class="h-5 w-auto object-contain"
+              class="h-5 w-auto object-contain brightness-0"
             />
           </a>
 
@@ -383,8 +393,8 @@ $rundown = [
             <div
               class="w-full h-48 sm:h-56 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-3xl text-orange-500 mb-3 overflow-hidden group-hover:scale-[1.02] transition duration-300 relative"
             >
-              <span class="z-10">MW</span>
-              <!-- <img src="url_foto_mario.jpg" alt="Mario Wihardja" class="w-full h-full object-cover"> -->
+              
+              <img src="<?= base_url('assets/images/events/speakers/mario-wihardja.webp'); ?>" alt="Dr. drg. Iing Ichsan Hanafi, MARS, MH">
             </div>
             <div class="pb-1">
               <h3
