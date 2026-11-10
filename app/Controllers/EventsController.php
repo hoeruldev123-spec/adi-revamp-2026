@@ -15,6 +15,22 @@ class EventsController extends BaseController
             'events' => [
 
                 [
+                    'title'        => 'The Agentic SDLC: From API Design to Production with Postman & AWS Bedrock',
+                    'type'         => 'Workshop / Seminar',
+                    'day'          => '09',
+                    'month'        => 'Dec',
+                    'date_raw'     => '2026-12-09',
+                    'date_text'    => 'Wednesday, 9 December 2026',
+                    'time'         => '12:00 – 14:30 WIB',
+                    'location'     => 'AWS Office, Sinarmas MSIG Tower 16th Floor, Jakarta',
+                    'excerpt'      => 'Explore the Postman Agent Stack, real API workflows, and a 5-question control framework for enterprise AI agents with Postman and AWS Bedrock.',
+                    'register_url' => base_url('/events/agentic-sdlc-workshop'),
+                    'detail_url'   => null,
+                    'target'       => '_self', // Karena mengarah ke Microsoft Forms eksternal
+                    'image'        => 'assets/images/events/banner/agentic-sdlc-postman-aws.webp',
+                ],
+
+                [
                     'title'        => 'Hands-On Build It, End-to-End Workshop with ClickHouse Cloud',
                     'type'         => 'Workshop',
                     'day'          => '08',
@@ -22,7 +38,7 @@ class EventsController extends BaseController
                     'date_raw'     => '2026-10-08',
                     'date_text'    => 'Thursday, 8 October 2026',
                     'time'         => '12:15 – 16:10 WIB',
-                    'location'     => 'AWS Office, Sinarmas MSIG Tower 16th Floor, Jakarta',
+                    'location'     => 'AWS Office, Jakarta',
                     'excerpt'      => 'Take a real analytics app live on ClickHouse Cloud — hands-on with CDC pipelines, AI SRE observability, and conversational BI in a 3-hour sitting.',
                     'register_url' => base_url('/events/clickhouse-build-it-end-to-end-workshop'),
                     'detail_url'   => null,
@@ -155,5 +171,14 @@ class EventsController extends BaseController
         ];
 
         return view('pages/events/digital-radiology-transformation-hybrid', compact('seo'));
+    }
+    
+    public function agenticSdlcWorkshop()
+    {
+        $data = [
+            'registrationUrl' => 'https://forms.office.com/URL-FORM-ANDA',
+        ];
+
+        return view('pages/events/agentic_sdlc_workshop', $data);
     }
 }

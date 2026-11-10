@@ -83,6 +83,7 @@ $routes->get('/events/aws-end-to-end-data-solution', 'EventsController::awsEndTo
 $routes->get('/events/digital-radiology-transformation', 'EventsController::digitalRadiologyTransformation');
 $routes->get('/events/digital-radiology-transformation-hybrid', 'EventsController::digitalRadiologyTransformationHybrid');
 $routes->get('/events/clickhouse-build-it-end-to-end-workshop', 'EventsController::clickhouseBuildItEndToEndWorkshop');
+$routes->get('/events/agentic-sdlc-workshop','EventsController::agenticSdlcWorkshop');
 
 // Rute dinamis ditaruh paling bawah
 $routes->get('/events/(:any)', 'EventsController::detail/$1');
