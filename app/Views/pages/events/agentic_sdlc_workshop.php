@@ -17,25 +17,16 @@
 $registrationUrl = $registrationUrl ?? '#';
 
 $rundown = [
-    ['12:00 – 13:00', '60 min', 'Open Registration, Lunch & Networking', '', 'All Data International', 'normal'],
-
-    ['13:00 – 13:10', '10 min', 'Opening Thesis', '“Agents are becoming primary API consumers. The SDLC was not designed for them.”', 'Pak Mario Wihardja – Postman', 'postman'],
-
-    ['13:10 – 13:20', '10 min', 'Kiro: Bringing Agentic AI Across the SDLC', 'How AWS’s agentic development platform uses specs, context, and enterprise controls to make agents reliable from idea to production.', 'Pak Muhammad Saiful Islam – AWS', 'aws'],
-
-    ['13:20 – 13:30', '10 min', 'The Context Problem', 'Why coding agents fail without API context; Postman MCP Server feeding context into Kiro.', 'All Data International', 'normal'],
-
-    ['13:30 – 13:50', '20 min', 'Kiro + Postman Power', 'Generating a Postman collection directly from the codebase, running tests inline, and keeping collections in sync.', 'All Data International', 'normal'],
-
-    ['13:50 – 14:05', '15 min', 'Fold Governance into the Kiro Powers', 'Showing how Postman Catalog boundaries and Kiro steering files constrain what the agent can generate.', 'All Data International', 'normal'],
-
-    ['14:05 – 14:20', '15 min', 'The Agentic SDLC with Kiro', 'Spec-driven loop (requirements to design to tasks) plus the Postman Power feedback loop: code changes → hooks trigger test generation → collections stay in sync.', 'All Data International', 'normal'],
-
-    ['14:20 – 14:50', '30 min', 'Industry Breakout', 'Three parallel discussion tracks: financial services, retail, and digital native.', 'Pak Mario Wihardja – Postman & Pak Muhammad Saiful Islam – AWS', 'postman'],
-
-    ['15:00 – 15:15', '15 min', 'Q&A: Open Discussion', 'Open discussion and audience Q&A.', 'All Data International', 'normal'],
-
-    ['15:15 – 15:25', '10 min', 'Product Offering: AWS & Postman', 'Introduction to AWS and Postman product offerings, including bundling and pricing options.', 'All Data International', 'normal'],
+    ['12:00 – 13:00', 'Open Registration, Lunch & Networking', ''],
+    ['13:00 – 13:10', 'Opening Thesis', '“Agents are becoming primary API consumers. The SDLC was not designed for them.”'],
+    ['13:10 – 13:20', 'Kiro: Bringing Agentic AI Across the SDLC', 'How AWS’s agentic development platform uses specs, context, and enterprise controls to make agents reliable from idea to production.'],
+    ['13:20 – 13:30', 'The Context Problem', 'Why coding agents fail without API context; Postman MCP Server feeding context into Kiro.'],
+    ['13:30 – 13:50', 'Kiro + Postman Power', 'Generating a Postman collection directly from the codebase, running tests inline, and keeping collections in sync.'],
+    ['13:50 – 14:05', 'Fold Governance into the Kiro Powers', 'Showing how Postman Catalog boundaries and Kiro steering files constrain what the agent can generate.'],
+    ['14:05 – 14:20', 'The Agentic SDLC with Kiro', 'Spec-driven loop (requirements to design to tasks) plus the Postman Power feedback loop: code changes → hooks trigger test generation → collections stay in sync.'],
+    ['14:20 – 14:50', 'Industry Breakout', 'Three parallel discussion tracks: financial services, retail, and digital native.'],
+    ['15:00 – 15:15', 'Q&A: Open Discussion', 'Open discussion and audience Q&A.'],
+    ['15:15 – 15:25', 'Product Offering: AWS & Postman', 'Introduction to AWS and Postman product offerings, including bundling and pricing options.'],
 ];
 
 ?>
@@ -265,113 +256,132 @@ $rundown = [
       </div>
     </section>
 
-    <!-- Overview & Background -->
-    <section id="about" class="py-16 bg-white border-y border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 class="text-3xl font-bold text-slate-900 mb-6">
-              Mengapa Agentic SDLC Penting untuk Enterprise Anda?
-            </h2>
-            <p class="text-slate-600 mb-4 leading-relaxed">
-              Saat ini, perangkat lunak tidak hanya menjalankan instruksi
-              statis, melainkan secara aktif mendeteksi dan mengorkestrasi
-              sistem lain.
-              <strong class="text-slate-900">AI Agents</strong> mendapatkan
-              kapabilitas utamanya melalui API: mengambil data, mengeksekusi
-              tindakan, menyimpan memori, serta berinteraksi dengan pengguna
-              maupun agen lain.
+<!-- Overview & Background -->
+<section id="about" class="py-16 bg-white border-y border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">
+          Mengapa Agentic SDLC Penting untuk Enterprise Anda?
+        </h2>
+
+        <p class="text-slate-600 mb-4 leading-relaxed">
+          Saat ini, perangkat lunak tidak hanya menjalankan instruksi
+          statis, melainkan secara aktif mendeteksi dan mengorkestrasi
+          sistem lain. <strong class="text-slate-900">AI Agents</strong>
+          mendapatkan kapabilitas utamanya melalui API: mengambil data,
+          mengeksekusi tindakan, menyimpan memori, serta berinteraksi
+          dengan pengguna maupun agen lain.
+        </p>
+
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Dalam sesi eksklusif ini, peserta akan mengeksplorasi
+          <strong>Postman Agent Stack</strong> dan
+          <strong>AWS Kiro</strong>, memahami bagaimana API context
+          membantu AI Agents bekerja secara andal di setiap tahapan
+          Software Development Lifecycle (SDLC), mulai dari design,
+          develop, test, govern, deploy, hingga operate.
+        </p>
+
+        <p class="text-slate-600 leading-relaxed mb-6">
+          Melalui pendekatan praktis dan contoh berbasis
+          <em>real-world data</em>, peserta juga akan mendiskusikan
+          lima kontrol utama dalam adopsi Agentic AI:
+          <strong>Trust</strong>, <strong>Access</strong>,
+          <strong>Governance</strong>, <strong>ROI</strong>, dan
+          <strong>Scale</strong>.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 pt-2">
+
+          <div class="border-l-4 border-postman pl-4">
+            <h4 class="text-xl font-bold text-slate-900">
+              Postman Agent Stack
+            </h4>
+            <p class="text-xs text-slate-500 mt-1">
+              Agent Mode, MCP Server, API Catalog, dan API testing
+              untuk menyediakan konteks API bagi AI Agents.
             </p>
-            <p class="text-slate-600 leading-relaxed mb-6">
-              Dalam sesi eksklusif selama 3 jam ini, peserta akan mengeksplorasi
-              <strong>Postman Agent Stack</strong>, melihat bukti empiris dari
-              <em>real data</em>, serta mendiskusikan 5 kontrol utama:
-              <strong>Trust</strong>, <strong>Access</strong>,
-              <strong>Governance</strong>, <strong>ROI</strong>, dan
-              <strong>Scale</strong>.
-            </p>
-            <div class="grid grid-cols-2 gap-4 pt-2">
-              <div class="border-l-4 border-postman pl-4">
-                <h4 class="text-xl font-bold text-slate-900">
-                  Postman Agent Stack
-                </h4>
-                <p class="text-xs text-slate-500 mt-1">
-                  Mengelola & menguji API workflows berbasis Agentic Mode
-                </p>
-              </div>
-              <div class="border-l-4 border-aws pl-4">
-                <h4 class="text-xl font-bold text-slate-900">AWS Bedrock</h4>
-                <p class="text-xs text-slate-500 mt-1">
-                  Integrasi AgentCore untuk infrastruktur AI yang aman
-                </p>
-              </div>
-            </div>
           </div>
 
-          <!-- 5 Control Questions Box -->
-          <div
-            class="bg-slate-50 border border-slate-200 p-8 rounded-2xl relative overflow-hidden shadow-sm"
-          >
-            <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
-              <i class="fa-solid fa-shield-halved text-postman mr-3"></i> 5 Key
-              Control Framework
-            </h3>
-            <ul class="space-y-4">
-              <li class="flex items-start space-x-3">
-                <span
-                  class="bg-white border border-slate-200 text-postman font-bold px-2.5 py-1 rounded text-xs shadow-sm"
-                  >1</span
-                >
-                <div>
-                  <strong class="text-slate-900">Trust:</strong> Menjamin
-                  keandalan eksekusi tindakan agen AI.
-                </div>
-              </li>
-              <li class="flex items-start space-x-3">
-                <span
-                  class="bg-white border border-slate-200 text-postman font-bold px-2.5 py-1 rounded text-xs shadow-sm"
-                  >2</span
-                >
-                <div>
-                  <strong class="text-slate-900">Access:</strong> Mengatur
-                  batasan akses data dan izin API secara terperinci.
-                </div>
-              </li>
-              <li class="flex items-start space-x-3">
-                <span
-                  class="bg-white border border-slate-200 text-postman font-bold px-2.5 py-1 rounded text-xs shadow-sm"
-                  >3</span
-                >
-                <div>
-                  <strong class="text-slate-900">Governance:</strong> Tata
-                  kelola kepatuhan & standar pengujian agentic.
-                </div>
-              </li>
-              <li class="flex items-start space-x-3">
-                <span
-                  class="bg-white border border-slate-200 text-postman font-bold px-2.5 py-1 rounded text-xs shadow-sm"
-                  >4</span
-                >
-                <div>
-                  <strong class="text-slate-900">ROI:</strong> Mengukur nilai
-                  bisnis nyata dari otomatisasi LLM.
-                </div>
-              </li>
-              <li class="flex items-start space-x-3">
-                <span
-                  class="bg-white border border-slate-200 text-postman font-bold px-2.5 py-1 rounded text-xs shadow-sm"
-                  >5</span
-                >
-                <div>
-                  <strong class="text-slate-900">Scale:</strong> Strategi
-                  skalabilitas arsitektur dari prototipe ke produksi.
-                </div>
-              </li>
-            </ul>
+          <div class="border-l-4 border-aws pl-4">
+            <h4 class="text-xl font-bold text-slate-900">
+              AWS Kiro
+            </h4>
+            <p class="text-xs text-slate-500 mt-1">
+              Spec-driven development dan agentic coding workflows
+              untuk membangun aplikasi dari ide hingga produksi
+              dengan enterprise-ready controls.
+            </p>
           </div>
+
         </div>
       </div>
-    </section>
+
+      <!-- 5 Control Questions Box -->
+      <div
+        class="bg-slate-50 border border-slate-200 p-8 rounded-2xl relative overflow-hidden shadow-sm"
+      >
+        <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
+          <i class="fa-solid fa-shield-halved text-postman mr-3"></i>
+          5 Key Control Framework
+        </h3>
+
+        <ul class="space-y-4">
+
+          <li class="flex items-start space-x-3">
+            <span class="bg-white border border-slate-200 text-postman font-bold px-2.5 py-1 rounded text-xs shadow-sm">1</span>
+            <div>
+              <strong class="text-slate-900">Trust:</strong>
+              Memastikan keandalan dan akurasi tindakan yang
+              dijalankan oleh AI Agents.
+            </div>
+          </li>
+
+          <li class="flex items-start space-x-3">
+            <span class="bg-white border border-slate-200 text-postman font-bold px-2.5 py-1 rounded text-xs shadow-sm">2</span>
+            <div>
+              <strong class="text-slate-900">Access:</strong>
+              Mengatur batasan akses data, autentikasi, dan
+              izin API secara terperinci.
+            </div>
+          </li>
+
+          <li class="flex items-start space-x-3">
+            <span class="bg-white border border-slate-200 text-postman font-bold px-2.5 py-1 rounded text-xs shadow-sm">3</span>
+            <div>
+              <strong class="text-slate-900">Governance:</strong>
+              Memastikan tata kelola API, standar pengembangan,
+              dan kepatuhan dalam ekosistem Agentic AI.
+            </div>
+          </li>
+
+          <li class="flex items-start space-x-3">
+            <span class="bg-white border border-slate-200 text-postman font-bold px-2.5 py-1 rounded text-xs shadow-sm">4</span>
+            <div>
+              <strong class="text-slate-900">ROI:</strong>
+              Mengukur dampak bisnis, efisiensi engineering,
+              dan nilai nyata dari implementasi AI Agents.
+            </div>
+          </li>
+
+          <li class="flex items-start space-x-3">
+            <span class="bg-white border border-slate-200 text-postman font-bold px-2.5 py-1 rounded text-xs shadow-sm">5</span>
+            <div>
+              <strong class="text-slate-900">Scale:</strong>
+              Menentukan strategi skalabilitas arsitektur,
+              operasional, dan adopsi Agentic AI dari pilot
+              hingga lingkungan enterprise.
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!-- Speakers Section -->
@@ -402,11 +412,9 @@ $rundown = [
 
       <!-- Speaker 1: Mario Wihardja -->
       <div
-        class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 text-center group hover:border-orange-400 hover:shadow-lg transition-all duration-300"
-      >
+        class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 text-center group hover:border-orange-400 hover:shadow-lg transition-all duration-300">
         <div
-          class="w-full aspect-[4/5] rounded-xl bg-slate-100 border border-slate-200 mb-4 overflow-hidden"
-        >
+          class="w-full aspect-[4/5] rounded-xl bg-slate-100 border border-slate-200 mb-4 overflow-hidden">
           <img
             src="<?= base_url('assets/images/events/speakers/mario-wihardja.webp'); ?>"
             alt="Mario Wihardja"
@@ -421,12 +429,11 @@ $rundown = [
           </h3>
 
           <p class="text-xs text-slate-500 font-medium mb-2">
-            Partner Solutions Architect
+            Strategic Account Director
           </p>
 
           <span
-            class="text-[10px] font-bold uppercase tracking-wider text-orange-600 px-3 py-1 rounded-full"
-          >
+            class="text-[10px] font-bold uppercase tracking-wider text-orange-600 px-3 py-1 rounded-full">
             Postman
           </span>
         </div>
@@ -472,7 +479,7 @@ $rundown = [
           class="w-full aspect-[4/5] rounded-xl bg-slate-100 border border-slate-200 mb-4 overflow-hidden"
         >
           <img
-            src="https://alldataint.com/assets/images/events/speakers/muhammadisaiful-islam.webp"
+            src="<?= base_url('assets/images/events/speakers/muhammadsaifulislam.webp'); ?>"
             alt="Muhammad Saiful Islam"
             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
@@ -619,75 +626,79 @@ $rundown = [
           </div>
           <h3 class="text-lg font-bold text-slate-900 mb-2">Peer Networking</h3>
           <p class="text-slate-600 text-sm">
-            Berdiskusi langsung dengan 40 praktisi dan pengambil keputusan
-            teknis dari 20-30 perusahaan terkemuka.
+            Berdiskusi langsung dengan praktisi dan pengambil keputusan
+            teknis dari perusahaan terkemuka.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Event Agenda & Rundown Section -->
-    <section id="agenda" class="py-20 bg-white border-t border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span
-            class="text-alldata text-xs font-semibold uppercase tracking-wider px-3 py-1 bg-blue-50 border border-blue-200 rounded-full"
-          >
-            Schedule & Topics
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-4 mb-4">
-            Agenda & Rundown Acara
-          </h2>
-        </div>
+<!-- Agenda Section -->
+<section id="agenda" class="py-20 bg-white border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- Rundown Table -->
-        <div
-          class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm mb-12"
-        >
-          <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse">
-              <thead>
-                <tr
-                  class="bg-slate-100/80 border-b border-slate-200 text-xs font-semibold text-slate-600 uppercase tracking-wider"
-                >
-                  <th class="py-4 px-6">Waktu</th>
-                  <th class="py-4 px-6">Durasi</th>
-                  <th class="py-4 px-6">Agenda & Sesi</th>
-                  <th class="py-4 px-6">PIC / Speaker</th>
-                </tr>
-              </thead>
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span
+        class="text-alldata text-xs font-semibold uppercase tracking-wider px-3 py-1 bg-blue-50 border border-blue-200 rounded-full"
+      >
+        Schedule & Topics
+      </span>
 
-              <tbody class="divide-y divide-slate-200 text-sm">
-                <?php foreach ($rundown as [$time, $duration, $title, $description, $pic, $picStyle]): ?>
-                  <tr class="hover:bg-slate-50 transition">
-                    <td class="py-4 px-6 font-mono text-slate-700 font-medium whitespace-nowrap">
-                      <?= esc($time) ?>
-                    </td>
-                    <td class="py-4 px-6 text-slate-500 whitespace-nowrap">
-                      <?= esc($duration) ?>
-                    </td>
-                    <td class="py-4 px-6 text-slate-700">
-                      <?php if ($description === ''): ?>
-                        <strong class="text-slate-900 font-semibold"><?= esc($title) ?></strong>
-                      <?php else: ?>
-                        <strong class="text-slate-900 block mb-0.5"><?= esc($title) ?></strong>
-                        <span class="text-slate-500 italic font-normal">
-                          <?= esc($description) ?>
-                        </span>
-                      <?php endif; ?>
-                    </td>
-                    <td class="py-4 px-6 <?= $picStyle === 'postman' ? 'text-postman font-semibold' : 'text-slate-600' ?>">
-                      <?= esc($pic) ?>
-                    </td>
-                  </tr>
-                <?php endforeach; ?>
-              </tbody>
-            </table>
-          </div>
-        </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-4 mb-4">
+        Agenda & Rundown Acara
+      </h2>
+    </div>
+
+    <!-- Rundown Table -->
+    <div
+      class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm mb-12"
+    >
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+
+          <thead>
+            <tr
+              class="bg-slate-100/80 border-b border-slate-200 text-xs font-semibold text-slate-600 uppercase tracking-wider"
+            >
+              <th class="py-4 px-6 w-40">Waktu</th>
+              <th class="py-4 px-6">Agenda & Sesi</th>
+            </tr>
+          </thead>
+
+          <tbody class="divide-y divide-slate-200 text-sm">
+
+            <?php foreach ($rundown as [$time, $title, $description]): ?>
+              <tr class="hover:bg-slate-50 transition">
+
+                <!-- Time -->
+                <td class="py-5 px-6 font-mono text-slate-700 font-semibold whitespace-nowrap align-top">
+                  <?= esc($time) ?>
+                </td>
+
+                <!-- Agenda -->
+                <td class="py-5 px-6 text-slate-700">
+                  <strong class="text-slate-900 block mb-1 font-semibold">
+                    <?= esc($title) ?>
+                  </strong>
+
+                  <?php if ($description !== ''): ?>
+                    <span class="text-slate-500 italic font-normal leading-relaxed">
+                      <?= esc($description) ?>
+                    </span>
+                  <?php endif; ?>
+                </td>
+
+              </tr>
+            <?php endforeach; ?>
+
+          </tbody>
+        </table>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
 
     <!-- Target Audience Criteria -->
     <section class="py-16 bg-slate-100/70 border-y border-slate-200">
@@ -865,6 +876,155 @@ $rundown = [
         </div>
       </div>
     </section>
+
+
+<section id="special-offer" class="relative py-16 sm:py-20 overflow-hidden bg-[#0B1730]">
+    <!-- Background Decoration -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute -top-32 -right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-32 -left-20 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full
+                    bg-amber-400/10 border border-amber-400/30
+                    text-amber-300 text-xs sm:text-sm font-bold tracking-wider uppercase">
+                    <i class="fas fa-star"></i>
+                    Exclusive for Event Attendees
+                </span>
+
+                <h2 class="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold
+                    text-white tracking-tight leading-tight">
+                    Unlock <span class="text-amber-400">Special Pricing</span>
+                    for Your Next Technology Initiative
+                </h2>
+
+                <p class="mt-5 text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+                    Sebagai apresiasi bagi peserta yang hadir dalam event ini,
+                    All Data International menghadirkan penawaran harga spesial
+                    untuk mendukung transformasi teknologi dan kebutuhan bisnis Anda.
+                </p>
+            </div>
+
+            <!-- Offer Card -->
+            <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-5">
+
+                    <!-- Left Content -->
+                    <div class="md:col-span-3 p-7 sm:p-10">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-amber-100
+                                flex items-center justify-center">
+                                <i class="fas fa-gift text-amber-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">
+                                    Your Exclusive Benefit
+                                </p>
+                                <h3 class="text-xl font-bold text-slate-900">
+                                    Special Attendee Offer
+                                </h3>
+                            </div>
+                        </div>
+
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            Dapatkan penawaran harga khusus dari All Data International
+                            untuk solusi dan layanan yang sesuai dengan kebutuhan
+                            organisasi Anda.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-100
+                                    flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fas fa-check text-green-600 text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-slate-900">
+                                        Exclusive Special Pricing
+                                    </p>
+                                    <p class="text-sm text-slate-500">
+                                        Penawaran harga spesial khusus peserta yang hadir.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-100
+                                    flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fas fa-check text-green-600 text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-slate-900">
+                                        Business & Technology Consultation
+                                    </p>
+                                    <p class="text-sm text-slate-500">
+                                        Diskusikan kebutuhan dan solusi teknologi
+                                        bersama tim All Data.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Deadline -->
+                    <div class="md:col-span-2 bg-slate-50 border-t md:border-t-0
+                        md:border-l border-slate-200 p-7 sm:p-10
+                        flex flex-col justify-center text-center">
+
+                        <span class="text-xs font-bold tracking-widest
+                            uppercase text-slate-500">
+                            Offer Valid Until
+                        </span>
+
+                        <div class="my-4">
+                            <p class="text-6xl sm:text-7xl font-black
+                                text-[#0B1730] tracking-tight leading-none">
+                                15
+                            </p>
+                            <p class="text-2xl font-extrabold text-amber-600 mt-2">
+                                DECEMBER
+                            </p>
+                            <p class="text-lg font-bold text-slate-600">
+                                2026
+                            </p>
+                        </div>
+
+                        <div class="border-t border-slate-200 pt-5 mt-2">
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Lakukan <strong>Order Commitment</strong> atau
+                                terbitkan <strong>Purchase Order (PO)</strong>
+                                paling lambat pada tanggal tersebut.
+                            </p>
+                        </div>
+
+                        <!-- <a href="#contact"
+                            class="mt-6 inline-flex items-center justify-center gap-2
+                            w-full px-6 py-4 rounded-xl bg-amber-500
+                            hover:bg-amber-400 text-slate-950 font-bold
+                            transition-all duration-300 shadow-lg shadow-amber-500/20">
+                            Claim Your Special Offer
+                            <i class="fas fa-arrow-right"></i>
+                        </a> -->
+
+                        <p class="text-[11px] text-slate-400 mt-4">
+                            Terms & Conditions Apply
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+</section>
+
 
     <!-- Location & Venue Detail -->
     <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
