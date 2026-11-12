@@ -362,7 +362,7 @@ $rundown = [
           Pelajari bagaimana mengontrol, menguji, dan menskalakan
           <strong class="text-slate-900">AI Agents</strong> di lingkungan
           Enterprise menggunakan
-          <strong class="text-slate-900">Postman & Kiro Proposal</strong>.
+          <strong class="text-slate-900">Postman & Kiro</strong>.
         </p>
 
         <!-- Metadata Cards -->
@@ -924,7 +924,7 @@ $rundown = [
             </p>
           </div>
         </div>
-        
+
       </div>
     </section>
 

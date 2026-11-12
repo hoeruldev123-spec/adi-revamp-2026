@@ -176,7 +176,7 @@ class EventsController extends BaseController
     public function agenticSdlcWorkshop()
     {
         $data = [
-            'registrationUrl' => 'https://forms.office.com/URL-FORM-ANDA',
+            'registrationUrl' => 'https://forms.cloud.microsoft/r/JPEgKkraDH',
         ];
 
         return view('pages/events/agentic_sdlc_workshop', $data);
