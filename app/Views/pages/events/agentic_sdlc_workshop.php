@@ -76,6 +76,7 @@ $rundown = [
         },
       };
     </script>
+
     <style>
       html {
         scroll-behavior: smooth;
@@ -105,6 +106,170 @@ $rundown = [
       .gradient-bg:hover {
         background: linear-gradient(135deg, #004085 0%, #0086b8 100%);
       }
+
+    /* Floating tombol*/
+    .floating-offer {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        z-index: 9999;
+
+        display: flex;
+        align-items: center;
+        gap: 0;
+
+        width: 58px;
+        height: 58px;
+        overflow: hidden;
+
+         background: linear-gradient(
+        135deg,
+        #0056b3 0%,
+        #00a3e0 100%
+    );
+
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,.25);
+
+    
+        border-radius: 50px;
+
+       box-shadow: 0 10px 30px rgba(0, 86, 179, .30);
+
+        text-decoration: none !important;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(25px) scale(.9);
+
+        transition:
+            width .5s cubic-bezier(.22,1,.36,1),
+            opacity .4s ease,
+            transform .4s ease,
+            background .3s ease,
+            box-shadow .3s ease;
+    }
+
+    /* Button visible */
+    .floating-offer.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+    }
+
+    /* Expanded state */
+    .floating-offer.is-expanded {
+        width: 225px;
+    }
+
+    /* Icon */
+    .floating-offer-icon {
+        width: 58px;
+        min-width: 58px;
+        height: 58px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 21px;
+         color: #ffffff;
+    }
+
+    /* Text */
+    .floating-offer-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        min-width: 0;
+        white-space: nowrap;
+
+        opacity: 0;
+        transform: translateX(-10px);
+
+        transition:
+            opacity .25s ease,
+            transform .35s ease;
+    }
+
+    .floating-offer-text strong {
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 1.4;
+         color: #ffffff;
+    }
+
+    .floating-offer-text small {
+        font-size: 11px;
+        font-weight: 600;
+        color: rgba(255,255,255,.85);
+    }
+
+    /* Show text only when expanded or hovered */
+    .floating-offer.is-expanded .floating-offer-text,
+    .floating-offer:hover .floating-offer-text,
+    .floating-offer:focus-visible .floating-offer-text {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Hover */
+    .floating-offer:hover,
+    .floating-offer:focus-visible {
+        width: 225px;
+        background: linear-gradient(
+        135deg,
+        #004085 0%,
+        #0086b8 100%
+    );
+
+    box-shadow: 0 14px 35px rgba(0, 86, 179, .40);
+        outline: none;
+    }
+
+    /* Hide when promo section is visible */
+    .floating-offer.is-hidden {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transform: translateY(20px) scale(.9) !important;
+    }
+
+    /* Optional: subtle cyan highlight */
+.floating-offer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,.12),
+        transparent 60%
+    );
+}
+
+    @media (max-width: 575px) {
+        .floating-offer {
+            right: 16px;
+            bottom: 18px;
+        }
+
+        .floating-offer.is-expanded,
+        .floating-offer:hover,
+        .floating-offer:focus-visible {
+            width: 215px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .floating-offer,
+        .floating-offer-text {
+            transition: none;
+        }
+    }
+
     </style>
   </head>
   <body
@@ -876,6 +1041,72 @@ $rundown = [
         </div>
       </div>
     </section>
+
+
+<!-- Floating Special Price Button -->
+<a href="#special-offer"
+   id="floating-special-offer"
+   class="floating-offer">
+
+    <span class="floating-offer-icon">
+        <i class="fas fa-tags"></i>
+    </span>
+
+    <span class="floating-offer-text">
+        <strong>Special Price</strong>
+        <small>Khusus Peserta</small>
+    </span>
+
+</a>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const button = document.getElementById('floating-special-offer');
+    const offerSection = document.getElementById('special-offer');
+
+    if (!button) return;
+
+    // Muncul setelah 2 detik
+    setTimeout(function () {
+
+        button.classList.add('is-visible', 'is-expanded');
+
+        // Setelah 5 detik, berubah menjadi tombol bulat
+        setTimeout(function () {
+            button.classList.remove('is-expanded');
+        }, 5000);
+
+    }, 2000);
+
+
+    // Hide button saat section promo masuk viewport
+    if (offerSection && 'IntersectionObserver' in window) {
+
+        const observer = new IntersectionObserver(function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+                    button.classList.add('is-hidden');
+                } else {
+                    button.classList.remove('is-hidden');
+                }
+
+            });
+
+        }, {
+            threshold: 0.05
+        });
+
+        observer.observe(offerSection);
+    }
+
+});
+</script>
+
 
 
 <section id="special-offer" class="relative py-16 sm:py-20 overflow-hidden bg-[#0B1730]">
