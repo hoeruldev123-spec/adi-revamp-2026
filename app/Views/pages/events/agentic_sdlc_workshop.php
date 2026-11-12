@@ -18,16 +18,25 @@ $registrationUrl = $registrationUrl ?? '#';
 
 $rundown = [
     ['12:00 – 13:00', '60 min', 'Open Registration, Lunch & Networking', '', 'All Data International', 'normal'],
+
     ['13:00 – 13:10', '10 min', 'Opening Thesis', '“Agents are becoming primary API consumers. The SDLC was not designed for them.”', 'Pak Mario Wihardja – Postman', 'postman'],
-    ['13:10 – 13:20', '10 min', 'The Context Problem', 'Why coding agents fail without API context; Postman MCP Server feeding context into Kiro.', 'All Data International', 'normal'],
-    ['13:20 – 13:40', '20 min', 'Design & Develop', 'Agent Mode: intent-to-collection, mocks, tests, and documentation generated from natural language.', 'All Data International', 'normal'],
-    ['13:40 – 13:55', '15 min', 'Test & Govern', 'Agent-assisted test repair; API Catalog as the governance boundary for agents.', 'All Data International', 'normal'],
-    ['13:55 – 14:05', '10 min', 'The AI-SDLC on AWS Bedrock', 'Verisk pattern: five stage-specific agents on Bedrock AgentCore, human checkpoints, >90% acceptance, and 20–30% lower cost per story point.', 'All Data International', 'normal'],
-    ['14:05 – 14:20', '15 min', 'Industry Breakout', 'Three parallel discussion tracks: financial services, retail, and digital native. Further details to be announced.', 'Pak Mario Wihardja – Postman', 'postman'],
-    ['14:20 – 14:30', '10 min', 'Maturity Model & Close', 'Adoption path (Crawl / Walk / Run); Q&A framing.', 'All Data International', 'normal'],
-    ['14:30 – 15:00', '30 min', 'Q&A: Open Discussion', '', 'All Data International', 'normal'],
-    ['15:00 – 15:10', '10 min', 'Postman Product Offering', 'Introduction to Postman product offerings and bundling options.', 'Postman', 'postman'],
-    ];
+
+    ['13:10 – 13:20', '10 min', 'Kiro: Bringing Agentic AI Across the SDLC', 'How AWS’s agentic development platform uses specs, context, and enterprise controls to make agents reliable from idea to production.', 'Pak Muhammad Saiful Islam – AWS', 'aws'],
+
+    ['13:20 – 13:30', '10 min', 'The Context Problem', 'Why coding agents fail without API context; Postman MCP Server feeding context into Kiro.', 'All Data International', 'normal'],
+
+    ['13:30 – 13:50', '20 min', 'Kiro + Postman Power', 'Generating a Postman collection directly from the codebase, running tests inline, and keeping collections in sync.', 'All Data International', 'normal'],
+
+    ['13:50 – 14:05', '15 min', 'Fold Governance into the Kiro Powers', 'Showing how Postman Catalog boundaries and Kiro steering files constrain what the agent can generate.', 'All Data International', 'normal'],
+
+    ['14:05 – 14:20', '15 min', 'The Agentic SDLC with Kiro', 'Spec-driven loop (requirements to design to tasks) plus the Postman Power feedback loop: code changes → hooks trigger test generation → collections stay in sync.', 'All Data International', 'normal'],
+
+    ['14:20 – 14:50', '30 min', 'Industry Breakout', 'Three parallel discussion tracks: financial services, retail, and digital native.', 'Pak Mario Wihardja – Postman & Pak Muhammad Saiful Islam – AWS', 'postman'],
+
+    ['15:00 – 15:15', '15 min', 'Q&A: Open Discussion', 'Open discussion and audience Q&A.', 'All Data International', 'normal'],
+
+    ['15:15 – 15:25', '10 min', 'Product Offering: AWS & Postman', 'Introduction to AWS and Postman product offerings, including bundling and pricing options.', 'All Data International', 'normal'],
+];
 
 ?>
 <!doctype html>
@@ -188,7 +197,7 @@ $rundown = [
           class="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6"
         >
           The Agentic SDLC: <br />
-          <span class="gradient-text">From API Design to Production</span>
+          <span class="gradient-text">From Specification to Production</span>
         </h1>
 
         <p
@@ -197,7 +206,7 @@ $rundown = [
           Pelajari bagaimana mengontrol, menguji, dan menskalakan
           <strong class="text-slate-900">AI Agents</strong> di lingkungan
           Enterprise menggunakan
-          <strong class="text-slate-900">Postman & AWS Bedrock</strong>.
+          <strong class="text-slate-900">Postman & Kiro Proposal</strong>.
         </p>
 
         <!-- Metadata Cards -->
@@ -364,82 +373,142 @@ $rundown = [
       </div>
     </section>
 
-    <!-- Speakers Section -->
-    <section id="speakers" class="py-20 bg-slate-50 border-t border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span
-            class="text-alldata text-xs font-semibold uppercase tracking-wider px-3 py-1 bg-blue-50 border border-blue-200 rounded-full"
-          >
-            Featured Experts
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-4 mb-4">
-            Pembicara & Expert Panel
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base">
-            Dengarkan langsung dari para praktisi dan pimpinan teknologi yang
-            membentuk masa depan AI Agentic SDLC.
-          </p>
+
+<!-- Speakers Section -->
+<section id="speakers" class="py-20 bg-slate-50 border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span
+        class="text-alldata text-xs font-bold uppercase tracking-widest px-4 py-2 bg-blue-50 border border-blue-200 rounded-full inline-block"
+      >
+        Meet Our Speakers
+      </span>
+
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-5 mb-5">
+        Learn from Industry Experts
+      </h2>
+
+      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+        Meet the technology leaders and industry practitioners sharing their
+        insights on how Agentic AI, AWS Kiro, and Postman are transforming
+        the Software Development Lifecycle.
+      </p>
+    </div>
+
+    <!-- Speakers Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+
+      <!-- Speaker 1: Mario Wihardja -->
+      <div
+        class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 text-center group hover:border-orange-400 hover:shadow-lg transition-all duration-300"
+      >
+        <div
+          class="w-full aspect-[4/5] rounded-xl bg-slate-100 border border-slate-200 mb-4 overflow-hidden"
+        >
+          <img
+            src="<?= base_url('assets/images/events/speakers/mario-wihardja.webp'); ?>"
+            alt="Mario Wihardja"
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
         </div>
 
-        <!-- Speaker Cards Grid (2 Pembicara - Compact Portrait Style) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto">
-          <!-- Speaker 1: Mario Wihardja -->
-          <div
-            class="bg-white border border-slate-200 rounded-xl p-4 text-center relative overflow-hidden group hover:border-orange-400 transition duration-300 shadow-sm"
-          >
-            <!-- Portrait Photo/Avatar Area -->
-            <div
-              class="w-full h-48 sm:h-56 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-3xl text-orange-500 mb-3 overflow-hidden group-hover:scale-[1.02] transition duration-300 relative"
-            >
-              
-              <img src="<?= base_url('assets/images/events/speakers/mario-wihardja.webp'); ?>" alt="Dr. drg. Iing Ichsan Hanafi, MARS, MH">
-            </div>
-            <div class="pb-1">
-              <h3
-                class="text-base font-bold text-slate-900 group-hover:text-orange-500 transition mb-0.5"
-              >
-                Mario Wihardja
-              </h3>
-              <span
-                class="text-[10px] font-semibold text-orange-600 bg-orange-50 border border-orange-200 px-2.5 py-0.5 rounded-full inline-block"
-              >
-                Postman
-              </span>
-            </div>
-          </div>
+        <div class="min-h-[90px] flex flex-col items-center justify-start">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-orange-500 transition mb-2">
+            Mario Wihardja
+          </h3>
 
-          <!-- Speaker 2: Nadhira Pratama -->
-          <div
-            class="bg-white border border-slate-200 rounded-xl p-4 text-center relative overflow-hidden group hover:border-alldata transition duration-300 shadow-sm"
+          <p class="text-xs text-slate-500 font-medium mb-2">
+            Partner Solutions Architect
+          </p>
+
+          <span
+            class="text-[10px] font-bold uppercase tracking-wider text-orange-600 px-3 py-1 rounded-full"
           >
-            <!-- Portrait Photo/Avatar Area -->
-            <div
-              class="w-full h-48 sm:h-56 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-3xl text-alldata mb-3 overflow-hidden group-hover:scale-[1.02] transition duration-300 relative"
-            >
-              <img
-                src="https://alldataint.com/assets/images/events/speakers/nadhira.webp"
-                alt="Nadhira Pratama"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="pb-1">
-              <h3
-                class="text-base font-bold text-slate-900 group-hover:text-alldata transition mb-0.5"
-              >
-                Nadhira Pratama
-              </h3>
-              <span
-                class="text-[10px] font-semibold text-alldata bg-blue-50 border border-blue-200 px-2.5 py-0.5 rounded-full inline-block"
-              >
-                All Data International
-              </span>
-            </div>
-          </div>
+            Postman
+          </span>
         </div>
       </div>
-    </section>
+
+      <!-- Speaker 2: Nadhira Pratama -->
+      <div
+        class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 text-center group hover:border-alldata hover:shadow-lg transition-all duration-300"
+      >
+        <div
+          class="w-full aspect-[4/5] rounded-xl bg-slate-100 border border-slate-200 mb-4 overflow-hidden"
+        >
+          <img
+            src="https://alldataint.com/assets/images/events/speakers/nadhira.webp"
+            alt="Nadhira Pratama"
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="min-h-[90px] flex flex-col items-center justify-start">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-alldata transition mb-1">
+            Nadhira Pratama
+          </h3>
+
+          <p class="text-xs text-slate-500 font-medium mb-2">
+            Solutions Architect
+          </p>
+
+          <span
+            class="text-[10px] font-bold uppercase tracking-wider text-alldata  px-3 py-1 rounded-full"
+          >
+            All Data International
+          </span>
+        </div>
+      </div>
+
+      <!-- Speaker 3: Muhammad Saiful Islam -->
+      <div
+        class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 text-center group hover:border-orange-400 hover:shadow-lg transition-all duration-300"
+      >
+        <div
+          class="w-full aspect-[4/5] rounded-xl bg-slate-100 border border-slate-200 mb-4 overflow-hidden"
+        >
+          <img
+            src="https://alldataint.com/assets/images/events/speakers/muhammadisaiful-islam.webp"
+            alt="Muhammad Saiful Islam"
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="min-h-[90px] flex flex-col items-center justify-start">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-orange-500 transition mb-1">
+            Muhammad Saiful Islam
+          </h3>
+
+          <p class="text-xs text-slate-500 font-medium mb-2">
+            Partner Solutions Architect
+          </p>
+
+          <span
+            class="text-[10px] font-bold uppercase tracking-wider text-orange-700  px-3 py-1 rounded-full"
+          >
+            AWS
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Caption -->
+    <div class="text-center mt-12">
+      <p class="text-xs sm:text-sm text-slate-500">
+        Powered by industry expertise from
+        <span class="font-semibold text-slate-700">Postman, AWS, and All Data International.</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Key Takeaways / Objectives -->
     <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -789,7 +858,7 @@ $rundown = [
               </h3>
               <p class="text-slate-600 text-sm leading-relaxed">
                 Kesempatan berdiskusi dan bertukar pandangan secara langsung
-                dengan para praktisi dari 20–30 perusahaan ternama.
+                dengan para praktisi perusahaan ternama.
               </p>
             </div>
           </div>
