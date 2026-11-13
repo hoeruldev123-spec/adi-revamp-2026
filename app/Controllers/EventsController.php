@@ -27,7 +27,7 @@ class EventsController extends BaseController
                     'register_url' => base_url('/events/agentic-sdlc-workshop'),
                     'detail_url'   => null,
                     'target'       => '_self', // Karena mengarah ke Microsoft Forms eksternal
-                    'image'        => 'assets/images/events/banner/agentic-sdlc-postman-aws.webp',
+                    'image'        => 'assets/images/events/banner/thumbnail-the-agentic-sdlc-from-api-design-to-production.webp',
                 ],
 
                 [

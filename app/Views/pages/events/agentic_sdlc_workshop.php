@@ -37,6 +37,20 @@ $rundown = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Agentic SDLC Workshop | Postman x All Data International</title>
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Agentic SDLC: From API Design to Production | All Data International, Postman & AWS">
+    <meta property="og:description" content="Pelajari bagaimana mengontrol, menguji, dan menskalakan AI Agents di lingkungan Enterprise menggunakan Postman & AWS Bedrock bersama All Data International.">
+    <meta property="og:image" content="<?= base_url('assets/images/events/banner/thumbnail-the-agentic-sdlc-from-api-design-to-production.webp'); ?>">
+    <meta property="og:image:alt" content="The Agentic SDLC: From API Design to Production Workshop">
+    <meta property="og:url" content="<?= current_url(); ?>">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Agentic SDLC: From API Design to Production | All Data International, Postman & AWS">
+    <meta name="twitter:description" content="Pelajari bagaimana mengontrol, menguji, dan menskalakan AI Agents di lingkungan Enterprise menggunakan Postman & AWS Bedrock bersama All Data International.">
+    <meta name="twitter:image" content="<?= base_url('assets/images/events/banner/thumbnail-the-agentic-sdlc-from-api-design-to-production.webp'); ?>">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?= base_url('assets/favicon/favicon.ico') ?>">
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/favicon/favicon-16x16.png') ?>">
@@ -1290,17 +1304,7 @@ document.addEventListener('DOMContentLoaded', function () {
           class="h-72 sm:h-80 rounded-xl overflow-hidden border border-slate-200 bg-slate-100 relative"
         >
           <!-- Google Maps Embed -->
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4637.798367906033!2d106.8222426!3d-6.2105702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f77096869e7b%3A0x984349475d16370d!2sAWS%20(Amazon%20Web%20Services)%20Jakarta%20Office!5e1!3m2!1sen!2sid!4v1794291513150!5m2!1sen!2sid"
-            width="100%"
-            height="100%"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            class="w-full h-full"
-          >
-          </iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4021676523757!2d106.8222426!3d-6.2105702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f77096869e7b%3A0x984349475d16370d!2sAWS%20(Amazon%20Web%20Services)%20Jakarta%20Office!5e0!3m2!1sid!2sid!4v1794568211936!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
     </section>
