@@ -53,6 +53,9 @@ $routes->match(['get', 'head'], 'team', 'CompanyController::team');
 
 $routes->match(['get', 'head'], '/company/contact', 'ContactController::index');
 
+//clickhouse routes
+$routes->get('clickhouse/migration-tools-clickhouse-apac', 'ClickHouse::migrationToolsApac');
+
 // Resources Routes
 // $routes->match(['get', 'head'], 'resources', 'ResourcesController::index');
 // $routes->match(['get','head'], 'resources/articles', 'ResourcesController::articles');
