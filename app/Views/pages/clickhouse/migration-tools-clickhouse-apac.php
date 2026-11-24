@@ -63,6 +63,8 @@ $approach = [
         'step' => '03',
         'title' => 'Validate the way an auditor would',
         'description' => 'Row counts are the first check, not the last. For every migrated table the tool compares source and target counts and stops on any mismatch rather than quietly re-running, because a partial re-insert is how duplicates get in. Once parity passes, it spot-checks money columns and JSON keys with sums and counts on both sides, which is the question a DBA asks next. For every converted procedure we run the original and the new logic on the same data and compare the output row by row. In our demo, the converted PL/SQL produced the same rows and the same totals to the cent.',
+        'image' => '/assets/images/clickhouse-migration-tools-2.webp',
+        'image_caption' => 'The Validation tab after an Oracle run: 13 of 13 tables matched, 1,126,035 rows. On the right, the agent’s own rules for the step, including stop-on-mismatch and the sum and count spot-checks.',
         'tag' => 'Evidence-based validation',
     ],
     [
@@ -371,9 +373,26 @@ function e(string $value): string {
                     <?php foreach ($approach as $item): ?>
                     <article class="flex gap-5 rounded-3xl border border-white bg-white p-6 shadow-sm sm:p-7">
                         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-sm font-black text-adi-blue"><?= e($item['step']) ?></div>
-                        <div>
+                        <div class="min-w-0 flex-1">
                             <h3 class="text-lg font-extrabold text-adi-navy"><?= e($item['title']) ?></h3>
                             <p class="mt-2 text-sm leading-7 text-slate-600"><?= e($item['description']) ?></p>
+
+                            <?php if (!empty($item['image'])): ?>
+                            <figure class="mt-5 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50">
+                                <img
+                                    src="<?= e($item['image']) ?>"
+                                    alt="<?= e($item['image_caption'] ?? $item['title']) ?>"
+                                    class="h-auto w-full object-cover"
+                                    loading="lazy"
+                                >
+                                <?php if (!empty($item['image_caption'])): ?>
+                                <figcaption class="border-t border-slate-100 bg-white px-4 py-2.5 text-xs leading-5 text-slate-500">
+                                    <?= e($item['image_caption']) ?>
+                                </figcaption>
+                                <?php endif; ?>
+                            </figure>
+                            <?php endif; ?>
+
                             <span class="mt-4 inline-flex rounded-full bg-cyan-50 px-3 py-1.5 text-xs font-bold text-adi-blue"><?= e($item['tag']) ?></span>
                         </div>
                     </article>
@@ -390,6 +409,18 @@ function e(string $value): string {
                     <h2 class="mt-4 text-3xl font-black tracking-tight sm:text-4xl">Where the AI does the work</h2>
                     <p class="mt-5 text-base leading-8 text-slate-300">For readers who want the detail, the tool runs the same seven stages for Oracle, BigQuery and PostgreSQL. The agent’s reasoning for each step sits alongside, so every decision is on the record.</p>
                 </div>
+
+                <figure class="mx-auto mt-12 max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-white/[.05] shadow-soft">
+                    <img
+                        src="<?= e('/assets/images/clickhouse-migration-tools-1.webp') ?>"
+                        alt="<?= e('The seven stages, with the Oracle TPC-H demo at step 3. The agent’s reasoning for each step sits alongside, so every decision is on the record.') ?>"
+                        class="h-auto w-full object-cover"
+                        loading="lazy"
+                    >
+                    <figcaption class="border-t border-white/10 bg-white/[.03] px-5 py-3.5 text-center text-xs leading-6 text-slate-300 sm:px-6">
+                        The seven stages, with the Oracle TPC-H demo at step 3. The agent’s reasoning for each step sits alongside, so every decision is on the record.
+                    </figcaption>
+                </figure>
                 <div class="relative mt-16 flex flex-wrap justify-center gap-5">
                     <?php
                     $stageIcons = [
@@ -427,13 +458,19 @@ function e(string $value): string {
                         <div>
                             <p class="text-xs font-bold uppercase tracking-[.16em] text-sky-300">The result in ClickHouse Cloud</p>
                             <h3 class="mt-2 text-xl font-extrabold">Business logic becomes visible SQL anyone on the team can read.</h3>
-                            <p class="mt-2 max-w-3xl text-sm leading-7 text-slate-300">The migrated tables sit alongside <code class="rounded bg-white/10 px-1.5 py-0.5 text-sky-200">daily_order_summary</code>, a materialized view that now does the work of a stored procedure. And in the Validation tab, the agent stops on any mismatch rather than quietly re-running, because a partial re-insert is how duplicates get in.</p>
-                        </div>
-                        <div class="rounded-2xl bg-white/10 px-6 py-4 text-center">
-                            <p class="text-3xl font-black text-white">13 / 13</p>
-                            <p class="mt-1 text-xs font-semibold text-sky-200">1,126,035 rows matched</p>
+                            <p class="mt-2 max-w-3xl text-sm leading-7 text-slate-300">The migrated tables sit alongside <code class="rounded bg-white/10 px-1.5 py-0.5 text-sky-200">daily_order_summary</code>, a materialized view that now does the work of a stored procedure.</p>
                         </div>
                     </div>
+
+                    <figure class="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-adi-navy/60">
+                        <img
+                            src="<?= e('/assets/images/clickhouse-migration-tools-3.webp') ?>"
+                            alt="<?= e('The result in ClickHouse Cloud: the migrated tables alongside daily_order_summary, a materialized view that now does the work of a stored procedure.') ?>"
+                            class="h-auto w-full object-cover"
+                            loading="lazy"
+                        >
+                       
+                    </figure>
                 </div>
             </div>
         </section>
@@ -514,7 +551,7 @@ function e(string $value): string {
                     <p class="section-kicker text-xs font-extrabold uppercase text-sky-300">Next step</p>
                     <h2 class="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Start with a [N-day] assessment.</h2>
                     <p class="mt-5 text-base leading-8 text-slate-300">If you have a warehouse that has been “next year’s project” for more than one year, the first step is a [N-day] assessment of your pipelines and warehouse. You get a written migration plan, and we run the tool against a copy of your own schema so you can see the proposed ClickHouse design before committing to anything.</p>
-                    <p class="mt-4 text-xs leading-6 text-slate-400">[Author name] is [role] at All Data International, a data and AI consultancy in Jakarta and a ClickHouse partner. Thanks to [reviewer names] for reading drafts of this post.</p>
+                    
                 </div>
                 <div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
                     <a href="<?= e($contactUrl) ?>" class="inline-flex min-w-56 items-center justify-center rounded-full bg-adi-cyan px-7 py-4 text-sm font-extrabold text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-1 hover:bg-cyan-600">Book an assessment ↗</a>
