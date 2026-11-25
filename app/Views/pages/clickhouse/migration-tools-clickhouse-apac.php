@@ -4,6 +4,7 @@ $pageTitle = 'The data warehouse migration nobody wants to start | All Data Inte
 $pageDescription = 'How we move Oracle, BigQuery and PostgreSQL warehouses onto ClickHouse Cloud without losing a number, why the AI does only half the work, and why the destination is not just a faster warehouse.';
 $siteUrl = 'https://alldataint.com';
 $logoUrl = 'https://alldataint.com/assets/images/logo_coloured.png';
+$clickhouseLogoUrl = base_url('assets/images/principals/Logo-ClickHouse.png');
 $contactEmail = 'info@alldataint.com';
 $contactUrl = 'mailto:' . $contactEmail . '?subject=ClickHouse%20Migration%20Assessment';
 
@@ -12,37 +13,37 @@ $challenges = [
         'number' => '01',
         'title' => 'The numbers might not match.',
         'description' => 'A regulatory return, a month-end close or a commission payout has to reconcile to the cent. A migration that is 99.9% right is a migration that failed, and proving the last 0.1% by hand takes longer than the migration itself.',
-        'icon' => 'scale',
+        'tag' => 'Reconciliation risk',
     ],
     [
         'number' => '02',
         'title' => 'The logic lives in code nobody owns.',
         'description' => 'Business rules accumulated in stored procedures over a decade. They are undocumented, they work, and rewriting them means first working out what they do.',
-        'icon' => 'code',
+        'tag' => 'Legacy PL/SQL & procedures',
     ],
     [
         'number' => '03',
         'title' => 'The bill grows faster than the value.',
         'description' => 'Licences, per-query charges and compute scale with data volume. Dashboards that took seconds now take minutes, so people stop opening them, so the platform costs more and delivers less.',
-        'icon' => 'chart',
+        'tag' => 'Unpredictable cost & latency',
     ],
     [
         'number' => '04',
         'title' => 'The team knows the old platform, not the new one.',
         'description' => 'A migration is also a change in skills. If the engineers who will run the new warehouse have never used it, the risk does not end at cut-over.',
-        'icon' => 'users',
+        'tag' => 'Team readiness & ownership',
     ],
     [
         'number' => '05',
         'title' => 'Residency and cloud choice are already decided.',
         'description' => 'In regulated sectors, where the data can live and which cloud it runs on are usually settled before the database is. Any destination has to fit those constraints, not argue with them.',
-        'icon' => 'shield',
+        'tag' => 'Compliance & cloud lock-in',
     ],
     [
         'number' => '06',
         'title' => 'The business is already asking for AI on this data.',
         'description' => 'Agents, assistants and customer-facing analytics all need answers in seconds on data that is minutes old. If the destination cannot serve that, the migration solves last year’s problem and leaves next year’s untouched.',
-        'icon' => 'spark',
+        'tag' => 'Real-time & AI readiness',
     ],
 ];
 
@@ -50,7 +51,7 @@ $approach = [
     [
         'step' => '01',
         'title' => 'Start with an assessment, not a quote',
-        'description' => 'Before anything moves, we spend [N days] with your team mapping the warehouse: which tables and reports matter, which procedures carry business logic, how fresh each dataset needs to be, and which workloads fit ClickHouse well today and which should wait. The output is a written plan with a migration order, not a sales proposal. Sometimes the answer is that only part of the warehouse should move first, and we say so.',
+        'description' => 'Before anything moves, we spend one day with your team mapping the warehouse: which tables and reports matter, which procedures carry business logic, how fresh each dataset needs to be, and which workloads fit ClickHouse well today and which should wait. The output is a written plan with a migration order, not a sales proposal. Sometimes the answer is that only part of the warehouse should move first, and we say so.',
         'tag' => 'Written migration plan',
     ],
     [
@@ -234,10 +235,16 @@ function e(string $value): string {
     <!-- Header -->
     <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur-xl">
         <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-            <a href="<?= e($siteUrl) ?>" class="flex items-center" aria-label="All Data International home">
-                <img src="<?= e($logoUrl) ?>" alt="All Data International" class="h-9 w-auto" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-                <span class="hidden text-xl font-extrabold tracking-tight text-adi-blue">All Data International</span>
-            </a>
+            <div class="flex items-center gap-4">
+                <a href="<?= e($siteUrl) ?>" class="flex items-center" aria-label="All Data International home">
+                    <img src="<?= e($logoUrl) ?>" alt="All Data International" class="h-9 w-auto" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                    <span class="hidden text-xl font-extrabold tracking-tight text-adi-blue">All Data International</span>
+                </a>
+                <span class="h-5 w-px bg-slate-200" aria-hidden="true"></span>
+                <a href="#clickhouse" class="flex items-center" aria-label="ClickHouse">
+                    <img src="<?= e($clickhouseLogoUrl) ?>" alt="ClickHouse" class="h-6 w-auto object-contain" loading="lazy">
+                </a>
+            </div>
             <nav class="hidden items-center gap-8 text-sm font-semibold text-slate-600 md:flex" aria-label="Main navigation">
                 <a class="transition hover:text-adi-blue" href="#challenges">Why migrations stall</a>
                 <a class="transition hover:text-adi-blue" href="#approach">What it takes</a>
@@ -267,44 +274,54 @@ function e(string $value): string {
         <section class="hero-grid relative isolate overflow-hidden bg-gradient-to-br from-white via-sky-50 to-blue-50">
             <div class="pointer-events-none absolute -right-32 -top-28 -z-10 h-[520px] w-[520px] rounded-full bg-cyan-300/20 blur-3xl"></div>
             <div class="pointer-events-none absolute -bottom-48 -left-24 -z-10 h-[420px] w-[420px] rounded-full bg-blue-300/20 blur-3xl"></div>
-            <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-[1.08fr_.92fr] lg:px-8 lg:py-28">
-                <div>
-                    <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[.14em] text-adi-blue shadow-sm">
-                        <span class="h-2 w-2 rounded-full bg-adi-cyan"></span>
-                        Migration Tool · AI-assisted migration to ClickHouse Cloud
-                    </div>
-                    <h1 class="max-w-3xl text-4xl font-black leading-[1.08] tracking-tight text-adi-navy sm:text-5xl lg:text-[3.55rem]">
-                        The data warehouse migration <span class="text-gradient">nobody wants to start</span>
-                    </h1>
-                    <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
-                        How we move Oracle, BigQuery and PostgreSQL warehouses onto ClickHouse Cloud without losing a number, why the AI does only half the work, and why the destination is not just a faster warehouse.
-                    </p>
-                    <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-                        <a href="#assessment" class="inline-flex items-center justify-center rounded-full bg-adi-cyan px-7 py-4 text-sm font-extrabold text-white shadow-glow transition hover:-translate-y-1 hover:bg-cyan-600">
-                            Book an assessment <span class="ml-3 text-lg">↗</span>
-                        </a>
-                        <a href="#story" class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/80 px-7 py-4 text-sm font-bold text-adi-blue transition hover:border-adi-cyan hover:bg-white">
-                            Read the full context <span class="ml-2">↓</span>
-                        </a>
-                    </div>
-                    <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-semibold text-slate-500">
-                        <span class="inline-flex items-center gap-2"><span class="text-adi-cyan">✓</span> Oracle, BigQuery & PostgreSQL</span>
-                        <span class="inline-flex items-center gap-2"><span class="text-adi-cyan">✓</span> Engineer-approved steps</span>
-                        <span class="inline-flex items-center gap-2"><span class="text-adi-cyan">✓</span> Reconciled to the cent</span>
-                    </div>
+            <div class="mx-auto max-w-5xl px-5 py-20 text-center lg:px-8 lg:py-28">
+                <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[.14em] text-adi-blue shadow-sm">
+                    <span class="h-2 w-2 rounded-full bg-adi-cyan"></span>
+                    Migration Tool · AI-assisted migration to ClickHouse Cloud
                 </div>
+                <h1 class="mx-auto max-w-4xl text-4xl font-black leading-[1.08] tracking-tight text-adi-navy sm:text-5xl lg:text-[3.75rem]">
+                    The data warehouse migration <span class="text-gradient">nobody wants to start</span>
+                </h1>
+                <p class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-slate-600">
+                    How we move Oracle, BigQuery and PostgreSQL warehouses onto ClickHouse Cloud without losing a number, why the AI does only half the work, and why the destination is not just a faster warehouse.
+                </p>
+                <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+                    <a href="#assessment" class="inline-flex items-center justify-center rounded-full bg-adi-cyan px-7 py-4 text-sm font-extrabold text-white shadow-glow transition hover:-translate-y-1 hover:bg-cyan-600">
+                        Book an assessment <span class="ml-3 text-lg">↗</span>
+                    </a>
+                    <a href="#story" class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/80 px-7 py-4 text-sm font-bold text-adi-blue transition hover:border-adi-cyan hover:bg-white">
+                        Read the full context <span class="ml-2">↓</span>
+                    </a>
+                </div>
+                <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-semibold text-slate-500">
+                    <span class="inline-flex items-center gap-2"><span class="text-adi-cyan">✓</span> Oracle, BigQuery & PostgreSQL</span>
+                    <span class="inline-flex items-center gap-2"><span class="text-adi-cyan">✓</span> Engineer-approved steps</span>
+                    <span class="inline-flex items-center gap-2"><span class="text-adi-cyan">✓</span> Reconciled to the cent</span>
+                </div>
+            </div>
+        </section>
 
-                <div class="relative mx-auto w-full max-w-xl">
-                    <div class="absolute -inset-5 rounded-[2rem] bg-gradient-to-br from-adi-cyan/20 via-blue-200/20 to-adi-cyan/15 blur-2xl"></div>
-                    <div class="relative overflow-hidden rounded-[1.75rem] border border-white bg-white p-5 shadow-soft sm:p-7">
-    <img
-        src="<?= base_url('assets/images/clickhouse-migration-tools-1.webp') ?>"
-        alt="ClickHouse Migration Tools APAC"
-        class="h-auto w-full rounded-2xl object-cover"
-        loading="lazy"
-    />
-</div>
-                    
+        <!-- Hero Preview / Perspective Showcase -->
+        <section class="relative isolate overflow-hidden bg-gradient-to-b from-blue-50/70 via-white to-white py-14 lg:py-20">
+            <div class="mx-auto max-w-6xl px-5 lg:px-8">
+                <div class="relative mx-auto max-w-5xl [perspective:1800px]">
+                    <div class="pointer-events-none absolute -inset-6 rounded-[2.5rem] bg-gradient-to-tr from-adi-blue/15 via-adi-cyan/20 to-sky-200/15 blur-3xl"></div>
+                    <div
+                        class="relative overflow-hidden rounded-[1.75rem] border border-slate-200/80 bg-white p-3 shadow-[0_32px_70px_-15px_rgba(11,23,48,0.22)] transition-transform duration-700 ease-out sm:p-5 lg:[transform:rotateX(8deg)_rotateY(10deg)_rotateZ(-1.5deg)] lg:hover:[transform:rotateX(2deg)_rotateY(3deg)_rotateZ(0deg)]"
+                    >
+                        <div class="mb-3 flex items-center gap-2 border-b border-slate-100 pb-3 px-2">
+                            <span class="h-2.5 w-2.5 rounded-full bg-rose-400"></span>
+                            <span class="h-2.5 w-2.5 rounded-full bg-amber-400"></span>
+                            <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+                            <span class="ml-2 text-xs font-semibold text-slate-400">ClickHouse Cloud Migration Workbench</span>
+                        </div>
+                        <img
+                            src="<?= base_url('assets/images/clickhouse-migration-tools-1.webp') ?>"
+                            alt="ClickHouse Migration Tools APAC"
+                            class="h-auto w-full rounded-xl object-cover"
+                            loading="lazy"
+                        />
+                    </div>
                 </div>
             </div>
         </section>
@@ -328,57 +345,55 @@ function e(string $value): string {
 
         <!-- Challenges -->
         <section id="challenges" class="scroll-mt-24 bg-white py-20 lg:py-28">
-            <div class="mx-auto max-w-7xl px-5 lg:px-8">
-                <div class="mx-auto max-w-3xl text-center">
+            <div class="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[.82fr_1.18fr] lg:items-start lg:px-8">
+                <div class="lg:sticky lg:top-28 lg:self-start">
                     <p class="section-kicker text-xs font-extrabold uppercase text-adi-cyan">The core friction</p>
-                    <h2 class="mt-4 text-3xl font-black tracking-tight text-adi-navy sm:text-4xl">Why migrations stall</h2>
-                    <p class="mt-5 text-base leading-8 text-slate-600">The technical work of a migration is well understood. What stops it is a set of risks that the people who would have to approve it are right to worry about.</p>
+                    <h2 class="mt-4 text-3xl font-black leading-tight tracking-tight text-adi-navy sm:text-4xl">Why migrations stall</h2>
+                    <p class="mt-6 text-base leading-8 text-slate-600">The technical work of a migration is well understood. What stops it is a set of risks that the people who would have to approve it are right to worry about.</p>
+                    <div class="mt-8 rounded-3xl bg-adi-navy p-6 text-white shadow-soft">
+                        <p class="text-xs font-bold uppercase tracking-[.16em] text-sky-300">Why teams hesitate</p>
+                        <p class="mt-3 text-base font-bold leading-relaxed">None of these is a reason to stay. All of them are reasons to run the migration differently, and to be deliberate about what you are migrating to.</p>
+                    </div>
                 </div>
-                <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="space-y-4">
                     <?php foreach ($challenges as $item): ?>
-                    <article class="group rounded-3xl border border-slate-100 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-100 hover:shadow-soft">
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm font-black text-adi-cyan"><?= e($item['number']) ?></span>
-                            <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-adi-mist text-xl text-adi-blue">
-                                <?php
-                                $icons = ['scale'=>'◎','code'=>'⌘','chart'=>'↗','users'=>'◉','shield'=>'◇','spark'=>'✳'];
-                                echo e($icons[$item['icon']] ?? '•');
-                                ?>
-                            </span>
+                    <article class="flex gap-5 rounded-3xl border border-slate-100 bg-white p-6 shadow-sm transition duration-300 hover:border-blue-100 hover:shadow-soft sm:p-7">
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-sm font-black text-adi-blue"><?= e($item['number']) ?></div>
+                        <div class="min-w-0 flex-1">
+                            <h3 class="text-lg font-extrabold text-adi-navy"><?= e($item['title']) ?></h3>
+                            <p class="mt-2 text-sm leading-7 text-slate-600"><?= e($item['description']) ?></p>
+                            <span class="mt-4 inline-flex rounded-full bg-cyan-50 px-3 py-1.5 text-xs font-bold text-adi-blue"><?= e($item['tag']) ?></span>
                         </div>
-                        <h3 class="mt-6 text-lg font-extrabold text-adi-navy"><?= e($item['title']) ?></h3>
-                        <p class="mt-3 text-sm leading-7 text-slate-600"><?= e($item['description']) ?></p>
                     </article>
                     <?php endforeach; ?>
-                </div>
-                <div class="mx-auto mt-12 max-w-3xl text-center">
-                    <p class="text-base font-semibold leading-8 text-adi-navy">None of these is a reason to stay. All of them are reasons to run the migration differently, and to be deliberate about what you are migrating to.</p>
                 </div>
             </div>
         </section>
 
         <!-- Approach -->
         <section id="approach" class="scroll-mt-24 bg-adi-mist py-20 lg:py-28">
-            <div class="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[.82fr_1.18fr] lg:items-start lg:px-8">
-                <div class="lg:sticky lg:top-28 lg:self-start">
+            <div class="mx-auto max-w-5xl px-5 lg:px-8">
+                <div class="max-w-3xl">
                     <p class="section-kicker text-xs font-extrabold uppercase text-adi-cyan">Our method</p>
                     <h2 class="mt-4 text-3xl font-black leading-tight tracking-tight text-adi-navy sm:text-4xl">What it takes to finish one</h2>
-                    <p class="mt-6 text-base leading-8 text-slate-600">AI-assisted migration tools are not rare in 2026, and ours is not the point of this post. What finishes a migration is the method around the tool. This is ours.</p>
-                    <div class="mt-8 rounded-3xl bg-adi-navy p-6 text-white shadow-soft">
-                        <p class="text-xs font-bold uppercase tracking-[.16em] text-sky-300">How we balance AI & engineering</p>
-                        <p class="mt-3 text-lg font-extrabold leading-relaxed">The agent removes the weeks of mechanical conversion; the engineer carries the judgement about which tables go first, how to treat a procedure with side effects, and when the validation is good enough to cut over.</p>
-                    </div>
+                    <p class="mt-5 text-base leading-8 text-slate-600">AI-assisted migration tools are not rare in 2026, and ours is not the point of this post. What finishes a migration is the method around the tool. This is ours.</p>
                 </div>
-                <div class="space-y-4">
+
+                <div class="mt-8 rounded-3xl bg-adi-navy p-6 text-white shadow-soft sm:p-7">
+                    <p class="text-xs font-bold uppercase tracking-[.16em] text-sky-300">How we balance AI & engineering</p>
+                    <p class="mt-3 text-lg font-extrabold leading-relaxed">The agent removes the weeks of mechanical conversion; the engineer carries the judgement about which tables go first, how to treat a procedure with side effects, and when the validation is good enough to cut over.</p>
+                </div>
+
+                <div class="mt-8 space-y-5">
                     <?php foreach ($approach as $item): ?>
-                    <article class="flex gap-5 rounded-3xl border border-white bg-white p-6 shadow-sm sm:p-7">
+                    <article class="flex flex-col gap-5 rounded-3xl border border-white bg-white p-6 shadow-sm sm:flex-row sm:p-8">
                         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-sm font-black text-adi-blue"><?= e($item['step']) ?></div>
                         <div class="min-w-0 flex-1">
-                            <h3 class="text-lg font-extrabold text-adi-navy"><?= e($item['title']) ?></h3>
-                            <p class="mt-2 text-sm leading-7 text-slate-600"><?= e($item['description']) ?></p>
+                            <h3 class="text-xl font-extrabold text-adi-navy"><?= e($item['title']) ?></h3>
+                            <p class="mt-2.5 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8"><?= e($item['description']) ?></p>
 
                             <?php if (!empty($item['image'])): ?>
-                            <figure class="mt-5 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50">
+                            <figure class="mt-6 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50">
                                 <img
                                     src="<?= e($item['image']) ?>"
                                     alt="<?= e($item['image_caption'] ?? $item['title']) ?>"
@@ -386,14 +401,14 @@ function e(string $value): string {
                                     loading="lazy"
                                 >
                                 <?php if (!empty($item['image_caption'])): ?>
-                                <figcaption class="border-t border-slate-100 bg-white px-4 py-2.5 text-xs leading-5 text-slate-500">
+                                <figcaption class="border-t border-slate-100 bg-white px-4 py-3 text-xs leading-5 text-slate-500">
                                     <?= e($item['image_caption']) ?>
                                 </figcaption>
                                 <?php endif; ?>
                             </figure>
                             <?php endif; ?>
 
-                            <span class="mt-4 inline-flex rounded-full bg-cyan-50 px-3 py-1.5 text-xs font-bold text-adi-blue"><?= e($item['tag']) ?></span>
+                            <span class="mt-5 inline-flex rounded-full bg-cyan-50 px-3 py-1.5 text-xs font-bold text-adi-blue"><?= e($item['tag']) ?></span>
                         </div>
                     </article>
                     <?php endforeach; ?>
@@ -424,19 +439,12 @@ function e(string $value): string {
                 <div class="relative mt-16 flex flex-wrap justify-center gap-5">
                     <?php
                     $stageIcons = [
-                        // 1. Discover and design (Search / Schema Compass)
                         '<svg class="h-5 w-5 text-sky-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>',
-                        // 2. Migrate data (Database Transfer / Copy Arrows)
                         '<svg class="h-5 w-5 text-sky-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>',
-                        // 3. Validate (Shield Check / Audit Verification)
                         '<svg class="h-5 w-5 text-sky-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>',
-                        // 4. Convert stored procedures (Repeat / Transform Logic)
                         '<svg class="h-5 w-5 text-sky-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>',
-                        // 5. Rewrite queries (Code / SQL Translation)
                         '<svg class="h-5 w-5 text-sky-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>',
-                        // 6. Benchmark (Gauge / Speed Performance)
                         '<svg class="h-5 w-5 text-sky-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>',
-                        // 7. Optimise and summarise (Sliders / Tune & Summary)
                         '<svg class="h-5 w-5 text-sky-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="2" y1="14" x2="6" y2="14"/><line x1="10" y1="8" x2="14" y2="8"/><line x1="18" y1="16" x2="22" y2="16"/></svg>',
                     ];
                     ?>
@@ -469,7 +477,6 @@ function e(string $value): string {
                             class="h-auto w-full object-cover"
                             loading="lazy"
                         >
-                       
                     </figure>
                 </div>
             </div>
@@ -501,12 +508,20 @@ function e(string $value): string {
         <!-- Why ClickHouse -->
         <section id="clickhouse" class="scroll-mt-24 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-20 lg:py-28">
             <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                
                 <div class="mx-auto max-w-3xl text-center">
-                    <p class="section-kicker text-xs font-extrabold uppercase text-adi-cyan">Why the destination matters</p>
+                    <div class="mb-5 flex justify-center">
+                        <img src="<?= e($clickhouseLogoUrl) ?>" alt="ClickHouse" class="h-10 w-auto object-contain sm:h-12" loading="lazy">
+                    </div>
+                    <div class="inline-flex items-center gap-2.5 rounded-full border border-blue-100 bg-white px-4 py-2 shadow-sm">
+                        <span class="section-kicker text-xs font-extrabold uppercase text-adi-cyan">Why the destination matters</span>
+                    </div>
                     <h2 class="mt-4 text-3xl font-black tracking-tight text-adi-navy sm:text-4xl">Why the destination is ClickHouse Cloud, <span class="text-gradient">and not another warehouse</span></h2>
                     <p class="mt-5 text-base leading-8 text-slate-600">Every data warehouse you are likely to be offered was designed around the same idea: data lands overnight, reports run in the morning, and a day of lag is fine because nothing downstream needs anything faster. That idea has had a good thirty years. It is now the thing holding you back, and moving to a newer warehouse that shares it buys a cheaper bill and the same ceiling.</p>
                     <p class="mt-4 text-base leading-8 text-slate-600">ClickHouse started from the opposite premise. It was built in 2009 to answer questions on billions of events while they were still arriving, open-sourced in 2016, and is now the engine behind real-time products at companies such as Sony, Tesla, Lyft, Instacart and Anthropic. It was never designed as a warehouse that got faster; it was designed as the layer that applications, dashboards and now agents query directly, on data that is seconds old. The warehouse reports you migrate first run on it comfortably. The point is what the same platform lets you do next.</p>
                 </div>
+
+
                 <div class="mt-14 grid gap-5 md:grid-cols-2">
                     <?php foreach ($platformBenefits as $index => $benefit): ?>
                     <article class="rounded-3xl border border-white bg-white p-7 shadow-sm sm:p-9">
@@ -527,7 +542,6 @@ function e(string $value): string {
                 </div>
             </div>
         </section>
-
         <!-- Delivery credibility / What to take away -->
         <section class="bg-white py-20 lg:py-24">
             <div class="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:px-8">
@@ -549,9 +563,8 @@ function e(string $value): string {
             <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 lg:grid-cols-[1fr_auto] lg:px-8">
                 <div class="max-w-3xl">
                     <p class="section-kicker text-xs font-extrabold uppercase text-sky-300">Next step</p>
-                    <h2 class="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Start with a [N-day] assessment.</h2>
-                    <p class="mt-5 text-base leading-8 text-slate-300">If you have a warehouse that has been “next year’s project” for more than one year, the first step is a [N-day] assessment of your pipelines and warehouse. You get a written migration plan, and we run the tool against a copy of your own schema so you can see the proposed ClickHouse design before committing to anything.</p>
-                    
+                    <h2 class="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Start with a One-Day Assessment.</h2>
+                    <p class="mt-5 text-base leading-8 text-slate-300">If you have a warehouse that has been “next year’s project” for more than one year, the first step is a one-day assessment of your pipelines and warehouse. You get a written migration plan, and we run the tool against a copy of your own schema so you can see the proposed ClickHouse design before committing to anything.</p>
                 </div>
                 <div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
                     <a href="<?= e($contactUrl) ?>" class="inline-flex min-w-56 items-center justify-center rounded-full bg-adi-cyan px-7 py-4 text-sm font-extrabold text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-1 hover:bg-cyan-600">Book an assessment ↗</a>
