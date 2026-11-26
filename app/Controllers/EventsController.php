@@ -21,7 +21,7 @@ class EventsController extends BaseController
                     'month'        => 'Dec',
                     'date_raw'     => '2026-12-09',
                     'date_text'    => 'Wednesday, 9 December 2026',
-                    'time'         => '12:00 – 14:30 WIB',
+                    'time'         => '12:00 – 15:30 WIB',
                     'location'     => 'AWS Office, Sinarmas MSIG Tower 16th Floor, Jakarta',
                     'excerpt'      => 'Explore the Postman Agent Stack, real API workflows, and a 5-question control framework for enterprise AI agents with Postman and AWS Bedrock.',
                     'register_url' => base_url('/events/agentic-sdlc-workshop'),
