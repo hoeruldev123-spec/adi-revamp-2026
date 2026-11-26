@@ -4,7 +4,7 @@ $pageTitle = 'The data warehouse migration nobody wants to start | All Data Inte
 $pageDescription = 'How we move BigQuery, Oracle and PostgreSQL warehouses onto ClickHouse Cloud without losing a number, why the AI does only half the work, and why the destination is not just a faster warehouse.';
 $siteUrl = 'https://alldataint.com';
 $logoUrl = 'https://alldataint.com/assets/images/logo_coloured.png';
-$clickhouseLogoUrl = base_url('assets/images/principals/Logo-ClickHouse.png');
+$clickhouseLogoUrl = base_url('assets/images/principals/ClickHouse_Logo.webp');
 $contactEmail = 'info@alldataint.com';
 $contactUrl = 'mailto:' . $contactEmail . '?subject=ClickHouse%20Migration%20Assessment';
 
