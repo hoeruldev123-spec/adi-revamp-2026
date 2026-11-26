@@ -40,7 +40,7 @@ $rundown = [
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="The Agentic SDLC: From API Design to Production | All Data International, Postman & AWS">
-    <meta property="og:description" content="Pelajari bagaimana mengontrol, menguji, dan menskalakan AI Agents di lingkungan Enterprise menggunakan Postman & AWS Bedrock bersama All Data International.">
+    <meta property="og:description" content="Pelajari bagaimana mengontrol, menguji, dan menskalakan AI Agents di lingkungan Enterprise menggunakan Postman & Amazon Bedrock bersama All Data International.">
     <meta property="og:image" content="<?= base_url('assets/images/events/banner/thumbnail-the-agentic-sdlc-from-api-design-to-production.webp'); ?>">
     <meta property="og:image:alt" content="The Agentic SDLC: From API Design to Production Workshop">
     <meta property="og:url" content="<?= current_url(); ?>">
@@ -48,7 +48,7 @@ $rundown = [
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The Agentic SDLC: From API Design to Production | All Data International, Postman & AWS">
-    <meta name="twitter:description" content="Pelajari bagaimana mengontrol, menguji, dan menskalakan AI Agents di lingkungan Enterprise menggunakan Postman & AWS Bedrock bersama All Data International.">
+    <meta name="twitter:description" content="Pelajari bagaimana mengontrol, menguji, dan menskalakan AI Agents di lingkungan Enterprise menggunakan Postman & Amazon Bedrock bersama All Data International.">
     <meta name="twitter:image" content="<?= base_url('assets/images/events/banner/thumbnail-the-agentic-sdlc-from-api-design-to-production.webp'); ?>">
 
     <!-- Favicon -->
@@ -366,7 +366,7 @@ $rundown = [
         <h1
           class="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6"
         >
-          The Agentic SDLC: <br />
+          The Agentic SDLC <br />
           <span class="gradient-text">From Specification to Production</span>
         </h1>
 
@@ -457,7 +457,7 @@ $rundown = [
         <p class="text-slate-600 leading-relaxed mb-4">
           Dalam sesi eksklusif ini, peserta akan mengeksplorasi
           <strong>Postman Agent Stack</strong> dan
-          <strong>AWS Kiro</strong>, memahami bagaimana API context
+          <strong>Kiro</strong>, memahami bagaimana API context
           membantu AI Agents bekerja secara andal di setiap tahapan
           Software Development Lifecycle (SDLC), mulai dari design,
           develop, test, govern, deploy, hingga operate.
@@ -486,7 +486,7 @@ $rundown = [
 
           <div class="border-l-4 border-aws pl-4">
             <h4 class="text-xl font-bold text-slate-900">
-              AWS Kiro
+              Kiro
             </h4>
             <p class="text-xs text-slate-500 mt-1">
               Spec-driven development dan agentic coding workflows
@@ -581,7 +581,7 @@ $rundown = [
 
       <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
         Meet the technology leaders and industry practitioners sharing their
-        insights on how Agentic AI, AWS Kiro, and Postman are transforming
+        insights on how Agentic AI, Kiro, and Postman are transforming
         the Software Development Lifecycle.
       </p>
     </div>
