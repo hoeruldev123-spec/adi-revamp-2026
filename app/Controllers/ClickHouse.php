@@ -4,12 +4,12 @@ namespace App\Controllers;
 
 class ClickHouse extends BaseController
 {
-    public function migrationToolsApac()
+    public function migrationToolApac()
     {
         $data = [
-            'title' => 'Migration Tools ClickHouse APAC',
+            'title' => 'Migration Tool ClickHouse APAC',
         ];
 
-        return view('pages/clickhouse/migration-tools-clickhouse-apac', $data);
+        return view('pages/clickhouse/migration-tool-clickhouse-apac', $data);
     }
 }

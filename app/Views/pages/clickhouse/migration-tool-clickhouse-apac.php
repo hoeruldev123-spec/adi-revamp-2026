@@ -1,7 +1,7 @@
 <?php
 
 $pageTitle = 'The data warehouse migration nobody wants to start | All Data International';
-$pageDescription = 'How we move Oracle, BigQuery and PostgreSQL warehouses onto ClickHouse Cloud without losing a number, why the AI does only half the work, and why the destination is not just a faster warehouse.';
+$pageDescription = 'How we move BigQuery, Oracle and PostgreSQL warehouses onto ClickHouse Cloud without losing a number, why the AI does only half the work, and why the destination is not just a faster warehouse.';
 $siteUrl = 'https://alldataint.com';
 $logoUrl = 'https://alldataint.com/assets/images/logo_coloured.png';
 $clickhouseLogoUrl = base_url('assets/images/principals/Logo-ClickHouse.png');
@@ -283,7 +283,7 @@ function e(string $value): string {
                     The data warehouse migration <span class="text-gradient">nobody wants to start</span>
                 </h1>
                 <p class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-slate-600">
-                    How we move Oracle, BigQuery and PostgreSQL warehouses onto ClickHouse Cloud without losing a number, why the AI does only half the work, and why the destination is not just a faster warehouse.
+                    How we move BigQuery, Oracle and PostgreSQL warehouses onto ClickHouse Cloud without losing a number, why the AI does only half the work, and why the destination is not just a faster warehouse.
                 </p>
                 <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
                     <a href="#assessment" class="inline-flex items-center justify-center rounded-full bg-adi-cyan px-7 py-4 text-sm font-extrabold text-white shadow-glow transition hover:-translate-y-1 hover:bg-cyan-600">
@@ -294,7 +294,7 @@ function e(string $value): string {
                     </a>
                 </div>
                 <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-semibold text-slate-500">
-                    <span class="inline-flex items-center gap-2"><span class="text-adi-cyan">✓</span> Oracle, BigQuery & PostgreSQL</span>
+                    <span class="inline-flex items-center gap-2"><span class="text-adi-cyan">✓</span> BigQuery, Oracle & PostgreSQL</span>
                     <span class="inline-flex items-center gap-2"><span class="text-adi-cyan">✓</span> Engineer-approved steps</span>
                     <span class="inline-flex items-center gap-2"><span class="text-adi-cyan">✓</span> Reconciled to the cent</span>
                 </div>
@@ -422,7 +422,7 @@ function e(string $value): string {
                 <div class="mx-auto max-w-3xl text-center">
                     <p class="section-kicker text-xs font-extrabold uppercase text-sky-300">Seven repeatable stages</p>
                     <h2 class="mt-4 text-3xl font-black tracking-tight sm:text-4xl">Where the AI does the work</h2>
-                    <p class="mt-5 text-base leading-8 text-slate-300">For readers who want the detail, the tool runs the same seven stages for Oracle, BigQuery and PostgreSQL. The agent’s reasoning for each step sits alongside, so every decision is on the record.</p>
+                    <p class="mt-5 text-base leading-8 text-slate-300">For readers who want the detail, the tool runs the same seven stages for BigQuery, Oracle and PostgreSQL. The agent’s reasoning for each step sits alongside, so every decision is on the record.</p>
                 </div>
 
                 <figure class="mx-auto mt-12 max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-white/[.05] shadow-soft">
@@ -487,7 +487,7 @@ function e(string $value): string {
             <div class="mx-auto max-w-7xl px-5 lg:px-8">
                 <div class="max-w-3xl">
                     <p class="section-kicker text-xs font-extrabold uppercase text-adi-cyan">Supported source warehouses</p>
-                    <h2 class="mt-4 text-3xl font-black tracking-tight text-adi-navy sm:text-4xl">Oracle, BigQuery and PostgreSQL</h2>
+                    <h2 class="mt-4 text-3xl font-black tracking-tight text-adi-navy sm:text-4xl">BigQuery, Oracle and PostgreSQL</h2>
                     <p class="mt-5 text-base leading-8 text-slate-600">ClickHouse publishes its own migration guides for BigQuery and PostgreSQL; our tool automates that path and extends it to Oracle, where no official guide exists.</p>
                 </div>
                 <div class="mt-10 overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
@@ -536,7 +536,7 @@ function e(string $value): string {
                         <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-xl text-adi-cyan">!</span>
                         <div>
                             <h3 class="font-extrabold text-adi-navy">One caveat, because your DBAs will raise it anyway.</h3>
-                            <p class="mt-2 text-sm leading-7 text-slate-700">ClickHouse is not a feature-for-feature copy of Oracle, BigQuery or a general-purpose warehouse. There are no stored procedures, and transactional patterns or highly normalised schemas with wide joins need redesign rather than lift-and-shift. We treat that as a feature of the assessment, not a flaw in the destination: the workloads that fit are the ones where real-time, concurrency and cost matter, which is where the value is. ClickHouse publishes its own migration guides for BigQuery and PostgreSQL; our tool automates that path and extends it to Oracle, where no official guide exists.</p>
+                            <p class="mt-2 text-sm leading-7 text-slate-700">ClickHouse is not a feature-for-feature copy of BigQuery, Oracle or a general-purpose warehouse. There are no stored procedures, and transactional patterns or highly normalised schemas with wide joins need redesign rather than lift-and-shift. We treat that as a feature of the assessment, not a flaw in the destination: the workloads that fit are the ones where real-time, concurrency and cost matter, which is where the value is. ClickHouse publishes its own migration guides for BigQuery and PostgreSQL; our tool automates that path and extends it to Oracle, where no official guide exists.</p>
                         </div>
                     </div>
                 </div>
